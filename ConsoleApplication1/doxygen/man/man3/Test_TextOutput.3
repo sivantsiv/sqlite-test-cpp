@@ -1,0 +1,142 @@
+.TH "Test::TextOutput" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Test::TextOutput \- Text output handler that outputs to the a stream\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpptest\-textoutput\&.h>\fP
+.PP
+Inherits \fBTest::Output\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBMode\fP { \fBTerse\fP, \fBVerbose\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTextOutput\fP (\fBMode\fP mode, std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "virtual void \fBfinished\fP (int tests, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBsuite_start\fP (int tests, const std::string &name)"
+.br
+.ti -1c
+.RI "virtual void \fBsuite_end\fP (int tests, const std::string &name, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBtest_end\fP (const std::string &name, bool ok, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBassertment\fP (const \fBSource\fP &s)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Text output handler that outputs to the a stream\&. 
+
+Test suite output handler that writes its information as text to a a stream\&. It it possible to select between two different operational modes that controls the detail level, see Mode\&. 
+.PP
+Definition at line 46 of file cpptest\-textoutput\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBTest::TextOutput::Mode\fP"
+\fBOutput\fP mode\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITerse \fP\fP
+Terse output mode, which only shows the number of correct tests\&. 
+.TP
+\fB\fIVerbose \fP\fP
+Verbose output mode, which also shows extended assert information for each test that failed\&. 
+.PP
+Definition at line 51 of file cpptest\-textoutput\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Test::TextOutput::TextOutput (\fBMode\fP mode, std::ostream & stream = \fCstd::cout\fP)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Test::TextOutput::assertment (const \fBSource\fP & s)\fC [virtual]\fP"
+Called when an assertment is issued\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Assert point information\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::TextOutput::finished (int tests, const \fBTime\fP & time)\fC [virtual]\fP"
+Called when testing is finished\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Total number of tests in all suites\&. 
+.br
+\fItime\fP Total elapsed time for all tests\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::TextOutput::suite_end (int tests, const std::string & name, const \fBTime\fP & time)\fC [virtual]\fP"
+Called when a suite is finished\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Number of tests in this suite\&. 
+.br
+\fIname\fP Name of the suite\&. 
+.br
+\fItime\fP Total elapsed time for all tests in this suite\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::TextOutput::suite_start (int tests, const std::string & name)\fC [virtual]\fP"
+Called when a suite is entered\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Number of tests in this suite\&. 
+.br
+\fIname\fP Name of the suite\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::TextOutput::test_end (const std::string & name, bool ok, const \fBTime\fP & time)\fC [virtual]\fP"
+Called when a test if finished, regardless if an assertment was issued\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP Name of the test function\&. 
+.br
+\fIok\fP True if the test was successful; false otherwise\&. 
+.br
+\fItime\fP Execution time\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

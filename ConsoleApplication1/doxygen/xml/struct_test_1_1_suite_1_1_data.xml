@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_test_1_1_suite_1_1_data" kind="struct" language="C++" prot="private">
+    <compoundname>Test::Suite::Data</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_test_1_1_suite_1_1_data_1addd41afd7a1c3156f2593f6667c33e9d" prot="public" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_suite_1a87c40a9c763fc3221bee0e70c431038f" kindref="member">Func</ref></type>
+        <definition>Func Test::Suite::Data::_func</definition>
+        <argsstring></argsstring>
+        <name>_func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="89" column="1" bodyfile="cpptest-suite.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_suite_1_1_data_1a4cb91a365c9c6388df045104a1491900" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::Suite::Data::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="90" column="1" bodyfile="cpptest-suite.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_suite_1_1_data_1a04f6602f1132dc3b4934a6185bc7f3a5" prot="public" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time Test::Suite::Data::_time</definition>
+        <argsstring></argsstring>
+        <name>_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="91" column="1" bodyfile="cpptest-suite.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_test_1_1_suite_1_1_data_1a539a0b3108c57188909bafc1f5617bce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Test::Suite::Data::Data</definition>
+        <argsstring>(Func func, const std::string &amp;name)</argsstring>
+        <name>Data</name>
+        <param>
+          <type><ref refid="class_test_1_1_suite_1a87c40a9c763fc3221bee0e70c431038f" kindref="member">Func</ref></type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="93" column="1" bodyfile="cpptest-suite.h" bodystart="93" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="11">
+        <label>Test::Suite::Data</label>
+        <childnode refid="12" relation="usage">
+          <edgelabel>_time</edgelabel>
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Test::Time</label>
+        <link refid="class_test_1_1_time"/>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-suite.h" line="88" column="1" bodyfile="cpptest-suite.h" bodystart="87" bodyend="95"/>
+    <listofallmembers>
+      <member refid="struct_test_1_1_suite_1_1_data_1addd41afd7a1c3156f2593f6667c33e9d" prot="public" virt="non-virtual"><scope>Test::Suite::Data</scope><name>_func</name></member>
+      <member refid="struct_test_1_1_suite_1_1_data_1a4cb91a365c9c6388df045104a1491900" prot="public" virt="non-virtual"><scope>Test::Suite::Data</scope><name>_name</name></member>
+      <member refid="struct_test_1_1_suite_1_1_data_1a04f6602f1132dc3b4934a6185bc7f3a5" prot="public" virt="non-virtual"><scope>Test::Suite::Data</scope><name>_time</name></member>
+      <member refid="struct_test_1_1_suite_1_1_data_1a539a0b3108c57188909bafc1f5617bce" prot="public" virt="non-virtual"><scope>Test::Suite::Data</scope><name>Data</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

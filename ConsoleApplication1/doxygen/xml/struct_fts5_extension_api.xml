@@ -1,0 +1,296 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_fts5_extension_api" kind="struct" language="C++" prot="public">
+    <compoundname>Fts5ExtensionApi</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_fts5_extension_api_1af9c8f09c2e6f1373e6bce57ec9861682" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Fts5ExtensionApi::iVersion</definition>
+        <argsstring></argsstring>
+        <name>iVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10416" column="1" bodyfile="sqlite3.h" bodystart="10416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a8e651288d8e0cf25f20f2b838f47ac34" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* Fts5ExtensionApi::xUserData) (Fts5Context *)</definition>
+        <argsstring>)(Fts5Context *)</argsstring>
+        <name>xUserData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10418" column="1" bodyfile="sqlite3.h" bodystart="10418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a427409c50da4e179c8f2d36b22a4ba21" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xColumnCount) (Fts5Context *)</definition>
+        <argsstring>)(Fts5Context *)</argsstring>
+        <name>xColumnCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10420" column="1" bodyfile="sqlite3.h" bodystart="10420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1ae1eb7ad1d3c131a09376134ecc099568" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xRowCount) (Fts5Context *, sqlite3_int64 *pnRow)</definition>
+        <argsstring>)(Fts5Context *, sqlite3_int64 *pnRow)</argsstring>
+        <name>xRowCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10421" column="1" bodyfile="sqlite3.h" bodystart="10421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a096e79406ae03df9796a2082d0ac8269" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xColumnTotalSize) (Fts5Context *, int iCol, sqlite3_int64 *pnToken)</definition>
+        <argsstring>)(Fts5Context *, int iCol, sqlite3_int64 *pnToken)</argsstring>
+        <name>xColumnTotalSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10422" column="1" bodyfile="sqlite3.h" bodystart="10422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a670af0d7715f69834376f8df187dcf30" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xTokenize) (Fts5Context *, const char *pText, int nText, void *pCtx, int(*xToken)(void *, int, const char *, int, int, int))</definition>
+        <argsstring>)(Fts5Context *, const char *pText, int nText, void *pCtx, int(*xToken)(void *, int, const char *, int, int, int))</argsstring>
+        <name>xTokenize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10424" column="1" bodyfile="sqlite3.h" bodystart="10424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a3ba0207080a9ca498625eefcc120bf1e" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xPhraseCount) (Fts5Context *)</definition>
+        <argsstring>)(Fts5Context *)</argsstring>
+        <name>xPhraseCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10430" column="1" bodyfile="sqlite3.h" bodystart="10430" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1aeda6faa66f47f9116c9ceba882aaedd2" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xPhraseSize) (Fts5Context *, int iPhrase)</definition>
+        <argsstring>)(Fts5Context *, int iPhrase)</argsstring>
+        <name>xPhraseSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10431" column="1" bodyfile="sqlite3.h" bodystart="10431" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1af57aff7a8aa8402bb37a77892c4daf45" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xInstCount) (Fts5Context *, int *pnInst)</definition>
+        <argsstring>)(Fts5Context *, int *pnInst)</argsstring>
+        <name>xInstCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10433" column="1" bodyfile="sqlite3.h" bodystart="10433" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a85e17f20db782b20b503f1d803a47a9e" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xInst) (Fts5Context *, int iIdx, int *piPhrase, int *piCol, int *piOff)</definition>
+        <argsstring>)(Fts5Context *, int iIdx, int *piPhrase, int *piCol, int *piOff)</argsstring>
+        <name>xInst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10434" column="1" bodyfile="sqlite3.h" bodystart="10434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1acc4336c9f7bf39defa1acbdbf5df0020" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a0a4d3e6c1ad46f90e746b920ab6ca0d2" kindref="member">sqlite3_int64</ref>(*</type>
+        <definition>sqlite3_int64(* Fts5ExtensionApi::xRowid) (Fts5Context *)</definition>
+        <argsstring>)(Fts5Context *)</argsstring>
+        <name>xRowid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10436" column="1" bodyfile="sqlite3.h" bodystart="10436" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a03c7fcd31a751fc34d25e5288045f91d" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xColumnText) (Fts5Context *, int iCol, const char **pz, int *pn)</definition>
+        <argsstring>)(Fts5Context *, int iCol, const char **pz, int *pn)</argsstring>
+        <name>xColumnText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10437" column="1" bodyfile="sqlite3.h" bodystart="10437" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1aefe6eb4685546e58f056a61da39a2bcb" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xColumnSize) (Fts5Context *, int iCol, int *pnToken)</definition>
+        <argsstring>)(Fts5Context *, int iCol, int *pnToken)</argsstring>
+        <name>xColumnSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10438" column="1" bodyfile="sqlite3.h" bodystart="10438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a8f6dcf0a1d246b235f98f5bbb214e28d" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xQueryPhrase) (Fts5Context *, int iPhrase, void *pUserData, int(*)(const Fts5ExtensionApi *, Fts5Context *, void *))</definition>
+        <argsstring>)(Fts5Context *, int iPhrase, void *pUserData, int(*)(const Fts5ExtensionApi *, Fts5Context *, void *))</argsstring>
+        <name>xQueryPhrase</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10440" column="1" bodyfile="sqlite3.h" bodystart="10440" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a0f59a6c383a478ed95efdb7e4a95de80" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xSetAuxdata) (Fts5Context *, void *pAux, void(*xDelete)(void *))</definition>
+        <argsstring>)(Fts5Context *, void *pAux, void(*xDelete)(void *))</argsstring>
+        <name>xSetAuxdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10443" column="1" bodyfile="sqlite3.h" bodystart="10443" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1a63ba9aaf30fe9fe5fbcd1541ff38abff" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* Fts5ExtensionApi::xGetAuxdata) (Fts5Context *, int bClear)</definition>
+        <argsstring>)(Fts5Context *, int bClear)</argsstring>
+        <name>xGetAuxdata</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10444" column="1" bodyfile="sqlite3.h" bodystart="10444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1ae2584a3afa2a70504847600e609d43ad" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xPhraseFirst) (Fts5Context *, int iPhrase, Fts5PhraseIter *, int *, int *)</definition>
+        <argsstring>)(Fts5Context *, int iPhrase, Fts5PhraseIter *, int *, int *)</argsstring>
+        <name>xPhraseFirst</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10446" column="1" bodyfile="sqlite3.h" bodystart="10446" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1ac46faf7ccccf6a02454069b296dc1877" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Fts5ExtensionApi::xPhraseNext) (Fts5Context *, Fts5PhraseIter *, int *piCol, int *piOff)</definition>
+        <argsstring>)(Fts5Context *, Fts5PhraseIter *, int *piCol, int *piOff)</argsstring>
+        <name>xPhraseNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10447" column="1" bodyfile="sqlite3.h" bodystart="10447" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1ac57daf9650e3f0c25432bbe348bc124f" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* Fts5ExtensionApi::xPhraseFirstColumn) (Fts5Context *, int iPhrase, Fts5PhraseIter *, int *)</definition>
+        <argsstring>)(Fts5Context *, int iPhrase, Fts5PhraseIter *, int *)</argsstring>
+        <name>xPhraseFirstColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10449" column="1" bodyfile="sqlite3.h" bodystart="10449" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_extension_api_1ae699a91c958cbac92a2ae8000670ef89" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* Fts5ExtensionApi::xPhraseNextColumn) (Fts5Context *, Fts5PhraseIter *, int *piCol)</definition>
+        <argsstring>)(Fts5Context *, Fts5PhraseIter *, int *piCol)</argsstring>
+        <name>xPhraseNextColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10450" column="1" bodyfile="sqlite3.h" bodystart="10450" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="10415" column="1" bodyfile="sqlite3.h" bodystart="10415" bodyend="10451"/>
+    <listofallmembers>
+      <member refid="struct_fts5_extension_api_1af9c8f09c2e6f1373e6bce57ec9861682" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>iVersion</name></member>
+      <member refid="struct_fts5_extension_api_1a427409c50da4e179c8f2d36b22a4ba21" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xColumnCount</name></member>
+      <member refid="struct_fts5_extension_api_1aefe6eb4685546e58f056a61da39a2bcb" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xColumnSize</name></member>
+      <member refid="struct_fts5_extension_api_1a03c7fcd31a751fc34d25e5288045f91d" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xColumnText</name></member>
+      <member refid="struct_fts5_extension_api_1a096e79406ae03df9796a2082d0ac8269" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xColumnTotalSize</name></member>
+      <member refid="struct_fts5_extension_api_1a63ba9aaf30fe9fe5fbcd1541ff38abff" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xGetAuxdata</name></member>
+      <member refid="struct_fts5_extension_api_1a85e17f20db782b20b503f1d803a47a9e" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xInst</name></member>
+      <member refid="struct_fts5_extension_api_1af57aff7a8aa8402bb37a77892c4daf45" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xInstCount</name></member>
+      <member refid="struct_fts5_extension_api_1a3ba0207080a9ca498625eefcc120bf1e" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xPhraseCount</name></member>
+      <member refid="struct_fts5_extension_api_1ae2584a3afa2a70504847600e609d43ad" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xPhraseFirst</name></member>
+      <member refid="struct_fts5_extension_api_1ac57daf9650e3f0c25432bbe348bc124f" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xPhraseFirstColumn</name></member>
+      <member refid="struct_fts5_extension_api_1ac46faf7ccccf6a02454069b296dc1877" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xPhraseNext</name></member>
+      <member refid="struct_fts5_extension_api_1ae699a91c958cbac92a2ae8000670ef89" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xPhraseNextColumn</name></member>
+      <member refid="struct_fts5_extension_api_1aeda6faa66f47f9116c9ceba882aaedd2" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xPhraseSize</name></member>
+      <member refid="struct_fts5_extension_api_1a8f6dcf0a1d246b235f98f5bbb214e28d" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xQueryPhrase</name></member>
+      <member refid="struct_fts5_extension_api_1ae1eb7ad1d3c131a09376134ecc099568" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xRowCount</name></member>
+      <member refid="struct_fts5_extension_api_1acc4336c9f7bf39defa1acbdbf5df0020" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xRowid</name></member>
+      <member refid="struct_fts5_extension_api_1a0f59a6c383a478ed95efdb7e4a95de80" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xSetAuxdata</name></member>
+      <member refid="struct_fts5_extension_api_1a670af0d7715f69834376f8df187dcf30" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xTokenize</name></member>
+      <member refid="struct_fts5_extension_api_1a8e651288d8e0cf25f20f2b838f47ac34" prot="public" virt="non-virtual"><scope>Fts5ExtensionApi</scope><name>xUserData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

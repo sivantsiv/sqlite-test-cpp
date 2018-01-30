@@ -1,0 +1,107 @@
+\hypertarget{class_test_1_1_time}{}\section{Test\+:\+:Time Class Reference}
+\label{class_test_1_1_time}\index{Test\+::\+Time@{Test\+::\+Time}}
+
+
+Time representation.  
+
+
+
+
+{\ttfamily \#include $<$cpptest-\/time.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_test_1_1_time_ae5c1089d2eb013c5b908ea95d924b733}{Time}} ()
+\item 
+\mbox{\hyperlink{class_test_1_1_time_afdc9c0556b8d71ecd8d621c2512154a5}{Time}} (unsigned int sec, unsigned int usec)
+\item 
+unsigned int \mbox{\hyperlink{class_test_1_1_time_a75a6145c4502fc9c1a3f5171c6536b07}{seconds}} () const
+\item 
+unsigned int \mbox{\hyperlink{class_test_1_1_time_a49a77156512509bea4bb49b614a5ecc8}{microseconds}} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_test_1_1_time}{Time}} \mbox{\hyperlink{class_test_1_1_time_a83422a11d27c17a7a4bc52ab14fdb9a3}{current}} ()
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_test_1_1_time}{Time}} \mbox{\hyperlink{class_test_1_1_time_ae2e555aa5b5c51e44b576d8baf48a2cd}{operator+}} (const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&t1, const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&t2)
+\item 
+\mbox{\hyperlink{class_test_1_1_time}{Time}} \mbox{\hyperlink{class_test_1_1_time_a09225563b0b317910b26c550ba74de64}{operator-\/}} (const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&t1, const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&t2)
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_test_1_1_time_a0287b008277738b9882ed96467e8b4f8}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&t)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Time representation. 
+
+Encapsulates a time value with microsecond resolution. It is possible to retrieve the current time, add and subtract time values, and output the time to an output stream. 
+
+Definition at line 43 of file cpptest-\/time.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_test_1_1_time_ae5c1089d2eb013c5b908ea95d924b733}\label{class_test_1_1_time_ae5c1089d2eb013c5b908ea95d924b733}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!Time@{Time}}
+\index{Time@{Time}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{Time()}{Time()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Test\+::\+Time\+::\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_test_1_1_time_afdc9c0556b8d71ecd8d621c2512154a5}\label{class_test_1_1_time_afdc9c0556b8d71ecd8d621c2512154a5}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!Time@{Time}}
+\index{Time@{Time}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{Time()}{Time()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Test\+::\+Time\+::\+Time (\begin{DoxyParamCaption}\item[{unsigned int}]{sec,  }\item[{unsigned int}]{usec }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_test_1_1_time_a83422a11d27c17a7a4bc52ab14fdb9a3}\label{class_test_1_1_time_a83422a11d27c17a7a4bc52ab14fdb9a3}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!current@{current}}
+\index{current@{current}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{current()}{current()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_test_1_1_time}{Time}} Test\+::\+Time\+::current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{class_test_1_1_time_a49a77156512509bea4bb49b614a5ecc8}\label{class_test_1_1_time_a49a77156512509bea4bb49b614a5ecc8}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!microseconds@{microseconds}}
+\index{microseconds@{microseconds}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{microseconds()}{microseconds()}}
+{\footnotesize\ttfamily unsigned int Test\+::\+Time\+::microseconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_test_1_1_time_a75a6145c4502fc9c1a3f5171c6536b07}\label{class_test_1_1_time_a75a6145c4502fc9c1a3f5171c6536b07}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!seconds@{seconds}}
+\index{seconds@{seconds}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{seconds()}{seconds()}}
+{\footnotesize\ttfamily unsigned int Test\+::\+Time\+::seconds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_test_1_1_time_ae2e555aa5b5c51e44b576d8baf48a2cd}\label{class_test_1_1_time_ae2e555aa5b5c51e44b576d8baf48a2cd}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!operator+@{operator+}}
+\index{operator+@{operator+}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{operator+}{operator+}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_test_1_1_time}{Time}} operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{t1,  }\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_test_1_1_time_a09225563b0b317910b26c550ba74de64}\label{class_test_1_1_time_a09225563b0b317910b26c550ba74de64}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{operator-\/}{operator-}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_test_1_1_time}{Time}} operator-\/ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{t1,  }\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{t2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_test_1_1_time_a0287b008277738b9882ed96467e8b4f8}\label{class_test_1_1_time_a0287b008277738b9882ed96467e8b4f8}} 
+\index{Test\+::\+Time@{Test\+::\+Time}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Test\+::\+Time@{Test\+::\+Time}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{t }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cpptest-time_8h}{cpptest-\/time.\+h}}\end{DoxyCompactItemize}

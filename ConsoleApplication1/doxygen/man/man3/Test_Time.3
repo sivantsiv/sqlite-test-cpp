@@ -1,0 +1,80 @@
+.TH "Test::Time" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Test::Time \- Time representation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpptest\-time\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTime\fP ()"
+.br
+.ti -1c
+.RI "\fBTime\fP (unsigned int sec, unsigned int usec)"
+.br
+.ti -1c
+.RI "unsigned int \fBseconds\fP () const"
+.br
+.ti -1c
+.RI "unsigned int \fBmicroseconds\fP () const"
+.br
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBTime\fP \fBcurrent\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBTime\fP \fBoperator+\fP (const \fBTime\fP &t1, const \fBTime\fP &t2)"
+.br
+.ti -1c
+.RI "\fBTime\fP \fBoperator\-\fP (const \fBTime\fP &t1, const \fBTime\fP &t2)"
+.br
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &os, const \fBTime\fP &t)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Time representation\&. 
+
+Encapsulates a time value with microsecond resolution\&. It is possible to retrieve the current time, add and subtract time values, and output the time to an output stream\&. 
+.PP
+Definition at line 43 of file cpptest\-time\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Test::Time::Time ()"
+
+.SS "Test::Time::Time (unsigned int sec, unsigned int usec)"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBTime\fP Test::Time::current ()\fC [static]\fP"
+
+.SS "unsigned int Test::Time::microseconds () const"
+
+.SS "unsigned int Test::Time::seconds () const"
+
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "\fBTime\fP operator+ (const \fBTime\fP & t1, const \fBTime\fP & t2)\fC [friend]\fP"
+
+.SS "\fBTime\fP operator\- (const \fBTime\fP & t1, const \fBTime\fP & t2)\fC [friend]\fP"
+
+.SS "std::ostream& operator<< (std::ostream & os, const \fBTime\fP & t)\fC [friend]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

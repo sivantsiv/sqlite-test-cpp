@@ -1,0 +1,282 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__io__methods" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_io_methods</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__io__methods_1ad1c72bdfde750a09a797f314a096a965" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_io_methods::iVersion</definition>
+        <argsstring></argsstring>
+        <name>iVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="767" column="1" bodyfile="sqlite3.h" bodystart="767" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1ae0673b03bfa033d59188bfdab418cd26" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xClose) (sqlite3_file *)</definition>
+        <argsstring>)(sqlite3_file *)</argsstring>
+        <name>xClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="768" column="1" bodyfile="sqlite3.h" bodystart="768" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1ac1433ffc0da0414a2a67a46d338d83eb" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xRead) (sqlite3_file *, void *, int iAmt, sqlite3_int64 iOfst)</definition>
+        <argsstring>)(sqlite3_file *, void *, int iAmt, sqlite3_int64 iOfst)</argsstring>
+        <name>xRead</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="769" column="1" bodyfile="sqlite3.h" bodystart="769" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a659f6a40777b685c6a6b80e5f07a3328" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xWrite) (sqlite3_file *, const void *, int iAmt, sqlite3_int64 iOfst)</definition>
+        <argsstring>)(sqlite3_file *, const void *, int iAmt, sqlite3_int64 iOfst)</argsstring>
+        <name>xWrite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="770" column="1" bodyfile="sqlite3.h" bodystart="770" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1abe797948913bfe94d4fab7246773af50" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xTruncate) (sqlite3_file *, sqlite3_int64 size)</definition>
+        <argsstring>)(sqlite3_file *, sqlite3_int64 size)</argsstring>
+        <name>xTruncate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="771" column="1" bodyfile="sqlite3.h" bodystart="771" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1ad4b78f6b0b475e621fe29fb1cc886437" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xSync) (sqlite3_file *, int flags)</definition>
+        <argsstring>)(sqlite3_file *, int flags)</argsstring>
+        <name>xSync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="772" column="1" bodyfile="sqlite3.h" bodystart="772" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1ae875f158de72435f40ca0bd5207d9862" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xFileSize) (sqlite3_file *, sqlite3_int64 *pSize)</definition>
+        <argsstring>)(sqlite3_file *, sqlite3_int64 *pSize)</argsstring>
+        <name>xFileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="773" column="1" bodyfile="sqlite3.h" bodystart="773" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1ac88793475b0c4188fb02c229f1a11e8b" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xLock) (sqlite3_file *, int)</definition>
+        <argsstring>)(sqlite3_file *, int)</argsstring>
+        <name>xLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="774" column="1" bodyfile="sqlite3.h" bodystart="774" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a5ce75a5ca2df9c1edcaef74d4c0d7e38" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xUnlock) (sqlite3_file *, int)</definition>
+        <argsstring>)(sqlite3_file *, int)</argsstring>
+        <name>xUnlock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="775" column="1" bodyfile="sqlite3.h" bodystart="775" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a484752731e4a054c97497ad8d48a344b" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xCheckReservedLock) (sqlite3_file *, int *pResOut)</definition>
+        <argsstring>)(sqlite3_file *, int *pResOut)</argsstring>
+        <name>xCheckReservedLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="776" column="1" bodyfile="sqlite3.h" bodystart="776" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a913b12deb1dcae2c61b90776bcd9d19c" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xFileControl) (sqlite3_file *, int op, void *pArg)</definition>
+        <argsstring>)(sqlite3_file *, int op, void *pArg)</argsstring>
+        <name>xFileControl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="777" column="1" bodyfile="sqlite3.h" bodystart="777" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a7a1c0cf3c4de6402a69f50e625be5ca2" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xSectorSize) (sqlite3_file *)</definition>
+        <argsstring>)(sqlite3_file *)</argsstring>
+        <name>xSectorSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="778" column="1" bodyfile="sqlite3.h" bodystart="778" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1abbf1b4769c310bfee517af815eed93e9" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xDeviceCharacteristics) (sqlite3_file *)</definition>
+        <argsstring>)(sqlite3_file *)</argsstring>
+        <name>xDeviceCharacteristics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="779" column="1" bodyfile="sqlite3.h" bodystart="779" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a2222efe012f210417f9881103014cdc5" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xShmMap) (sqlite3_file *, int iPg, int pgsz, int, void volatile **)</definition>
+        <argsstring>)(sqlite3_file *, int iPg, int pgsz, int, void volatile **)</argsstring>
+        <name>xShmMap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="781" column="1" bodyfile="sqlite3.h" bodystart="781" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a2dbd4777e8ebce36b91dd5d64aef9bbf" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xShmLock) (sqlite3_file *, int offset, int n, int flags)</definition>
+        <argsstring>)(sqlite3_file *, int offset, int n, int flags)</argsstring>
+        <name>xShmLock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="782" column="1" bodyfile="sqlite3.h" bodystart="782" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1aa4e436fef318c4702940da870f8e2710" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_io_methods::xShmBarrier) (sqlite3_file *)</definition>
+        <argsstring>)(sqlite3_file *)</argsstring>
+        <name>xShmBarrier</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="783" column="1" bodyfile="sqlite3.h" bodystart="783" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a494ae8bbfe91c38598c73aaa18f1848f" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xShmUnmap) (sqlite3_file *, int deleteFlag)</definition>
+        <argsstring>)(sqlite3_file *, int deleteFlag)</argsstring>
+        <name>xShmUnmap</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="784" column="1" bodyfile="sqlite3.h" bodystart="784" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1a71e611fc755d95ffbd3e7ecb8cb5fae6" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xFetch) (sqlite3_file *, sqlite3_int64 iOfst, int iAmt, void **pp)</definition>
+        <argsstring>)(sqlite3_file *, sqlite3_int64 iOfst, int iAmt, void **pp)</argsstring>
+        <name>xFetch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="786" column="1" bodyfile="sqlite3.h" bodystart="786" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__io__methods_1abebf1bbaa50bea56f0e37d0f66193bda" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_io_methods::xUnfetch) (sqlite3_file *, sqlite3_int64 iOfst, void *p)</definition>
+        <argsstring>)(sqlite3_file *, sqlite3_int64 iOfst, void *p)</argsstring>
+        <name>xUnfetch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="787" column="1" bodyfile="sqlite3.h" bodystart="787" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="766" column="1" bodyfile="sqlite3.h" bodystart="766" bodyend="790"/>
+    <listofallmembers>
+      <member refid="structsqlite3__io__methods_1ad1c72bdfde750a09a797f314a096a965" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>iVersion</name></member>
+      <member refid="structsqlite3__io__methods_1a484752731e4a054c97497ad8d48a344b" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xCheckReservedLock</name></member>
+      <member refid="structsqlite3__io__methods_1ae0673b03bfa033d59188bfdab418cd26" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xClose</name></member>
+      <member refid="structsqlite3__io__methods_1abbf1b4769c310bfee517af815eed93e9" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xDeviceCharacteristics</name></member>
+      <member refid="structsqlite3__io__methods_1a71e611fc755d95ffbd3e7ecb8cb5fae6" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xFetch</name></member>
+      <member refid="structsqlite3__io__methods_1a913b12deb1dcae2c61b90776bcd9d19c" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xFileControl</name></member>
+      <member refid="structsqlite3__io__methods_1ae875f158de72435f40ca0bd5207d9862" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xFileSize</name></member>
+      <member refid="structsqlite3__io__methods_1ac88793475b0c4188fb02c229f1a11e8b" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xLock</name></member>
+      <member refid="structsqlite3__io__methods_1ac1433ffc0da0414a2a67a46d338d83eb" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xRead</name></member>
+      <member refid="structsqlite3__io__methods_1a7a1c0cf3c4de6402a69f50e625be5ca2" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xSectorSize</name></member>
+      <member refid="structsqlite3__io__methods_1aa4e436fef318c4702940da870f8e2710" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xShmBarrier</name></member>
+      <member refid="structsqlite3__io__methods_1a2dbd4777e8ebce36b91dd5d64aef9bbf" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xShmLock</name></member>
+      <member refid="structsqlite3__io__methods_1a2222efe012f210417f9881103014cdc5" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xShmMap</name></member>
+      <member refid="structsqlite3__io__methods_1a494ae8bbfe91c38598c73aaa18f1848f" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xShmUnmap</name></member>
+      <member refid="structsqlite3__io__methods_1ad4b78f6b0b475e621fe29fb1cc886437" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xSync</name></member>
+      <member refid="structsqlite3__io__methods_1abe797948913bfe94d4fab7246773af50" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xTruncate</name></member>
+      <member refid="structsqlite3__io__methods_1abebf1bbaa50bea56f0e37d0f66193bda" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xUnfetch</name></member>
+      <member refid="structsqlite3__io__methods_1a5ce75a5ca2df9c1edcaef74d4c0d7e38" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xUnlock</name></member>
+      <member refid="structsqlite3__io__methods_1a659f6a40777b685c6a6b80e5f07a3328" prot="public" virt="non-virtual"><scope>sqlite3_io_methods</scope><name>xWrite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

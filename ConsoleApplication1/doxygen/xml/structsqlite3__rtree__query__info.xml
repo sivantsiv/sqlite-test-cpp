@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__rtree__query__info" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_rtree_query_info</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a21e4964ceeddedce2211c8a75067936d" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_rtree_query_info::pContext</definition>
+        <argsstring></argsstring>
+        <name>pContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8823" column="1" bodyfile="sqlite3.h" bodystart="8823" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a9df4acb109f572455c8e2fb443027157" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_rtree_query_info::nParam</definition>
+        <argsstring></argsstring>
+        <name>nParam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8824" column="1" bodyfile="sqlite3.h" bodystart="8824" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a61352eac82151fee3e4c7ff718612179" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1ae9156ff58620c1ceae9391f1afabae1b" kindref="member">sqlite3_rtree_dbl</ref> *</type>
+        <definition>sqlite3_rtree_dbl* sqlite3_rtree_query_info::aParam</definition>
+        <argsstring></argsstring>
+        <name>aParam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8825" column="1" bodyfile="sqlite3.h" bodystart="8825" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a7c1d4f1f20c14b88c4dc02643e6706a0" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_rtree_query_info::pUser</definition>
+        <argsstring></argsstring>
+        <name>pUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8826" column="1" bodyfile="sqlite3.h" bodystart="8826" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a23bcc6df883995d42d65449a27f45f85" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_rtree_query_info::xDelUser) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xDelUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8827" column="1" bodyfile="sqlite3.h" bodystart="8827" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a9d6e605e62fcf49d57dfc0d192076542" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1ae9156ff58620c1ceae9391f1afabae1b" kindref="member">sqlite3_rtree_dbl</ref> *</type>
+        <definition>sqlite3_rtree_dbl* sqlite3_rtree_query_info::aCoord</definition>
+        <argsstring></argsstring>
+        <name>aCoord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8828" column="1" bodyfile="sqlite3.h" bodystart="8828" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1ace9f952557eb7b0e050d879ebb80905a" prot="public" static="no" mutable="no">
+        <type>unsigned int *</type>
+        <definition>unsigned int* sqlite3_rtree_query_info::anQueue</definition>
+        <argsstring></argsstring>
+        <name>anQueue</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8829" column="1" bodyfile="sqlite3.h" bodystart="8829" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1aa4b95a36fe7306e17e8cf9329fcb0964" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_rtree_query_info::nCoord</definition>
+        <argsstring></argsstring>
+        <name>nCoord</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8830" column="1" bodyfile="sqlite3.h" bodystart="8830" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1af91ca2d5f867b3b0aa9c91920a3b5b45" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_rtree_query_info::iLevel</definition>
+        <argsstring></argsstring>
+        <name>iLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8831" column="1" bodyfile="sqlite3.h" bodystart="8831" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1ac84533734fb4c86c3f2deba904118785" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_rtree_query_info::mxLevel</definition>
+        <argsstring></argsstring>
+        <name>mxLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8832" column="1" bodyfile="sqlite3.h" bodystart="8832" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a9e43489993c8aeace851f86eaa00ec26" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a0a4d3e6c1ad46f90e746b920ab6ca0d2" kindref="member">sqlite3_int64</ref></type>
+        <definition>sqlite3_int64 sqlite3_rtree_query_info::iRowid</definition>
+        <argsstring></argsstring>
+        <name>iRowid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8833" column="1" bodyfile="sqlite3.h" bodystart="8833" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1af7da93e7fc405eec7e7ec90ab237eab2" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1ae9156ff58620c1ceae9391f1afabae1b" kindref="member">sqlite3_rtree_dbl</ref></type>
+        <definition>sqlite3_rtree_dbl sqlite3_rtree_query_info::rParentScore</definition>
+        <argsstring></argsstring>
+        <name>rParentScore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8834" column="1" bodyfile="sqlite3.h" bodystart="8834" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a8bd37c6af5427c35830f674a4db682c3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_rtree_query_info::eParentWithin</definition>
+        <argsstring></argsstring>
+        <name>eParentWithin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8835" column="1" bodyfile="sqlite3.h" bodystart="8835" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1ad1038309f7ea55472a7ff99bf4f9d514" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_rtree_query_info::eWithin</definition>
+        <argsstring></argsstring>
+        <name>eWithin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8836" column="1" bodyfile="sqlite3.h" bodystart="8836" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1af449e4a3607573d17b3d31c67b6e1584" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1ae9156ff58620c1ceae9391f1afabae1b" kindref="member">sqlite3_rtree_dbl</ref></type>
+        <definition>sqlite3_rtree_dbl sqlite3_rtree_query_info::rScore</definition>
+        <argsstring></argsstring>
+        <name>rScore</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8837" column="1" bodyfile="sqlite3.h" bodystart="8837" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__query__info_1a57ccb3cce45dd946e5184b5addeb0326" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1ac2fa1ecdb2290d9af6010edbd1cbc83c" kindref="member">sqlite3_value</ref> **</type>
+        <definition>sqlite3_value** sqlite3_rtree_query_info::apSqlParam</definition>
+        <argsstring></argsstring>
+        <name>apSqlParam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8839" column="1" bodyfile="sqlite3.h" bodystart="8839" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="8822" column="1" bodyfile="sqlite3.h" bodystart="8822" bodyend="8840"/>
+    <listofallmembers>
+      <member refid="structsqlite3__rtree__query__info_1a9d6e605e62fcf49d57dfc0d192076542" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>aCoord</name></member>
+      <member refid="structsqlite3__rtree__query__info_1ace9f952557eb7b0e050d879ebb80905a" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>anQueue</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a61352eac82151fee3e4c7ff718612179" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>aParam</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a57ccb3cce45dd946e5184b5addeb0326" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>apSqlParam</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a8bd37c6af5427c35830f674a4db682c3" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>eParentWithin</name></member>
+      <member refid="structsqlite3__rtree__query__info_1ad1038309f7ea55472a7ff99bf4f9d514" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>eWithin</name></member>
+      <member refid="structsqlite3__rtree__query__info_1af91ca2d5f867b3b0aa9c91920a3b5b45" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>iLevel</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a9e43489993c8aeace851f86eaa00ec26" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>iRowid</name></member>
+      <member refid="structsqlite3__rtree__query__info_1ac84533734fb4c86c3f2deba904118785" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>mxLevel</name></member>
+      <member refid="structsqlite3__rtree__query__info_1aa4b95a36fe7306e17e8cf9329fcb0964" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>nCoord</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a9df4acb109f572455c8e2fb443027157" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>nParam</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a21e4964ceeddedce2211c8a75067936d" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>pContext</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a7c1d4f1f20c14b88c4dc02643e6706a0" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>pUser</name></member>
+      <member refid="structsqlite3__rtree__query__info_1af7da93e7fc405eec7e7ec90ab237eab2" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>rParentScore</name></member>
+      <member refid="structsqlite3__rtree__query__info_1af449e4a3607573d17b3d31c67b6e1584" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>rScore</name></member>
+      <member refid="structsqlite3__rtree__query__info_1a23bcc6df883995d42d65449a27f45f85" prot="public" virt="non-virtual"><scope>sqlite3_rtree_query_info</scope><name>xDelUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

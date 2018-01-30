@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_time" kind="class" language="C++" prot="public">
+    <compoundname>Test::Time</compoundname>
+    <includes refid="cpptest-time_8h" local="no">cpptest-time.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_1_1_time_1ab453330562a4fd0e42ff7cadeb7cb657" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Test::Time::_sec</definition>
+        <argsstring></argsstring>
+        <name>_sec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="60" column="1" bodyfile="cpptest-time.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_time_1af2307298f53086b71fcf2353e69dd497" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Test::Time::_usec</definition>
+        <argsstring></argsstring>
+        <name>_usec</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="61" column="1" bodyfile="cpptest-time.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_time_1ae5c1089d2eb013c5b908ea95d924b733" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::Time::Time</definition>
+        <argsstring>()</argsstring>
+        <name>Time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="46" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_time_1afdc9c0556b8d71ecd8d621c2512154a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::Time::Time</definition>
+        <argsstring>(unsigned int sec, unsigned int usec)</argsstring>
+        <name>Time</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>sec</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>usec</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_time_1a75a6145c4502fc9c1a3f5171c6536b07" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Test::Time::seconds</definition>
+        <argsstring>() const</argsstring>
+        <name>seconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="49" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_time_1a49a77156512509bea4bb49b614a5ecc8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Test::Time::microseconds</definition>
+        <argsstring>() const</argsstring>
+        <name>microseconds</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="50" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_test_1_1_time_1a83422a11d27c17a7a4bc52ab14fdb9a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>static Time Test::Time::current</definition>
+        <argsstring>()</argsstring>
+        <name>current</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="52" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_test_1_1_time_1ae2e555aa5b5c51e44b576d8baf48a2cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time operator+</definition>
+        <argsstring>(const Time &amp;t1, const Time &amp;t2)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_test_1_1_time_1a09225563b0b317910b26c550ba74de64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time operator-</definition>
+        <argsstring>(const Time &amp;t1, const Time &amp;t2)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>t2</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_test_1_1_time_1a0287b008277738b9882ed96467e8b4f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const Time &amp;t)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-time.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Time representation. </para>    </briefdescription>
+    <detaileddescription>
+<para>Encapsulates a time value with microsecond resolution. It is possible to retrieve the current time, add and subtract time values, and output the time to an output stream. </para>    </detaileddescription>
+    <location file="cpptest-time.h" line="44" column="1" bodyfile="cpptest-time.h" bodystart="43" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_time_1ab453330562a4fd0e42ff7cadeb7cb657" prot="private" virt="non-virtual"><scope>Test::Time</scope><name>_sec</name></member>
+      <member refid="class_test_1_1_time_1af2307298f53086b71fcf2353e69dd497" prot="private" virt="non-virtual"><scope>Test::Time</scope><name>_usec</name></member>
+      <member refid="class_test_1_1_time_1a83422a11d27c17a7a4bc52ab14fdb9a3" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>current</name></member>
+      <member refid="class_test_1_1_time_1a49a77156512509bea4bb49b614a5ecc8" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>microseconds</name></member>
+      <member refid="class_test_1_1_time_1ae2e555aa5b5c51e44b576d8baf48a2cd" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>operator+</name></member>
+      <member refid="class_test_1_1_time_1a09225563b0b317910b26c550ba74de64" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>operator-</name></member>
+      <member refid="class_test_1_1_time_1a0287b008277738b9882ed96467e8b4f8" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_test_1_1_time_1a75a6145c4502fc9c1a3f5171c6536b07" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>seconds</name></member>
+      <member refid="class_test_1_1_time_1ae5c1089d2eb013c5b908ea95d924b733" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>Time</name></member>
+      <member refid="class_test_1_1_time_1afdc9c0556b8d71ecd8d621c2512154a5" prot="public" virt="non-virtual"><scope>Test::Time</scope><name>Time</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

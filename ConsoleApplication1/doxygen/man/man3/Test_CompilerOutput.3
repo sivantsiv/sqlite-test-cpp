@@ -1,0 +1,103 @@
+.TH "Test::CompilerOutput" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Test::CompilerOutput \- Compiler-like output handler\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpptest\-compileroutput\&.h>\fP
+.PP
+Inherits \fBTest::Output\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBInvalidFormat\fP"
+.br
+.RI "Compiler output exception\&. "
+.in -1c
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBFormat\fP { \fBGeneric\fP, \fBBCC\fP, \fBGCC\fP, \fBMSVC\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCompilerOutput\fP (\fBFormat\fP format=\fBGeneric\fP, std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "\fBCompilerOutput\fP (const std::string &format, std::ostream &stream=std::cout)"
+.br
+.ti -1c
+.RI "virtual void \fBassertment\fP (const \fBSource\fP &s)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Compiler-like output handler\&. 
+
+Test suite output handler that only outputs failures in compiler warning/error format\&. This way, you can use your IDE to browse between failures\&.
+.PP
+The output format is configurable to be able to emulate different compiler outputs\&. The following modifiers exist:
+.IP "\(bu" 2
+\fIfile\fP Outputs the file containing the test function\&.
+.IP "\(bu" 2
+\fIline\fP Line number for the the test function\&.
+.IP "\(bu" 2
+\fItext\fP Expression (or message) that caused the assertment\&. Note that each modifier can only be specified once\&. 
+.PP
+
+.PP
+Definition at line 52 of file cpptest\-compileroutput\&.h\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBTest::CompilerOutput::Format\fP"
+Pre-defined compiler output formats\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIGeneric \fP\fP
+Generic compiler format, which equals: \fC%file:%line: %text\fP 
+.TP
+\fB\fIBCC \fP\fP
+\fCBorland C++ Compiler\fP (BCC) format, which equals: \fCError cpptest %file %line: %text\fP\&. 
+.TP
+\fB\fIGCC \fP\fP
+\fCGNU Compiler Collection\fP (GCC) format, which equals: \fC%file:%line: %text\fP 
+.TP
+\fB\fIMSVC \fP\fP
+\fCMicrosoft Visual C++\fP (MSVC) format, which equals: \fC%file(%line) : %text\fP 
+.PP
+Definition at line 70 of file cpptest\-compileroutput\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Test::CompilerOutput::CompilerOutput (\fBFormat\fP format = \fC\fBGeneric\fP\fP, std::ostream & stream = \fCstd::cout\fP)\fC [explicit]\fP"
+
+.SS "Test::CompilerOutput::CompilerOutput (const std::string & format, std::ostream & stream = \fCstd::cout\fP)\fC [explicit]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Test::CompilerOutput::assertment (const \fBSource\fP & s)\fC [virtual]\fP"
+Called when an assertment is issued\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Assert point information\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

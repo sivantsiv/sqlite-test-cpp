@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_collector_output" kind="class" language="C++" prot="public">
+    <compoundname>Test::CollectorOutput</compoundname>
+    <basecompoundref refid="class_test_1_1_output" prot="public" virt="non-virtual">Test::Output</basecompoundref>
+    <derivedcompoundref refid="class_test_1_1_html_output" prot="public" virt="non-virtual">Test::HtmlOutput</derivedcompoundref>
+    <includes refid="cpptest-collectoroutput_8h" local="no">cpptest-collectoroutput.h</includes>
+    <innerclass refid="struct_test_1_1_collector_output_1_1_suite_info" prot="protected">Test::CollectorOutput::SuiteInfo</innerclass>
+    <innerclass refid="struct_test_1_1_collector_output_1_1_test_info" prot="protected">Test::CollectorOutput::TestInfo</innerclass>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_test_1_1_collector_output_1a1921f35e0da596bd75da5824afe872c9" prot="protected" static="no">
+        <type>std::list&lt; <ref refid="class_test_1_1_source" kindref="compound">Source</ref> &gt;</type>
+        <definition>typedef std::list&lt;Source&gt; Test::CollectorOutput::Sources</definition>
+        <argsstring></argsstring>
+        <name>Sources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="64" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_test_1_1_collector_output_1a54a7b7c9b6d181102bc8934190b06e86" prot="protected" static="no">
+        <type>std::vector&lt; <ref refid="struct_test_1_1_collector_output_1_1_test_info" kindref="compound">TestInfo</ref> &gt;</type>
+        <definition>typedef std::vector&lt;TestInfo&gt; Test::CollectorOutput::Tests</definition>
+        <argsstring></argsstring>
+        <name>Tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="77" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_test_1_1_collector_output_1a0879ce3b51f1e3b3fe14aa5665dccd30" prot="protected" static="no">
+        <type>std::list&lt; <ref refid="struct_test_1_1_collector_output_1_1_suite_info" kindref="compound">SuiteInfo</ref> &gt;</type>
+        <definition>typedef std::list&lt;SuiteInfo&gt; Test::CollectorOutput::Suites</definition>
+        <argsstring></argsstring>
+        <name>Suites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="89" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_test_1_1_collector_output_1a9f79c0fa5abf1d6248a85e7ae4701c5f" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_collector_output_1a0879ce3b51f1e3b3fe14aa5665dccd30" kindref="member">Suites</ref></type>
+        <definition>Suites Test::CollectorOutput::_suites</definition>
+        <argsstring></argsstring>
+        <name>_suites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="91" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_collector_output_1a7d8ec4ad0316b57aa96ae50a548c94d2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Test::CollectorOutput::_total_errors</definition>
+        <argsstring></argsstring>
+        <name>_total_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="92" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_collector_output_1ace6c1fc02a6ac7a6c15b982b96f5f68f" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Test::CollectorOutput::_total_tests</definition>
+        <argsstring></argsstring>
+        <name>_total_tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="93" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_collector_output_1af1e014fde4bf5b4e6c89de748630aa79" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time Test::CollectorOutput::_total_time</definition>
+        <argsstring></argsstring>
+        <name>_total_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="94" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_1_1_collector_output_1a02c3242939bfc525a1b7baf247fa8881" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_test_1_1_collector_output_1_1_suite_info" kindref="compound">SuiteInfo</ref> *</type>
+        <definition>SuiteInfo* Test::CollectorOutput::_cur_suite</definition>
+        <argsstring></argsstring>
+        <name>_cur_suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="99" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_collector_output_1ae146f7c104d9d0324b58373c12716549" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_test_1_1_collector_output_1_1_test_info" kindref="compound">TestInfo</ref> *</type>
+        <definition>TestInfo* Test::CollectorOutput::_cur_test</definition>
+        <argsstring></argsstring>
+        <name>_cur_test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="100" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_collector_output_1ad1a7502a31c58d93f0d88d7a679ab24d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::CollectorOutput::finished</definition>
+        <argsstring>(int tests, const Time &amp;time)</argsstring>
+        <name>finished</name>
+        <reimplements refid="class_test_1_1_output_1aeff8af8326a8c54a38199f76837f860a">finished</reimplements>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when testing is finished.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of tests in all suites. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total elapsed time for all tests. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_collector_output_1a1d4c1eb5920fa96fb8dc8fe2eb0c336e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::CollectorOutput::suite_start</definition>
+        <argsstring>(int tests, const std::string &amp;name)</argsstring>
+        <name>suite_start</name>
+        <reimplements refid="class_test_1_1_output_1a7022c32c5a1577b10b93d3942746f17d">suite_start</reimplements>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a suite is entered.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of tests in this suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the suite. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_collector_output_1a50c041adf1de3e296b50b1611e55a407" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::CollectorOutput::suite_end</definition>
+        <argsstring>(int tests, const std::string &amp;name, const Time &amp;time)</argsstring>
+        <name>suite_end</name>
+        <reimplements refid="class_test_1_1_output_1a6dbf4c0adb2bd4a7364c629179f788a6">suite_end</reimplements>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a suite is finished.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of tests in this suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total elapsed time for all tests in this suite. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_collector_output_1a0ac72b71fac68305ceabb1c516760eb0" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::CollectorOutput::test_start</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>test_start</name>
+        <reimplements refid="class_test_1_1_output_1a52d43b97609febc5abbc6da9aa0abac2">test_start</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a tests is executed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the test function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="54" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_collector_output_1a08aa350c9a0ce221d03f6841a0b5d633" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::CollectorOutput::test_end</definition>
+        <argsstring>(const std::string &amp;name, bool ok, const Time &amp;time)</argsstring>
+        <name>test_end</name>
+        <reimplements refid="class_test_1_1_output_1a3796943e3b56373492c957212a21454e">test_end</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ok</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a test if finished, regardless if an assertment was issued.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the test function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ok</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the test was successful; false otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution time. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_collector_output_1a96b61d5e53c3dfa1b98747bb582aa4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::CollectorOutput::assertment</definition>
+        <argsstring>(const Source &amp;s)</argsstring>
+        <name>assertment</name>
+        <reimplements refid="class_test_1_1_output_1a48c31f0baa7627d81939be840c9a7f65">assertment</reimplements>
+        <param>
+          <type>const <ref refid="class_test_1_1_source" kindref="compound">Source</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when an assertment is issued.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Assert point information. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="57" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_test_1_1_collector_output_1a852bde8f194b4f81ca36f222257adc53" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::CollectorOutput::CollectorOutput</definition>
+        <argsstring>()</argsstring>
+        <name>CollectorOutput</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="96" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Collector output. </para>    </briefdescription>
+    <detaileddescription>
+<para>Base class for output handlers that need to report status when all tests have executed. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="2">
+        <label>Test::HtmlOutput</label>
+        <link refid="class_test_1_1_html_output"/>
+        <childnode refid="0" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>Test::CollectorOutput</label>
+        <link refid="class_test_1_1_collector_output"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>Test::Time</label>
+        <link refid="class_test_1_1_time"/>
+      </node>
+      <node id="4">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="3">
+        <label>Test::CollectorOutput</label>
+        <link refid="class_test_1_1_collector_output"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>_total_time</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-collectoroutput.h" line="48" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="47" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_collector_output_1a02c3242939bfc525a1b7baf247fa8881" prot="private" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>_cur_suite</name></member>
+      <member refid="class_test_1_1_collector_output_1ae146f7c104d9d0324b58373c12716549" prot="private" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>_cur_test</name></member>
+      <member refid="class_test_1_1_collector_output_1a9f79c0fa5abf1d6248a85e7ae4701c5f" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>_suites</name></member>
+      <member refid="class_test_1_1_collector_output_1a7d8ec4ad0316b57aa96ae50a548c94d2" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>_total_errors</name></member>
+      <member refid="class_test_1_1_collector_output_1ace6c1fc02a6ac7a6c15b982b96f5f68f" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>_total_tests</name></member>
+      <member refid="class_test_1_1_collector_output_1af1e014fde4bf5b4e6c89de748630aa79" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>_total_time</name></member>
+      <member refid="class_test_1_1_collector_output_1a96b61d5e53c3dfa1b98747bb582aa4f3" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>assertment</name></member>
+      <member refid="class_test_1_1_collector_output_1a852bde8f194b4f81ca36f222257adc53" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>CollectorOutput</name></member>
+      <member refid="class_test_1_1_collector_output_1ad1a7502a31c58d93f0d88d7a679ab24d" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>finished</name></member>
+      <member refid="class_test_1_1_output_1aa66480875d088befc6c23ecfd1107cc1" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>initialize</name></member>
+      <member refid="class_test_1_1_output_1acbffb6b160039caafd3e9ac11cace65c" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>Output</name></member>
+      <member refid="class_test_1_1_collector_output_1a1921f35e0da596bd75da5824afe872c9" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>Sources</name></member>
+      <member refid="class_test_1_1_collector_output_1a50c041adf1de3e296b50b1611e55a407" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>suite_end</name></member>
+      <member refid="class_test_1_1_collector_output_1a1d4c1eb5920fa96fb8dc8fe2eb0c336e" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>suite_start</name></member>
+      <member refid="class_test_1_1_collector_output_1a0879ce3b51f1e3b3fe14aa5665dccd30" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>Suites</name></member>
+      <member refid="class_test_1_1_collector_output_1a08aa350c9a0ce221d03f6841a0b5d633" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>test_end</name></member>
+      <member refid="class_test_1_1_collector_output_1a0ac72b71fac68305ceabb1c516760eb0" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>test_start</name></member>
+      <member refid="class_test_1_1_collector_output_1a54a7b7c9b6d181102bc8934190b06e86" prot="protected" virt="non-virtual"><scope>Test::CollectorOutput</scope><name>Tests</name></member>
+      <member refid="class_test_1_1_output_1a838de994609ac3d13b7d7cd389f56090" prot="public" virt="virtual"><scope>Test::CollectorOutput</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__mem__methods" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_mem_methods</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1a19aee06ad5c1c7041f55725b6adb2b18" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* sqlite3_mem_methods::xMalloc) (int)</definition>
+        <argsstring>)(int)</argsstring>
+        <name>xMalloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1583" column="1" bodyfile="sqlite3.h" bodystart="1583" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1a17d4fe3177f86bd7b559ecadaa343ee8" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_mem_methods::xFree) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xFree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1584" column="1" bodyfile="sqlite3.h" bodystart="1584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1a82ef8b50d6b9920c1dadb3257cf36a3a" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* sqlite3_mem_methods::xRealloc) (void *, int)</definition>
+        <argsstring>)(void *, int)</argsstring>
+        <name>xRealloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1585" column="1" bodyfile="sqlite3.h" bodystart="1585" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1a703ec736e9ce21fd43b9602bcd07fa8e" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mem_methods::xSize) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1586" column="1" bodyfile="sqlite3.h" bodystart="1586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1aaf22c6bca12dc6a3f5851e2b6b59835d" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mem_methods::xRoundup) (int)</definition>
+        <argsstring>)(int)</argsstring>
+        <name>xRoundup</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1587" column="1" bodyfile="sqlite3.h" bodystart="1587" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1a870eddbe27d9062ed2fb49ba13233501" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mem_methods::xInit) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1588" column="1" bodyfile="sqlite3.h" bodystart="1588" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1ae3b1f92553e714484515409eefec5c2f" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_mem_methods::xShutdown) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xShutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1589" column="1" bodyfile="sqlite3.h" bodystart="1589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mem__methods_1a390f66d08d5a480544e919f64d7713de" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_mem_methods::pAppData</definition>
+        <argsstring></argsstring>
+        <name>pAppData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1590" column="1" bodyfile="sqlite3.h" bodystart="1590" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="1582" column="1" bodyfile="sqlite3.h" bodystart="1582" bodyend="1591"/>
+    <listofallmembers>
+      <member refid="structsqlite3__mem__methods_1a390f66d08d5a480544e919f64d7713de" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>pAppData</name></member>
+      <member refid="structsqlite3__mem__methods_1a17d4fe3177f86bd7b559ecadaa343ee8" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>xFree</name></member>
+      <member refid="structsqlite3__mem__methods_1a870eddbe27d9062ed2fb49ba13233501" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>xInit</name></member>
+      <member refid="structsqlite3__mem__methods_1a19aee06ad5c1c7041f55725b6adb2b18" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>xMalloc</name></member>
+      <member refid="structsqlite3__mem__methods_1a82ef8b50d6b9920c1dadb3257cf36a3a" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>xRealloc</name></member>
+      <member refid="structsqlite3__mem__methods_1aaf22c6bca12dc6a3f5851e2b6b59835d" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>xRoundup</name></member>
+      <member refid="structsqlite3__mem__methods_1ae3b1f92553e714484515409eefec5c2f" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>xShutdown</name></member>
+      <member refid="structsqlite3__mem__methods_1a703ec736e9ce21fd43b9602bcd07fa8e" prot="public" virt="non-virtual"><scope>sqlite3_mem_methods</scope><name>xSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

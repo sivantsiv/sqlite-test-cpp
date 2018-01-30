@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__vtab" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_vtab</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__vtab_1a4ef8198ca611b73a9b23054dd1e91e2b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="structsqlite3__module" kindref="compound">sqlite3_module</ref> *</type>
+        <definition>const sqlite3_module* sqlite3_vtab::pModule</definition>
+        <argsstring></argsstring>
+        <name>pModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6324" column="1" bodyfile="sqlite3.h" bodystart="6324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vtab_1ab3c80d385849bdd82363a0df7d6fcba8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_vtab::nRef</definition>
+        <argsstring></argsstring>
+        <name>nRef</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6325" column="1" bodyfile="sqlite3.h" bodystart="6325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vtab_1afc50eadfdd7cef876633d460deba48d6" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* sqlite3_vtab::zErrMsg</definition>
+        <argsstring></argsstring>
+        <name>zErrMsg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6326" column="1" bodyfile="sqlite3.h" bodystart="6326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="85">
+        <label>sqlite3_vtab</label>
+        <link refid="structsqlite3__vtab"/>
+        <childnode refid="86" relation="usage">
+          <edgelabel>pModule</edgelabel>
+        </childnode>
+      </node>
+      <node id="86">
+        <label>sqlite3_module</label>
+        <link refid="structsqlite3__module"/>
+      </node>
+    </collaborationgraph>
+    <location file="sqlite3.h" line="6323" column="1" bodyfile="sqlite3.h" bodystart="6323" bodyend="6328"/>
+    <listofallmembers>
+      <member refid="structsqlite3__vtab_1ab3c80d385849bdd82363a0df7d6fcba8" prot="public" virt="non-virtual"><scope>sqlite3_vtab</scope><name>nRef</name></member>
+      <member refid="structsqlite3__vtab_1a4ef8198ca611b73a9b23054dd1e91e2b" prot="public" virt="non-virtual"><scope>sqlite3_vtab</scope><name>pModule</name></member>
+      <member refid="structsqlite3__vtab_1afc50eadfdd7cef876633d460deba48d6" prot="public" virt="non-virtual"><scope>sqlite3_vtab</scope><name>zErrMsg</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

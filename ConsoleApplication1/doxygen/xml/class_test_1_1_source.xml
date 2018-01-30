@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_source" kind="class" language="C++" prot="public">
+    <compoundname>Test::Source</compoundname>
+    <includes refid="cpptest-source_8h" local="no">cpptest-source.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_test_1_1_source_1a7de7b0dd89982bdae285f3a3b6197f9c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class Suite</definition>
+        <argsstring></argsstring>
+        <name>Suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="44" column="1" bodyfile="cpptest-source.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_1_1_source_1ab7bf23499552158ab8d2becb74ba0517" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int Test::Source::_line</definition>
+        <argsstring></argsstring>
+        <name>_line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="57" column="1" bodyfile="cpptest-source.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_source_1a600d0128d2c066e9c6d7a1e42011d567" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::Source::_file</definition>
+        <argsstring></argsstring>
+        <name>_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="58" column="1" bodyfile="cpptest-source.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_source_1a6208e0416ea5dc1eb48083aaaa5c96b0" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::Source::_msg</definition>
+        <argsstring></argsstring>
+        <name>_msg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="59" column="1" bodyfile="cpptest-source.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_source_1a617143c14a1a394e15e64901a276ef85" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::Source::_suite</definition>
+        <argsstring></argsstring>
+        <name>_suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="60" column="1" bodyfile="cpptest-source.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_source_1a5b142b3fb3dcc98f16a8ee8f79e6816a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::Source::_test</definition>
+        <argsstring></argsstring>
+        <name>_test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="61" column="1" bodyfile="cpptest-source.h" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_source_1abe0f303fe92270aa12a4a749ae0395ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::Source::Source</definition>
+        <argsstring>()</argsstring>
+        <name>Source</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_source_1ac764beb685a574b81527d0f90ae9e428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::Source::Source</definition>
+        <argsstring>(const char *file, unsigned int line, const char *msg)</argsstring>
+        <name>Source</name>
+        <param>
+          <type>const char *</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>line</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="48" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_source_1a5244b21c0aae95eab1c87f69ab108a2d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; Test::Source::file</definition>
+        <argsstring>() const</argsstring>
+        <name>file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_source_1ae3da8b65a4a950a4be76bae056dbb5ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int Test::Source::line</definition>
+        <argsstring>() const</argsstring>
+        <name>line</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_source_1add142dd87973b9b16dfad92ba1efbe9c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; Test::Source::message</definition>
+        <argsstring>() const</argsstring>
+        <name>message</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_source_1afb6c58ea7325e7082539f4e1cefc4508" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; Test::Source::suite</definition>
+        <argsstring>() const</argsstring>
+        <name>suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="53" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_source_1a7f4861f56448910101a61d4e3c1c471f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; Test::Source::test</definition>
+        <argsstring>() const</argsstring>
+        <name>test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-source.h" line="54" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Assertment source information. </para>    </briefdescription>
+    <detaileddescription>
+<para>Contains information about an assertment point. </para>    </detaileddescription>
+    <location file="cpptest-source.h" line="43" column="1" bodyfile="cpptest-source.h" bodystart="42" bodyend="62"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_source_1a600d0128d2c066e9c6d7a1e42011d567" prot="private" virt="non-virtual"><scope>Test::Source</scope><name>_file</name></member>
+      <member refid="class_test_1_1_source_1ab7bf23499552158ab8d2becb74ba0517" prot="private" virt="non-virtual"><scope>Test::Source</scope><name>_line</name></member>
+      <member refid="class_test_1_1_source_1a6208e0416ea5dc1eb48083aaaa5c96b0" prot="private" virt="non-virtual"><scope>Test::Source</scope><name>_msg</name></member>
+      <member refid="class_test_1_1_source_1a617143c14a1a394e15e64901a276ef85" prot="private" virt="non-virtual"><scope>Test::Source</scope><name>_suite</name></member>
+      <member refid="class_test_1_1_source_1a5b142b3fb3dcc98f16a8ee8f79e6816a" prot="private" virt="non-virtual"><scope>Test::Source</scope><name>_test</name></member>
+      <member refid="class_test_1_1_source_1a5244b21c0aae95eab1c87f69ab108a2d" prot="public" virt="non-virtual"><scope>Test::Source</scope><name>file</name></member>
+      <member refid="class_test_1_1_source_1ae3da8b65a4a950a4be76bae056dbb5ee" prot="public" virt="non-virtual"><scope>Test::Source</scope><name>line</name></member>
+      <member refid="class_test_1_1_source_1add142dd87973b9b16dfad92ba1efbe9c" prot="public" virt="non-virtual"><scope>Test::Source</scope><name>message</name></member>
+      <member refid="class_test_1_1_source_1abe0f303fe92270aa12a4a749ae0395ef" prot="public" virt="non-virtual"><scope>Test::Source</scope><name>Source</name></member>
+      <member refid="class_test_1_1_source_1ac764beb685a574b81527d0f90ae9e428" prot="public" virt="non-virtual"><scope>Test::Source</scope><name>Source</name></member>
+      <member refid="class_test_1_1_source_1a7de7b0dd89982bdae285f3a3b6197f9c" prot="private" virt="non-virtual"><scope>Test::Source</scope><name>Suite</name></member>
+      <member refid="class_test_1_1_source_1afb6c58ea7325e7082539f4e1cefc4508" prot="public" virt="non-virtual"><scope>Test::Source</scope><name>suite</name></member>
+      <member refid="class_test_1_1_source_1a7f4861f56448910101a61d4e3c1c471f" prot="public" virt="non-virtual"><scope>Test::Source</scope><name>test</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

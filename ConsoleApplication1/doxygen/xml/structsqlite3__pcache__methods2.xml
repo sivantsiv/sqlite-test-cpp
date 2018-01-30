@@ -1,0 +1,211 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__pcache__methods2" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_pcache_methods2</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a03b27be6c7cb8f1d2662c454cbe58483" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_pcache_methods2::iVersion</definition>
+        <argsstring></argsstring>
+        <name>iVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7561" column="1" bodyfile="sqlite3.h" bodystart="7561" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1aee83131f16bb88218d7b0339854719d6" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_pcache_methods2::pArg</definition>
+        <argsstring></argsstring>
+        <name>pArg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7562" column="1" bodyfile="sqlite3.h" bodystart="7562" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a21f7fdd82d029d3b0567c573c012adfc" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_pcache_methods2::xInit) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7563" column="1" bodyfile="sqlite3.h" bodystart="7563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a4285fc03adf01cbd3283644a1072ffef" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_pcache_methods2::xShutdown) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xShutdown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7564" column="1" bodyfile="sqlite3.h" bodystart="7564" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1aa8babc280d7ba89c6c279301d5a36d69" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a096c453d937d51f7926d7d31c8e0bd2f" kindref="member">sqlite3_pcache</ref> *(*</type>
+        <definition>sqlite3_pcache*(* sqlite3_pcache_methods2::xCreate) (int szPage, int szExtra, int bPurgeable)</definition>
+        <argsstring>)(int szPage, int szExtra, int bPurgeable)</argsstring>
+        <name>xCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7565" column="1" bodyfile="sqlite3.h" bodystart="7565" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a76de689adc20fdbfef427b1c7ae1bcea" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_pcache_methods2::xCachesize) (sqlite3_pcache *, int nCachesize)</definition>
+        <argsstring>)(sqlite3_pcache *, int nCachesize)</argsstring>
+        <name>xCachesize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7566" column="1" bodyfile="sqlite3.h" bodystart="7566" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a16b85f7889b050702c739eccf2f0c036" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_pcache_methods2::xPagecount) (sqlite3_pcache *)</definition>
+        <argsstring>)(sqlite3_pcache *)</argsstring>
+        <name>xPagecount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7567" column="1" bodyfile="sqlite3.h" bodystart="7567" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a6283d91a6ad5037fad33003c2198c9f7" prot="public" static="no" mutable="no">
+        <type><ref refid="structsqlite3__pcache__page" kindref="compound">sqlite3_pcache_page</ref> *(*</type>
+        <definition>sqlite3_pcache_page*(* sqlite3_pcache_methods2::xFetch) (sqlite3_pcache *, unsigned key, int createFlag)</definition>
+        <argsstring>)(sqlite3_pcache *, unsigned key, int createFlag)</argsstring>
+        <name>xFetch</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7568" column="1" bodyfile="sqlite3.h" bodystart="7568" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a8fcb4ba48106aac8dfff247baea06e1a" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_pcache_methods2::xUnpin) (sqlite3_pcache *, sqlite3_pcache_page *, int discard)</definition>
+        <argsstring>)(sqlite3_pcache *, sqlite3_pcache_page *, int discard)</argsstring>
+        <name>xUnpin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7569" column="1" bodyfile="sqlite3.h" bodystart="7569" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1ad5b7609bdc0d2ae80325f7925b76c0af" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_pcache_methods2::xRekey) (sqlite3_pcache *, sqlite3_pcache_page *, unsigned oldKey, unsigned newKey)</definition>
+        <argsstring>)(sqlite3_pcache *, sqlite3_pcache_page *, unsigned oldKey, unsigned newKey)</argsstring>
+        <name>xRekey</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7570" column="1" bodyfile="sqlite3.h" bodystart="7570" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a711d60b1895622a10186a2894cef1383" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_pcache_methods2::xTruncate) (sqlite3_pcache *, unsigned iLimit)</definition>
+        <argsstring>)(sqlite3_pcache *, unsigned iLimit)</argsstring>
+        <name>xTruncate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7572" column="1" bodyfile="sqlite3.h" bodystart="7572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a17a43db31d015c29e44d68c752682365" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_pcache_methods2::xDestroy) (sqlite3_pcache *)</definition>
+        <argsstring>)(sqlite3_pcache *)</argsstring>
+        <name>xDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7573" column="1" bodyfile="sqlite3.h" bodystart="7573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__methods2_1a225971a193ff429d9f1339aca39c7755" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_pcache_methods2::xShrink) (sqlite3_pcache *)</definition>
+        <argsstring>)(sqlite3_pcache *)</argsstring>
+        <name>xShrink</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7574" column="1" bodyfile="sqlite3.h" bodystart="7574" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="72">
+        <label>sqlite3_pcache_methods2</label>
+        <link refid="structsqlite3__pcache__methods2"/>
+        <childnode refid="73" relation="usage">
+          <edgelabel>xFetch</edgelabel>
+        </childnode>
+      </node>
+      <node id="73">
+        <label>sqlite3_pcache_page</label>
+        <link refid="structsqlite3__pcache__page"/>
+      </node>
+    </collaborationgraph>
+    <location file="sqlite3.h" line="7560" column="1" bodyfile="sqlite3.h" bodystart="7560" bodyend="7575"/>
+    <listofallmembers>
+      <member refid="structsqlite3__pcache__methods2_1a03b27be6c7cb8f1d2662c454cbe58483" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>iVersion</name></member>
+      <member refid="structsqlite3__pcache__methods2_1aee83131f16bb88218d7b0339854719d6" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>pArg</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a76de689adc20fdbfef427b1c7ae1bcea" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xCachesize</name></member>
+      <member refid="structsqlite3__pcache__methods2_1aa8babc280d7ba89c6c279301d5a36d69" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xCreate</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a17a43db31d015c29e44d68c752682365" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xDestroy</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a6283d91a6ad5037fad33003c2198c9f7" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xFetch</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a21f7fdd82d029d3b0567c573c012adfc" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xInit</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a16b85f7889b050702c739eccf2f0c036" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xPagecount</name></member>
+      <member refid="structsqlite3__pcache__methods2_1ad5b7609bdc0d2ae80325f7925b76c0af" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xRekey</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a225971a193ff429d9f1339aca39c7755" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xShrink</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a4285fc03adf01cbd3283644a1072ffef" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xShutdown</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a711d60b1895622a10186a2894cef1383" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xTruncate</name></member>
+      <member refid="structsqlite3__pcache__methods2_1a8fcb4ba48106aac8dfff247baea06e1a" prot="public" virt="non-virtual"><scope>sqlite3_pcache_methods2</scope><name>xUnpin</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

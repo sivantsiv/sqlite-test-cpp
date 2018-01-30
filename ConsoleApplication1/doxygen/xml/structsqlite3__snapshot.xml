@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__snapshot" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_snapshot</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__snapshot_1aeed328b50a9580e9a91d0bf10612be4e" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char sqlite3_snapshot::hidden[48]</definition>
+        <argsstring>[48]</argsstring>
+        <name>hidden</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8573" column="1" bodyfile="sqlite3.h" bodystart="8573" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="8572" column="1" bodyfile="sqlite3.h" bodystart="8572" bodyend="8574"/>
+    <listofallmembers>
+      <member refid="structsqlite3__snapshot_1aeed328b50a9580e9a91d0bf10612be4e" prot="public" virt="non-virtual"><scope>sqlite3_snapshot</scope><name>hidden</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

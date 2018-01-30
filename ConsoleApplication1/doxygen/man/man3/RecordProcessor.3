@@ -1,0 +1,74 @@
+.TH "RecordProcessor" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RecordProcessor
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RecordProcessor\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRecordProcessor\fP ()"
+.br
+.ti -1c
+.RI "\fBRecordProcessor\fP (const char *filename)"
+.br
+.ti -1c
+.RI "bool \fBcreateTable\fP ()"
+.br
+.ti -1c
+.RI "bool \fBdeleteTable\fP ()"
+.br
+.ti -1c
+.RI "bool \fBinsertRecord\fP (const char *sql)"
+.br
+.ti -1c
+.RI "\fBRecords\fP & \fBselectRecord\fP (const char *sql)"
+.br
+.ti -1c
+.RI "\fB~RecordProcessor\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 17 of file RecordProcessor\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RecordProcessor::RecordProcessor ()"
+
+.PP
+Definition at line 67 of file RecordProcessor\&.cpp\&.
+.SS "RecordProcessor::RecordProcessor (const char * filename)"
+
+.PP
+Definition at line 84 of file RecordProcessor\&.cpp\&.
+.SS "RecordProcessor::~RecordProcessor ()"
+
+.PP
+Definition at line 180 of file RecordProcessor\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool RecordProcessor::createTable ()"
+
+.PP
+Definition at line 100 of file RecordProcessor\&.cpp\&.
+.SS "bool RecordProcessor::deleteTable ()"
+
+.PP
+Definition at line 123 of file RecordProcessor\&.cpp\&.
+.SS "bool RecordProcessor::insertRecord (const char * sql)"
+
+.PP
+Definition at line 143 of file RecordProcessor\&.cpp\&.
+.SS "\fBRecords\fP & RecordProcessor::selectRecord (const char * sql)"
+
+.PP
+Definition at line 159 of file RecordProcessor\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

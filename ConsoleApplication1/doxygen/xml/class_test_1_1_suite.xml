@@ -1,0 +1,496 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_suite" kind="class" language="C++" prot="public">
+    <compoundname>Test::Suite</compoundname>
+    <derivedcompoundref refid="classdb_test" prot="public" virt="non-virtual">dbTest</derivedcompoundref>
+    <includes refid="cpptest-suite_8h" local="no">cpptest-suite.h</includes>
+    <innerclass refid="struct_test_1_1_suite_1_1_data" prot="private">Test::Suite::Data</innerclass>
+      <sectiondef kind="protected-type">
+      <memberdef kind="typedef" id="class_test_1_1_suite_1a87c40a9c763fc3221bee0e70c431038f" prot="protected" static="no">
+        <type>void(Suite::*</type>
+        <definition>typedef void(Suite::* Test::Suite::Func) ()</definition>
+        <argsstring>)()</argsstring>
+        <name>Func</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pointer to a test function. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="65" column="1" bodyfile="cpptest-suite.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_test_1_1_suite_1a2d7e4d50aeefc72709195283d42de952" prot="private" static="no">
+        <type>std::list&lt; Data &gt;</type>
+        <definition>typedef std::list&lt;Data&gt; Test::Suite::Tests</definition>
+        <argsstring></argsstring>
+        <name>Tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="97" column="1" bodyfile="cpptest-suite.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="class_test_1_1_suite_1a0c7124064c71bd5f45459ece49f9a73b" prot="private" static="no">
+        <type>std::list&lt; <ref refid="class_test_1_1_suite" kindref="compound">Suite</ref> * &gt;</type>
+        <definition>typedef std::list&lt;Suite*&gt; Test::Suite::Suites</definition>
+        <argsstring></argsstring>
+        <name>Suites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="98" column="1" bodyfile="cpptest-suite.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_test_1_1_suite_1a843435d7ee79d23ed13e6eec5c7ac6bb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct DoRun</definition>
+        <argsstring></argsstring>
+        <name>DoRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="82" column="1" bodyfile="cpptest-suite.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_test_1_1_suite_1ab4730d33c1241aba407b71f8eafb7bcc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct ExecTests</definition>
+        <argsstring></argsstring>
+        <name>ExecTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="83" column="1" bodyfile="cpptest-suite.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_test_1_1_suite_1a901d2d72cc93e087c94d99680f65fa8e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct SubSuiteTests</definition>
+        <argsstring></argsstring>
+        <name>SubSuiteTests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="84" column="1" bodyfile="cpptest-suite.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="friend" id="class_test_1_1_suite_1a5933776e455e5bd9ad1d4a8b1c591aa2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct SubSuiteTime</definition>
+        <argsstring></argsstring>
+        <name>SubSuiteTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="85" column="1" bodyfile="cpptest-suite.h" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_1_1_suite_1aeb807b97c3cc4ec60c126a8979e5f294" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::Suite::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="100" column="1" bodyfile="cpptest-suite.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_suite_1adf574ab37581edc2f7e218d0e67fbc07" prot="private" static="no" mutable="no">
+        <type>const std::string *</type>
+        <definition>const std::string* Test::Suite::_cur_test</definition>
+        <argsstring></argsstring>
+        <name>_cur_test</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="101" column="1" bodyfile="cpptest-suite.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_suite_1a5ca64a360a04bdc746d66dddfff1b65b" prot="private" static="no" mutable="no">
+        <type>Suites</type>
+        <definition>Suites Test::Suite::_suites</definition>
+        <argsstring></argsstring>
+        <name>_suites</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="102" column="1" bodyfile="cpptest-suite.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_suite_1ac1780d36940ef248d6fa1f7bb0efa3be" prot="private" static="no" mutable="no">
+        <type>Tests</type>
+        <definition>Tests Test::Suite::_tests</definition>
+        <argsstring></argsstring>
+        <name>_tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="103" column="1" bodyfile="cpptest-suite.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_suite_1a04984d016caef584812f61488cb1fc5b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_output" kindref="compound">Output</ref> *</type>
+        <definition>Output* Test::Suite::_output</definition>
+        <argsstring></argsstring>
+        <name>_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="104" column="1" bodyfile="cpptest-suite.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_suite_1a0cefa605e9dec5e1c0b8d918e1490b83" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Test::Suite::_result</definition>
+        <argsstring></argsstring>
+        <name>_result</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="105" column="1" bodyfile="cpptest-suite.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_suite_1a62f4e03e780f2459d4782e6ed2052b29" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Test::Suite::_success</definition>
+        <argsstring></argsstring>
+        <name>_success</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="106" column="1" bodyfile="cpptest-suite.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_suite_1a7220c98179d6d7a13a26e2c3d68f0c95" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Test::Suite::_continue</definition>
+        <argsstring></argsstring>
+        <name>_continue</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="107" column="1" bodyfile="cpptest-suite.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_suite_1a8cb51a002cf4e675820f91fe03ec9117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::Suite::Suite</definition>
+        <argsstring>()</argsstring>
+        <name>Suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a2396d55bb8f9277e19dfdd4fd35421ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual Test::Suite::~Suite</definition>
+        <argsstring>()</argsstring>
+        <name>~Suite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a0237b63fc694ecb133d023cf2d6ab271" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Test::Suite::add</definition>
+        <argsstring>(std::auto_ptr&lt; Suite &gt; suite)</argsstring>
+        <name>add</name>
+        <param>
+          <type>std::auto_ptr&lt; <ref refid="class_test_1_1_suite" kindref="compound">Suite</ref> &gt;</type>
+          <declname>suite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="58" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1ad17746e218da79c537bc9d21e389f570" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Test::Suite::run</definition>
+        <argsstring>(Output &amp;output, bool cont_after_fail=true)</argsstring>
+        <name>run</name>
+        <param>
+          <type><ref refid="class_test_1_1_output" kindref="compound">Output</ref> &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cont_after_fail</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="60" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_test_1_1_suite_1a3e2289069402291cdb100483a3247c16" prot="protected" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Test::Suite::continue_after_failure</definition>
+        <argsstring>() const</argsstring>
+        <name>continue_after_failure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="67" column="1" bodyfile="cpptest-suite.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1aa022f93f2bc7c0ca4f8bf0bb94758226" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Suite::setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <reimplementedby refid="classdb_test_1aeefb6e8d64ee6e03da89cb5573d60b31">setup</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="69" column="1" bodyfile="cpptest-suite.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a2f2f180307180f8fdb0ca718a12047d0" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Suite::tear_down</definition>
+        <argsstring>()</argsstring>
+        <name>tear_down</name>
+        <reimplementedby refid="classdb_test_1a1fa8de6f80f7578356b0f8feb8dcdd8f">tear_down</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="70" column="1" bodyfile="cpptest-suite.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a11e542d1d45905b817b00c35660700b9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Test::Suite::register_test</definition>
+        <argsstring>(Func func, const std::string &amp;name)</argsstring>
+        <name>register_test</name>
+        <param>
+          <type><ref refid="class_test_1_1_suite_1a87c40a9c763fc3221bee0e70c431038f" kindref="member">Func</ref></type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a1851ad75aed6141a19a06eeeb0fe0d3c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Test::Suite::assertment</definition>
+        <argsstring>(Source s)</argsstring>
+        <name>assertment</name>
+        <param>
+          <type><ref refid="class_test_1_1_source" kindref="compound">Source</ref></type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="73" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_test_1_1_suite_1a60fab043851acb59f3130b183a2d2bb6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Test::Suite::do_run</definition>
+        <argsstring>(Output *os, bool cont_after_fail)</argsstring>
+        <name>do_run</name>
+        <param>
+          <type><ref refid="class_test_1_1_output" kindref="compound">Output</ref> *</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>cont_after_fail</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="109" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a9c75b397554a17a152734e27da7c1211" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Test::Suite::total_tests</definition>
+        <argsstring>() const</argsstring>
+        <name>total_tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a8e566bc7174c0b88388b88d98838efde" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time Test::Suite::total_time</definition>
+        <argsstring>(bool recursive) const</argsstring>
+        <name>total_time</name>
+        <param>
+          <type>bool</type>
+          <declname>recursive</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1a5ca258bbc4a71458ff63dc9a8b3a217c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::Suite::Suite</definition>
+        <argsstring>(const Suite &amp;)</argsstring>
+        <name>Suite</name>
+        <param>
+          <type>const <ref refid="class_test_1_1_suite" kindref="compound">Suite</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="115" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_suite_1ad124c1b8570aa49e2bfddc5693f392a6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_test_1_1_suite" kindref="compound">Suite</ref> &amp;</type>
+        <definition>Suite&amp; Test::Suite::operator=</definition>
+        <argsstring>(const Suite &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_test_1_1_suite" kindref="compound">Suite</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-suite.h" line="116" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Unit testing suite. </para>    </briefdescription>
+    <detaileddescription>
+<para>Base class for all suites. Derive from this class to create own test suites.</para><para>Test functions in derived classes are registered as tests using the <ref refid="cpptest-suite_8h_1abe8c3e0a2cf3893ebc1c265264ed9cb8" kindref="member">TEST_ADD(func)</ref>. Testing is started by <ref refid="class_test_1_1_suite_1ad17746e218da79c537bc9d21e389f570" kindref="member">run()</ref>. Note that suites may be embedded in other suites using <ref refid="class_test_1_1_suite_1a0237b63fc694ecb133d023cf2d6ab271" kindref="member">add()</ref>. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="92">
+        <label>dbTest</label>
+        <link refid="classdb_test"/>
+        <childnode refid="91" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>Test::Suite</label>
+        <link refid="class_test_1_1_suite"/>
+      </node>
+    </inheritancegraph>
+    <location file="cpptest-suite.h" line="53" column="1" bodyfile="cpptest-suite.h" bodystart="52" bodyend="117"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_suite_1a7220c98179d6d7a13a26e2c3d68f0c95" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_continue</name></member>
+      <member refid="class_test_1_1_suite_1adf574ab37581edc2f7e218d0e67fbc07" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_cur_test</name></member>
+      <member refid="class_test_1_1_suite_1aeb807b97c3cc4ec60c126a8979e5f294" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_name</name></member>
+      <member refid="class_test_1_1_suite_1a04984d016caef584812f61488cb1fc5b" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_output</name></member>
+      <member refid="class_test_1_1_suite_1a0cefa605e9dec5e1c0b8d918e1490b83" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_result</name></member>
+      <member refid="class_test_1_1_suite_1a62f4e03e780f2459d4782e6ed2052b29" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_success</name></member>
+      <member refid="class_test_1_1_suite_1a5ca64a360a04bdc746d66dddfff1b65b" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_suites</name></member>
+      <member refid="class_test_1_1_suite_1ac1780d36940ef248d6fa1f7bb0efa3be" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>_tests</name></member>
+      <member refid="class_test_1_1_suite_1a0237b63fc694ecb133d023cf2d6ab271" prot="public" virt="non-virtual"><scope>Test::Suite</scope><name>add</name></member>
+      <member refid="class_test_1_1_suite_1a1851ad75aed6141a19a06eeeb0fe0d3c" prot="protected" virt="non-virtual"><scope>Test::Suite</scope><name>assertment</name></member>
+      <member refid="class_test_1_1_suite_1a3e2289069402291cdb100483a3247c16" prot="protected" virt="non-virtual"><scope>Test::Suite</scope><name>continue_after_failure</name></member>
+      <member refid="class_test_1_1_suite_1a60fab043851acb59f3130b183a2d2bb6" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>do_run</name></member>
+      <member refid="class_test_1_1_suite_1a843435d7ee79d23ed13e6eec5c7ac6bb" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>DoRun</name></member>
+      <member refid="class_test_1_1_suite_1ab4730d33c1241aba407b71f8eafb7bcc" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>ExecTests</name></member>
+      <member refid="class_test_1_1_suite_1a87c40a9c763fc3221bee0e70c431038f" prot="protected" virt="non-virtual"><scope>Test::Suite</scope><name>Func</name></member>
+      <member refid="class_test_1_1_suite_1ad124c1b8570aa49e2bfddc5693f392a6" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>operator=</name></member>
+      <member refid="class_test_1_1_suite_1a11e542d1d45905b817b00c35660700b9" prot="protected" virt="non-virtual"><scope>Test::Suite</scope><name>register_test</name></member>
+      <member refid="class_test_1_1_suite_1ad17746e218da79c537bc9d21e389f570" prot="public" virt="non-virtual"><scope>Test::Suite</scope><name>run</name></member>
+      <member refid="class_test_1_1_suite_1aa022f93f2bc7c0ca4f8bf0bb94758226" prot="protected" virt="virtual"><scope>Test::Suite</scope><name>setup</name></member>
+      <member refid="class_test_1_1_suite_1a901d2d72cc93e087c94d99680f65fa8e" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>SubSuiteTests</name></member>
+      <member refid="class_test_1_1_suite_1a5933776e455e5bd9ad1d4a8b1c591aa2" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>SubSuiteTime</name></member>
+      <member refid="class_test_1_1_suite_1a8cb51a002cf4e675820f91fe03ec9117" prot="public" virt="non-virtual"><scope>Test::Suite</scope><name>Suite</name></member>
+      <member refid="class_test_1_1_suite_1a5ca258bbc4a71458ff63dc9a8b3a217c" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>Suite</name></member>
+      <member refid="class_test_1_1_suite_1a0c7124064c71bd5f45459ece49f9a73b" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>Suites</name></member>
+      <member refid="class_test_1_1_suite_1a2f2f180307180f8fdb0ca718a12047d0" prot="protected" virt="virtual"><scope>Test::Suite</scope><name>tear_down</name></member>
+      <member refid="class_test_1_1_suite_1a2d7e4d50aeefc72709195283d42de952" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>Tests</name></member>
+      <member refid="class_test_1_1_suite_1a9c75b397554a17a152734e27da7c1211" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>total_tests</name></member>
+      <member refid="class_test_1_1_suite_1a8e566bc7174c0b88388b88d98838efde" prot="private" virt="non-virtual"><scope>Test::Suite</scope><name>total_time</name></member>
+      <member refid="class_test_1_1_suite_1a2396d55bb8f9277e19dfdd4fd35421ec" prot="public" virt="virtual"><scope>Test::Suite</scope><name>~Suite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

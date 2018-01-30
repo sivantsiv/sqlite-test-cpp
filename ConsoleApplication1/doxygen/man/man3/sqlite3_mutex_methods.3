@@ -1,0 +1,86 @@
+.TH "sqlite3_mutex_methods" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sqlite3_mutex_methods
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int(* \fBxMutexInit\fP )(void)"
+.br
+.ti -1c
+.RI "int(* \fBxMutexEnd\fP )(void)"
+.br
+.ti -1c
+.RI "\fBsqlite3_mutex\fP *(* \fBxMutexAlloc\fP )(int)"
+.br
+.ti -1c
+.RI "void(* \fBxMutexFree\fP )(\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "void(* \fBxMutexEnter\fP )(\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxMutexTry\fP )(\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "void(* \fBxMutexLeave\fP )(\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxMutexHeld\fP )(\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxMutexNotheld\fP )(\fBsqlite3_mutex\fP *)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 6852 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBsqlite3_mutex\fP*(* sqlite3_mutex_methods::xMutexAlloc) (int)"
+
+.PP
+Definition at line 6855 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mutex_methods::xMutexEnd) (void)"
+
+.PP
+Definition at line 6854 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_mutex_methods::xMutexEnter) (\fBsqlite3_mutex\fP *)"
+
+.PP
+Definition at line 6857 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_mutex_methods::xMutexFree) (\fBsqlite3_mutex\fP *)"
+
+.PP
+Definition at line 6856 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mutex_methods::xMutexHeld) (\fBsqlite3_mutex\fP *)"
+
+.PP
+Definition at line 6860 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mutex_methods::xMutexInit) (void)"
+
+.PP
+Definition at line 6853 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_mutex_methods::xMutexLeave) (\fBsqlite3_mutex\fP *)"
+
+.PP
+Definition at line 6859 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mutex_methods::xMutexNotheld) (\fBsqlite3_mutex\fP *)"
+
+.PP
+Definition at line 6861 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mutex_methods::xMutexTry) (\fBsqlite3_mutex\fP *)"
+
+.PP
+Definition at line 6858 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

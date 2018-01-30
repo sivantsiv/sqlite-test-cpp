@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__index__info_1_1sqlite3__index__constraint__usage" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_index_info::sqlite3_index_constraint_usage</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__index__info_1_1sqlite3__index__constraint__usage_1a2cbf680033c2937b3de226e091743a94" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::sqlite3_index_constraint_usage::argvIndex</definition>
+        <argsstring></argsstring>
+        <name>argvIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6221" column="1" bodyfile="sqlite3.h" bodystart="6221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1_1sqlite3__index__constraint__usage_1ad07fa17d30e4fb3abe23ceaf84edf0ef" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char sqlite3_index_info::sqlite3_index_constraint_usage::omit</definition>
+        <argsstring></argsstring>
+        <name>omit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6222" column="1" bodyfile="sqlite3.h" bodystart="6222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="6220" column="1" bodyfile="sqlite3.h" bodystart="6220" bodyend="6223"/>
+    <listofallmembers>
+      <member refid="structsqlite3__index__info_1_1sqlite3__index__constraint__usage_1a2cbf680033c2937b3de226e091743a94" prot="public" virt="non-virtual"><scope>sqlite3_index_info::sqlite3_index_constraint_usage</scope><name>argvIndex</name></member>
+      <member refid="structsqlite3__index__info_1_1sqlite3__index__constraint__usage_1ad07fa17d30e4fb3abe23ceaf84edf0ef" prot="public" virt="non-virtual"><scope>sqlite3_index_info::sqlite3_index_constraint_usage</scope><name>omit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__file" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_file</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__file_1adfc58b2d7514112375d7330e2881bc70" prot="public" static="no" mutable="no">
+        <type>const struct <ref refid="structsqlite3__io__methods" kindref="compound">sqlite3_io_methods</ref> *</type>
+        <definition>const struct sqlite3_io_methods* sqlite3_file::pMethods</definition>
+        <argsstring></argsstring>
+        <name>pMethods</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="668" column="1" bodyfile="sqlite3.h" bodystart="668" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="48">
+        <label>sqlite3_file</label>
+        <link refid="structsqlite3__file"/>
+        <childnode refid="49" relation="usage">
+          <edgelabel>pMethods</edgelabel>
+        </childnode>
+      </node>
+      <node id="49">
+        <label>sqlite3_io_methods</label>
+        <link refid="structsqlite3__io__methods"/>
+      </node>
+    </collaborationgraph>
+    <location file="sqlite3.h" line="667" column="1" bodyfile="sqlite3.h" bodystart="667" bodyend="669"/>
+    <listofallmembers>
+      <member refid="structsqlite3__file_1adfc58b2d7514112375d7330e2881bc70" prot="public" virt="non-virtual"><scope>sqlite3_file</scope><name>pMethods</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

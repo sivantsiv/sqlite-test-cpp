@@ -1,0 +1,27 @@
+Normally, assert macros issues an assert if the given expression, if any, fails (as defined by the macro). Assertments include information about the current test suite, test function, source file, source file line, and a message. The message is normally the offending expression, however, for macros ending in \+\_\+\+M\+SG it is possibly to supply a user defined message.
+
+{\bfseries General asserts}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{cpptest-assert_8h_a947ab44cc42369eb7cfe33f8a1e38e4b}{T\+E\+S\+T\+\_\+\+F\+A\+I\+L(msg)}}
+\end{DoxyItemize}
+
+{\bfseries Comparision asserts}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{cpptest-assert_8h_a29a763f14098f5574ae5c68291dc6ddd}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T(expr)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_ac612ede938734f9c8d898e05818882fb}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+S\+G(expr, msg)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_ae281f4d973e657b11691a97551f17dd1}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S(expected, got)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_ab8e9ce729f96abe74b76d98f9568a59c}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+S\+G(expected, got, msg)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+B\+J(expected, got)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_a9583b1709f4b9dfb3ff2849bfec5c885}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A(a, b, delta)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_afcd749452840bfde9be575ef22fcede0}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+S\+G(a, b, delta, msg)}}
+\end{DoxyItemize}
+
+{\bfseries Exception asserts}
+\begin{DoxyItemize}
+\item \mbox{\hyperlink{cpptest-assert_8h_a5174c5f93519d5726c8993b2f36d6ceb}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S(expr, x)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_a1ce6abe9e9134ce993840a648673e0f2}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+S\+G(expr, x, msg)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_a895af88056cd626a010136ac07b81d37}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G(expr)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_a052597a8fd7dbc40ba350c735c4517c5}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+S\+G(expr, msg)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_a885a5f6b6decac47414b4cc1a0a66425}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G(expr)}}
+\item \mbox{\hyperlink{cpptest-assert_8h_a758a47b613522a3d597c513786191ff9}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+S\+G(expr, msg)}} 
+\end{DoxyItemize}

@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__rtree__geometry" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_rtree_geometry</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__rtree__geometry_1a62fe439a49ed5b8628464c418f35f572" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_rtree_geometry::pContext</definition>
+        <argsstring></argsstring>
+        <name>pContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8791" column="1" bodyfile="sqlite3.h" bodystart="8791" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__geometry_1ada7b9eba82660e3321dd4c93526697c9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_rtree_geometry::nParam</definition>
+        <argsstring></argsstring>
+        <name>nParam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8792" column="1" bodyfile="sqlite3.h" bodystart="8792" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__geometry_1a0a22e4b810cb1b8f1af792fd50493002" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1ae9156ff58620c1ceae9391f1afabae1b" kindref="member">sqlite3_rtree_dbl</ref> *</type>
+        <definition>sqlite3_rtree_dbl* sqlite3_rtree_geometry::aParam</definition>
+        <argsstring></argsstring>
+        <name>aParam</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8793" column="1" bodyfile="sqlite3.h" bodystart="8793" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__geometry_1add62e1cd5faa6000c815104af3c540d0" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_rtree_geometry::pUser</definition>
+        <argsstring></argsstring>
+        <name>pUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8794" column="1" bodyfile="sqlite3.h" bodystart="8794" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__rtree__geometry_1ae9835a39924a75b33cce9f6b10e1813f" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_rtree_geometry::xDelUser) (void *)</definition>
+        <argsstring>)(void *)</argsstring>
+        <name>xDelUser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="8795" column="1" bodyfile="sqlite3.h" bodystart="8795" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="8790" column="1" bodyfile="sqlite3.h" bodystart="8790" bodyend="8796"/>
+    <listofallmembers>
+      <member refid="structsqlite3__rtree__geometry_1a0a22e4b810cb1b8f1af792fd50493002" prot="public" virt="non-virtual"><scope>sqlite3_rtree_geometry</scope><name>aParam</name></member>
+      <member refid="structsqlite3__rtree__geometry_1ada7b9eba82660e3321dd4c93526697c9" prot="public" virt="non-virtual"><scope>sqlite3_rtree_geometry</scope><name>nParam</name></member>
+      <member refid="structsqlite3__rtree__geometry_1a62fe439a49ed5b8628464c418f35f572" prot="public" virt="non-virtual"><scope>sqlite3_rtree_geometry</scope><name>pContext</name></member>
+      <member refid="structsqlite3__rtree__geometry_1add62e1cd5faa6000c815104af3c540d0" prot="public" virt="non-virtual"><scope>sqlite3_rtree_geometry</scope><name>pUser</name></member>
+      <member refid="structsqlite3__rtree__geometry_1ae9835a39924a75b33cce9f6b10e1813f" prot="public" virt="non-virtual"><scope>sqlite3_rtree_geometry</scope><name>xDelUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

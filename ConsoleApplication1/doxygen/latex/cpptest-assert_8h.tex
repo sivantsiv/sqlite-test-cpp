@@ -1,0 +1,584 @@
+\hypertarget{cpptest-assert_8h}{}\section{cpptest-\/assert.h File Reference}
+\label{cpptest-assert_8h}\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+{\ttfamily \#include $<$sstream$>$}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a947ab44cc42369eb7cfe33f8a1e38e4b}{T\+E\+S\+T\+\_\+\+F\+A\+IL}}(msg)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a29a763f14098f5574ae5c68291dc6ddd}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+RT}}(expr)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_ac612ede938734f9c8d898e05818882fb}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}}(expr,  msg)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_ae281f4d973e657b11691a97551f17dd1}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+LS}}(expected,  got)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+BJ}}(expected,  got)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_ab8e9ce729f96abe74b76d98f9568a59c}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+SG}}(expected,  got,  msg)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a9583b1709f4b9dfb3ff2849bfec5c885}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+TA}}(a,  b,  delta)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_afcd749452840bfde9be575ef22fcede0}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+SG}}(a,  b,  delta,  msg)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a5174c5f93519d5726c8993b2f36d6ceb}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+WS}}(expr,  x)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a1ce6abe9e9134ce993840a648673e0f2}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+SG}}(expr,  x,  msg)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a895af88056cd626a010136ac07b81d37}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+NG}}(expr)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a052597a8fd7dbc40ba350c735c4517c5}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+SG}}(expr,  msg)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a885a5f6b6decac47414b4cc1a0a66425}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+NG}}(expr)
+\item 
+\#define \mbox{\hyperlink{cpptest-assert_8h_a758a47b613522a3d597c513786191ff9}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+SG}}(expr,  msg)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cpptest-assert_8h_a29a763f14098f5574ae5c68291dc6ddd}\label{cpptest-assert_8h_a29a763f14098f5574ae5c68291dc6ddd}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+RT@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+RT}}
+\index{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+RT@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+RT}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+RT}{TEST\_ASSERT}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        if (!(expr))                                                \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, #expr));  \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and issues an assertment if it fails.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_ac612ede938734f9c8d898e05818882fb}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+S\+G(expr, msg)}}
+\end{DoxySeeAlso}
+\begin{DoxyParagraph}{Example\+:}
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} MySuite::test()
+\{
+    \textcolor{keywordtype}{int} i;
+
+    \textcolor{comment}{// ...}
+
+    \mbox{\hyperlink{cpptest-assert_8h_a29a763f14098f5574ae5c68291dc6ddd}{TEST\_ASSERT}}(i == 13)
+\}
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 87 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a9583b1709f4b9dfb3ff2849bfec5c885}\label{cpptest-assert_8h_a9583b1709f4b9dfb3ff2849bfec5c885}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+TA@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+TA}}
+\index{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+TA@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+TA}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+TA}{TEST\_ASSERT\_DELTA}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+TA(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{delta }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        if (((b) < (a) - (delta)) || ((b) > (a) + (delta)))         \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_,           \(\backslash\)
+                       \textcolor{stringliteral}{"delta("} #a \textcolor{stringliteral}{", "} #b \textcolor{stringliteral}{", "} #delta \textcolor{stringliteral}{")"} ));      \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify that two expressions are equal up to a constant, issues an assertment if it fails.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First expression to test. \\
+\hline
+{\em b} & Second expression to test. \\
+\hline
+{\em delta} & Constant.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_afcd749452840bfde9be575ef22fcede0}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+S\+G(a, b, delta, msg)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 216 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_afcd749452840bfde9be575ef22fcede0}\label{cpptest-assert_8h_afcd749452840bfde9be575ef22fcede0}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+SG}}
+\index{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+SG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+SG}{TEST\_ASSERT\_DELTA\_MSG}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{a,  }\item[{}]{b,  }\item[{}]{delta,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        if (((b) < (a) - (delta)) || ((b) > (a) + (delta)))         \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, msg));    \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify that two expressions are equal up to a constant, issues an assertment if it fails.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & First expression to test. \\
+\hline
+{\em b} & Second expression to test. \\
+\hline
+{\em delta} & Constant. \\
+\hline
+{\em msg} & User message. ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a9583b1709f4b9dfb3ff2849bfec5c885}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+D\+E\+L\+T\+A(a, b, delta)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 240 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_ae281f4d973e657b11691a97551f17dd1}\label{cpptest-assert_8h_ae281f4d973e657b11691a97551f17dd1}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+LS@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+LS}}
+\index{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+LS@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+LS}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+LS}{TEST\_ASSERT\_EQUALS}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+LS(\begin{DoxyParamCaption}\item[{}]{expected,  }\item[{}]{got }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                   \(\backslash\)
+        if (!((got) == (expected)))                                     \(\backslash\)
+        \{                                                               \(\backslash\)
+            std::stringstream tmpstream;                                \(\backslash\)
+            tmpstream << \textcolor{stringliteral}{"Got "} << (got) << \textcolor{stringliteral}{", expected "} << (expected);\(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_,               \(\backslash\)
+                        tmpstream.str().c\_str()));                      \(\backslash\)
+            if (!continue\_after\_failure()) return;                      \(\backslash\)
+        \}                                                               \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify that two expressions are equal, issues an assertment if it fails. Requires the output operator ($<$$<$) to be defined for both expected and got.
+
+If the output operator is not available, you should use \mbox{\hyperlink{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+B\+J(expected, got)}}.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Expected value. \\
+\hline
+{\em got} & Value to test against expected value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_ab8e9ce729f96abe74b76d98f9568a59c}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+S\+G(expected, got, msg)}} 
+
+\mbox{\hyperlink{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+B\+J(expected, got)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 133 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_ab8e9ce729f96abe74b76d98f9568a59c}\label{cpptest-assert_8h_ab8e9ce729f96abe74b76d98f9568a59c}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+SG}}
+\index{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+SG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+SG}{TEST\_ASSERT\_EQUALS\_MSG}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{expected,  }\item[{}]{got,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                                   \(\backslash\)
+        if (!((got) == (expected)))                                     \(\backslash\)
+        \{                                                               \(\backslash\)
+            std::stringstream tmpstream;                                \(\backslash\)
+            tmpstream << (msg) << \textcolor{stringliteral}{": "};                                 \(\backslash\)
+            tmpstream << \textcolor{stringliteral}{"Got "} << (got) << \textcolor{stringliteral}{", expected "} << (expected);\(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_,               \(\backslash\)
+                        tmpstream.str().c\_str()));                      \(\backslash\)
+            if (!continue\_after\_failure()) return;                      \(\backslash\)
+        \}                                                               \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify that two expressions are equal, issues an assertment if it fails. The output operator ($<$$<$) must be defined for the object under test. If the output operator is not available, you should use \mbox{\hyperlink{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+B\+J(expected, got)}} instead.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Expected value. \\
+\hline
+{\em got} & Value to test against expected value. \\
+\hline
+{\em msg} & User message to print out on failure.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_ae281f4d973e657b11691a97551f17dd1}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S(expected, got)}} 
+
+\mbox{\hyperlink{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+B\+J(expected, got)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 190 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}\label{cpptest-assert_8h_aa506d98e8a5fc575df0361906f7deef8}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+BJ@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+BJ}}
+\index{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+BJ@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+BJ}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+BJ}{TEST\_ASSERT\_EQUALS\_OBJ}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+O\+BJ(\begin{DoxyParamCaption}\item[{}]{expected,  }\item[{}]{got }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        if (!((got) == (expected)))                                 \(\backslash\)
+        \{                                                           \(\backslash\)
+            std::stringstream tmpstream;                            \(\backslash\)
+            tmpstream << #expected << \textcolor{stringliteral}{" object not equal to "};      \(\backslash\)
+            tmpstream << #got << \textcolor{stringliteral}{" object."};                        \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_,           \(\backslash\)
+                        tmpstream.str().c\_str()));                  \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify that two expressions are equal, issues an assertment if it fails.
+
+If the output operator is defined for the objects being compared you should use \mbox{\hyperlink{cpptest-assert_8h_ae281f4d973e657b11691a97551f17dd1}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S(expected, got)}} instead for more useful failure messages.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expected} & Expected value. \\
+\hline
+{\em got} & Value to test against expected value.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_ae281f4d973e657b11691a97551f17dd1}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S(expected, got)}} 
+
+\mbox{\hyperlink{cpptest-assert_8h_ab8e9ce729f96abe74b76d98f9568a59c}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+E\+Q\+U\+A\+L\+S\+\_\+\+M\+S\+G(expected, got, msg)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 162 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_ac612ede938734f9c8d898e05818882fb}\label{cpptest-assert_8h_ac612ede938734f9c8d898e05818882fb}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}}
+\index{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG}{TEST\_ASSERT\_MSG}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        if (!(expr))                                                \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, msg));    \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and issues an assertment if it fails.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test. \\
+\hline
+{\em msg} & User message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a29a763f14098f5574ae5c68291dc6ddd}{T\+E\+S\+T\+\_\+\+A\+S\+S\+E\+R\+T(expr)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 107 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a947ab44cc42369eb7cfe33f8a1e38e4b}\label{cpptest-assert_8h_a947ab44cc42369eb7cfe33f8a1e38e4b}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+F\+A\+IL@{T\+E\+S\+T\+\_\+\+F\+A\+IL}}
+\index{T\+E\+S\+T\+\_\+\+F\+A\+IL@{T\+E\+S\+T\+\_\+\+F\+A\+IL}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+F\+A\+IL}{TEST\_FAIL}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+F\+A\+IL(\begin{DoxyParamCaption}\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, (msg) != 0 ? #msg : \textcolor{stringliteral}{""})); \(\backslash\)
+        if (!continue\_after\_failure()) return;                      \(\backslash\)
+    \}
+\end{DoxyCode}
+Unconditional failure.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & Provided message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Example\+:}
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{void} MySuite::test()
+\{
+    \textcolor{comment}{// ...}
+
+    \textcolor{keywordflow}{switch} (flag)
+    \{
+        \textcolor{comment}{// handling valid cases ...}
+
+        \textcolor{keywordflow}{default}:
+            \mbox{\hyperlink{cpptest-assert_8h_a947ab44cc42369eb7cfe33f8a1e38e4b}{TEST\_FAIL}}(\textcolor{stringliteral}{"This should not happen"})
+    \}
+\}
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 59 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a5174c5f93519d5726c8993b2f36d6ceb}\label{cpptest-assert_8h_a5174c5f93519d5726c8993b2f36d6ceb}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+WS@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+WS}}
+\index{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+WS@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+WS}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+WS}{TEST\_THROWS}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+WS(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{x }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        bool \_\_expected = \textcolor{keyword}{false};                                    \(\backslash\)
+        try \{ expr; \}                                               \(\backslash\)
+        catch (x)           \{ \_\_expected = \textcolor{keyword}{true}; \}                  \(\backslash\)
+        catch (...)         \{\}                                      \(\backslash\)
+        if (!\_\_expected)                                            \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, #expr));  \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and expects an exception in return. An assertment is issued if the exception is not thrown.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test. \\
+\hline
+{\em x} & Expected exception.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a1ce6abe9e9134ce993840a648673e0f2}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+S\+G(expr, x, msg)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 261 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a895af88056cd626a010136ac07b81d37}\label{cpptest-assert_8h_a895af88056cd626a010136ac07b81d37}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+NG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+NG}}
+\index{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+NG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+NG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+NG}{TEST\_THROWS\_ANYTHING}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+NG(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        bool \_\_expected = \textcolor{keyword}{false};                                    \(\backslash\)
+        try \{ expr; \}                                               \(\backslash\)
+        catch (...) \{ \_\_expected = \textcolor{keyword}{true}; \}                          \(\backslash\)
+        if (!\_\_expected)                                            \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, #expr));  \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and expects any exception in return. An assertment is issued if no exception is thrown.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a052597a8fd7dbc40ba350c735c4517c5}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+S\+G(expr, msg)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 311 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a052597a8fd7dbc40ba350c735c4517c5}\label{cpptest-assert_8h_a052597a8fd7dbc40ba350c735c4517c5}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+SG}}
+\index{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+SG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+SG}{TEST\_THROWS\_ANYTHING\_MSG}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        bool \_\_expected = \textcolor{keyword}{false};                                    \(\backslash\)
+        try \{ expr; \}                                               \(\backslash\)
+        catch (...) \{ \_\_expected = \textcolor{keyword}{true}; \}                          \(\backslash\)
+        if (!\_\_expected)                                            \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, msg));    \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and expects any exception in return. An assertment is issued if no exception is thrown.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test. \\
+\hline
+{\em msg} & User message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a895af88056cd626a010136ac07b81d37}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+A\+N\+Y\+T\+H\+I\+N\+G(expr)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 335 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a1ce6abe9e9134ce993840a648673e0f2}\label{cpptest-assert_8h_a1ce6abe9e9134ce993840a648673e0f2}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+SG}}
+\index{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+SG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+SG}{TEST\_THROWS\_MSG}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{x,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        bool \_\_expected = \textcolor{keyword}{false};                                    \(\backslash\)
+        try \{ expr; \}                                               \(\backslash\)
+        catch (x)           \{ \_\_expected = \textcolor{keyword}{true}; \}                  \(\backslash\)
+        catch (...)         \{\}                                      \(\backslash\)
+        if (!\_\_expected)                                            \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, msg));    \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and expects an exception in return. An assertment is issued if the exception is not thrown.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test. \\
+\hline
+{\em x} & Expected exception. \\
+\hline
+{\em msg} & User message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a5174c5f93519d5726c8993b2f36d6ceb}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S(expr, x)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 287 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a885a5f6b6decac47414b4cc1a0a66425}\label{cpptest-assert_8h_a885a5f6b6decac47414b4cc1a0a66425}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+NG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+NG}}
+\index{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+NG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+NG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+NG}{TEST\_THROWS\_NOTHING}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+NG(\begin{DoxyParamCaption}\item[{}]{expr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        bool \_\_expected = \textcolor{keyword}{true};                                     \(\backslash\)
+        try \{ expr; \}                                               \(\backslash\)
+        catch (...) \{ \_\_expected = \textcolor{keyword}{false}; \}                         \(\backslash\)
+        if (!\_\_expected)                                            \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, #expr));  \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and expects no exception in return. An assertment is issued if any exception is thrown.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a758a47b613522a3d597c513786191ff9}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+S\+G(expr, msg)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 358 of file cpptest-\/assert.\+h.
+
+\mbox{\Hypertarget{cpptest-assert_8h_a758a47b613522a3d597c513786191ff9}\label{cpptest-assert_8h_a758a47b613522a3d597c513786191ff9}} 
+\index{cpptest-\/assert.\+h@{cpptest-\/assert.\+h}!T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+SG}}
+\index{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+SG@{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+SG}!cpptest-\/assert.\+h@{cpptest-\/assert.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+SG}{TEST\_THROWS\_NOTHING\_MSG}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G\+\_\+\+M\+SG(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\{                                                               \(\backslash\)
+        bool \_\_expected = \textcolor{keyword}{true};                                     \(\backslash\)
+        try \{ expr; \}                                               \(\backslash\)
+        catch (...) \{ \_\_expected = \textcolor{keyword}{false}; \}                         \(\backslash\)
+        if (!\_\_expected)                                            \(\backslash\)
+        \{                                                           \(\backslash\)
+            assertment(::\mbox{\hyperlink{class_test_1_1_source}{Test::Source}}(\_\_FILE\_\_, \_\_LINE\_\_, msg));    \(\backslash\)
+            if (!continue\_after\_failure()) return;                  \(\backslash\)
+        \}                                                           \(\backslash\)
+    \}
+\end{DoxyCode}
+Verify an expression and expects no exception in return. An assertment is issued if any exception is thrown.
+
+Used in conjunction with \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em expr} & Expression to test. \\
+\hline
+{\em msg} & User message.\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{cpptest-assert_8h_a885a5f6b6decac47414b4cc1a0a66425}{T\+E\+S\+T\+\_\+\+T\+H\+R\+O\+W\+S\+\_\+\+N\+O\+T\+H\+I\+N\+G(expr)}}
+\end{DoxySeeAlso}
+For a description of all asserts, see \mbox{\hyperlink{asserts}{Available asserts}}. 
+
+Definition at line 382 of file cpptest-\/assert.\+h.
+

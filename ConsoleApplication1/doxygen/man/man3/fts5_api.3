@@ -1,0 +1,51 @@
+.TH "fts5_api" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fts5_api
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBiVersion\fP"
+.br
+.ti -1c
+.RI "int(* \fBxCreateTokenizer\fP )(\fBfts5_api\fP *pApi, const char *zName, void *pContext, \fBfts5_tokenizer\fP *pTokenizer, void(*xDestroy)(void *))"
+.br
+.ti -1c
+.RI "int(* \fBxFindTokenizer\fP )(\fBfts5_api\fP *pApi, const char *zName, void **ppContext, \fBfts5_tokenizer\fP *pTokenizer)"
+.br
+.ti -1c
+.RI "int(* \fBxCreateFunction\fP )(\fBfts5_api\fP *pApi, const char *zName, void *pContext, \fBfts5_extension_function\fP xFunction, void(*xDestroy)(void *))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 10687 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int fts5_api::iVersion"
+
+.PP
+Definition at line 10688 of file sqlite3\&.h\&.
+.SS "int(* fts5_api::xCreateFunction) (\fBfts5_api\fP *pApi, const char *zName, void *pContext, \fBfts5_extension_function\fP xFunction, void(*xDestroy)(void *))"
+
+.PP
+Definition at line 10708 of file sqlite3\&.h\&.
+.SS "int(* fts5_api::xCreateTokenizer) (\fBfts5_api\fP *pApi, const char *zName, void *pContext, \fBfts5_tokenizer\fP *pTokenizer, void(*xDestroy)(void *))"
+
+.PP
+Definition at line 10691 of file sqlite3\&.h\&.
+.SS "int(* fts5_api::xFindTokenizer) (\fBfts5_api\fP *pApi, const char *zName, void **ppContext, \fBfts5_tokenizer\fP *pTokenizer)"
+
+.PP
+Definition at line 10700 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

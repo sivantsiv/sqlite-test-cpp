@@ -1,0 +1,44 @@
+.TH "asserts" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+asserts \- Available asserts 
+Normally, assert macros issues an assert if the given expression, if any, fails (as defined by the macro)\&. Assertments include information about the current test suite, test function, source file, source file line, and a message\&. The message is normally the offending expression, however, for macros ending in _MSG it is possibly to supply a user defined message\&.
+.PP
+\fBGeneral asserts\fP
+.IP "\(bu" 2
+\fBTEST_FAIL(msg)\fP
+.PP
+.PP
+\fBComparision asserts\fP
+.IP "\(bu" 2
+\fBTEST_ASSERT(expr)\fP
+.IP "\(bu" 2
+\fBTEST_ASSERT_MSG(expr, msg)\fP
+.IP "\(bu" 2
+\fBTEST_ASSERT_EQUALS(expected, got)\fP
+.IP "\(bu" 2
+\fBTEST_ASSERT_EQUALS_MSG(expected, got, msg)\fP
+.IP "\(bu" 2
+\fBTEST_ASSERT_EQUALS_OBJ(expected, got)\fP
+.IP "\(bu" 2
+\fBTEST_ASSERT_DELTA(a, b, delta)\fP
+.IP "\(bu" 2
+\fBTEST_ASSERT_DELTA_MSG(a, b, delta, msg)\fP
+.PP
+.PP
+\fBException asserts\fP
+.IP "\(bu" 2
+\fBTEST_THROWS(expr, x)\fP
+.IP "\(bu" 2
+\fBTEST_THROWS_MSG(expr, x, msg)\fP
+.IP "\(bu" 2
+\fBTEST_THROWS_ANYTHING(expr)\fP
+.IP "\(bu" 2
+\fBTEST_THROWS_ANYTHING_MSG(expr, msg)\fP
+.IP "\(bu" 2
+\fBTEST_THROWS_NOTHING(expr)\fP
+.IP "\(bu" 2
+\fBTEST_THROWS_NOTHING_MSG(expr, msg)\fP 
+.PP
+

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="stdafx_8h" kind="file" language="C++">
+    <compoundname>stdafx.h</compoundname>
+    <includes refid="targetver_8h" local="yes">targetver.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">tchar.h</includes>
+    <includedby refid="_console_application1_8cpp" local="yes">ConsoleApplication1.cpp</includedby>
+    <includedby refid="_record_processor_8cpp" local="yes">RecordProcessor.cpp</includedby>
+    <includedby refid="stdafx_8cpp" local="yes">stdafx.cpp</includedby>
+    <incdepgraph>
+      <node id="175">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="174">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="175" relation="include">
+        </childnode>
+      </node>
+      <node id="173">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="174" relation="include">
+        </childnode>
+        <childnode refid="176" relation="include">
+        </childnode>
+        <childnode refid="177" relation="include">
+        </childnode>
+      </node>
+      <node id="177">
+        <label>tchar.h</label>
+      </node>
+      <node id="176">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="181">
+        <label>stdafx.cpp</label>
+        <link refid="stdafx_8cpp"/>
+      </node>
+      <node id="179">
+        <label>ConsoleApplication1.cpp</label>
+        <link refid="_console_application1_8cpp"/>
+      </node>
+      <node id="178">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="179" relation="include">
+        </childnode>
+        <childnode refid="180" relation="include">
+        </childnode>
+        <childnode refid="181" relation="include">
+        </childnode>
+      </node>
+      <node id="180">
+        <label>RecordProcessor.cpp</label>
+        <link refid="_record_processor_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>stdafx.h<sp/>:<sp/>include<sp/>file<sp/>for<sp/>standard<sp/>system<sp/>include<sp/>files,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>or<sp/>project<sp/>specific<sp/>include<sp/>files<sp/>that<sp/>are<sp/>used<sp/>frequently,<sp/>but</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>are<sp/>changed<sp/>infrequently</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="targetver_8h" kindref="compound">targetver.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tchar.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TODO:<sp/>reference<sp/>additional<sp/>headers<sp/>your<sp/>program<sp/>requires<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="stdafx.h"/>
+  </compounddef>
+</doxygen>

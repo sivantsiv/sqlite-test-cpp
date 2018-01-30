@@ -1,0 +1,210 @@
+.TH "Test::CollectorOutput" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Test::CollectorOutput \- Collector output\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpptest\-collectoroutput\&.h>\fP
+.PP
+Inherits \fBTest::Output\fP\&.
+.PP
+Inherited by \fBTest::HtmlOutput\fP\&.
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBSuiteInfo\fP"
+.br
+.ti -1c
+.RI "struct \fBTestInfo\fP"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual void \fBfinished\fP (int tests, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBsuite_start\fP (int tests, const std::string &name)"
+.br
+.ti -1c
+.RI "virtual void \fBsuite_end\fP (int tests, const std::string &name, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBtest_start\fP (const std::string &name)"
+.br
+.ti -1c
+.RI "virtual void \fBtest_end\fP (const std::string &name, bool ok, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBassertment\fP (const \fBSource\fP &s)"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::list< \fBSource\fP > \fBSources\fP"
+.br
+.ti -1c
+.RI "typedef std::vector< \fBTestInfo\fP > \fBTests\fP"
+.br
+.ti -1c
+.RI "typedef std::list< \fBSuiteInfo\fP > \fBSuites\fP"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCollectorOutput\fP ()"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBSuites\fP \fB_suites\fP"
+.br
+.ti -1c
+.RI "int \fB_total_errors\fP"
+.br
+.ti -1c
+.RI "int \fB_total_tests\fP"
+.br
+.ti -1c
+.RI "\fBTime\fP \fB_total_time\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Collector output\&. 
+
+Base class for output handlers that need to report status when all tests have executed\&. 
+.PP
+Definition at line 47 of file cpptest\-collectoroutput\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::list<\fBSource\fP> \fBTest::CollectorOutput::Sources\fP\fC [protected]\fP"
+
+.PP
+Definition at line 62 of file cpptest\-collectoroutput\&.h\&.
+.SS "typedef std::list<\fBSuiteInfo\fP> \fBTest::CollectorOutput::Suites\fP\fC [protected]\fP"
+
+.PP
+Definition at line 89 of file cpptest\-collectoroutput\&.h\&.
+.SS "typedef std::vector<\fBTestInfo\fP> \fBTest::CollectorOutput::Tests\fP\fC [protected]\fP"
+
+.PP
+Definition at line 77 of file cpptest\-collectoroutput\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Test::CollectorOutput::CollectorOutput ()\fC [protected]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Test::CollectorOutput::assertment (const \fBSource\fP & s)\fC [virtual]\fP"
+Called when an assertment is issued\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Assert point information\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::CollectorOutput::finished (int tests, const \fBTime\fP & time)\fC [virtual]\fP"
+Called when testing is finished\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Total number of tests in all suites\&. 
+.br
+\fItime\fP Total elapsed time for all tests\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::CollectorOutput::suite_end (int tests, const std::string & name, const \fBTime\fP & time)\fC [virtual]\fP"
+Called when a suite is finished\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Number of tests in this suite\&. 
+.br
+\fIname\fP Name of the suite\&. 
+.br
+\fItime\fP Total elapsed time for all tests in this suite\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::CollectorOutput::suite_start (int tests, const std::string & name)\fC [virtual]\fP"
+Called when a suite is entered\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Number of tests in this suite\&. 
+.br
+\fIname\fP Name of the suite\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::CollectorOutput::test_end (const std::string & name, bool ok, const \fBTime\fP & time)\fC [virtual]\fP"
+Called when a test if finished, regardless if an assertment was issued\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP Name of the test function\&. 
+.br
+\fIok\fP True if the test was successful; false otherwise\&. 
+.br
+\fItime\fP Execution time\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SS "virtual void Test::CollectorOutput::test_start (const std::string & name)\fC [virtual]\fP"
+Called when a tests is executed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP Name of the test function\&. 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBTest::Output\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBSuites\fP Test::CollectorOutput::_suites\fC [protected]\fP"
+
+.PP
+Definition at line 91 of file cpptest\-collectoroutput\&.h\&.
+.SS "int Test::CollectorOutput::_total_errors\fC [protected]\fP"
+
+.PP
+Definition at line 92 of file cpptest\-collectoroutput\&.h\&.
+.SS "int Test::CollectorOutput::_total_tests\fC [protected]\fP"
+
+.PP
+Definition at line 93 of file cpptest\-collectoroutput\&.h\&.
+.SS "\fBTime\fP Test::CollectorOutput::_total_time\fC [protected]\fP"
+
+.PP
+Definition at line 94 of file cpptest\-collectoroutput\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_test_1_1_collector_output_1_1_suite_info" kind="struct" language="C++" prot="protected">
+    <compoundname>Test::CollectorOutput::SuiteInfo</compoundname>
+    <includes refid="cpptest-collectoroutput_8h" local="no">cpptest-collectoroutput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_suite_info_1a55bdc93b43037cba310bfd69441a3f15" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::CollectorOutput::SuiteInfo::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="81" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_suite_info_1aad064ab88ce0e898be5b01ae98898e0f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Test::CollectorOutput::SuiteInfo::_errors</definition>
+        <argsstring></argsstring>
+        <name>_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="82" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_suite_info_1aeffb563714b2ba368e8c9cc92cb78091" prot="public" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_collector_output_1a54a7b7c9b6d181102bc8934190b06e86" kindref="member">Tests</ref></type>
+        <definition>Tests Test::CollectorOutput::SuiteInfo::_tests</definition>
+        <argsstring></argsstring>
+        <name>_tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="83" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_suite_info_1a50173eba0cbf1c9e77bb029809a4580e" prot="public" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time Test::CollectorOutput::SuiteInfo::_time</definition>
+        <argsstring></argsstring>
+        <name>_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="84" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_test_1_1_collector_output_1_1_suite_info_1a293cc820c5745fc786faf3b8e2ab9438" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::CollectorOutput::SuiteInfo::SuiteInfo</definition>
+        <argsstring>(const std::string &amp;name, int tests)</argsstring>
+        <name>SuiteInfo</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="86" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="96">
+        <label>Test::Time</label>
+        <link refid="class_test_1_1_time"/>
+      </node>
+      <node id="95">
+        <label>Test::CollectorOutput::SuiteInfo</label>
+        <link refid="struct_test_1_1_collector_output_1_1_suite_info"/>
+        <childnode refid="96" relation="usage">
+          <edgelabel>_time</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-collectoroutput.h" line="80" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="79" bodyend="87"/>
+    <listofallmembers>
+      <member refid="struct_test_1_1_collector_output_1_1_suite_info_1aad064ab88ce0e898be5b01ae98898e0f" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::SuiteInfo</scope><name>_errors</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_suite_info_1a55bdc93b43037cba310bfd69441a3f15" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::SuiteInfo</scope><name>_name</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_suite_info_1aeffb563714b2ba368e8c9cc92cb78091" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::SuiteInfo</scope><name>_tests</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_suite_info_1a50173eba0cbf1c9e77bb029809a4580e" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::SuiteInfo</scope><name>_time</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_suite_info_1a293cc820c5745fc786faf3b8e2ab9438" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::SuiteInfo</scope><name>SuiteInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

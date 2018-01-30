@@ -1,0 +1,177 @@
+.TH "sqlite3_vfs" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sqlite3_vfs
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBiVersion\fP"
+.br
+.ti -1c
+.RI "int \fBszOsFile\fP"
+.br
+.ti -1c
+.RI "int \fBmxPathname\fP"
+.br
+.ti -1c
+.RI "\fBsqlite3_vfs\fP * \fBpNext\fP"
+.br
+.ti -1c
+.RI "const char * \fBzName\fP"
+.br
+.ti -1c
+.RI "void * \fBpAppData\fP"
+.br
+.ti -1c
+.RI "int(* \fBxOpen\fP )(\fBsqlite3_vfs\fP *, const char *\fBzName\fP, \fBsqlite3_file\fP *, int flags, int *pOutFlags)"
+.br
+.ti -1c
+.RI "int(* \fBxDelete\fP )(\fBsqlite3_vfs\fP *, const char *\fBzName\fP, int syncDir)"
+.br
+.ti -1c
+.RI "int(* \fBxAccess\fP )(\fBsqlite3_vfs\fP *, const char *\fBzName\fP, int flags, int *pResOut)"
+.br
+.ti -1c
+.RI "int(* \fBxFullPathname\fP )(\fBsqlite3_vfs\fP *, const char *\fBzName\fP, int nOut, char *zOut)"
+.br
+.ti -1c
+.RI "void *(* \fBxDlOpen\fP )(\fBsqlite3_vfs\fP *, const char *zFilename)"
+.br
+.ti -1c
+.RI "void(* \fBxDlError\fP )(\fBsqlite3_vfs\fP *, int nByte, char *zErrMsg)"
+.br
+.ti -1c
+.RI "void(*(* \fBxDlSym\fP )(\fBsqlite3_vfs\fP *, void *, const char *zSymbol))(void)"
+.br
+.ti -1c
+.RI "void(* \fBxDlClose\fP )(\fBsqlite3_vfs\fP *, void *)"
+.br
+.ti -1c
+.RI "int(* \fBxRandomness\fP )(\fBsqlite3_vfs\fP *, int nByte, char *zOut)"
+.br
+.ti -1c
+.RI "int(* \fBxSleep\fP )(\fBsqlite3_vfs\fP *, int microseconds)"
+.br
+.ti -1c
+.RI "int(* \fBxCurrentTime\fP )(\fBsqlite3_vfs\fP *, double *)"
+.br
+.ti -1c
+.RI "int(* \fBxGetLastError\fP )(\fBsqlite3_vfs\fP *, int, char *)"
+.br
+.ti -1c
+.RI "int(* \fBxCurrentTimeInt64\fP )(\fBsqlite3_vfs\fP *, \fBsqlite3_int64\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxSetSystemCall\fP )(\fBsqlite3_vfs\fP *, const char *\fBzName\fP, \fBsqlite3_syscall_ptr\fP)"
+.br
+.ti -1c
+.RI "\fBsqlite3_syscall_ptr\fP(* \fBxGetSystemCall\fP )(\fBsqlite3_vfs\fP *, const char *\fBzName\fP)"
+.br
+.ti -1c
+.RI "const char *(* \fBxNextSystemCall\fP )(\fBsqlite3_vfs\fP *, const char *\fBzName\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 1285 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int sqlite3_vfs::iVersion"
+
+.PP
+Definition at line 1286 of file sqlite3\&.h\&.
+.SS "int sqlite3_vfs::mxPathname"
+
+.PP
+Definition at line 1288 of file sqlite3\&.h\&.
+.SS "void* sqlite3_vfs::pAppData"
+
+.PP
+Definition at line 1291 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_vfs\fP* sqlite3_vfs::pNext"
+
+.PP
+Definition at line 1289 of file sqlite3\&.h\&.
+.SS "int sqlite3_vfs::szOsFile"
+
+.PP
+Definition at line 1287 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xAccess) (\fBsqlite3_vfs\fP *, const char *\fBzName\fP, int flags, int *pResOut)"
+
+.PP
+Definition at line 1295 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xCurrentTime) (\fBsqlite3_vfs\fP *, double *)"
+
+.PP
+Definition at line 1303 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xCurrentTimeInt64) (\fBsqlite3_vfs\fP *, \fBsqlite3_int64\fP *)"
+
+.PP
+Definition at line 1309 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xDelete) (\fBsqlite3_vfs\fP *, const char *\fBzName\fP, int syncDir)"
+
+.PP
+Definition at line 1294 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_vfs::xDlClose) (\fBsqlite3_vfs\fP *, void *)"
+
+.PP
+Definition at line 1300 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_vfs::xDlError) (\fBsqlite3_vfs\fP *, int nByte, char *zErrMsg)"
+
+.PP
+Definition at line 1298 of file sqlite3\&.h\&.
+.SS "void*(* sqlite3_vfs::xDlOpen) (\fBsqlite3_vfs\fP *, const char *zFilename)"
+
+.PP
+Definition at line 1297 of file sqlite3\&.h\&.
+.SS "void(*(* sqlite3_vfs::xDlSym) (\fBsqlite3_vfs\fP *, void *, const char *zSymbol))(void)"
+
+.PP
+Definition at line 1299 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xFullPathname) (\fBsqlite3_vfs\fP *, const char *\fBzName\fP, int nOut, char *zOut)"
+
+.PP
+Definition at line 1296 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xGetLastError) (\fBsqlite3_vfs\fP *, int, char *)"
+
+.PP
+Definition at line 1304 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_syscall_ptr\fP(* sqlite3_vfs::xGetSystemCall) (\fBsqlite3_vfs\fP *, const char *\fBzName\fP)"
+
+.PP
+Definition at line 1315 of file sqlite3\&.h\&.
+.SS "const char*(* sqlite3_vfs::xNextSystemCall) (\fBsqlite3_vfs\fP *, const char *\fBzName\fP)"
+
+.PP
+Definition at line 1316 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xOpen) (\fBsqlite3_vfs\fP *, const char *\fBzName\fP, \fBsqlite3_file\fP *, int flags, int *pOutFlags)"
+
+.PP
+Definition at line 1292 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xRandomness) (\fBsqlite3_vfs\fP *, int nByte, char *zOut)"
+
+.PP
+Definition at line 1301 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xSetSystemCall) (\fBsqlite3_vfs\fP *, const char *\fBzName\fP, \fBsqlite3_syscall_ptr\fP)"
+
+.PP
+Definition at line 1314 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_vfs::xSleep) (\fBsqlite3_vfs\fP *, int microseconds)"
+
+.PP
+Definition at line 1302 of file sqlite3\&.h\&.
+.SS "const char* sqlite3_vfs::zName"
+
+.PP
+Definition at line 1290 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

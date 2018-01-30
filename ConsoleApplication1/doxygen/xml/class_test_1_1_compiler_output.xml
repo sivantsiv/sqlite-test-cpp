@@ -1,0 +1,202 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_compiler_output" kind="class" language="C++" prot="public">
+    <compoundname>Test::CompilerOutput</compoundname>
+    <basecompoundref refid="class_test_1_1_output" prot="public" virt="non-virtual">Test::Output</basecompoundref>
+    <includes refid="cpptest-compileroutput_8h" local="no">cpptest-compileroutput.h</includes>
+    <innerclass refid="class_test_1_1_compiler_output_1_1_invalid_format" prot="public">Test::CompilerOutput::InvalidFormat</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ff" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Format</name>
+        <enumvalue id="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffa1a83926858dfb1bab06bc0a313a49dac" prot="public">
+          <name>Generic</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Generic compiler format, which equals: <computeroutput>%file:%line: %text</computeroutput> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffa9ad6dc16df2c992e8b77a3f6ee2247d8" prot="public">
+          <name>BCC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><ulink url="http://www.borland.com/products/downloads/download_cbuilder.html">Borland C++ Compiler</ulink> (BCC) format, which equals: <computeroutput>Error cpptest %file %line: %text</computeroutput>. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffa7d077829f643d60a87a022d39989dd3b" prot="public">
+          <name>GCC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><ulink url="http://gcc.gnu.org">GNU Compiler Collection</ulink> (GCC) format, which equals: <computeroutput>%file:%line: %text</computeroutput> </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffae4f7af0eaa05253ea35484384deeb86b" prot="public">
+          <name>MSVC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para><ulink url="http://www.microsoft.com">Microsoft Visual C++</ulink> (MSVC) format, which equals: <computeroutput>%file(%line) : %text</computeroutput> </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Pre-defined compiler output formats. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-compileroutput.h" line="71" column="1" bodyfile="cpptest-compileroutput.h" bodystart="70" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_1_1_compiler_output_1a22a307a50e5c81239aa9c8feed16aa47" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::CompilerOutput::_format</definition>
+        <argsstring></argsstring>
+        <name>_format</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-compileroutput.h" line="105" column="1" bodyfile="cpptest-compileroutput.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_compiler_output_1a96caa7e7080ec9d1a504afd24ea561c2" prot="private" static="no" mutable="no">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; Test::CompilerOutput::_stream</definition>
+        <argsstring></argsstring>
+        <name>_stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-compileroutput.h" line="106" column="1" bodyfile="cpptest-compileroutput.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_compiler_output_1a816ae9a0ff2fb6cbb95c7cd815a6e621" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::CompilerOutput::CompilerOutput</definition>
+        <argsstring>(Format format=Generic, std::ostream &amp;stream=std::cout)</argsstring>
+        <name>CompilerOutput</name>
+        <param>
+          <type><ref refid="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ff" kindref="member">Format</ref></type>
+          <declname>format</declname>
+          <defval><ref refid="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffa1a83926858dfb1bab06bc0a313a49dac" kindref="member">Generic</ref></defval>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+          <defval>std::cout</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-compileroutput.h" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_compiler_output_1a49f7092d23ce60e3b83fa30fb5ab9ab7" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::CompilerOutput::CompilerOutput</definition>
+        <argsstring>(const std::string &amp;format, std::ostream &amp;stream=std::cout)</argsstring>
+        <name>CompilerOutput</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>format</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+          <defval>std::cout</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-compileroutput.h" line="99" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_compiler_output_1a1c36e3fd12afe3556e887349b0b86b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::CompilerOutput::assertment</definition>
+        <argsstring>(const Source &amp;s)</argsstring>
+        <name>assertment</name>
+        <reimplements refid="class_test_1_1_output_1a48c31f0baa7627d81939be840c9a7f65">assertment</reimplements>
+        <param>
+          <type>const <ref refid="class_test_1_1_source" kindref="compound">Source</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when an assertment is issued.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Assert point information. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-compileroutput.h" line="102" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Compiler-like output handler. </para>    </briefdescription>
+    <detaileddescription>
+<para>Test suite output handler that only outputs failures in compiler warning/error format. This way, you can use your IDE to browse between failures.</para><para>The output format is configurable to be able to emulate different compiler outputs. The following modifiers exist:<itemizedlist>
+<listitem><para><emphasis>file</emphasis> Outputs the file containing the test function.</para></listitem><listitem><para><emphasis>line</emphasis> Line number for the the test function.</para></listitem><listitem><para><emphasis>text</emphasis> Expression (or message) that caused the assertment. Note that each modifier can only be specified once. </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="6">
+        <label>Test::CompilerOutput</label>
+        <link refid="class_test_1_1_compiler_output"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="8">
+        <label>Test::CompilerOutput</label>
+        <link refid="class_test_1_1_compiler_output"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-compileroutput.h" line="53" column="1" bodyfile="cpptest-compileroutput.h" bodystart="52" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_compiler_output_1a22a307a50e5c81239aa9c8feed16aa47" prot="private" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>_format</name></member>
+      <member refid="class_test_1_1_compiler_output_1a96caa7e7080ec9d1a504afd24ea561c2" prot="private" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>_stream</name></member>
+      <member refid="class_test_1_1_compiler_output_1a1c36e3fd12afe3556e887349b0b86b50" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>assertment</name></member>
+      <member refid="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffa9ad6dc16df2c992e8b77a3f6ee2247d8" prot="public" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>BCC</name></member>
+      <member refid="class_test_1_1_compiler_output_1a816ae9a0ff2fb6cbb95c7cd815a6e621" prot="public" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>CompilerOutput</name></member>
+      <member refid="class_test_1_1_compiler_output_1a49f7092d23ce60e3b83fa30fb5ab9ab7" prot="public" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>CompilerOutput</name></member>
+      <member refid="class_test_1_1_output_1aeff8af8326a8c54a38199f76837f860a" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>finished</name></member>
+      <member refid="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ff" prot="public" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>Format</name></member>
+      <member refid="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffa7d077829f643d60a87a022d39989dd3b" prot="public" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>GCC</name></member>
+      <member refid="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffa1a83926858dfb1bab06bc0a313a49dac" prot="public" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>Generic</name></member>
+      <member refid="class_test_1_1_output_1aa66480875d088befc6c23ecfd1107cc1" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>initialize</name></member>
+      <member refid="class_test_1_1_compiler_output_1ab34cf506804cefbc67545a256af196ffae4f7af0eaa05253ea35484384deeb86b" prot="public" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>MSVC</name></member>
+      <member refid="class_test_1_1_output_1acbffb6b160039caafd3e9ac11cace65c" prot="protected" virt="non-virtual"><scope>Test::CompilerOutput</scope><name>Output</name></member>
+      <member refid="class_test_1_1_output_1a6dbf4c0adb2bd4a7364c629179f788a6" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>suite_end</name></member>
+      <member refid="class_test_1_1_output_1a7022c32c5a1577b10b93d3942746f17d" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>suite_start</name></member>
+      <member refid="class_test_1_1_output_1a3796943e3b56373492c957212a21454e" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>test_end</name></member>
+      <member refid="class_test_1_1_output_1a52d43b97609febc5abbc6da9aa0abac2" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>test_start</name></member>
+      <member refid="class_test_1_1_output_1a838de994609ac3d13b7d7cd389f56090" prot="public" virt="virtual"><scope>Test::CompilerOutput</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

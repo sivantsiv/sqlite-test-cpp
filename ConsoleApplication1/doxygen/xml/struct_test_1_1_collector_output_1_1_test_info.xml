@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_test_1_1_collector_output_1_1_test_info" kind="struct" language="C++" prot="protected">
+    <compoundname>Test::CollectorOutput::TestInfo</compoundname>
+    <includes refid="cpptest-collectoroutput_8h" local="no">cpptest-collectoroutput.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_test_info_1aa28d98e3ea65b4dda28fbb8c62817cf5" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::CollectorOutput::TestInfo::_name</definition>
+        <argsstring></argsstring>
+        <name>_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="68" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_test_info_1a59094663d5e7e2a7d896ce574ae6ef1b" prot="public" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_time" kindref="compound">Time</ref></type>
+        <definition>Time Test::CollectorOutput::TestInfo::_time</definition>
+        <argsstring></argsstring>
+        <name>_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="69" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_test_info_1a99a6450e62566587a15c9ae9b7073ae7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Test::CollectorOutput::TestInfo::_success</definition>
+        <argsstring></argsstring>
+        <name>_success</name>
+        <bitfield> 1</bitfield>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="71" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_test_1_1_collector_output_1_1_test_info_1a930eb868ea4e8fb30577967179c80d77" prot="public" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_collector_output_1a1921f35e0da596bd75da5824afe872c9" kindref="member">Sources</ref></type>
+        <definition>Sources Test::CollectorOutput::TestInfo::_sources</definition>
+        <argsstring></argsstring>
+        <name>_sources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="72" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_test_1_1_collector_output_1_1_test_info_1acfd49728d424c2824effe37beb85de87" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::CollectorOutput::TestInfo::TestInfo</definition>
+        <argsstring>(const std::string name)</argsstring>
+        <name>TestInfo</name>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-collectoroutput.h" line="74" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="99">
+        <label>Test::Time</label>
+        <link refid="class_test_1_1_time"/>
+      </node>
+      <node id="98">
+        <label>Test::CollectorOutput::TestInfo</label>
+        <link refid="struct_test_1_1_collector_output_1_1_test_info"/>
+        <childnode refid="99" relation="usage">
+          <edgelabel>_time</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-collectoroutput.h" line="67" column="1" bodyfile="cpptest-collectoroutput.h" bodystart="66" bodyend="75"/>
+    <listofallmembers>
+      <member refid="struct_test_1_1_collector_output_1_1_test_info_1aa28d98e3ea65b4dda28fbb8c62817cf5" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::TestInfo</scope><name>_name</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_test_info_1a930eb868ea4e8fb30577967179c80d77" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::TestInfo</scope><name>_sources</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_test_info_1a99a6450e62566587a15c9ae9b7073ae7" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::TestInfo</scope><name>_success</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_test_info_1a59094663d5e7e2a7d896ce574ae6ef1b" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::TestInfo</scope><name>_time</name></member>
+      <member refid="struct_test_1_1_collector_output_1_1_test_info_1acfd49728d424c2824effe37beb85de87" prot="public" virt="non-virtual"><scope>Test::CollectorOutput::TestInfo</scope><name>TestInfo</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

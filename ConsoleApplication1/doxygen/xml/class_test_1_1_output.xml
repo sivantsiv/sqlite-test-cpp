@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_output" kind="class" language="C++" prot="public">
+    <compoundname>Test::Output</compoundname>
+    <derivedcompoundref refid="class_test_1_1_collector_output" prot="public" virt="non-virtual">Test::CollectorOutput</derivedcompoundref>
+    <derivedcompoundref refid="class_test_1_1_compiler_output" prot="public" virt="non-virtual">Test::CompilerOutput</derivedcompoundref>
+    <derivedcompoundref refid="class_test_1_1_text_output" prot="public" virt="non-virtual">Test::TextOutput</derivedcompoundref>
+    <includes refid="cpptest-output_8h" local="no">cpptest-output.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_output_1a838de994609ac3d13b7d7cd389f56090" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual Test::Output::~Output</definition>
+        <argsstring>()</argsstring>
+        <name>~Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty destructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="60" column="1" bodyfile="cpptest-output.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1aa66480875d088befc6c23ecfd1107cc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Output::initialize</definition>
+        <argsstring>(int tests)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when testing is started.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of tests in all suites. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="66" column="1" bodyfile="cpptest-output.h" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1aeff8af8326a8c54a38199f76837f860a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Output::finished</definition>
+        <argsstring>(int tests, const Time &amp;time)</argsstring>
+        <name>finished</name>
+        <reimplementedby refid="class_test_1_1_collector_output_1ad1a7502a31c58d93f0d88d7a679ab24d">finished</reimplementedby>
+        <reimplementedby refid="class_test_1_1_text_output_1a9dcf13d9714a2774230386ef3215b701">finished</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when testing is finished.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of tests in all suites. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total elapsed time for all tests. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="76" column="1" bodyfile="cpptest-output.h" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1a7022c32c5a1577b10b93d3942746f17d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Output::suite_start</definition>
+        <argsstring>(int tests, const std::string &amp;name)</argsstring>
+        <name>suite_start</name>
+        <reimplementedby refid="class_test_1_1_collector_output_1a1d4c1eb5920fa96fb8dc8fe2eb0c336e">suite_start</reimplementedby>
+        <reimplementedby refid="class_test_1_1_text_output_1a0b6479918ee7f0501dfcdfcbc7c9d190">suite_start</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a suite is entered.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of tests in this suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the suite. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="87" column="1" bodyfile="cpptest-output.h" bodystart="87" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1a6dbf4c0adb2bd4a7364c629179f788a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Output::suite_end</definition>
+        <argsstring>(int tests, const std::string &amp;name, const Time &amp;time)</argsstring>
+        <name>suite_end</name>
+        <reimplementedby refid="class_test_1_1_collector_output_1a50c041adf1de3e296b50b1611e55a407">suite_end</reimplementedby>
+        <reimplementedby refid="class_test_1_1_text_output_1a84efd3536702a815325590cc8837dbb2">suite_end</reimplementedby>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a suite is finished.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of tests in this suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total elapsed time for all tests in this suite. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="99" column="1" bodyfile="cpptest-output.h" bodystart="99" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1a52d43b97609febc5abbc6da9aa0abac2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Output::test_start</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>test_start</name>
+        <reimplementedby refid="class_test_1_1_collector_output_1a0ac72b71fac68305ceabb1c516760eb0">test_start</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a tests is executed.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the test function. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="111" column="1" bodyfile="cpptest-output.h" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1a3796943e3b56373492c957212a21454e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Output::test_end</definition>
+        <argsstring>(const std::string &amp;name, bool ok, const Time &amp;time)</argsstring>
+        <name>test_end</name>
+        <reimplementedby refid="class_test_1_1_collector_output_1a08aa350c9a0ce221d03f6841a0b5d633">test_end</reimplementedby>
+        <reimplementedby refid="class_test_1_1_text_output_1a0ff333537e85d680740c72dd46cd2e7e">test_end</reimplementedby>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ok</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a test if finished, regardless if an assertment was issued.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the test function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ok</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the test was successful; false otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution time. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="123" column="1" bodyfile="cpptest-output.h" bodystart="123" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1a48c31f0baa7627d81939be840c9a7f65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::Output::assertment</definition>
+        <argsstring>(const Source &amp;s)</argsstring>
+        <name>assertment</name>
+        <reimplementedby refid="class_test_1_1_collector_output_1a96b61d5e53c3dfa1b98747bb582aa4f3">assertment</reimplementedby>
+        <reimplementedby refid="class_test_1_1_text_output_1a8110f86aa00f783fc5a91ec2f59a7998">assertment</reimplementedby>
+        <reimplementedby refid="class_test_1_1_compiler_output_1a1c36e3fd12afe3556e887349b0b86b50">assertment</reimplementedby>
+        <param>
+          <type>const <ref refid="class_test_1_1_source" kindref="compound">Source</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when an assertment is issued.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Assert point information. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="135" column="1" bodyfile="cpptest-output.h" bodystart="135" bodyend="138"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_test_1_1_output_1acbffb6b160039caafd3e9ac11cace65c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Test::Output::Output</definition>
+        <argsstring>()</argsstring>
+        <name>Output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Empty constructor. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="143" column="1" bodyfile="cpptest-output.h" bodystart="143" bodyend="143"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_test_1_1_output_1a0a206a697544d1e57c7f6c9c4607c8ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::Output::Output</definition>
+        <argsstring>(const Output &amp;)</argsstring>
+        <name>Output</name>
+        <param>
+          <type>const <ref refid="class_test_1_1_output" kindref="compound">Output</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_output_1a558aece22e3fae4bf063fc2217634563" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_test_1_1_output" kindref="compound">Output</ref> &amp;</type>
+        <definition>Output&amp; Test::Output::operator=</definition>
+        <argsstring>(const Output &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="class_test_1_1_output" kindref="compound">Output</ref> &amp;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-output.h" line="147" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Test suite output handler. </para>    </briefdescription>
+    <detaileddescription>
+<para>Abstract base class for all suite output handlers. Derive from this class to create real output handlers that creates arbitrary complex output handlers.</para><para>All parts of testing is reported (test start/stop, suite start/stop, individual test start/stop, and assertments), thus giving maximum flexibility for derived classes. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="37">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="39">
+        <label>Test::HtmlOutput</label>
+        <link refid="class_test_1_1_html_output"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="40">
+        <label>Test::CompilerOutput</label>
+        <link refid="class_test_1_1_compiler_output"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="41">
+        <label>Test::TextOutput</label>
+        <link refid="class_test_1_1_text_output"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>Test::CollectorOutput</label>
+        <link refid="class_test_1_1_collector_output"/>
+        <childnode refid="37" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="cpptest-output.h" line="56" column="1" bodyfile="cpptest-output.h" bodystart="55" bodyend="148"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_output_1a48c31f0baa7627d81939be840c9a7f65" prot="public" virt="virtual"><scope>Test::Output</scope><name>assertment</name></member>
+      <member refid="class_test_1_1_output_1aeff8af8326a8c54a38199f76837f860a" prot="public" virt="virtual"><scope>Test::Output</scope><name>finished</name></member>
+      <member refid="class_test_1_1_output_1aa66480875d088befc6c23ecfd1107cc1" prot="public" virt="virtual"><scope>Test::Output</scope><name>initialize</name></member>
+      <member refid="class_test_1_1_output_1a558aece22e3fae4bf063fc2217634563" prot="private" virt="non-virtual"><scope>Test::Output</scope><name>operator=</name></member>
+      <member refid="class_test_1_1_output_1acbffb6b160039caafd3e9ac11cace65c" prot="protected" virt="non-virtual"><scope>Test::Output</scope><name>Output</name></member>
+      <member refid="class_test_1_1_output_1a0a206a697544d1e57c7f6c9c4607c8ce" prot="private" virt="non-virtual"><scope>Test::Output</scope><name>Output</name></member>
+      <member refid="class_test_1_1_output_1a6dbf4c0adb2bd4a7364c629179f788a6" prot="public" virt="virtual"><scope>Test::Output</scope><name>suite_end</name></member>
+      <member refid="class_test_1_1_output_1a7022c32c5a1577b10b93d3942746f17d" prot="public" virt="virtual"><scope>Test::Output</scope><name>suite_start</name></member>
+      <member refid="class_test_1_1_output_1a3796943e3b56373492c957212a21454e" prot="public" virt="virtual"><scope>Test::Output</scope><name>test_end</name></member>
+      <member refid="class_test_1_1_output_1a52d43b97609febc5abbc6da9aa0abac2" prot="public" virt="virtual"><scope>Test::Output</scope><name>test_start</name></member>
+      <member refid="class_test_1_1_output_1a838de994609ac3d13b7d7cd389f56090" prot="public" virt="virtual"><scope>Test::Output</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

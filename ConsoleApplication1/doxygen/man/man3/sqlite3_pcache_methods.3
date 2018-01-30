@@ -1,0 +1,100 @@
+.TH "sqlite3_pcache_methods" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sqlite3_pcache_methods
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "void * \fBpArg\fP"
+.br
+.ti -1c
+.RI "int(* \fBxInit\fP )(void *)"
+.br
+.ti -1c
+.RI "void(* \fBxShutdown\fP )(void *)"
+.br
+.ti -1c
+.RI "\fBsqlite3_pcache\fP *(* \fBxCreate\fP )(int szPage, int bPurgeable)"
+.br
+.ti -1c
+.RI "void(* \fBxCachesize\fP )(\fBsqlite3_pcache\fP *, int nCachesize)"
+.br
+.ti -1c
+.RI "int(* \fBxPagecount\fP )(\fBsqlite3_pcache\fP *)"
+.br
+.ti -1c
+.RI "void *(* \fBxFetch\fP )(\fBsqlite3_pcache\fP *, unsigned key, int createFlag)"
+.br
+.ti -1c
+.RI "void(* \fBxUnpin\fP )(\fBsqlite3_pcache\fP *, void *, int discard)"
+.br
+.ti -1c
+.RI "void(* \fBxRekey\fP )(\fBsqlite3_pcache\fP *, void *, unsigned oldKey, unsigned newKey)"
+.br
+.ti -1c
+.RI "void(* \fBxTruncate\fP )(\fBsqlite3_pcache\fP *, unsigned iLimit)"
+.br
+.ti -1c
+.RI "void(* \fBxDestroy\fP )(\fBsqlite3_pcache\fP *)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 7583 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "void* sqlite3_pcache_methods::pArg"
+
+.PP
+Definition at line 7584 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_pcache_methods::xCachesize) (\fBsqlite3_pcache\fP *, int nCachesize)"
+
+.PP
+Definition at line 7588 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_pcache\fP*(* sqlite3_pcache_methods::xCreate) (int szPage, int bPurgeable)"
+
+.PP
+Definition at line 7587 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_pcache_methods::xDestroy) (\fBsqlite3_pcache\fP *)"
+
+.PP
+Definition at line 7594 of file sqlite3\&.h\&.
+.SS "void*(* sqlite3_pcache_methods::xFetch) (\fBsqlite3_pcache\fP *, unsigned key, int createFlag)"
+
+.PP
+Definition at line 7590 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_pcache_methods::xInit) (void *)"
+
+.PP
+Definition at line 7585 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_pcache_methods::xPagecount) (\fBsqlite3_pcache\fP *)"
+
+.PP
+Definition at line 7589 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_pcache_methods::xRekey) (\fBsqlite3_pcache\fP *, void *, unsigned oldKey, unsigned newKey)"
+
+.PP
+Definition at line 7592 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_pcache_methods::xShutdown) (void *)"
+
+.PP
+Definition at line 7586 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_pcache_methods::xTruncate) (\fBsqlite3_pcache\fP *, unsigned iLimit)"
+
+.PP
+Definition at line 7593 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_pcache_methods::xUnpin) (\fBsqlite3_pcache\fP *, void *, int discard)"
+
+.PP
+Definition at line 7591 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

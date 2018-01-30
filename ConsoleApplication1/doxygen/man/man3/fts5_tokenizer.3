@@ -1,0 +1,44 @@
+.TH "fts5_tokenizer" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+fts5_tokenizer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int(* \fBxCreate\fP )(void *, const char **azArg, int nArg, \fBFts5Tokenizer\fP **ppOut)"
+.br
+.ti -1c
+.RI "void(* \fBxDelete\fP )(\fBFts5Tokenizer\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxTokenize\fP )(\fBFts5Tokenizer\fP *, void *pCtx, int flags, const char *pText, int nText, int(*xToken)(void *pCtx, int tflags, const char *pToken, int nToken, int iStart, int iEnd))"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 10651 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int(* fts5_tokenizer::xCreate) (void *, const char **azArg, int nArg, \fBFts5Tokenizer\fP **ppOut)"
+
+.PP
+Definition at line 10652 of file sqlite3\&.h\&.
+.SS "void(* fts5_tokenizer::xDelete) (\fBFts5Tokenizer\fP *)"
+
+.PP
+Definition at line 10653 of file sqlite3\&.h\&.
+.SS "int(* fts5_tokenizer::xTokenize) (\fBFts5Tokenizer\fP *, void *pCtx, int flags, const char *pText, int nText, int(*xToken)( void *pCtx, int tflags, const char *pToken, int nToken, int iStart, int iEnd))"
+
+.PP
+Definition at line 10654 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

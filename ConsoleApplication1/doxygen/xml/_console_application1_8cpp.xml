@@ -1,0 +1,392 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_console_application1_8cpp" kind="file" language="C++">
+    <compoundname>ConsoleApplication1.cpp</compoundname>
+    <includes refid="stdafx_8h" local="yes">stdafx.h</includes>
+    <includes local="no">sstream</includes>
+    <includes refid="_record_processor_8h" local="yes">RecordProcessor.h</includes>
+    <includes refid="cpptest_8h" local="yes">cpptest.h</includes>
+    <incdepgraph>
+      <node id="20">
+        <label>list</label>
+      </node>
+      <node id="15">
+        <label>stdarg.h</label>
+      </node>
+      <node id="8">
+        <label>windows.h</label>
+      </node>
+      <node id="18">
+        <label>cpptest-source.h</label>
+        <link refid="cpptest-source_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>SDKDDKVer.h</label>
+      </node>
+      <node id="24">
+        <label>stdexcept</label>
+      </node>
+      <node id="16">
+        <label>cpptest.h</label>
+        <link refid="cpptest_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>cpptest-compileroutput.h</label>
+        <link refid="cpptest-compileroutput_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="2">
+        <label>targetver.h</label>
+        <link refid="targetver_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>cpptest-output.h</label>
+        <link refid="cpptest-output_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>sqlite3.h</label>
+        <link refid="sqlite3_8h"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>cpptest-assert.h</label>
+        <link refid="cpptest-assert_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>cpptest-collectoroutput.h</label>
+        <link refid="cpptest-collectoroutput_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>ctime</label>
+      </node>
+      <node id="0">
+        <label>ConsoleApplication1.cpp</label>
+        <link refid="_console_application1_8cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+      <node id="1">
+        <label>stdafx.h</label>
+        <link refid="stdafx_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>cpptest-textoutput.h</label>
+        <link refid="cpptest-textoutput_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>sstream</label>
+      </node>
+      <node id="22">
+        <label>cpptest-time.h</label>
+        <link refid="cpptest-time_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>cpptest-htmloutput.h</label>
+        <link refid="cpptest-htmloutput_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>RecordProcessor.h</label>
+        <link refid="_record_processor_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="19">
+        <label>cpptest-suite.h</label>
+        <link refid="cpptest-suite_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>tchar.h</label>
+      </node>
+      <node id="4">
+        <label>stdio.h</label>
+      </node>
+      <node id="21">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classdb_test" prot="public">dbTest</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_console_application1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>()</argsstring>
+        <name>main</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="146" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="146" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>ConsoleApplication1.cpp<sp/>:<sp/>Defines<sp/>the<sp/>entry<sp/>point<sp/>for<sp/>the<sp/>console<sp/>application.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="stdafx_8h" kindref="compound">stdafx.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_record_processor_8h" kindref="compound">RecordProcessor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cpptest_8h" kindref="compound">cpptest.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Unit<sp/>tests<sp/>implementation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classdb_test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classdb_test" kindref="compound">dbTest</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_suite" kindref="compound">Test::Suite</ref><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>case<sp/>1<sp/>-<sp/>retrieve<sp/>a<sp/>pattern<sp/>call<sp/>with<sp/>a<sp/>specified<sp/>identifier,<sp/>e.g.<sp/>42</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_select_by_id()<sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref><sp/>selected<sp/>=<sp/>processor.selectRecord(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>RECORDS<sp/>WHERE<sp/>ID<sp/>=<sp/>42&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(selected.size()<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>sstream(selected[0][0]);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sstream<sp/>&gt;&gt;<sp/>id;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(</highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>==<sp/>42);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>failed,<sp/>nothing<sp/>was<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(0<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>case<sp/>2<sp/>-<sp/>list<sp/>all<sp/>pattern<sp/>calls<sp/>with<sp/>a<sp/>specified<sp/>name,<sp/>e.g.<sp/>“myPattern”</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_select_by_name()<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;myPattern&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref><sp/>selected<sp/>=<sp/>processor.selectRecord(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>RECORDS<sp/>WHERE<sp/>NAME=&apos;myPattern&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(selected.size()<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(!name.compare(selected[0][1]));</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(!name.compare(selected[1][1]));</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>failed,<sp/>nothing<sp/>was<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(0<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>case<sp/>3<sp/>-<sp/>list<sp/>all<sp/>pattern<sp/>calls<sp/>with<sp/>a<sp/>specified<sp/>path,<sp/>e.g.<sp/>“src/patterns/Functional.pat”</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_select_by_file()<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>file_path<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;src/patterns/Functional.pat&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref><sp/>selected<sp/>=<sp/>processor.selectRecord(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>RECORDS<sp/>WHERE<sp/>FILE=&apos;src/patterns/Functional.pat&apos;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(selected.size()<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(!file_path.compare(selected[0][2]));</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(!file_path.compare(selected[1][2]));</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>failed,<sp/>nothing<sp/>was<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(0<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>case<sp/>4<sp/>-<sp/>list<sp/>all<sp/>pattern<sp/>calls<sp/>which<sp/>are<sp/>skipped,<sp/>i.<sp/>e.<sp/>when<sp/>the<sp/>“called”<sp/>flag<sp/>is<sp/>false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_select_called()<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref><sp/>selected<sp/>=<sp/>processor.selectRecord(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>RECORDS<sp/>WHERE<sp/>CALLED<sp/>=<sp/>1&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(selected.size()<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>sstream(selected[0][3]);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>called<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sstream<sp/>&gt;&gt;<sp/>called;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(called<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sstream.str(selected[1][3]);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sstream<sp/>&gt;&gt;<sp/>called;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(called<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>failed,<sp/>nothing<sp/>was<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(0<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>case<sp/>5<sp/>-<sp/>list<sp/>all<sp/>pattern<sp/>calls<sp/>which<sp/>are<sp/>not<sp/>skipped,<sp/>i.<sp/>e.<sp/>when<sp/>the<sp/>“called”<sp/>flag<sp/>is<sp/>true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>test_select_not_called()<sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref><sp/>selected<sp/>=<sp/>processor.selectRecord(</highlight><highlight class="stringliteral">&quot;SELECT<sp/>*<sp/>FROM<sp/>RECORDS<sp/>WHERE<sp/>CALLED<sp/>=<sp/>0&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(selected.size()<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stringstream<sp/>sstream(selected[0][3]);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>called<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sstream<sp/>&gt;&gt;<sp/>called;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(called<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sstream.str(selected[1][3]);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sstream<sp/>&gt;&gt;<sp/>called;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(called<sp/>==<sp/>0);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Test<sp/>failed,<sp/>nothing<sp/>was<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT</ref>(0<sp/>==<sp/>1);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="112" refid="classdb_test_1aef2697ca1fc1a9368f220d8b5e62402d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdb_test_1aef2697ca1fc1a9368f220d8b5e62402d" kindref="member">dbTest</ref>()<sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-suite_8h_1abe8c3e0a2cf3893ebc1c265264ed9cb8" kindref="member">TEST_ADD</ref>(dbTest::test_select_by_id);<sp/></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-suite_8h_1abe8c3e0a2cf3893ebc1c265264ed9cb8" kindref="member">TEST_ADD</ref>(dbTest::test_select_by_name);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-suite_8h_1abe8c3e0a2cf3893ebc1c265264ed9cb8" kindref="member">TEST_ADD</ref>(dbTest::test_select_by_file);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-suite_8h_1abe8c3e0a2cf3893ebc1c265264ed9cb8" kindref="member">TEST_ADD</ref>(dbTest::test_select_called);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cpptest-suite_8h_1abe8c3e0a2cf3893ebc1c265264ed9cb8" kindref="member">TEST_ADD</ref>(dbTest::test_select_not_called);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="122" refid="classdb_test_1a9edd9165f54a1ad52545ebff71686735" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_record_processor" kindref="compound">RecordProcessor</ref><sp/><ref refid="classdb_test_1a9edd9165f54a1ad52545ebff71686735" kindref="member">processor</ref>;<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124" refid="classdb_test_1aeefb6e8d64ee6e03da89cb5573d60b31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdb_test_1aeefb6e8d64ee6e03da89cb5573d60b31" kindref="member">setup</ref>()<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Setup<sp/>initial<sp/>state<sp/>of<sp/>the<sp/>database/table/records</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processor.<ref refid="class_record_processor_1a2c919a73f9cd411c141635f35dd047be" kindref="member">createTable</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processor.<ref refid="class_record_processor_1a6101b13cf5883e1fefe3013947ca9b68" kindref="member">insertRecord</ref>(</highlight><highlight class="stringliteral">&quot;INSERT<sp/>INTO<sp/>RECORDS<sp/>(ID,NAME,FILE,CALLED)<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;VALUES<sp/>(42,<sp/>&apos;myPattern&apos;,<sp/>&apos;src/patterns/Functional.pat&apos;,<sp/>0<sp/>);<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processor.<ref refid="class_record_processor_1a6101b13cf5883e1fefe3013947ca9b68" kindref="member">insertRecord</ref>(</highlight><highlight class="stringliteral">&quot;INSERT<sp/>INTO<sp/>RECORDS<sp/>(ID,NAME,FILE,CALLED)<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;VALUES<sp/>(43,<sp/>&apos;myPattern&apos;,<sp/>&apos;src/patterns/Functional.pat&apos;,<sp/>0<sp/>);<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processor.<ref refid="class_record_processor_1a6101b13cf5883e1fefe3013947ca9b68" kindref="member">insertRecord</ref>(</highlight><highlight class="stringliteral">&quot;INSERT<sp/>INTO<sp/>RECORDS<sp/>(ID,NAME,FILE,CALLED)<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;VALUES<sp/>(85,<sp/>&apos;srcPattern&apos;,<sp/>&apos;src/patterns/NoneFunctional.pat&apos;,<sp/>1<sp/>);<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processor.<ref refid="class_record_processor_1a6101b13cf5883e1fefe3013947ca9b68" kindref="member">insertRecord</ref>(</highlight><highlight class="stringliteral">&quot;INSERT<sp/>INTO<sp/>RECORDS<sp/>(ID,NAME,FILE,CALLED)<sp/>&quot;</highlight><highlight class="normal"><sp/><sp/>\</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;VALUES<sp/>(86,<sp/>&apos;thePattern&apos;,<sp/>&apos;src/patterns/NoneFunctional.pat&apos;,<sp/>1<sp/>);<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Release<sp/>allocate<sp/>resources/clear<sp/>test<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classdb_test_1a1fa8de6f80f7578356b0f8feb8dcdd8f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classdb_test_1a1fa8de6f80f7578356b0f8feb8dcdd8f" kindref="member">tear_down</ref>()<sp/></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>processor.<ref refid="class_record_processor_1a6739098423e2d913004459282217db2e" kindref="member">deleteTable</ref>();</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Testing<sp/>RecordProcessor<sp/>class</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="_console_application1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_console_application1_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classdb_test" kindref="compound">dbTest</ref><sp/>unit_tests;</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_text_output" kindref="compound">Test::TextOutput</ref><sp/>output(<ref refid="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1a85dd6e42f6261a23fd504201f5cc2792" kindref="member">Test::TextOutput::Verbose</ref>);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>unit_tests.<ref refid="class_test_1_1_suite_1ad17746e218da79c537bc9d21e389f570" kindref="member">run</ref>(output);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Allow<sp/>the<sp/>user<sp/>to<sp/>see<sp/>unit<sp/>tests<sp/>output<sp/>-<sp/>optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>Sleep(5000);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="ConsoleApplication1.cpp"/>
+  </compounddef>
+</doxygen>

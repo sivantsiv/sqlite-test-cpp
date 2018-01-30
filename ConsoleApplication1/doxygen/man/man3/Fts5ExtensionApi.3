@@ -1,0 +1,163 @@
+.TH "Fts5ExtensionApi" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Fts5ExtensionApi
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBiVersion\fP"
+.br
+.ti -1c
+.RI "void *(* \fBxUserData\fP )(\fBFts5Context\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxColumnCount\fP )(\fBFts5Context\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxRowCount\fP )(\fBFts5Context\fP *, \fBsqlite3_int64\fP *pnRow)"
+.br
+.ti -1c
+.RI "int(* \fBxColumnTotalSize\fP )(\fBFts5Context\fP *, int iCol, \fBsqlite3_int64\fP *pnToken)"
+.br
+.ti -1c
+.RI "int(* \fBxTokenize\fP )(\fBFts5Context\fP *, const char *pText, int nText, void *pCtx, int(*xToken)(void *, int, const char *, int, int, int))"
+.br
+.ti -1c
+.RI "int(* \fBxPhraseCount\fP )(\fBFts5Context\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxPhraseSize\fP )(\fBFts5Context\fP *, int iPhrase)"
+.br
+.ti -1c
+.RI "int(* \fBxInstCount\fP )(\fBFts5Context\fP *, int *pnInst)"
+.br
+.ti -1c
+.RI "int(* \fBxInst\fP )(\fBFts5Context\fP *, int iIdx, int *piPhrase, int *piCol, int *piOff)"
+.br
+.ti -1c
+.RI "\fBsqlite3_int64\fP(* \fBxRowid\fP )(\fBFts5Context\fP *)"
+.br
+.ti -1c
+.RI "int(* \fBxColumnText\fP )(\fBFts5Context\fP *, int iCol, const char **pz, int *pn)"
+.br
+.ti -1c
+.RI "int(* \fBxColumnSize\fP )(\fBFts5Context\fP *, int iCol, int *pnToken)"
+.br
+.ti -1c
+.RI "int(* \fBxQueryPhrase\fP )(\fBFts5Context\fP *, int iPhrase, void *pUserData, int(*)(const \fBFts5ExtensionApi\fP *, \fBFts5Context\fP *, void *))"
+.br
+.ti -1c
+.RI "int(* \fBxSetAuxdata\fP )(\fBFts5Context\fP *, void *pAux, void(*xDelete)(void *))"
+.br
+.ti -1c
+.RI "void *(* \fBxGetAuxdata\fP )(\fBFts5Context\fP *, int bClear)"
+.br
+.ti -1c
+.RI "int(* \fBxPhraseFirst\fP )(\fBFts5Context\fP *, int iPhrase, \fBFts5PhraseIter\fP *, int *, int *)"
+.br
+.ti -1c
+.RI "void(* \fBxPhraseNext\fP )(\fBFts5Context\fP *, \fBFts5PhraseIter\fP *, int *piCol, int *piOff)"
+.br
+.ti -1c
+.RI "int(* \fBxPhraseFirstColumn\fP )(\fBFts5Context\fP *, int iPhrase, \fBFts5PhraseIter\fP *, int *)"
+.br
+.ti -1c
+.RI "void(* \fBxPhraseNextColumn\fP )(\fBFts5Context\fP *, \fBFts5PhraseIter\fP *, int *piCol)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 10415 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int Fts5ExtensionApi::iVersion"
+
+.PP
+Definition at line 10416 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xColumnCount) (\fBFts5Context\fP *)"
+
+.PP
+Definition at line 10420 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xColumnSize) (\fBFts5Context\fP *, int iCol, int *pnToken)"
+
+.PP
+Definition at line 10438 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xColumnText) (\fBFts5Context\fP *, int iCol, const char **pz, int *pn)"
+
+.PP
+Definition at line 10437 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xColumnTotalSize) (\fBFts5Context\fP *, int iCol, \fBsqlite3_int64\fP *pnToken)"
+
+.PP
+Definition at line 10422 of file sqlite3\&.h\&.
+.SS "void*(* Fts5ExtensionApi::xGetAuxdata) (\fBFts5Context\fP *, int bClear)"
+
+.PP
+Definition at line 10444 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xInst) (\fBFts5Context\fP *, int iIdx, int *piPhrase, int *piCol, int *piOff)"
+
+.PP
+Definition at line 10434 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xInstCount) (\fBFts5Context\fP *, int *pnInst)"
+
+.PP
+Definition at line 10433 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xPhraseCount) (\fBFts5Context\fP *)"
+
+.PP
+Definition at line 10430 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xPhraseFirst) (\fBFts5Context\fP *, int iPhrase, \fBFts5PhraseIter\fP *, int *, int *)"
+
+.PP
+Definition at line 10446 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xPhraseFirstColumn) (\fBFts5Context\fP *, int iPhrase, \fBFts5PhraseIter\fP *, int *)"
+
+.PP
+Definition at line 10449 of file sqlite3\&.h\&.
+.SS "void(* Fts5ExtensionApi::xPhraseNext) (\fBFts5Context\fP *, \fBFts5PhraseIter\fP *, int *piCol, int *piOff)"
+
+.PP
+Definition at line 10447 of file sqlite3\&.h\&.
+.SS "void(* Fts5ExtensionApi::xPhraseNextColumn) (\fBFts5Context\fP *, \fBFts5PhraseIter\fP *, int *piCol)"
+
+.PP
+Definition at line 10450 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xPhraseSize) (\fBFts5Context\fP *, int iPhrase)"
+
+.PP
+Definition at line 10431 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xQueryPhrase) (\fBFts5Context\fP *, int iPhrase, void *pUserData, int(*)(const \fBFts5ExtensionApi\fP *, \fBFts5Context\fP *, void *))"
+
+.PP
+Definition at line 10440 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xRowCount) (\fBFts5Context\fP *, \fBsqlite3_int64\fP *pnRow)"
+
+.PP
+Definition at line 10421 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_int64\fP(* Fts5ExtensionApi::xRowid) (\fBFts5Context\fP *)"
+
+.PP
+Definition at line 10436 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xSetAuxdata) (\fBFts5Context\fP *, void *pAux, void(*xDelete)(void *))"
+
+.PP
+Definition at line 10443 of file sqlite3\&.h\&.
+.SS "int(* Fts5ExtensionApi::xTokenize) (\fBFts5Context\fP *, const char *pText, int nText, void *pCtx, int(*xToken)(void *, int, const char *, int, int, int))"
+
+.PP
+Definition at line 10424 of file sqlite3\&.h\&.
+.SS "void*(* Fts5ExtensionApi::xUserData) (\fBFts5Context\fP *)"
+
+.PP
+Definition at line 10418 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

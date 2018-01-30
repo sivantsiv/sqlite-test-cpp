@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__vfs" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_vfs</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__vfs_1a694dd264949bd163545fe174510ed019" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_vfs::iVersion</definition>
+        <argsstring></argsstring>
+        <name>iVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1286" column="1" bodyfile="sqlite3.h" bodystart="1286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a549399081342d61134b6398562a0a997" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_vfs::szOsFile</definition>
+        <argsstring></argsstring>
+        <name>szOsFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1287" column="1" bodyfile="sqlite3.h" bodystart="1287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1adb2d82c74891b00b5529fb94e7710135" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_vfs::mxPathname</definition>
+        <argsstring></argsstring>
+        <name>mxPathname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1288" column="1" bodyfile="sqlite3.h" bodystart="1288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1ae795a4417697ecd35163f6cdf0069073" prot="public" static="no" mutable="no">
+        <type><ref refid="structsqlite3__vfs" kindref="compound">sqlite3_vfs</ref> *</type>
+        <definition>sqlite3_vfs* sqlite3_vfs::pNext</definition>
+        <argsstring></argsstring>
+        <name>pNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1289" column="1" bodyfile="sqlite3.h" bodystart="1289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a0f06a27ac2201ea04c0623ef19e5d73e" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* sqlite3_vfs::zName</definition>
+        <argsstring></argsstring>
+        <name>zName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1290" column="1" bodyfile="sqlite3.h" bodystart="1290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a1ba832cf207fe59c1fc8eb436524bc35" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_vfs::pAppData</definition>
+        <argsstring></argsstring>
+        <name>pAppData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1291" column="1" bodyfile="sqlite3.h" bodystart="1291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1ab106b445eb5d372266a1108fc982a9aa" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xOpen) (sqlite3_vfs *, const char *zName, sqlite3_file *, int flags, int *pOutFlags)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zName, sqlite3_file *, int flags, int *pOutFlags)</argsstring>
+        <name>xOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1292" column="1" bodyfile="sqlite3.h" bodystart="1292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a9a84baca80b7ab2da9fb147cb40c73d2" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xDelete) (sqlite3_vfs *, const char *zName, int syncDir)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zName, int syncDir)</argsstring>
+        <name>xDelete</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1294" column="1" bodyfile="sqlite3.h" bodystart="1294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a3a5cc43f1b8a88747eb77db730ce4f69" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xAccess) (sqlite3_vfs *, const char *zName, int flags, int *pResOut)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zName, int flags, int *pResOut)</argsstring>
+        <name>xAccess</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1295" column="1" bodyfile="sqlite3.h" bodystart="1295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1ae6573ffda4c4f014960b0ec3a1522dfa" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xFullPathname) (sqlite3_vfs *, const char *zName, int nOut, char *zOut)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zName, int nOut, char *zOut)</argsstring>
+        <name>xFullPathname</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1296" column="1" bodyfile="sqlite3.h" bodystart="1296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a4de0324cd74c8ec98e4605d432f16e0a" prot="public" static="no" mutable="no">
+        <type>void *(*</type>
+        <definition>void*(* sqlite3_vfs::xDlOpen) (sqlite3_vfs *, const char *zFilename)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zFilename)</argsstring>
+        <name>xDlOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1297" column="1" bodyfile="sqlite3.h" bodystart="1297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1ace296f3efa5d1a490c892069891f37c0" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_vfs::xDlError) (sqlite3_vfs *, int nByte, char *zErrMsg)</definition>
+        <argsstring>)(sqlite3_vfs *, int nByte, char *zErrMsg)</argsstring>
+        <name>xDlError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1298" column="1" bodyfile="sqlite3.h" bodystart="1298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a847ba7d9a80164138031aacef1d01507" prot="public" static="no" mutable="no">
+        <type>void(*(*</type>
+        <definition>void(*(* sqlite3_vfs::xDlSym) (sqlite3_vfs *, void *, const char *zSymbol))(void)</definition>
+        <argsstring>)(sqlite3_vfs *, void *, const char *zSymbol))(void)</argsstring>
+        <name>xDlSym</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1299" column="1" bodyfile="sqlite3.h" bodystart="1299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a0cbdab1584e0e2a80b32b2c335f17f99" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_vfs::xDlClose) (sqlite3_vfs *, void *)</definition>
+        <argsstring>)(sqlite3_vfs *, void *)</argsstring>
+        <name>xDlClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1300" column="1" bodyfile="sqlite3.h" bodystart="1300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1ac74c20a91cbd440ed72b11de4c4333ea" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xRandomness) (sqlite3_vfs *, int nByte, char *zOut)</definition>
+        <argsstring>)(sqlite3_vfs *, int nByte, char *zOut)</argsstring>
+        <name>xRandomness</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1301" column="1" bodyfile="sqlite3.h" bodystart="1301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1abd36ce64a27bd6c1b57a6f2c7031ff65" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xSleep) (sqlite3_vfs *, int microseconds)</definition>
+        <argsstring>)(sqlite3_vfs *, int microseconds)</argsstring>
+        <name>xSleep</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1302" column="1" bodyfile="sqlite3.h" bodystart="1302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a925aa81bcf67f2daf50ad59de850ef41" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xCurrentTime) (sqlite3_vfs *, double *)</definition>
+        <argsstring>)(sqlite3_vfs *, double *)</argsstring>
+        <name>xCurrentTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1303" column="1" bodyfile="sqlite3.h" bodystart="1303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1ae90895f142cc41801f515ae5e339a3d7" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xGetLastError) (sqlite3_vfs *, int, char *)</definition>
+        <argsstring>)(sqlite3_vfs *, int, char *)</argsstring>
+        <name>xGetLastError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1304" column="1" bodyfile="sqlite3.h" bodystart="1304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a2a344dbc5e4625343d992546fbff5421" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xCurrentTimeInt64) (sqlite3_vfs *, sqlite3_int64 *)</definition>
+        <argsstring>)(sqlite3_vfs *, sqlite3_int64 *)</argsstring>
+        <name>xCurrentTimeInt64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1309" column="1" bodyfile="sqlite3.h" bodystart="1309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a444cd80f79ea4994f72551bb9f403866" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_vfs::xSetSystemCall) (sqlite3_vfs *, const char *zName, sqlite3_syscall_ptr)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zName, sqlite3_syscall_ptr)</argsstring>
+        <name>xSetSystemCall</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1314" column="1" bodyfile="sqlite3.h" bodystart="1314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1a1bf78a1603ab605cd92d146e3f810727" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a99a6393e96d7095fa024de9c1257aa6f" kindref="member">sqlite3_syscall_ptr</ref>(*</type>
+        <definition>sqlite3_syscall_ptr(* sqlite3_vfs::xGetSystemCall) (sqlite3_vfs *, const char *zName)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zName)</argsstring>
+        <name>xGetSystemCall</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1315" column="1" bodyfile="sqlite3.h" bodystart="1315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__vfs_1afbd158883d9bb7954fa7ecd595fe3c2b" prot="public" static="no" mutable="no">
+        <type>const char *(*</type>
+        <definition>const char*(* sqlite3_vfs::xNextSystemCall) (sqlite3_vfs *, const char *zName)</definition>
+        <argsstring>)(sqlite3_vfs *, const char *zName)</argsstring>
+        <name>xNextSystemCall</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="1316" column="1" bodyfile="sqlite3.h" bodystart="1316" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="83">
+        <label>sqlite3_vfs</label>
+        <link refid="structsqlite3__vfs"/>
+        <childnode refid="83" relation="usage">
+          <edgelabel>pNext</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="sqlite3.h" line="1285" column="1" bodyfile="sqlite3.h" bodystart="1285" bodyend="1322"/>
+    <listofallmembers>
+      <member refid="structsqlite3__vfs_1a694dd264949bd163545fe174510ed019" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>iVersion</name></member>
+      <member refid="structsqlite3__vfs_1adb2d82c74891b00b5529fb94e7710135" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>mxPathname</name></member>
+      <member refid="structsqlite3__vfs_1a1ba832cf207fe59c1fc8eb436524bc35" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>pAppData</name></member>
+      <member refid="structsqlite3__vfs_1ae795a4417697ecd35163f6cdf0069073" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>pNext</name></member>
+      <member refid="structsqlite3__vfs_1a549399081342d61134b6398562a0a997" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>szOsFile</name></member>
+      <member refid="structsqlite3__vfs_1a3a5cc43f1b8a88747eb77db730ce4f69" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xAccess</name></member>
+      <member refid="structsqlite3__vfs_1a925aa81bcf67f2daf50ad59de850ef41" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xCurrentTime</name></member>
+      <member refid="structsqlite3__vfs_1a2a344dbc5e4625343d992546fbff5421" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xCurrentTimeInt64</name></member>
+      <member refid="structsqlite3__vfs_1a9a84baca80b7ab2da9fb147cb40c73d2" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xDelete</name></member>
+      <member refid="structsqlite3__vfs_1a0cbdab1584e0e2a80b32b2c335f17f99" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xDlClose</name></member>
+      <member refid="structsqlite3__vfs_1ace296f3efa5d1a490c892069891f37c0" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xDlError</name></member>
+      <member refid="structsqlite3__vfs_1a4de0324cd74c8ec98e4605d432f16e0a" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xDlOpen</name></member>
+      <member refid="structsqlite3__vfs_1a847ba7d9a80164138031aacef1d01507" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xDlSym</name></member>
+      <member refid="structsqlite3__vfs_1ae6573ffda4c4f014960b0ec3a1522dfa" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xFullPathname</name></member>
+      <member refid="structsqlite3__vfs_1ae90895f142cc41801f515ae5e339a3d7" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xGetLastError</name></member>
+      <member refid="structsqlite3__vfs_1a1bf78a1603ab605cd92d146e3f810727" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xGetSystemCall</name></member>
+      <member refid="structsqlite3__vfs_1afbd158883d9bb7954fa7ecd595fe3c2b" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xNextSystemCall</name></member>
+      <member refid="structsqlite3__vfs_1ab106b445eb5d372266a1108fc982a9aa" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xOpen</name></member>
+      <member refid="structsqlite3__vfs_1ac74c20a91cbd440ed72b11de4c4333ea" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xRandomness</name></member>
+      <member refid="structsqlite3__vfs_1a444cd80f79ea4994f72551bb9f403866" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xSetSystemCall</name></member>
+      <member refid="structsqlite3__vfs_1abd36ce64a27bd6c1b57a6f2c7031ff65" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>xSleep</name></member>
+      <member refid="structsqlite3__vfs_1a0f06a27ac2201ea04c0623ef19e5d73e" prot="public" virt="non-virtual"><scope>sqlite3_vfs</scope><name>zName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

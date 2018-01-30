@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__index__info_1_1sqlite3__index__constraint" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_index_info::sqlite3_index_constraint</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__index__info_1_1sqlite3__index__constraint_1a0f1e207060420058ee2881f2ea368e3a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::sqlite3_index_constraint::iColumn</definition>
+        <argsstring></argsstring>
+        <name>iColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6209" column="1" bodyfile="sqlite3.h" bodystart="6209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1_1sqlite3__index__constraint_1a362f4ec1f71975cb0ac39a8b5e4b1476" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char sqlite3_index_info::sqlite3_index_constraint::op</definition>
+        <argsstring></argsstring>
+        <name>op</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6210" column="1" bodyfile="sqlite3.h" bodystart="6210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1_1sqlite3__index__constraint_1ae16e62caeab743cc68bb22227dacb501" prot="public" static="no" mutable="no">
+        <type>unsigned char</type>
+        <definition>unsigned char sqlite3_index_info::sqlite3_index_constraint::usable</definition>
+        <argsstring></argsstring>
+        <name>usable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6211" column="1" bodyfile="sqlite3.h" bodystart="6211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1_1sqlite3__index__constraint_1a4e8368da66f34b7f07b369984b813d1b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::sqlite3_index_constraint::iTermOffset</definition>
+        <argsstring></argsstring>
+        <name>iTermOffset</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6212" column="1" bodyfile="sqlite3.h" bodystart="6212" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="6208" column="1" bodyfile="sqlite3.h" bodystart="6208" bodyend="6213"/>
+    <listofallmembers>
+      <member refid="structsqlite3__index__info_1_1sqlite3__index__constraint_1a0f1e207060420058ee2881f2ea368e3a" prot="public" virt="non-virtual"><scope>sqlite3_index_info::sqlite3_index_constraint</scope><name>iColumn</name></member>
+      <member refid="structsqlite3__index__info_1_1sqlite3__index__constraint_1a4e8368da66f34b7f07b369984b813d1b" prot="public" virt="non-virtual"><scope>sqlite3_index_info::sqlite3_index_constraint</scope><name>iTermOffset</name></member>
+      <member refid="structsqlite3__index__info_1_1sqlite3__index__constraint_1a362f4ec1f71975cb0ac39a8b5e4b1476" prot="public" virt="non-virtual"><scope>sqlite3_index_info::sqlite3_index_constraint</scope><name>op</name></member>
+      <member refid="structsqlite3__index__info_1_1sqlite3__index__constraint_1ae16e62caeab743cc68bb22227dacb501" prot="public" virt="non-virtual"><scope>sqlite3_index_info::sqlite3_index_constraint</scope><name>usable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

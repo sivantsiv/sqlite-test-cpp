@@ -1,0 +1,135 @@
+.TH "sqlite3_rtree_query_info" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sqlite3_rtree_query_info
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "void * \fBpContext\fP"
+.br
+.ti -1c
+.RI "int \fBnParam\fP"
+.br
+.ti -1c
+.RI "\fBsqlite3_rtree_dbl\fP * \fBaParam\fP"
+.br
+.ti -1c
+.RI "void * \fBpUser\fP"
+.br
+.ti -1c
+.RI "void(* \fBxDelUser\fP )(void *)"
+.br
+.ti -1c
+.RI "\fBsqlite3_rtree_dbl\fP * \fBaCoord\fP"
+.br
+.ti -1c
+.RI "unsigned int * \fBanQueue\fP"
+.br
+.ti -1c
+.RI "int \fBnCoord\fP"
+.br
+.ti -1c
+.RI "int \fBiLevel\fP"
+.br
+.ti -1c
+.RI "int \fBmxLevel\fP"
+.br
+.ti -1c
+.RI "\fBsqlite3_int64\fP \fBiRowid\fP"
+.br
+.ti -1c
+.RI "\fBsqlite3_rtree_dbl\fP \fBrParentScore\fP"
+.br
+.ti -1c
+.RI "int \fBeParentWithin\fP"
+.br
+.ti -1c
+.RI "int \fBeWithin\fP"
+.br
+.ti -1c
+.RI "\fBsqlite3_rtree_dbl\fP \fBrScore\fP"
+.br
+.ti -1c
+.RI "\fBsqlite3_value\fP ** \fBapSqlParam\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 8822 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBsqlite3_rtree_dbl\fP* sqlite3_rtree_query_info::aCoord"
+
+.PP
+Definition at line 8828 of file sqlite3\&.h\&.
+.SS "unsigned int* sqlite3_rtree_query_info::anQueue"
+
+.PP
+Definition at line 8829 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_rtree_dbl\fP* sqlite3_rtree_query_info::aParam"
+
+.PP
+Definition at line 8825 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_value\fP** sqlite3_rtree_query_info::apSqlParam"
+
+.PP
+Definition at line 8839 of file sqlite3\&.h\&.
+.SS "int sqlite3_rtree_query_info::eParentWithin"
+
+.PP
+Definition at line 8835 of file sqlite3\&.h\&.
+.SS "int sqlite3_rtree_query_info::eWithin"
+
+.PP
+Definition at line 8836 of file sqlite3\&.h\&.
+.SS "int sqlite3_rtree_query_info::iLevel"
+
+.PP
+Definition at line 8831 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_int64\fP sqlite3_rtree_query_info::iRowid"
+
+.PP
+Definition at line 8833 of file sqlite3\&.h\&.
+.SS "int sqlite3_rtree_query_info::mxLevel"
+
+.PP
+Definition at line 8832 of file sqlite3\&.h\&.
+.SS "int sqlite3_rtree_query_info::nCoord"
+
+.PP
+Definition at line 8830 of file sqlite3\&.h\&.
+.SS "int sqlite3_rtree_query_info::nParam"
+
+.PP
+Definition at line 8824 of file sqlite3\&.h\&.
+.SS "void* sqlite3_rtree_query_info::pContext"
+
+.PP
+Definition at line 8823 of file sqlite3\&.h\&.
+.SS "void* sqlite3_rtree_query_info::pUser"
+
+.PP
+Definition at line 8826 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_rtree_dbl\fP sqlite3_rtree_query_info::rParentScore"
+
+.PP
+Definition at line 8834 of file sqlite3\&.h\&.
+.SS "\fBsqlite3_rtree_dbl\fP sqlite3_rtree_query_info::rScore"
+
+.PP
+Definition at line 8837 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_rtree_query_info::xDelUser) (void *)"
+
+.PP
+Definition at line 8827 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

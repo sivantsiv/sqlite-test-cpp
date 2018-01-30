@@ -1,0 +1,140 @@
+.TH "Test::Suite" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Test::Suite \- Unit testing suite\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpptest\-suite\&.h>\fP
+.PP
+Inherited by \fBdbTest\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSuite\fP ()"
+.br
+.ti -1c
+.RI "virtual \fB~Suite\fP ()"
+.br
+.ti -1c
+.RI "void \fBadd\fP (std::auto_ptr< \fBSuite\fP > suite)"
+.br
+.ti -1c
+.RI "bool \fBrun\fP (\fBOutput\fP &output, bool cont_after_fail=true)"
+.br
+.in -1c
+.SS "Protected Types"
+
+.in +1c
+.ti -1c
+.RI "typedef void(Suite::* \fBFunc\fP) ()"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBcontinue_after_failure\fP () const"
+.br
+.ti -1c
+.RI "virtual void \fBsetup\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBtear_down\fP ()"
+.br
+.ti -1c
+.RI "void \fBregister_test\fP (\fBFunc\fP func, const std::string &name)"
+.br
+.ti -1c
+.RI "void \fBassertment\fP (\fBSource\fP s)"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "struct \fBDoRun\fP"
+.br
+.ti -1c
+.RI "struct \fBExecTests\fP"
+.br
+.ti -1c
+.RI "struct \fBSubSuiteTests\fP"
+.br
+.ti -1c
+.RI "struct \fBSubSuiteTime\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Unit testing suite\&. 
+
+Base class for all suites\&. Derive from this class to create own test suites\&.
+.PP
+Test functions in derived classes are registered as tests using the \fBTEST_ADD(func)\fP\&. Testing is started by \fBrun()\fP\&. Note that suites may be embedded in other suites using \fBadd()\fP\&. 
+.PP
+Definition at line 52 of file cpptest\-suite\&.h\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef void(Suite::* Test::Suite::Func) ()\fC [protected]\fP"
+Pointer to a test function\&. 
+.PP
+Definition at line 65 of file cpptest\-suite\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Test::Suite::Suite ()"
+
+.SS "virtual Test::Suite::~Suite ()\fC [virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Test::Suite::add (std::auto_ptr< \fBSuite\fP > suite)"
+
+.SS "void Test::Suite::assertment (\fBSource\fP s)\fC [protected]\fP"
+
+.SS "bool Test::Suite::continue_after_failure () const\fC [inline]\fP, \fC [protected]\fP"
+
+.PP
+Definition at line 67 of file cpptest\-suite\&.h\&.
+.SS "void Test::Suite::register_test (\fBFunc\fP func, const std::string & name)\fC [protected]\fP"
+
+.SS "bool Test::Suite::run (\fBOutput\fP & output, bool cont_after_fail = \fCtrue\fP)"
+
+.SS "virtual void Test::Suite::setup ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBdbTest\fP\&.
+.PP
+Definition at line 69 of file cpptest\-suite\&.h\&.
+.SS "virtual void Test::Suite::tear_down ()\fC [inline]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Reimplemented in \fBdbTest\fP\&.
+.PP
+Definition at line 70 of file cpptest\-suite\&.h\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend struct DoRun\fC [friend]\fP"
+
+.PP
+Definition at line 80 of file cpptest\-suite\&.h\&.
+.SS "friend struct ExecTests\fC [friend]\fP"
+
+.PP
+Definition at line 83 of file cpptest\-suite\&.h\&.
+.SS "friend struct SubSuiteTests\fC [friend]\fP"
+
+.PP
+Definition at line 84 of file cpptest\-suite\&.h\&.
+.SS "friend struct SubSuiteTime\fC [friend]\fP"
+
+.PP
+Definition at line 85 of file cpptest\-suite\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

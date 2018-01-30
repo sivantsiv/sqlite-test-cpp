@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_compiler_output_1_1_invalid_format" kind="class" language="C++" prot="public">
+    <compoundname>Test::CompilerOutput::InvalidFormat</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">logic_error</basecompoundref>
+    <includes refid="cpptest-compileroutput_8h" local="no">cpptest-compileroutput.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_compiler_output_1_1_invalid_format_1a3a7ab44239805bcefd4bc19c48c91992" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Test::CompilerOutput::InvalidFormat::InvalidFormat</definition>
+        <argsstring>(const std::string &amp;what)</argsstring>
+        <name>InvalidFormat</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>what</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-compileroutput.h" line="64" column="1" bodyfile="cpptest-compileroutput.h" bodystart="64" bodyend="65"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Compiler output exception. </para>    </briefdescription>
+    <detaileddescription>
+<para>Indicates that an invalid message format was given when creating a compiler output. The failing format may be retrieved using the what() method. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="34">
+        <label>std::logic_error</label>
+      </node>
+      <node id="33">
+        <label>Test::CompilerOutput::InvalidFormat</label>
+        <link refid="class_test_1_1_compiler_output_1_1_invalid_format"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="36">
+        <label>std::logic_error</label>
+      </node>
+      <node id="35">
+        <label>Test::CompilerOutput::InvalidFormat</label>
+        <link refid="class_test_1_1_compiler_output_1_1_invalid_format"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-compileroutput.h" line="62" column="1" bodyfile="cpptest-compileroutput.h" bodystart="61" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_compiler_output_1_1_invalid_format_1a3a7ab44239805bcefd4bc19c48c91992" prot="public" virt="non-virtual"><scope>Test::CompilerOutput::InvalidFormat</scope><name>InvalidFormat</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

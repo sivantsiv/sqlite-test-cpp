@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__module" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_module</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__module_1a42b11d080dc205aea43581b18f925afe" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_module::iVersion</definition>
+        <argsstring></argsstring>
+        <name>iVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6075" column="1" bodyfile="sqlite3.h" bodystart="6075" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a5934e38da1222cac999d01d372af293e" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xCreate) (sqlite3 *, void *pAux, int argc, const char *const  *argv, sqlite3_vtab **ppVTab, char **)</definition>
+        <argsstring>)(sqlite3 *, void *pAux, int argc, const char *const *argv, sqlite3_vtab **ppVTab, char **)</argsstring>
+        <name>xCreate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6076" column="1" bodyfile="sqlite3.h" bodystart="6076" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a457fe622b5334195640e3e835c9923a8" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xConnect) (sqlite3 *, void *pAux, int argc, const char *const  *argv, sqlite3_vtab **ppVTab, char **)</definition>
+        <argsstring>)(sqlite3 *, void *pAux, int argc, const char *const *argv, sqlite3_vtab **ppVTab, char **)</argsstring>
+        <name>xConnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6079" column="1" bodyfile="sqlite3.h" bodystart="6079" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1aad92b2cd56253baaeac656d7693ce4af" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xBestIndex) (sqlite3_vtab *pVTab, sqlite3_index_info *)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab, sqlite3_index_info *)</argsstring>
+        <name>xBestIndex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6082" column="1" bodyfile="sqlite3.h" bodystart="6082" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a0107afd3c350db14098edbaae04342df" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xDisconnect) (sqlite3_vtab *pVTab)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab)</argsstring>
+        <name>xDisconnect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6083" column="1" bodyfile="sqlite3.h" bodystart="6083" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a0ec3414a65bb24f400e8cfd820751412" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xDestroy) (sqlite3_vtab *pVTab)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab)</argsstring>
+        <name>xDestroy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6084" column="1" bodyfile="sqlite3.h" bodystart="6084" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a3f1e18ef5e5bd4ddbd9500c7cd951f34" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xOpen) (sqlite3_vtab *pVTab, sqlite3_vtab_cursor **ppCursor)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab, sqlite3_vtab_cursor **ppCursor)</argsstring>
+        <name>xOpen</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6085" column="1" bodyfile="sqlite3.h" bodystart="6085" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1acc6c4d6d41f3d056e297eea9725b887c" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xClose) (sqlite3_vtab_cursor *)</definition>
+        <argsstring>)(sqlite3_vtab_cursor *)</argsstring>
+        <name>xClose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6086" column="1" bodyfile="sqlite3.h" bodystart="6086" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a46ba11ba4d07f7fdcab4f35bf2045300" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xFilter) (sqlite3_vtab_cursor *, int idxNum, const char *idxStr, int argc, sqlite3_value **argv)</definition>
+        <argsstring>)(sqlite3_vtab_cursor *, int idxNum, const char *idxStr, int argc, sqlite3_value **argv)</argsstring>
+        <name>xFilter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6087" column="1" bodyfile="sqlite3.h" bodystart="6087" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a7a95af281219212e50f3417f8c816bfc" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xNext) (sqlite3_vtab_cursor *)</definition>
+        <argsstring>)(sqlite3_vtab_cursor *)</argsstring>
+        <name>xNext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6089" column="1" bodyfile="sqlite3.h" bodystart="6089" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1afad8fda57fb28a01196230bc554e44b1" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xEof) (sqlite3_vtab_cursor *)</definition>
+        <argsstring>)(sqlite3_vtab_cursor *)</argsstring>
+        <name>xEof</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6090" column="1" bodyfile="sqlite3.h" bodystart="6090" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a7cde490d5d06e19b90d768b90991f4a6" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xColumn) (sqlite3_vtab_cursor *, sqlite3_context *, int)</definition>
+        <argsstring>)(sqlite3_vtab_cursor *, sqlite3_context *, int)</argsstring>
+        <name>xColumn</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6091" column="1" bodyfile="sqlite3.h" bodystart="6091" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a26c91e3a8a34d356ff36790488e4acf1" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xRowid) (sqlite3_vtab_cursor *, sqlite3_int64 *pRowid)</definition>
+        <argsstring>)(sqlite3_vtab_cursor *, sqlite3_int64 *pRowid)</argsstring>
+        <name>xRowid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6092" column="1" bodyfile="sqlite3.h" bodystart="6092" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1aa6c44549a07cc5bf36fae44930069ade" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xUpdate) (sqlite3_vtab *, int, sqlite3_value **, sqlite3_int64 *)</definition>
+        <argsstring>)(sqlite3_vtab *, int, sqlite3_value **, sqlite3_int64 *)</argsstring>
+        <name>xUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6093" column="1" bodyfile="sqlite3.h" bodystart="6093" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1af190bd5cbd1e3ff30a09ca7b015af1a1" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xBegin) (sqlite3_vtab *pVTab)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab)</argsstring>
+        <name>xBegin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6094" column="1" bodyfile="sqlite3.h" bodystart="6094" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a3a2dda4b384eef16bf939e3c25df7282" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xSync) (sqlite3_vtab *pVTab)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab)</argsstring>
+        <name>xSync</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6095" column="1" bodyfile="sqlite3.h" bodystart="6095" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a1d9fa3ed3dd16165cfcda3a532a7a3fc" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xCommit) (sqlite3_vtab *pVTab)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab)</argsstring>
+        <name>xCommit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6096" column="1" bodyfile="sqlite3.h" bodystart="6096" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a2168ba5102151712f8bbfdc5b2ccaf9c" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xRollback) (sqlite3_vtab *pVTab)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab)</argsstring>
+        <name>xRollback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6097" column="1" bodyfile="sqlite3.h" bodystart="6097" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1afb7bf9d156a767a50f5e9d92b135a80f" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xFindFunction) (sqlite3_vtab *pVtab, int nArg, const char *zName, void(**pxFunc)(sqlite3_context *, int, sqlite3_value **), void **ppArg)</definition>
+        <argsstring>)(sqlite3_vtab *pVtab, int nArg, const char *zName, void(**pxFunc)(sqlite3_context *, int, sqlite3_value **), void **ppArg)</argsstring>
+        <name>xFindFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6098" column="1" bodyfile="sqlite3.h" bodystart="6098" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a684849a921202d5dec6012824c1d2308" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xRename) (sqlite3_vtab *pVtab, const char *zNew)</definition>
+        <argsstring>)(sqlite3_vtab *pVtab, const char *zNew)</argsstring>
+        <name>xRename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6101" column="1" bodyfile="sqlite3.h" bodystart="6101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1a3819f1935503e558637647c359193ef9" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xSavepoint) (sqlite3_vtab *pVTab, int)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab, int)</argsstring>
+        <name>xSavepoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6104" column="1" bodyfile="sqlite3.h" bodystart="6104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1ac5f0d86a3e9a26668dbf1251a7c51517" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xRelease) (sqlite3_vtab *pVTab, int)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab, int)</argsstring>
+        <name>xRelease</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6105" column="1" bodyfile="sqlite3.h" bodystart="6105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__module_1aaf96452ff3240596b8b8850c2baff3eb" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_module::xRollbackTo) (sqlite3_vtab *pVTab, int)</definition>
+        <argsstring>)(sqlite3_vtab *pVTab, int)</argsstring>
+        <name>xRollbackTo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6106" column="1" bodyfile="sqlite3.h" bodystart="6106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="6074" column="1" bodyfile="sqlite3.h" bodystart="6074" bodyend="6107"/>
+    <listofallmembers>
+      <member refid="structsqlite3__module_1a42b11d080dc205aea43581b18f925afe" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>iVersion</name></member>
+      <member refid="structsqlite3__module_1af190bd5cbd1e3ff30a09ca7b015af1a1" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xBegin</name></member>
+      <member refid="structsqlite3__module_1aad92b2cd56253baaeac656d7693ce4af" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xBestIndex</name></member>
+      <member refid="structsqlite3__module_1acc6c4d6d41f3d056e297eea9725b887c" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xClose</name></member>
+      <member refid="structsqlite3__module_1a7cde490d5d06e19b90d768b90991f4a6" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xColumn</name></member>
+      <member refid="structsqlite3__module_1a1d9fa3ed3dd16165cfcda3a532a7a3fc" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xCommit</name></member>
+      <member refid="structsqlite3__module_1a457fe622b5334195640e3e835c9923a8" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xConnect</name></member>
+      <member refid="structsqlite3__module_1a5934e38da1222cac999d01d372af293e" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xCreate</name></member>
+      <member refid="structsqlite3__module_1a0ec3414a65bb24f400e8cfd820751412" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xDestroy</name></member>
+      <member refid="structsqlite3__module_1a0107afd3c350db14098edbaae04342df" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xDisconnect</name></member>
+      <member refid="structsqlite3__module_1afad8fda57fb28a01196230bc554e44b1" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xEof</name></member>
+      <member refid="structsqlite3__module_1a46ba11ba4d07f7fdcab4f35bf2045300" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xFilter</name></member>
+      <member refid="structsqlite3__module_1afb7bf9d156a767a50f5e9d92b135a80f" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xFindFunction</name></member>
+      <member refid="structsqlite3__module_1a7a95af281219212e50f3417f8c816bfc" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xNext</name></member>
+      <member refid="structsqlite3__module_1a3f1e18ef5e5bd4ddbd9500c7cd951f34" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xOpen</name></member>
+      <member refid="structsqlite3__module_1ac5f0d86a3e9a26668dbf1251a7c51517" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xRelease</name></member>
+      <member refid="structsqlite3__module_1a684849a921202d5dec6012824c1d2308" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xRename</name></member>
+      <member refid="structsqlite3__module_1a2168ba5102151712f8bbfdc5b2ccaf9c" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xRollback</name></member>
+      <member refid="structsqlite3__module_1aaf96452ff3240596b8b8850c2baff3eb" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xRollbackTo</name></member>
+      <member refid="structsqlite3__module_1a26c91e3a8a34d356ff36790488e4acf1" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xRowid</name></member>
+      <member refid="structsqlite3__module_1a3819f1935503e558637647c359193ef9" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xSavepoint</name></member>
+      <member refid="structsqlite3__module_1a3a2dda4b384eef16bf939e3c25df7282" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xSync</name></member>
+      <member refid="structsqlite3__module_1aa6c44549a07cc5bf36fae44930069ade" prot="public" virt="non-virtual"><scope>sqlite3_module</scope><name>xUpdate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

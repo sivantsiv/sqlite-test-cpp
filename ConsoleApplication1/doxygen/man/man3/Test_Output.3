@@ -1,0 +1,174 @@
+.TH "Test::Output" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Test::Output \- Test suite output handler\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cpptest\-output\&.h>\fP
+.PP
+Inherited by \fBTest::CollectorOutput\fP, \fBTest::CompilerOutput\fP, and \fBTest::TextOutput\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~Output\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBinitialize\fP (int tests)"
+.br
+.ti -1c
+.RI "virtual void \fBfinished\fP (int tests, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBsuite_start\fP (int tests, const std::string &name)"
+.br
+.ti -1c
+.RI "virtual void \fBsuite_end\fP (int tests, const std::string &name, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBtest_start\fP (const std::string &name)"
+.br
+.ti -1c
+.RI "virtual void \fBtest_end\fP (const std::string &name, bool ok, const \fBTime\fP &time)"
+.br
+.ti -1c
+.RI "virtual void \fBassertment\fP (const \fBSource\fP &s)"
+.br
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBOutput\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Test suite output handler\&. 
+
+Abstract base class for all suite output handlers\&. Derive from this class to create real output handlers that creates arbitrary complex output handlers\&.
+.PP
+All parts of testing is reported (test start/stop, suite start/stop, individual test start/stop, and assertments), thus giving maximum flexibility for derived classes\&. 
+.PP
+Definition at line 55 of file cpptest\-output\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual Test::Output::~Output ()\fC [inline]\fP, \fC [virtual]\fP"
+Empty destructor\&. 
+.PP
+Definition at line 60 of file cpptest\-output\&.h\&.
+.SS "Test::Output::Output ()\fC [inline]\fP, \fC [protected]\fP"
+Empty constructor\&. 
+.PP
+Definition at line 143 of file cpptest\-output\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Test::Output::assertment (const \fBSource\fP & s)\fC [inline]\fP, \fC [virtual]\fP"
+Called when an assertment is issued\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIs\fP Assert point information\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTest::CompilerOutput\fP, \fBTest::TextOutput\fP, and \fBTest::CollectorOutput\fP\&.
+.PP
+Definition at line 135 of file cpptest\-output\&.h\&.
+.SS "virtual void Test::Output::finished (int tests, const \fBTime\fP & time)\fC [inline]\fP, \fC [virtual]\fP"
+Called when testing is finished\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Total number of tests in all suites\&. 
+.br
+\fItime\fP Total elapsed time for all tests\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTest::TextOutput\fP, and \fBTest::CollectorOutput\fP\&.
+.PP
+Definition at line 76 of file cpptest\-output\&.h\&.
+.SS "virtual void Test::Output::initialize (int tests)\fC [inline]\fP, \fC [virtual]\fP"
+Called when testing is started\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Total number of tests in all suites\&. 
+.RE
+.PP
+
+.PP
+Definition at line 66 of file cpptest\-output\&.h\&.
+.SS "virtual void Test::Output::suite_end (int tests, const std::string & name, const \fBTime\fP & time)\fC [inline]\fP, \fC [virtual]\fP"
+Called when a suite is finished\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Number of tests in this suite\&. 
+.br
+\fIname\fP Name of the suite\&. 
+.br
+\fItime\fP Total elapsed time for all tests in this suite\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTest::TextOutput\fP, and \fBTest::CollectorOutput\fP\&.
+.PP
+Definition at line 99 of file cpptest\-output\&.h\&.
+.SS "virtual void Test::Output::suite_start (int tests, const std::string & name)\fC [inline]\fP, \fC [virtual]\fP"
+Called when a suite is entered\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItests\fP Number of tests in this suite\&. 
+.br
+\fIname\fP Name of the suite\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTest::TextOutput\fP, and \fBTest::CollectorOutput\fP\&.
+.PP
+Definition at line 87 of file cpptest\-output\&.h\&.
+.SS "virtual void Test::Output::test_end (const std::string & name, bool ok, const \fBTime\fP & time)\fC [inline]\fP, \fC [virtual]\fP"
+Called when a test if finished, regardless if an assertment was issued\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP Name of the test function\&. 
+.br
+\fIok\fP True if the test was successful; false otherwise\&. 
+.br
+\fItime\fP Execution time\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTest::TextOutput\fP, and \fBTest::CollectorOutput\fP\&.
+.PP
+Definition at line 123 of file cpptest\-output\&.h\&.
+.SS "virtual void Test::Output::test_start (const std::string & name)\fC [inline]\fP, \fC [virtual]\fP"
+Called when a tests is executed\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIname\fP Name of the test function\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBTest::CollectorOutput\fP\&.
+.PP
+Definition at line 111 of file cpptest\-output\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

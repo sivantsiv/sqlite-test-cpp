@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="cpptest-collectoroutput_8h" kind="file" language="C++">
+    <compoundname>cpptest-collectoroutput.h</compoundname>
+    <includes local="no">list</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="cpptest-output_8h" local="yes">cpptest-output.h</includes>
+    <includes refid="cpptest-source_8h" local="yes">cpptest-source.h</includes>
+    <includes refid="cpptest-time_8h" local="yes">cpptest-time.h</includes>
+    <includedby refid="cpptest-htmloutput_8h" local="yes">cpptest-htmloutput.h</includedby>
+    <incdepgraph>
+      <node id="36">
+        <label>list</label>
+      </node>
+      <node id="40">
+        <label>cpptest-source.h</label>
+        <link refid="cpptest-source_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>string</label>
+      </node>
+      <node id="39">
+        <label>cpptest-output.h</label>
+        <link refid="cpptest-output_8h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>cpptest-collectoroutput.h</label>
+        <link refid="cpptest-collectoroutput_8h"/>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+        <childnode refid="40" relation="include">
+        </childnode>
+        <childnode refid="41" relation="include">
+        </childnode>
+      </node>
+      <node id="38">
+        <label>vector</label>
+      </node>
+      <node id="41">
+        <label>cpptest-time.h</label>
+        <link refid="cpptest-time_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="45">
+        <label>cpptest.h</label>
+        <link refid="cpptest_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="43">
+        <label>cpptest-collectoroutput.h</label>
+        <link refid="cpptest-collectoroutput_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+      </node>
+      <node id="46">
+        <label>ConsoleApplication1.cpp</label>
+        <link refid="_console_application1_8cpp"/>
+      </node>
+      <node id="44">
+        <label>cpptest-htmloutput.h</label>
+        <link refid="cpptest-htmloutput_8h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_test_1_1_collector_output" prot="public">Test::CollectorOutput</innerclass>
+    <innerclass refid="struct_test_1_1_collector_output_1_1_test_info" prot="protected">Test::CollectorOutput::TestInfo</innerclass>
+    <innerclass refid="struct_test_1_1_collector_output_1_1_suite_info" prot="protected">Test::CollectorOutput::SuiteInfo</innerclass>
+    <innernamespace refid="namespace_test">Test</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>$Id:<sp/>cpptest-collectoroutput.h,v<sp/>1.3<sp/>2005/06/08<sp/>08:08:06<sp/>nilu<sp/>Exp<sp/>$</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>CppTest<sp/>-<sp/>A<sp/>C++<sp/>Unit<sp/>Testing<sp/>Framework</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2003<sp/>Niklas<sp/>Lundell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>library<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>modify<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>License<sp/>as<sp/>published<sp/>by<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>version<sp/>2<sp/>of<sp/>the<sp/>License,<sp/>or<sp/>(at<sp/>your<sp/>option)<sp/>any<sp/>later<sp/>version.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>library<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the<sp/>GNU</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Lesser<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>Lesser<sp/>General<sp/>Public</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>License<sp/>along<sp/>with<sp/>this<sp/>library;<sp/>if<sp/>not,<sp/>write<sp/>to<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>59<sp/>Temple<sp/>Place<sp/>-<sp/>Suite<sp/>330,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Boston,<sp/>MA<sp/>02111-1307,<sp/>USA.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//<sp/>---</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="preprocessor">#ifndef<sp/>CPPTEST_COLLECTOROUTPUT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CPPTEST_COLLECTOROUTPUT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cpptest-output_8h" kindref="compound">cpptest-output.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cpptest-source_8h" kindref="compound">cpptest-source.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cpptest-time_8h" kindref="compound">cpptest-time.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="namespace_test" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_test" kindref="compound">Test</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47" refid="class_test_1_1_collector_output" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_test_1_1_collector_output" kindref="compound">CollectorOutput</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_output" kindref="compound">Output</ref></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_collector_output_1ad1a7502a31c58d93f0d88d7a679ab24d" kindref="member">finished</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tests,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_time" kindref="compound">Time</ref>&amp;<sp/>time);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_collector_output_1a1d4c1eb5920fa96fb8dc8fe2eb0c336e" kindref="member">suite_start</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tests,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_collector_output_1a50c041adf1de3e296b50b1611e55a407" kindref="member">suite_end</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tests,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_time" kindref="compound">Time</ref>&amp;<sp/>time);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_collector_output_1a0ac72b71fac68305ceabb1c516760eb0" kindref="member">test_start</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_collector_output_1a08aa350c9a0ce221d03f6841a0b5d633" kindref="member">test_end</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>ok,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_time" kindref="compound">Time</ref>&amp;<sp/>time);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_collector_output_1a96b61d5e53c3dfa1b98747bb582aa4f3" kindref="member">assertment</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_test_1_1_source" kindref="compound">Source</ref>&amp;<sp/>s);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">OutputSuiteInfo;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">OutputTestInfo;</highlight></codeline>
+<codeline lineno="62" refid="class_test_1_1_collector_output_1a1921f35e0da596bd75da5824afe872c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">OutputErrorTestInfo;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::list&lt;Source&gt;<sp/><ref refid="class_test_1_1_collector_output_1a1921f35e0da596bd75da5824afe872c9" kindref="member">Sources</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="66" refid="struct_test_1_1_collector_output_1_1_test_info" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_test_1_1_collector_output_1_1_test_info" kindref="compound">TestInfo</ref></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="68" refid="struct_test_1_1_collector_output_1_1_test_info_1aa28d98e3ea65b4dda28fbb8c62817cf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_test_1_1_collector_output_1_1_test_info_1aa28d98e3ea65b4dda28fbb8c62817cf5" kindref="member">_name</ref>;</highlight></codeline>
+<codeline lineno="69" refid="struct_test_1_1_collector_output_1_1_test_info_1a59094663d5e7e2a7d896ce574ae6ef1b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_time" kindref="compound">Time</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_test_info_1a59094663d5e7e2a7d896ce574ae6ef1b" kindref="member">_time</ref>;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="struct_test_1_1_collector_output_1_1_test_info_1a99a6450e62566587a15c9ae9b7073ae7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_test_info_1a99a6450e62566587a15c9ae9b7073ae7" kindref="member">_success</ref><sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="72" refid="struct_test_1_1_collector_output_1_1_test_info_1a930eb868ea4e8fb30577967179c80d77" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1a1921f35e0da596bd75da5824afe872c9" kindref="member">Sources</ref><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_test_info_1a930eb868ea4e8fb30577967179c80d77" kindref="member">_sources</ref>;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="struct_test_1_1_collector_output_1_1_test_info_1acfd49728d424c2824effe37beb85de87" kindref="member">TestInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>name);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77" refid="class_test_1_1_collector_output_1a54a7b7c9b6d181102bc8934190b06e86" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector&lt;TestInfo&gt;<sp/><ref refid="class_test_1_1_collector_output_1a54a7b7c9b6d181102bc8934190b06e86" kindref="member">Tests</ref>;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="79" refid="struct_test_1_1_collector_output_1_1_suite_info" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_test_1_1_collector_output_1_1_suite_info" kindref="compound">SuiteInfo</ref></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="81" refid="struct_test_1_1_collector_output_1_1_suite_info_1a55bdc93b43037cba310bfd69441a3f15" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_test_1_1_collector_output_1_1_suite_info_1a55bdc93b43037cba310bfd69441a3f15" kindref="member">_name</ref>;</highlight></codeline>
+<codeline lineno="82" refid="struct_test_1_1_collector_output_1_1_suite_info_1aad064ab88ce0e898be5b01ae98898e0f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_suite_info_1aad064ab88ce0e898be5b01ae98898e0f" kindref="member">_errors</ref>;</highlight></codeline>
+<codeline lineno="83" refid="struct_test_1_1_collector_output_1_1_suite_info_1aeffb563714b2ba368e8c9cc92cb78091" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1a54a7b7c9b6d181102bc8934190b06e86" kindref="member">Tests</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_suite_info_1aeffb563714b2ba368e8c9cc92cb78091" kindref="member">_tests</ref>;</highlight></codeline>
+<codeline lineno="84" refid="struct_test_1_1_collector_output_1_1_suite_info_1a50173eba0cbf1c9e77bb029809a4580e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_time" kindref="compound">Time</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_suite_info_1a50173eba0cbf1c9e77bb029809a4580e" kindref="member">_time</ref>;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_suite_info_1a293cc820c5745fc786faf3b8e2ab9438" kindref="member">SuiteInfo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tests);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89" refid="class_test_1_1_collector_output_1a0879ce3b51f1e3b3fe14aa5665dccd30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::list&lt;SuiteInfo&gt;<sp/><ref refid="class_test_1_1_collector_output_1a0879ce3b51f1e3b3fe14aa5665dccd30" kindref="member">Suites</ref>;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91" refid="class_test_1_1_collector_output_1a9f79c0fa5abf1d6248a85e7ae4701c5f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1a0879ce3b51f1e3b3fe14aa5665dccd30" kindref="member">Suites</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1a9f79c0fa5abf1d6248a85e7ae4701c5f" kindref="member">_suites</ref>;</highlight></codeline>
+<codeline lineno="92" refid="class_test_1_1_collector_output_1a7d8ec4ad0316b57aa96ae50a548c94d2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1a7d8ec4ad0316b57aa96ae50a548c94d2" kindref="member">_total_errors</ref>;</highlight></codeline>
+<codeline lineno="93" refid="class_test_1_1_collector_output_1ace6c1fc02a6ac7a6c15b982b96f5f68f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1ace6c1fc02a6ac7a6c15b982b96f5f68f" kindref="member">_total_tests</ref>;</highlight></codeline>
+<codeline lineno="94" refid="class_test_1_1_collector_output_1af1e014fde4bf5b4e6c89de748630aa79" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_time" kindref="compound">Time</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1af1e014fde4bf5b4e6c89de748630aa79" kindref="member">_total_time</ref>;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_test_1_1_collector_output_1a852bde8f194b4f81ca36f222257adc53" kindref="member">CollectorOutput</ref>();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_suite_info" kindref="compound">SuiteInfo</ref>*<sp/><sp/><sp/><sp/><sp/><sp/>_cur_suite;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_test_1_1_collector_output_1_1_test_info" kindref="compound">TestInfo</ref>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/>_cur_test;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>Test</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>#ifndef<sp/>CPPTEST_COLLECTOROUTPUT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="cpptest-collectoroutput.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,429 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_text_output" kind="class" language="C++" prot="public">
+    <compoundname>Test::TextOutput</compoundname>
+    <basecompoundref refid="class_test_1_1_output" prot="public" virt="non-virtual">Test::Output</basecompoundref>
+    <includes refid="cpptest-textoutput_8h" local="no">cpptest-textoutput.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1" prot="public" static="no" strong="no">
+        <type></type>
+        <name>Mode</name>
+        <enumvalue id="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1ae63930203459836dfc6e0939f92a9fb2" prot="public">
+          <name>Terse</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Terse output mode, which only shows the number of correct tests. </para>          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1a85dd6e42f6261a23fd504201f5cc2792" prot="public">
+          <name>Verbose</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Verbose output mode, which also shows extended assert information for each test that failed. </para>          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="class_test_1_1_output" kindref="compound">Output</ref> mode. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="52" column="1" bodyfile="cpptest-textoutput.h" bodystart="51" bodyend="61"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="class_test_1_1_text_output_1a42a7753c3074bb8129dd7eb808d1bc8c" prot="private" static="no">
+        <type>std::list&lt; <ref refid="class_test_1_1_source" kindref="compound">Source</ref> &gt;</type>
+        <definition>typedef std::list&lt;Source&gt; Test::TextOutput::ErrorList</definition>
+        <argsstring></argsstring>
+        <name>ErrorList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="74" column="1" bodyfile="cpptest-textoutput.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_test_1_1_text_output_1a6e15d47932f699f98994b3b6ee13bfd4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1" kindref="member">Mode</ref></type>
+        <definition>Mode Test::TextOutput::_mode</definition>
+        <argsstring></argsstring>
+        <name>_mode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="76" column="1" bodyfile="cpptest-textoutput.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_text_output_1a536a0f4096aa5b4885fb9862e9074e57" prot="private" static="no" mutable="no">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream&amp; Test::TextOutput::_stream</definition>
+        <argsstring></argsstring>
+        <name>_stream</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="77" column="1" bodyfile="cpptest-textoutput.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_text_output_1a618346a794a226c7384e6a7e53ae93b1" prot="private" static="no" mutable="no">
+        <type>ErrorList</type>
+        <definition>ErrorList Test::TextOutput::_suite_error_list</definition>
+        <argsstring></argsstring>
+        <name>_suite_error_list</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="78" column="1" bodyfile="cpptest-textoutput.h" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_text_output_1a64725e7a14645c581bc1f6c4574a734b" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Test::TextOutput::_suite_name</definition>
+        <argsstring></argsstring>
+        <name>_suite_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="79" column="1" bodyfile="cpptest-textoutput.h" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_text_output_1aed8285a83afe240654c12ded88b5c039" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Test::TextOutput::_suite_errors</definition>
+        <argsstring></argsstring>
+        <name>_suite_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="80" column="1" bodyfile="cpptest-textoutput.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_text_output_1a8753b9e5394cd60794727cbe7c12c2fe" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Test::TextOutput::_suite_tests</definition>
+        <argsstring></argsstring>
+        <name>_suite_tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="81" column="1" bodyfile="cpptest-textoutput.h" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_text_output_1aaafb16f6f85b2b3acdea989e95f435dc" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Test::TextOutput::_suite_total_tests</definition>
+        <argsstring></argsstring>
+        <name>_suite_total_tests</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="82" column="1" bodyfile="cpptest-textoutput.h" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_test_1_1_text_output_1aa9976eda4ce7c6da54005c8069c91f07" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Test::TextOutput::_total_errors</definition>
+        <argsstring></argsstring>
+        <name>_total_errors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="83" column="1" bodyfile="cpptest-textoutput.h" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_text_output_1ab9bdd9b2d9b362ca5fb148b766ecdd02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Test::TextOutput::TextOutput</definition>
+        <argsstring>(Mode mode, std::ostream &amp;stream=std::cout)</argsstring>
+        <name>TextOutput</name>
+        <param>
+          <type><ref refid="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1" kindref="member">Mode</ref></type>
+          <declname>mode</declname>
+        </param>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>stream</declname>
+          <defval>std::cout</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_text_output_1a9dcf13d9714a2774230386ef3215b701" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::TextOutput::finished</definition>
+        <argsstring>(int tests, const Time &amp;time)</argsstring>
+        <name>finished</name>
+        <reimplements refid="class_test_1_1_output_1aeff8af8326a8c54a38199f76837f860a">finished</reimplements>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when testing is finished.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total number of tests in all suites. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total elapsed time for all tests. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_text_output_1a0b6479918ee7f0501dfcdfcbc7c9d190" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::TextOutput::suite_start</definition>
+        <argsstring>(int tests, const std::string &amp;name)</argsstring>
+        <name>suite_start</name>
+        <reimplements refid="class_test_1_1_output_1a7022c32c5a1577b10b93d3942746f17d">suite_start</reimplements>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a suite is entered.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of tests in this suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the suite. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_text_output_1a84efd3536702a815325590cc8837dbb2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::TextOutput::suite_end</definition>
+        <argsstring>(int tests, const std::string &amp;name, const Time &amp;time)</argsstring>
+        <name>suite_end</name>
+        <reimplements refid="class_test_1_1_output_1a6dbf4c0adb2bd4a7364c629179f788a6">suite_end</reimplements>
+        <param>
+          <type>int</type>
+          <declname>tests</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a suite is finished.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tests</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of tests in this suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the suite. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Total elapsed time for all tests in this suite. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_text_output_1a0ff333537e85d680740c72dd46cd2e7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::TextOutput::test_end</definition>
+        <argsstring>(const std::string &amp;name, bool ok, const Time &amp;time)</argsstring>
+        <name>test_end</name>
+        <reimplements refid="class_test_1_1_output_1a3796943e3b56373492c957212a21454e">test_end</reimplements>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>ok</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_test_1_1_time" kindref="compound">Time</ref> &amp;</type>
+          <declname>time</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when a test if finished, regardless if an assertment was issued.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the test function. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ok</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if the test was successful; false otherwise. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Execution time. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="class_test_1_1_text_output_1a8110f86aa00f783fc5a91ec2f59a7998" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void Test::TextOutput::assertment</definition>
+        <argsstring>(const Source &amp;s)</argsstring>
+        <name>assertment</name>
+        <reimplements refid="class_test_1_1_output_1a48c31f0baa7627d81939be840c9a7f65">assertment</reimplements>
+        <param>
+          <type>const <ref refid="class_test_1_1_source" kindref="compound">Source</ref> &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Called when an assertment is issued.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>s</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Assert point information. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-textoutput.h" line="71" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Text output handler that outputs to the a stream. </para>    </briefdescription>
+    <detaileddescription>
+<para>Test suite output handler that writes its information as text to a a stream. It it possible to select between two different operational modes that controls the detail level, see Mode. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="101">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="100">
+        <label>Test::TextOutput</label>
+        <link refid="class_test_1_1_text_output"/>
+        <childnode refid="101" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="103">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="102">
+        <label>Test::TextOutput</label>
+        <link refid="class_test_1_1_text_output"/>
+        <childnode refid="103" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-textoutput.h" line="47" column="1" bodyfile="cpptest-textoutput.h" bodystart="46" bodyend="84"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_text_output_1a6e15d47932f699f98994b3b6ee13bfd4" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_mode</name></member>
+      <member refid="class_test_1_1_text_output_1a536a0f4096aa5b4885fb9862e9074e57" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_stream</name></member>
+      <member refid="class_test_1_1_text_output_1a618346a794a226c7384e6a7e53ae93b1" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_suite_error_list</name></member>
+      <member refid="class_test_1_1_text_output_1aed8285a83afe240654c12ded88b5c039" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_suite_errors</name></member>
+      <member refid="class_test_1_1_text_output_1a64725e7a14645c581bc1f6c4574a734b" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_suite_name</name></member>
+      <member refid="class_test_1_1_text_output_1a8753b9e5394cd60794727cbe7c12c2fe" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_suite_tests</name></member>
+      <member refid="class_test_1_1_text_output_1aaafb16f6f85b2b3acdea989e95f435dc" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_suite_total_tests</name></member>
+      <member refid="class_test_1_1_text_output_1aa9976eda4ce7c6da54005c8069c91f07" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>_total_errors</name></member>
+      <member refid="class_test_1_1_text_output_1a8110f86aa00f783fc5a91ec2f59a7998" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>assertment</name></member>
+      <member refid="class_test_1_1_text_output_1a42a7753c3074bb8129dd7eb808d1bc8c" prot="private" virt="non-virtual"><scope>Test::TextOutput</scope><name>ErrorList</name></member>
+      <member refid="class_test_1_1_text_output_1a9dcf13d9714a2774230386ef3215b701" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>finished</name></member>
+      <member refid="class_test_1_1_output_1aa66480875d088befc6c23ecfd1107cc1" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>initialize</name></member>
+      <member refid="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1" prot="public" virt="non-virtual"><scope>Test::TextOutput</scope><name>Mode</name></member>
+      <member refid="class_test_1_1_output_1acbffb6b160039caafd3e9ac11cace65c" prot="protected" virt="non-virtual"><scope>Test::TextOutput</scope><name>Output</name></member>
+      <member refid="class_test_1_1_text_output_1a84efd3536702a815325590cc8837dbb2" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>suite_end</name></member>
+      <member refid="class_test_1_1_text_output_1a0b6479918ee7f0501dfcdfcbc7c9d190" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>suite_start</name></member>
+      <member refid="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1ae63930203459836dfc6e0939f92a9fb2" prot="public" virt="non-virtual"><scope>Test::TextOutput</scope><name>Terse</name></member>
+      <member refid="class_test_1_1_text_output_1a0ff333537e85d680740c72dd46cd2e7e" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>test_end</name></member>
+      <member refid="class_test_1_1_output_1a52d43b97609febc5abbc6da9aa0abac2" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>test_start</name></member>
+      <member refid="class_test_1_1_text_output_1ab9bdd9b2d9b362ca5fb148b766ecdd02" prot="public" virt="non-virtual"><scope>Test::TextOutput</scope><name>TextOutput</name></member>
+      <member refid="class_test_1_1_text_output_1ae7b22c9458e6c566996bf4517c73feb1a85dd6e42f6261a23fd504201f5cc2792" prot="public" virt="non-virtual"><scope>Test::TextOutput</scope><name>Verbose</name></member>
+      <member refid="class_test_1_1_output_1a838de994609ac3d13b7d7cd389f56090" prot="public" virt="virtual"><scope>Test::TextOutput</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

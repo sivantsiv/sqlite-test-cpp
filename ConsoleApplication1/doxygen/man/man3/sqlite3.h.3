@@ -1,0 +1,4393 @@
+.TH "sqlite3.h" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sqlite3.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stdarg\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBsqlite3_file\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_io_methods\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_vfs\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_mem_methods\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_module\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_index_info\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_index_info::sqlite3_index_constraint\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_index_info::sqlite3_index_orderby\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_index_info::sqlite3_index_constraint_usage\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_vtab\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_vtab_cursor\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_mutex_methods\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_pcache_page\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_pcache_methods2\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_pcache_methods\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_snapshot\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_rtree_geometry\fP"
+.br
+.ti -1c
+.RI "struct \fBsqlite3_rtree_query_info\fP"
+.br
+.ti -1c
+.RI "struct \fBFts5PhraseIter\fP"
+.br
+.ti -1c
+.RI "struct \fBFts5ExtensionApi\fP"
+.br
+.ti -1c
+.RI "struct \fBfts5_tokenizer\fP"
+.br
+.ti -1c
+.RI "struct \fBfts5_api\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBSQLITE_EXTERN\fP   extern"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_API\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CDECL\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_APICALL\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STDCALL\fP   \fBSQLITE_APICALL\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CALLBACK\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SYSAPI\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DEPRECATED\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_EXPERIMENTAL\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_VERSION\fP   '3\&.21\&.0'"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_VERSION_NUMBER\fP   3021000"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SOURCE_ID\fP   '2017\-10\-24 18:55:49 1a584e499906b5c87ec7d43d4abce641fdf017c42125b083109bc77c4de48827'"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OK\fP   0   /* Successful result */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ERROR\fP   1   /* Generic error */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INTERNAL\fP   2   /* Internal logic error in SQLite */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_PERM\fP   3   /* Access permission denied */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ABORT\fP   4   /* Callback routine requested an abort */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_BUSY\fP   5   /* The database file is locked */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LOCKED\fP   6   /* A table in the database is locked */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NOMEM\fP   7   /* A malloc() failed */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_READONLY\fP   8   /* Attempt to write a readonly database */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INTERRUPT\fP   9   /* Operation terminated by \fBsqlite3_interrupt\fP()*/"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR\fP   10   /* Some kind of disk I/O error occurred */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CORRUPT\fP   11   /* The database disk image is malformed */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NOTFOUND\fP   12   /* Unknown opcode in \fBsqlite3_file_control\fP() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FULL\fP   13   /* Insertion failed because database is full */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CANTOPEN\fP   14   /* Unable to open the database file */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_PROTOCOL\fP   15   /* Database lock protocol error */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_EMPTY\fP   16   /* Internal use only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SCHEMA\fP   17   /* The database schema changed */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TOOBIG\fP   18   /* String or BLOB exceeds size limit */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT\fP   19   /* Abort due to constraint violation */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MISMATCH\fP   20   /* Data type mismatch */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MISUSE\fP   21   /* Library used incorrectly */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NOLFS\fP   22   /* Uses OS features not supported on host */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_AUTH\fP   23   /* Authorization denied */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FORMAT\fP   24   /* Not used */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_RANGE\fP   25   /* 2nd parameter to sqlite3_bind out of range */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NOTADB\fP   26   /* File opened that is not a database file */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NOTICE\fP   27   /* Notifications from \fBsqlite3_log\fP() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_WARNING\fP   28   /* Warnings from \fBsqlite3_log\fP() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ROW\fP   100  /* \fBsqlite3_step\fP() has another row ready */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DONE\fP   101  /* \fBsqlite3_step\fP() has finished executing */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_READ\fP   (\fBSQLITE_IOERR\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_SHORT_READ\fP   (\fBSQLITE_IOERR\fP | (2<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_WRITE\fP   (\fBSQLITE_IOERR\fP | (3<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_FSYNC\fP   (\fBSQLITE_IOERR\fP | (4<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_DIR_FSYNC\fP   (\fBSQLITE_IOERR\fP | (5<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_TRUNCATE\fP   (\fBSQLITE_IOERR\fP | (6<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_FSTAT\fP   (\fBSQLITE_IOERR\fP | (7<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_UNLOCK\fP   (\fBSQLITE_IOERR\fP | (8<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_RDLOCK\fP   (\fBSQLITE_IOERR\fP | (9<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_DELETE\fP   (\fBSQLITE_IOERR\fP | (10<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_BLOCKED\fP   (\fBSQLITE_IOERR\fP | (11<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_NOMEM\fP   (\fBSQLITE_IOERR\fP | (12<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_ACCESS\fP   (\fBSQLITE_IOERR\fP | (13<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_CHECKRESERVEDLOCK\fP   (\fBSQLITE_IOERR\fP | (14<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_LOCK\fP   (\fBSQLITE_IOERR\fP | (15<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_CLOSE\fP   (\fBSQLITE_IOERR\fP | (16<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_DIR_CLOSE\fP   (\fBSQLITE_IOERR\fP | (17<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_SHMOPEN\fP   (\fBSQLITE_IOERR\fP | (18<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_SHMSIZE\fP   (\fBSQLITE_IOERR\fP | (19<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_SHMLOCK\fP   (\fBSQLITE_IOERR\fP | (20<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_SHMMAP\fP   (\fBSQLITE_IOERR\fP | (21<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_SEEK\fP   (\fBSQLITE_IOERR\fP | (22<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_DELETE_NOENT\fP   (\fBSQLITE_IOERR\fP | (23<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_MMAP\fP   (\fBSQLITE_IOERR\fP | (24<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_GETTEMPPATH\fP   (\fBSQLITE_IOERR\fP | (25<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_CONVPATH\fP   (\fBSQLITE_IOERR\fP | (26<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_VNODE\fP   (\fBSQLITE_IOERR\fP | (27<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_AUTH\fP   (\fBSQLITE_IOERR\fP | (28<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_BEGIN_ATOMIC\fP   (\fBSQLITE_IOERR\fP | (29<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_COMMIT_ATOMIC\fP   (\fBSQLITE_IOERR\fP | (30<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOERR_ROLLBACK_ATOMIC\fP   (\fBSQLITE_IOERR\fP | (31<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LOCKED_SHAREDCACHE\fP   (\fBSQLITE_LOCKED\fP |  (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_BUSY_RECOVERY\fP   (\fBSQLITE_BUSY\fP   |  (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_BUSY_SNAPSHOT\fP   (\fBSQLITE_BUSY\fP   |  (2<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CANTOPEN_NOTEMPDIR\fP   (\fBSQLITE_CANTOPEN\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CANTOPEN_ISDIR\fP   (\fBSQLITE_CANTOPEN\fP | (2<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CANTOPEN_FULLPATH\fP   (\fBSQLITE_CANTOPEN\fP | (3<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CANTOPEN_CONVPATH\fP   (\fBSQLITE_CANTOPEN\fP | (4<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CORRUPT_VTAB\fP   (\fBSQLITE_CORRUPT\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_READONLY_RECOVERY\fP   (\fBSQLITE_READONLY\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_READONLY_CANTLOCK\fP   (\fBSQLITE_READONLY\fP | (2<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_READONLY_ROLLBACK\fP   (\fBSQLITE_READONLY\fP | (3<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_READONLY_DBMOVED\fP   (\fBSQLITE_READONLY\fP | (4<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ABORT_ROLLBACK\fP   (\fBSQLITE_ABORT\fP | (2<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_CHECK\fP   (\fBSQLITE_CONSTRAINT\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_COMMITHOOK\fP   (\fBSQLITE_CONSTRAINT\fP | (2<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_FOREIGNKEY\fP   (\fBSQLITE_CONSTRAINT\fP | (3<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_FUNCTION\fP   (\fBSQLITE_CONSTRAINT\fP | (4<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_NOTNULL\fP   (\fBSQLITE_CONSTRAINT\fP | (5<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_PRIMARYKEY\fP   (\fBSQLITE_CONSTRAINT\fP | (6<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_TRIGGER\fP   (\fBSQLITE_CONSTRAINT\fP | (7<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_UNIQUE\fP   (\fBSQLITE_CONSTRAINT\fP | (8<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_VTAB\fP   (\fBSQLITE_CONSTRAINT\fP | (9<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONSTRAINT_ROWID\fP   (\fBSQLITE_CONSTRAINT\fP |(10<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NOTICE_RECOVER_WAL\fP   (\fBSQLITE_NOTICE\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NOTICE_RECOVER_ROLLBACK\fP   (\fBSQLITE_NOTICE\fP | (2<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_WARNING_AUTOINDEX\fP   (\fBSQLITE_WARNING\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_AUTH_USER\fP   (\fBSQLITE_AUTH\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OK_LOAD_PERMANENTLY\fP   (\fBSQLITE_OK\fP | (1<<8))"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_READONLY\fP   0x00000001  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_READWRITE\fP   0x00000002  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_CREATE\fP   0x00000004  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_DELETEONCLOSE\fP   0x00000008  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_EXCLUSIVE\fP   0x00000010  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_AUTOPROXY\fP   0x00000020  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_URI\fP   0x00000040  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_MEMORY\fP   0x00000080  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_MAIN_DB\fP   0x00000100  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_TEMP_DB\fP   0x00000200  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_TRANSIENT_DB\fP   0x00000400  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_MAIN_JOURNAL\fP   0x00000800  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_TEMP_JOURNAL\fP   0x00001000  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_SUBJOURNAL\fP   0x00002000  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_MASTER_JOURNAL\fP   0x00004000  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_NOMUTEX\fP   0x00008000  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_FULLMUTEX\fP   0x00010000  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_SHAREDCACHE\fP   0x00020000  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_PRIVATECACHE\fP   0x00040000  /* Ok for sqlite3_open_v2() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_OPEN_WAL\fP   0x00080000  /* VFS only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC512\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC1K\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC2K\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC4K\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC8K\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC16K\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC32K\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_ATOMIC64K\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_SAFE_APPEND\fP   0x00000200"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_SEQUENTIAL\fP   0x00000400"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_UNDELETABLE_WHEN_OPEN\fP   0x00000800"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_POWERSAFE_OVERWRITE\fP   0x00001000"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_IMMUTABLE\fP   0x00002000"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IOCAP_BATCH_ATOMIC\fP   0x00004000"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LOCK_NONE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LOCK_SHARED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LOCK_RESERVED\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LOCK_PENDING\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LOCK_EXCLUSIVE\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SYNC_NORMAL\fP   0x00002"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SYNC_FULL\fP   0x00003"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SYNC_DATAONLY\fP   0x00010"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_LOCKSTATE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_GET_LOCKPROXYFILE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_SET_LOCKPROXYFILE\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_LAST_ERRNO\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_SIZE_HINT\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_CHUNK_SIZE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_FILE_POINTER\fP   7"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_SYNC_OMITTED\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_WIN32_AV_RETRY\fP   9"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_PERSIST_WAL\fP   10"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_OVERWRITE\fP   11"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_VFSNAME\fP   12"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_POWERSAFE_OVERWRITE\fP   13"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_PRAGMA\fP   14"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_BUSYHANDLER\fP   15"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_TEMPFILENAME\fP   16"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_MMAP_SIZE\fP   18"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_TRACE\fP   19"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_HAS_MOVED\fP   20"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_SYNC\fP   21"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_COMMIT_PHASETWO\fP   22"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_WIN32_SET_HANDLE\fP   23"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_WAL_BLOCK\fP   24"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_ZIPVFS\fP   25"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_RBU\fP   26"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_VFS_POINTER\fP   27"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_JOURNAL_POINTER\fP   28"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_WIN32_GET_HANDLE\fP   29"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_PDB\fP   30"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_BEGIN_ATOMIC_WRITE\fP   31"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_COMMIT_ATOMIC_WRITE\fP   32"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FCNTL_ROLLBACK_ATOMIC_WRITE\fP   33"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_GET_LOCKPROXYFILE\fP   \fBSQLITE_FCNTL_GET_LOCKPROXYFILE\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SET_LOCKPROXYFILE\fP   \fBSQLITE_FCNTL_SET_LOCKPROXYFILE\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LAST_ERRNO\fP   \fBSQLITE_FCNTL_LAST_ERRNO\fP"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ACCESS_EXISTS\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ACCESS_READWRITE\fP   1   /* Used by PRAGMA temp_store_directory */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ACCESS_READ\fP   2   /* Unused */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SHM_UNLOCK\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SHM_LOCK\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SHM_SHARED\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SHM_EXCLUSIVE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SHM_NLOCK\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_SINGLETHREAD\fP   1  /* nil */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_MULTITHREAD\fP   2  /* nil */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_SERIALIZED\fP   3  /* nil */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_MALLOC\fP   4  /* \fBsqlite3_mem_methods\fP* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_GETMALLOC\fP   5  /* \fBsqlite3_mem_methods\fP* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_SCRATCH\fP   6  /* No longer used */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_PAGECACHE\fP   7  /* void*, int sz, int N */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_HEAP\fP   8  /* void*, int nByte, int min */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_MEMSTATUS\fP   9  /* boolean */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_MUTEX\fP   10  /* \fBsqlite3_mutex_methods\fP* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_GETMUTEX\fP   11  /* \fBsqlite3_mutex_methods\fP* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_LOOKASIDE\fP   13  /* int int */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_PCACHE\fP   14  /* no\-op */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_GETPCACHE\fP   15  /* no\-op */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_LOG\fP   16  /* xFunc, void* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_URI\fP   17  /* int */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_PCACHE2\fP   18  /* \fBsqlite3_pcache_methods2\fP* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_GETPCACHE2\fP   19  /* \fBsqlite3_pcache_methods2\fP* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_COVERING_INDEX_SCAN\fP   20  /* int */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_SQLLOG\fP   21  /* xSqllog, void* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_MMAP_SIZE\fP   22  /* \fBsqlite3_int64\fP, \fBsqlite3_int64\fP */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_WIN32_HEAPSIZE\fP   23  /* int nByte */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_PCACHE_HDRSZ\fP   24  /* int *psz */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_PMASZ\fP   25  /* unsigned int szPma */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_STMTJRNL_SPILL\fP   26  /* int nByte */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CONFIG_SMALL_MALLOC\fP   27  /* boolean */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_MAINDBNAME\fP   1000 /* const char* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_LOOKASIDE\fP   1001 /* void* int int */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_ENABLE_FKEY\fP   1002 /* int int* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_ENABLE_TRIGGER\fP   1003 /* int int* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER\fP   1004 /* int int* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION\fP   1005 /* int int* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_NO_CKPT_ON_CLOSE\fP   1006 /* int int* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBCONFIG_ENABLE_QPSG\fP   1007 /* int int* */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DENY\fP   1   /* Abort the SQL statement with an error */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_IGNORE\fP   2   /* Don't allow access, but don't generate an error */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_INDEX\fP   1   /* Index Name      Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_TABLE\fP   2   /* Table Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_TEMP_INDEX\fP   3   /* Index Name      Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_TEMP_TABLE\fP   4   /* Table Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_TEMP_TRIGGER\fP   5   /* Trigger Name    Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_TEMP_VIEW\fP   6   /* View Name       NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_TRIGGER\fP   7   /* Trigger Name    Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_VIEW\fP   8   /* View Name       NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DELETE\fP   9   /* Table Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_INDEX\fP   10   /* Index Name      Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_TABLE\fP   11   /* Table Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_TEMP_INDEX\fP   12   /* Index Name      Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_TEMP_TABLE\fP   13   /* Table Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_TEMP_TRIGGER\fP   14   /* Trigger Name    Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_TEMP_VIEW\fP   15   /* View Name       NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_TRIGGER\fP   16   /* Trigger Name    Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_VIEW\fP   17   /* View Name       NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INSERT\fP   18   /* Table Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_PRAGMA\fP   19   /* Pragma Name     1st arg or NULL */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_READ\fP   20   /* Table Name      Column Name     */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SELECT\fP   21   /* NULL            NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TRANSACTION\fP   22   /* Operation       NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_UPDATE\fP   23   /* Table Name      Column Name     */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ATTACH\fP   24   /* Filename        NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DETACH\fP   25   /* Database Name   NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ALTER_TABLE\fP   26   /* Database Name   Table Name      */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_REINDEX\fP   27   /* Index Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ANALYZE\fP   28   /* Table Name      NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CREATE_VTABLE\fP   29   /* Table Name      Module Name     */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DROP_VTABLE\fP   30   /* Table Name      Module Name     */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FUNCTION\fP   31   /* NULL            Function Name   */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SAVEPOINT\fP   32   /* Operation       Savepoint Name  */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_COPY\fP   0   /* No longer used */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_RECURSIVE\fP   33   /* NULL            NULL            */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TRACE_STMT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TRACE_PROFILE\fP   0x02"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TRACE_ROW\fP   0x04"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TRACE_CLOSE\fP   0x08"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_LENGTH\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_SQL_LENGTH\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_COLUMN\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_EXPR_DEPTH\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_COMPOUND_SELECT\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_VDBE_OP\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_FUNCTION_ARG\fP   6"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_ATTACHED\fP   7"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_LIKE_PATTERN_LENGTH\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_VARIABLE_NUMBER\fP   9"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_TRIGGER_DEPTH\fP   10"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_LIMIT_WORKER_THREADS\fP   11"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_PREPARE_PERSISTENT\fP   0x01"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INTEGER\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FLOAT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_BLOB\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_NULL\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TEXT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE3_TEXT\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_UTF8\fP   1    /* IMP: R\-37514\-35566 */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_UTF16LE\fP   2    /* IMP: R\-03371\-37637 */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_UTF16BE\fP   3    /* IMP: R\-51971\-34154 */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_UTF16\fP   4    /* Use native byte order */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ANY\fP   5    /* Deprecated */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_UTF16_ALIGNED\fP   8    /* \fBsqlite3_create_collation\fP only */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DETERMINISTIC\fP   0x800"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATIC\fP   ((\fBsqlite3_destructor_type\fP)0)"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TRANSIENT\fP   ((\fBsqlite3_destructor_type\fP)\-1)"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_SCAN_UNIQUE\fP   1     /* Scan visits at most 1 row */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_EQ\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_GT\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_LE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_LT\fP   16"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_GE\fP   32"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_MATCH\fP   64"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_LIKE\fP   65"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_GLOB\fP   66"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_REGEXP\fP   67"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_NE\fP   68"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_ISNOT\fP   69"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_ISNOTNULL\fP   70"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_ISNULL\fP   71"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_INDEX_CONSTRAINT_IS\fP   72"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_FAST\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_RECURSIVE\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_MASTER\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_MEM\fP   3  /* \fBsqlite3_malloc\fP() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_MEM2\fP   4  /* NOT USED */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_OPEN\fP   4  /* sqlite3BtreeOpen() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_PRNG\fP   5  /* \fBsqlite3_randomness\fP() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_LRU\fP   6  /* lru page list */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_LRU2\fP   7  /* NOT USED */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_PMEM\fP   7  /* sqlite3PageMalloc() */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_APP1\fP   8  /* For use by application */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_APP2\fP   9  /* For use by application */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_APP3\fP   10  /* For use by application */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_VFS1\fP   11  /* For use by built\-in VFS */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_VFS2\fP   12  /* For use by extension VFS */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_MUTEX_STATIC_VFS3\fP   13  /* For use by application VFS */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_FIRST\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_PRNG_SAVE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_PRNG_RESTORE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_PRNG_RESET\fP   7"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_BITVEC_TEST\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_FAULT_INSTALL\fP   9"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_BENIGN_MALLOC_HOOKS\fP   10"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_PENDING_BYTE\fP   11"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_ASSERT\fP   12"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_ALWAYS\fP   13"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_RESERVE\fP   14"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_OPTIMIZATIONS\fP   15"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_ISKEYWORD\fP   16"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_SCRATCHMALLOC\fP   17  /* NOT USED */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_LOCALTIME_FAULT\fP   18"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_EXPLAIN_STMT\fP   19  /* NOT USED */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_ONCE_RESET_THRESHOLD\fP   19"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_NEVER_CORRUPT\fP   20"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_VDBE_COVERAGE\fP   21"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_BYTEORDER\fP   22"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_ISINIT\fP   23"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_SORTER_MMAP\fP   24"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_IMPOSTER\fP   25"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_TESTCTRL_LAST\fP   25"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_MEMORY_USED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_PAGECACHE_USED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_PAGECACHE_OVERFLOW\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_SCRATCH_USED\fP   3  /* NOT USED */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_SCRATCH_OVERFLOW\fP   4  /* NOT USED */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_MALLOC_SIZE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_PARSER_STACK\fP   6"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_PAGECACHE_SIZE\fP   7"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_SCRATCH_SIZE\fP   8  /* NOT USED */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STATUS_MALLOC_COUNT\fP   9"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_LOOKASIDE_USED\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_CACHE_USED\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_SCHEMA_USED\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_STMT_USED\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_LOOKASIDE_HIT\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_LOOKASIDE_MISS_SIZE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_LOOKASIDE_MISS_FULL\fP   6"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_CACHE_HIT\fP   7"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_CACHE_MISS\fP   8"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_CACHE_WRITE\fP   9"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_DEFERRED_FKS\fP   10"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_CACHE_USED_SHARED\fP   11"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_DBSTATUS_MAX\fP   11   /* Largest defined DBSTATUS */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STMTSTATUS_FULLSCAN_STEP\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STMTSTATUS_SORT\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STMTSTATUS_AUTOINDEX\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STMTSTATUS_VM_STEP\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STMTSTATUS_REPREPARE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STMTSTATUS_RUN\fP   6"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_STMTSTATUS_MEMUSED\fP   99"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CHECKPOINT_PASSIVE\fP   0  /* Do as much as possible w/o blocking */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CHECKPOINT_FULL\fP   1  /* Wait for writers, then checkpoint */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CHECKPOINT_RESTART\fP   2  /* Like FULL but wait for for readers */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_CHECKPOINT_TRUNCATE\fP   3  /* Like RESTART but also truncate WAL */"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_VTAB_CONSTRAINT_SUPPORT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_ROLLBACK\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_FAIL\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_REPLACE\fP   5"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SCANSTAT_NLOOP\fP   0"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SCANSTAT_NVISIT\fP   1"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SCANSTAT_EST\fP   2"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SCANSTAT_NAME\fP   3"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SCANSTAT_EXPLAIN\fP   4"
+.br
+.ti -1c
+.RI "#define \fBSQLITE_SCANSTAT_SELECTID\fP   5"
+.br
+.ti -1c
+.RI "#define \fB_SQLITE3RTREE_H_\fP"
+.br
+.ti -1c
+.RI "#define \fBNOT_WITHIN\fP   0   /* Object completely outside of query region */"
+.br
+.ti -1c
+.RI "#define \fBPARTLY_WITHIN\fP   1   /* Object partially overlaps query region */"
+.br
+.ti -1c
+.RI "#define \fBFULLY_WITHIN\fP   2   /* Object fully contained within query region */"
+.br
+.ti -1c
+.RI "#define \fB_FTS5_H\fP"
+.br
+.ti -1c
+.RI "#define \fBFTS5_TOKENIZE_QUERY\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBFTS5_TOKENIZE_PREFIX\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBFTS5_TOKENIZE_DOCUMENT\fP   0x0004"
+.br
+.ti -1c
+.RI "#define \fBFTS5_TOKENIZE_AUX\fP   0x0008"
+.br
+.ti -1c
+.RI "#define \fBFTS5_TOKEN_COLOCATED\fP   0x0001      /* Same position as prev\&. token */"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBsqlite3\fP \fBsqlite3\fP"
+.br
+.ti -1c
+.RI "typedef long long int \fBsqlite_int64\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long long int \fBsqlite_uint64\fP"
+.br
+.ti -1c
+.RI "typedef \fBsqlite_int64\fP \fBsqlite3_int64\fP"
+.br
+.ti -1c
+.RI "typedef \fBsqlite_uint64\fP \fBsqlite3_uint64\fP"
+.br
+.ti -1c
+.RI "typedef int(* \fBsqlite3_callback\fP) (void *, int, char **, char **)"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_file\fP \fBsqlite3_file\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_io_methods\fP \fBsqlite3_io_methods\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_mutex\fP \fBsqlite3_mutex\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_api_routines\fP \fBsqlite3_api_routines\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_vfs\fP \fBsqlite3_vfs\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBsqlite3_syscall_ptr\fP) (void)"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_mem_methods\fP \fBsqlite3_mem_methods\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_stmt\fP \fBsqlite3_stmt\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_value\fP \fBsqlite3_value\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_context\fP \fBsqlite3_context\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBsqlite3_destructor_type\fP) (void *)"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_vtab\fP \fBsqlite3_vtab\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_index_info\fP \fBsqlite3_index_info\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_vtab_cursor\fP \fBsqlite3_vtab_cursor\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_module\fP \fBsqlite3_module\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_blob\fP \fBsqlite3_blob\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_mutex_methods\fP \fBsqlite3_mutex_methods\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_pcache\fP \fBsqlite3_pcache\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_pcache_page\fP \fBsqlite3_pcache_page\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_pcache_methods2\fP \fBsqlite3_pcache_methods2\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_pcache_methods\fP \fBsqlite3_pcache_methods\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_backup\fP \fBsqlite3_backup\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_snapshot\fP \fBsqlite3_snapshot\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_rtree_geometry\fP \fBsqlite3_rtree_geometry\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBsqlite3_rtree_query_info\fP \fBsqlite3_rtree_query_info\fP"
+.br
+.ti -1c
+.RI "typedef double \fBsqlite3_rtree_dbl\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBFts5ExtensionApi\fP \fBFts5ExtensionApi\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBFts5Context\fP \fBFts5Context\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBFts5PhraseIter\fP \fBFts5PhraseIter\fP"
+.br
+.ti -1c
+.RI "typedef void(* \fBfts5_extension_function\fP) (const \fBFts5ExtensionApi\fP *pApi, \fBFts5Context\fP *pFts, \fBsqlite3_context\fP *pCtx, int nVal, \fBsqlite3_value\fP **apVal)"
+.br
+.ti -1c
+.RI "typedef struct \fBFts5Tokenizer\fP \fBFts5Tokenizer\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBfts5_tokenizer\fP \fBfts5_tokenizer\fP"
+.br
+.ti -1c
+.RI "typedef struct \fBfts5_api\fP \fBfts5_api\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_libversion\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_sourceid\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_libversion_number\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_compileoption_used\fP (const char *zOptName)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_compileoption_get\fP (int N)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_threadsafe\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_close\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_close_v2\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_exec\fP (\fBsqlite3\fP *, const char *sql, int(*callback)(void *, int, char **, char **), void *, char **errmsg)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_initialize\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_shutdown\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_os_init\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_os_end\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_config\fP (int,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_db_config\fP (\fBsqlite3\fP *, int op,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_extended_result_codes\fP (\fBsqlite3\fP *, int onoff)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_int64\fP \fBsqlite3_last_insert_rowid\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_set_last_insert_rowid\fP (\fBsqlite3\fP *, \fBsqlite3_int64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_changes\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_total_changes\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_interrupt\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_complete\fP (const char *sql)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_complete16\fP (const void *sql)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_busy_handler\fP (\fBsqlite3\fP *, int(*)(void *, int), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_busy_timeout\fP (\fBsqlite3\fP *, int ms)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_get_table\fP (\fBsqlite3\fP *db, const char *zSql, char ***pazResult, int *pnRow, int *pnColumn, char **pzErrmsg)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_free_table\fP (char **result)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP char * \fBsqlite3_mprintf\fP (const char *,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP char * \fBsqlite3_vmprintf\fP (const char *, va_list)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP char * \fBsqlite3_snprintf\fP (int, char *, const char *,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP char * \fBsqlite3_vsnprintf\fP (int, char *, const char *, va_list)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_malloc\fP (int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_malloc64\fP (\fBsqlite3_uint64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_realloc\fP (void *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_realloc64\fP (void *, \fBsqlite3_uint64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_free\fP (void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_uint64\fP \fBsqlite3_msize\fP (void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_int64\fP \fBsqlite3_memory_used\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_int64\fP \fBsqlite3_memory_highwater\fP (int resetFlag)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_randomness\fP (int N, void *P)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_set_authorizer\fP (\fBsqlite3\fP *, int(*xAuth)(void *, int, const char *, const char *, const char *, const char *), void *pUserData)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void * \fBsqlite3_trace\fP (\fBsqlite3\fP *, void(*xTrace)(void *, const char *), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void * \fBsqlite3_profile\fP (\fBsqlite3\fP *, void(*xProfile)(void *, const char *, \fBsqlite3_uint64\fP), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_trace_v2\fP (\fBsqlite3\fP *, unsigned uMask, int(*xCallback)(unsigned, void *, void *, void *), void *pCtx)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_progress_handler\fP (\fBsqlite3\fP *, int, int(*)(void *), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_open\fP (const char *filename, \fBsqlite3\fP **ppDb)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_open16\fP (const void *filename, \fBsqlite3\fP **ppDb)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_open_v2\fP (const char *filename, \fBsqlite3\fP **ppDb, int flags, const char *zVfs)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_uri_parameter\fP (const char *zFilename, const char *zParam)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_uri_boolean\fP (const char *zFile, const char *zParam, int bDefault)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_int64\fP \fBsqlite3_uri_int64\fP (const char *, const char *, \fBsqlite3_int64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_errcode\fP (\fBsqlite3\fP *db)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_extended_errcode\fP (\fBsqlite3\fP *db)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_errmsg\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_errmsg16\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_errstr\fP (int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_limit\fP (\fBsqlite3\fP *, int id, int newVal)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_prepare\fP (\fBsqlite3\fP *db, const char *zSql, int nByte, \fBsqlite3_stmt\fP **ppStmt, const char **pzTail)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_prepare_v2\fP (\fBsqlite3\fP *db, const char *zSql, int nByte, \fBsqlite3_stmt\fP **ppStmt, const char **pzTail)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_prepare_v3\fP (\fBsqlite3\fP *db, const char *zSql, int nByte, unsigned int prepFlags, \fBsqlite3_stmt\fP **ppStmt, const char **pzTail)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_prepare16\fP (\fBsqlite3\fP *db, const void *zSql, int nByte, \fBsqlite3_stmt\fP **ppStmt, const void **pzTail)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_prepare16_v2\fP (\fBsqlite3\fP *db, const void *zSql, int nByte, \fBsqlite3_stmt\fP **ppStmt, const void **pzTail)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_prepare16_v3\fP (\fBsqlite3\fP *db, const void *zSql, int nByte, unsigned int prepFlags, \fBsqlite3_stmt\fP **ppStmt, const void **pzTail)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_sql\fP (\fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP char * \fBsqlite3_expanded_sql\fP (\fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_stmt_readonly\fP (\fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_stmt_busy\fP (\fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_blob\fP (\fBsqlite3_stmt\fP *, int, const void *, int n, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_blob64\fP (\fBsqlite3_stmt\fP *, int, const void *, \fBsqlite3_uint64\fP, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_double\fP (\fBsqlite3_stmt\fP *, int, double)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_int\fP (\fBsqlite3_stmt\fP *, int, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_int64\fP (\fBsqlite3_stmt\fP *, int, \fBsqlite3_int64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_null\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_text\fP (\fBsqlite3_stmt\fP *, int, const char *, int, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_text16\fP (\fBsqlite3_stmt\fP *, int, const void *, int, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_text64\fP (\fBsqlite3_stmt\fP *, int, const char *, \fBsqlite3_uint64\fP, void(*)(void *), unsigned char encoding)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_value\fP (\fBsqlite3_stmt\fP *, int, const \fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_pointer\fP (\fBsqlite3_stmt\fP *, int, void *, const char *, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_zeroblob\fP (\fBsqlite3_stmt\fP *, int, int n)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_zeroblob64\fP (\fBsqlite3_stmt\fP *, int, \fBsqlite3_uint64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_parameter_count\fP (\fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_bind_parameter_name\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_bind_parameter_index\fP (\fBsqlite3_stmt\fP *, const char *zName)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_clear_bindings\fP (\fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_column_count\fP (\fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_column_name\fP (\fBsqlite3_stmt\fP *, int N)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_column_name16\fP (\fBsqlite3_stmt\fP *, int N)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_column_database_name\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_column_database_name16\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_column_table_name\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_column_table_name16\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_column_origin_name\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_column_origin_name16\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_column_decltype\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_column_decltype16\fP (\fBsqlite3_stmt\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_step\fP (\fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_data_count\fP (\fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_column_blob\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP double \fBsqlite3_column_double\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_column_int\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_int64\fP \fBsqlite3_column_int64\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const unsigned char * \fBsqlite3_column_text\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_column_text16\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_value\fP * \fBsqlite3_column_value\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_column_bytes\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_column_bytes16\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_column_type\fP (\fBsqlite3_stmt\fP *, int iCol)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_finalize\fP (\fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_reset\fP (\fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_function\fP (\fBsqlite3\fP *db, const char *zFunctionName, int nArg, int eTextRep, void *pApp, void(*xFunc)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **), void(*xStep)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **), void(*xFinal)(\fBsqlite3_context\fP *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_function16\fP (\fBsqlite3\fP *db, const void *zFunctionName, int nArg, int eTextRep, void *pApp, void(*xFunc)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **), void(*xStep)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **), void(*xFinal)(\fBsqlite3_context\fP *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_function_v2\fP (\fBsqlite3\fP *db, const char *zFunctionName, int nArg, int eTextRep, void *pApp, void(*xFunc)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **), void(*xStep)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **), void(*xFinal)(\fBsqlite3_context\fP *), void(*xDestroy)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int \fBsqlite3_aggregate_count\fP (\fBsqlite3_context\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int \fBsqlite3_expired\fP (\fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int \fBsqlite3_transfer_bindings\fP (\fBsqlite3_stmt\fP *, \fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int \fBsqlite3_global_recover\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void \fBsqlite3_thread_cleanup\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int \fBsqlite3_memory_alarm\fP (void(*)(void *, \fBsqlite3_int64\fP, int), void *, \fBsqlite3_int64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_value_blob\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP double \fBsqlite3_value_double\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_value_int\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_int64\fP \fBsqlite3_value_int64\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_value_pointer\fP (\fBsqlite3_value\fP *, const char *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const unsigned char * \fBsqlite3_value_text\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_value_text16\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_value_text16le\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const void * \fBsqlite3_value_text16be\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_value_bytes\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_value_bytes16\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_value_type\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_value_numeric_type\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP unsigned int \fBsqlite3_value_subtype\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_value\fP * \fBsqlite3_value_dup\fP (const \fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_value_free\fP (\fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_aggregate_context\fP (\fBsqlite3_context\fP *, int nBytes)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_user_data\fP (\fBsqlite3_context\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3\fP * \fBsqlite3_context_db_handle\fP (\fBsqlite3_context\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_get_auxdata\fP (\fBsqlite3_context\fP *, int N)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_set_auxdata\fP (\fBsqlite3_context\fP *, int N, void *, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_blob\fP (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_blob64\fP (\fBsqlite3_context\fP *, const void *, \fBsqlite3_uint64\fP, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_double\fP (\fBsqlite3_context\fP *, double)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_error\fP (\fBsqlite3_context\fP *, const char *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_error16\fP (\fBsqlite3_context\fP *, const void *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_error_toobig\fP (\fBsqlite3_context\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_error_nomem\fP (\fBsqlite3_context\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_error_code\fP (\fBsqlite3_context\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_int\fP (\fBsqlite3_context\fP *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_int64\fP (\fBsqlite3_context\fP *, \fBsqlite3_int64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_null\fP (\fBsqlite3_context\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_text\fP (\fBsqlite3_context\fP *, const char *, int, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_text64\fP (\fBsqlite3_context\fP *, const char *, \fBsqlite3_uint64\fP, void(*)(void *), unsigned char encoding)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_text16\fP (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_text16le\fP (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_text16be\fP (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_value\fP (\fBsqlite3_context\fP *, \fBsqlite3_value\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_pointer\fP (\fBsqlite3_context\fP *, void *, const char *, void(*)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_zeroblob\fP (\fBsqlite3_context\fP *, int n)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_result_zeroblob64\fP (\fBsqlite3_context\fP *, \fBsqlite3_uint64\fP n)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_result_subtype\fP (\fBsqlite3_context\fP *, unsigned int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_collation\fP (\fBsqlite3\fP *, const char *zName, int eTextRep, void *pArg, int(*xCompare)(void *, int, const void *, int, const void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_collation_v2\fP (\fBsqlite3\fP *, const char *zName, int eTextRep, void *pArg, int(*xCompare)(void *, int, const void *, int, const void *), void(*xDestroy)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_collation16\fP (\fBsqlite3\fP *, const void *zName, int eTextRep, void *pArg, int(*xCompare)(void *, int, const void *, int, const void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_collation_needed\fP (\fBsqlite3\fP *, void *, void(*)(void *, \fBsqlite3\fP *, int eTextRep, const char *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_collation_needed16\fP (\fBsqlite3\fP *, void *, void(*)(void *, \fBsqlite3\fP *, int eTextRep, const void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_sleep\fP (int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_get_autocommit\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3\fP * \fBsqlite3_db_handle\fP (\fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP const char * \fBsqlite3_db_filename\fP (\fBsqlite3\fP *db, const char *zDbName)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_db_readonly\fP (\fBsqlite3\fP *db, const char *zDbName)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_stmt\fP * \fBsqlite3_next_stmt\fP (\fBsqlite3\fP *pDb, \fBsqlite3_stmt\fP *pStmt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_commit_hook\fP (\fBsqlite3\fP *, int(*)(void *), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_rollback_hook\fP (\fBsqlite3\fP *, void(*)(void *), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_update_hook\fP (\fBsqlite3\fP *, void(*)(void *, int, char const *, char const *, \fBsqlite3_int64\fP), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_enable_shared_cache\fP (int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_release_memory\fP (int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_db_release_memory\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_int64\fP \fBsqlite3_soft_heap_limit64\fP (\fBsqlite3_int64\fP N)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void \fBsqlite3_soft_heap_limit\fP (int N)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_table_column_metadata\fP (\fBsqlite3\fP *db, const char *zDbName, const char *zTableName, const char *zColumnName, char const **pzDataType, char const **pzCollSeq, int *pNotNull, int *pPrimaryKey, int *pAutoinc)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_load_extension\fP (\fBsqlite3\fP *db, const char *zFile, const char *zProc, char **pzErrMsg)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_enable_load_extension\fP (\fBsqlite3\fP *db, int onoff)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_auto_extension\fP (void(*xEntryPoint)(void))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_cancel_auto_extension\fP (void(*xEntryPoint)(void))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_reset_auto_extension\fP (void)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_module\fP (\fBsqlite3\fP *db, const char *zName, const \fBsqlite3_module\fP *p, void *pClientData)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_create_module_v2\fP (\fBsqlite3\fP *db, const char *zName, const \fBsqlite3_module\fP *p, void *pClientData, void(*xDestroy)(void *))"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_declare_vtab\fP (\fBsqlite3\fP *, const char *zSQL)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_overload_function\fP (\fBsqlite3\fP *, const char *zFuncName, int nArg)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_blob_open\fP (\fBsqlite3\fP *, const char *zDb, const char *zTable, const char *zColumn, \fBsqlite3_int64\fP iRow, int flags, \fBsqlite3_blob\fP **ppBlob)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_blob_reopen\fP (\fBsqlite3_blob\fP *, \fBsqlite3_int64\fP)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_blob_close\fP (\fBsqlite3_blob\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_blob_bytes\fP (\fBsqlite3_blob\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_blob_read\fP (\fBsqlite3_blob\fP *, void *Z, int N, int iOffset)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_blob_write\fP (\fBsqlite3_blob\fP *, const void *z, int n, int iOffset)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_vfs\fP * \fBsqlite3_vfs_find\fP (const char *zVfsName)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_vfs_register\fP (\fBsqlite3_vfs\fP *, int makeDflt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_vfs_unregister\fP (\fBsqlite3_vfs\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_mutex\fP * \fBsqlite3_mutex_alloc\fP (int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_mutex_free\fP (\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_mutex_enter\fP (\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_mutex_try\fP (\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_mutex_leave\fP (\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_mutex_held\fP (\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_mutex_notheld\fP (\fBsqlite3_mutex\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_mutex\fP * \fBsqlite3_db_mutex\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_file_control\fP (\fBsqlite3\fP *, const char *zDbName, int op, void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_test_control\fP (int op,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_status\fP (int op, int *pCurrent, int *pHighwater, int resetFlag)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_status64\fP (int op, \fBsqlite3_int64\fP *pCurrent, \fBsqlite3_int64\fP *pHighwater, int resetFlag)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_db_status\fP (\fBsqlite3\fP *, int op, int *pCur, int *pHiwtr, int resetFlg)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_stmt_status\fP (\fBsqlite3_stmt\fP *, int op, int resetFlg)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBsqlite3_backup\fP * \fBsqlite3_backup_init\fP (\fBsqlite3\fP *pDest, const char *zDestName, \fBsqlite3\fP *pSource, const char *zSourceName)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_backup_step\fP (\fBsqlite3_backup\fP *p, int nPage)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_backup_finish\fP (\fBsqlite3_backup\fP *p)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_backup_remaining\fP (\fBsqlite3_backup\fP *p)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_backup_pagecount\fP (\fBsqlite3_backup\fP *p)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_unlock_notify\fP (\fBsqlite3\fP *pBlocked, void(*xNotify)(void **apArg, int nArg), void *pNotifyArg)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_stricmp\fP (const char *, const char *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_strnicmp\fP (const char *, const char *, int)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_strglob\fP (const char *zGlob, const char *zStr)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_strlike\fP (const char *zGlob, const char *zStr, unsigned int cEsc)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_log\fP (int iErrCode, const char *zFormat,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void * \fBsqlite3_wal_hook\fP (\fBsqlite3\fP *, int(*)(void *, \fBsqlite3\fP *, const char *, int), void *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_wal_autocheckpoint\fP (\fBsqlite3\fP *db, int N)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_wal_checkpoint\fP (\fBsqlite3\fP *db, const char *zDb)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_wal_checkpoint_v2\fP (\fBsqlite3\fP *db, const char *zDb, int eMode, int *pnLog, int *pnCkpt)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_vtab_config\fP (\fBsqlite3\fP *, int op,\&.\&.\&.)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_vtab_on_conflict\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_stmt_scanstatus\fP (\fBsqlite3_stmt\fP *pStmt, int idx, int iScanStatusOp, void *pOut)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP void \fBsqlite3_stmt_scanstatus_reset\fP (\fBsqlite3_stmt\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_db_cacheflush\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_system_errno\fP (\fBsqlite3\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int \fBsqlite3_snapshot_get\fP (\fBsqlite3\fP *db, const char *zSchema, \fBsqlite3_snapshot\fP **ppSnapshot)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int \fBsqlite3_snapshot_open\fP (\fBsqlite3\fP *db, const char *zSchema, \fBsqlite3_snapshot\fP *pSnapshot)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP void \fBsqlite3_snapshot_free\fP (\fBsqlite3_snapshot\fP *)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int \fBsqlite3_snapshot_cmp\fP (\fBsqlite3_snapshot\fP *p1, \fBsqlite3_snapshot\fP *p2)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int \fBsqlite3_snapshot_recover\fP (\fBsqlite3\fP *db, const char *zDb)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_rtree_geometry_callback\fP (\fBsqlite3\fP *db, const char *zGeom, int(*xGeom)(\fBsqlite3_rtree_geometry\fP *, int, \fBsqlite3_rtree_dbl\fP *, int *), void *pContext)"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP int \fBsqlite3_rtree_query_callback\fP (\fBsqlite3\fP *db, const char *zQueryFunc, int(*xQueryFunc)(\fBsqlite3_rtree_query_info\fP *), void *pContext, void(*xDestructor)(void *))"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXTERN\fP const char \fBsqlite3_version\fP []"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXTERN\fP char * \fBsqlite3_temp_directory\fP"
+.br
+.ti -1c
+.RI "\fBSQLITE_API\fP \fBSQLITE_EXTERN\fP char * \fBsqlite3_data_directory\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define _FTS5_H"
+
+.PP
+Definition at line 10169 of file sqlite3\&.h\&.
+.SS "#define _SQLITE3RTREE_H_"
+
+.PP
+Definition at line 8753 of file sqlite3\&.h\&.
+.SS "#define FTS5_TOKEN_COLOCATED   0x0001      /* Same position as prev\&. token */"
+
+.PP
+Definition at line 10677 of file sqlite3\&.h\&.
+.SS "#define FTS5_TOKENIZE_AUX   0x0008"
+
+.PP
+Definition at line 10673 of file sqlite3\&.h\&.
+.SS "#define FTS5_TOKENIZE_DOCUMENT   0x0004"
+
+.PP
+Definition at line 10672 of file sqlite3\&.h\&.
+.SS "#define FTS5_TOKENIZE_PREFIX   0x0002"
+
+.PP
+Definition at line 10671 of file sqlite3\&.h\&.
+.SS "#define FTS5_TOKENIZE_QUERY   0x0001"
+
+.PP
+Definition at line 10670 of file sqlite3\&.h\&.
+.SS "#define FULLY_WITHIN   2   /* Object fully contained within query region */"
+
+.PP
+Definition at line 8847 of file sqlite3\&.h\&.
+.SS "#define NOT_WITHIN   0   /* Object completely outside of query region */"
+
+.PP
+Definition at line 8845 of file sqlite3\&.h\&.
+.SS "#define PARTLY_WITHIN   1   /* Object partially overlaps query region */"
+
+.PP
+Definition at line 8846 of file sqlite3\&.h\&.
+.SS "#define SQLITE3_TEXT   3"
+
+.PP
+Definition at line 4320 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ABORT   4   /* Callback routine requested an abort */"
+
+.PP
+Definition at line 427 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ABORT_ROLLBACK   (\fBSQLITE_ABORT\fP | (2<<8))"
+
+.PP
+Definition at line 516 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ACCESS_EXISTS   0"
+
+.PP
+Definition at line 1344 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ACCESS_READ   2   /* Unused */"
+
+.PP
+Definition at line 1346 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ACCESS_READWRITE   1   /* Used by PRAGMA temp_store_directory */"
+
+.PP
+Definition at line 1345 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ALTER_TABLE   26   /* Database Name   Table Name      */"
+
+.PP
+Definition at line 2883 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ANALYZE   28   /* Table Name      NULL            */"
+
+.PP
+Definition at line 2885 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ANY   5    /* Deprecated */"
+
+.PP
+Definition at line 4723 of file sqlite3\&.h\&.
+.SS "#define SQLITE_API"
+
+.PP
+Definition at line 52 of file sqlite3\&.h\&.
+.SS "#define SQLITE_APICALL"
+
+.PP
+Definition at line 58 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ATTACH   24   /* Filename        NULL            */"
+
+.PP
+Definition at line 2881 of file sqlite3\&.h\&.
+.SS "#define SQLITE_AUTH   23   /* Authorization denied */"
+
+.PP
+Definition at line 446 of file sqlite3\&.h\&.
+.SS "#define SQLITE_AUTH_USER   (\fBSQLITE_AUTH\fP | (1<<8))"
+
+.PP
+Definition at line 530 of file sqlite3\&.h\&.
+.SS "#define SQLITE_BLOB   4"
+
+.PP
+Definition at line 4313 of file sqlite3\&.h\&.
+.SS "#define SQLITE_BUSY   5   /* The database file is locked */"
+
+.PP
+Definition at line 428 of file sqlite3\&.h\&.
+.SS "#define SQLITE_BUSY_RECOVERY   (\fBSQLITE_BUSY\fP   |  (1<<8))"
+
+.PP
+Definition at line 505 of file sqlite3\&.h\&.
+.SS "#define SQLITE_BUSY_SNAPSHOT   (\fBSQLITE_BUSY\fP   |  (2<<8))"
+
+.PP
+Definition at line 506 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CALLBACK"
+
+.PP
+Definition at line 64 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CANTOPEN   14   /* Unable to open the database file */"
+
+.PP
+Definition at line 437 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CANTOPEN_CONVPATH   (\fBSQLITE_CANTOPEN\fP | (4<<8))"
+
+.PP
+Definition at line 510 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CANTOPEN_FULLPATH   (\fBSQLITE_CANTOPEN\fP | (3<<8))"
+
+.PP
+Definition at line 509 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CANTOPEN_ISDIR   (\fBSQLITE_CANTOPEN\fP | (2<<8))"
+
+.PP
+Definition at line 508 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CANTOPEN_NOTEMPDIR   (\fBSQLITE_CANTOPEN\fP | (1<<8))"
+
+.PP
+Definition at line 507 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CDECL"
+
+.PP
+Definition at line 55 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CHECKPOINT_FULL   1  /* Wait for writers, then checkpoint */"
+
+.PP
+Definition at line 8206 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CHECKPOINT_PASSIVE   0  /* Do as much as possible w/o blocking */"
+
+.PP
+Definition at line 8205 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CHECKPOINT_RESTART   2  /* Like FULL but wait for for readers */"
+
+.PP
+Definition at line 8207 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CHECKPOINT_TRUNCATE   3  /* Like RESTART but also truncate WAL */"
+
+.PP
+Definition at line 8208 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_COVERING_INDEX_SCAN   20  /* int */"
+
+.PP
+Definition at line 1937 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_GETMALLOC   5  /* \fBsqlite3_mem_methods\fP* */"
+
+.PP
+Definition at line 1922 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_GETMUTEX   11  /* \fBsqlite3_mutex_methods\fP* */"
+
+.PP
+Definition at line 1928 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_GETPCACHE   15  /* no\-op */"
+
+.PP
+Definition at line 1932 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_GETPCACHE2   19  /* \fBsqlite3_pcache_methods2\fP* */"
+
+.PP
+Definition at line 1936 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_HEAP   8  /* void*, int nByte, int min */"
+
+.PP
+Definition at line 1925 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_LOG   16  /* xFunc, void* */"
+
+.PP
+Definition at line 1933 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_LOOKASIDE   13  /* int int */"
+
+.PP
+Definition at line 1930 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_MALLOC   4  /* \fBsqlite3_mem_methods\fP* */"
+
+.PP
+Definition at line 1921 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_MEMSTATUS   9  /* boolean */"
+
+.PP
+Definition at line 1926 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_MMAP_SIZE   22  /* \fBsqlite3_int64\fP, \fBsqlite3_int64\fP */"
+
+.PP
+Definition at line 1939 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_MULTITHREAD   2  /* nil */"
+
+.PP
+Definition at line 1919 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_MUTEX   10  /* \fBsqlite3_mutex_methods\fP* */"
+
+.PP
+Definition at line 1927 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_PAGECACHE   7  /* void*, int sz, int N */"
+
+.PP
+Definition at line 1924 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_PCACHE   14  /* no\-op */"
+
+.PP
+Definition at line 1931 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_PCACHE2   18  /* \fBsqlite3_pcache_methods2\fP* */"
+
+.PP
+Definition at line 1935 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_PCACHE_HDRSZ   24  /* int *psz */"
+
+.PP
+Definition at line 1941 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_PMASZ   25  /* unsigned int szPma */"
+
+.PP
+Definition at line 1942 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_SCRATCH   6  /* No longer used */"
+
+.PP
+Definition at line 1923 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_SERIALIZED   3  /* nil */"
+
+.PP
+Definition at line 1920 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_SINGLETHREAD   1  /* nil */"
+
+.PP
+Definition at line 1918 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_SMALL_MALLOC   27  /* boolean */"
+
+.PP
+Definition at line 1944 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_SQLLOG   21  /* xSqllog, void* */"
+
+.PP
+Definition at line 1938 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_STMTJRNL_SPILL   26  /* int nByte */"
+
+.PP
+Definition at line 1943 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_URI   17  /* int */"
+
+.PP
+Definition at line 1934 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONFIG_WIN32_HEAPSIZE   23  /* int nByte */"
+
+.PP
+Definition at line 1940 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT   19   /* Abort due to constraint violation */"
+
+.PP
+Definition at line 442 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_CHECK   (\fBSQLITE_CONSTRAINT\fP | (1<<8))"
+
+.PP
+Definition at line 517 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_COMMITHOOK   (\fBSQLITE_CONSTRAINT\fP | (2<<8))"
+
+.PP
+Definition at line 518 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_FOREIGNKEY   (\fBSQLITE_CONSTRAINT\fP | (3<<8))"
+
+.PP
+Definition at line 519 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_FUNCTION   (\fBSQLITE_CONSTRAINT\fP | (4<<8))"
+
+.PP
+Definition at line 520 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_NOTNULL   (\fBSQLITE_CONSTRAINT\fP | (5<<8))"
+
+.PP
+Definition at line 521 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_PRIMARYKEY   (\fBSQLITE_CONSTRAINT\fP | (6<<8))"
+
+.PP
+Definition at line 522 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_ROWID   (\fBSQLITE_CONSTRAINT\fP |(10<<8))"
+
+.PP
+Definition at line 526 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_TRIGGER   (\fBSQLITE_CONSTRAINT\fP | (7<<8))"
+
+.PP
+Definition at line 523 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_UNIQUE   (\fBSQLITE_CONSTRAINT\fP | (8<<8))"
+
+.PP
+Definition at line 524 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CONSTRAINT_VTAB   (\fBSQLITE_CONSTRAINT\fP | (9<<8))"
+
+.PP
+Definition at line 525 of file sqlite3\&.h\&.
+.SS "#define SQLITE_COPY   0   /* No longer used */"
+
+.PP
+Definition at line 2890 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CORRUPT   11   /* The database disk image is malformed */"
+
+.PP
+Definition at line 434 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CORRUPT_VTAB   (\fBSQLITE_CORRUPT\fP | (1<<8))"
+
+.PP
+Definition at line 511 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_INDEX   1   /* Index Name      Table Name      */"
+
+.PP
+Definition at line 2858 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_TABLE   2   /* Table Name      NULL            */"
+
+.PP
+Definition at line 2859 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_TEMP_INDEX   3   /* Index Name      Table Name      */"
+
+.PP
+Definition at line 2860 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_TEMP_TABLE   4   /* Table Name      NULL            */"
+
+.PP
+Definition at line 2861 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_TEMP_TRIGGER   5   /* Trigger Name    Table Name      */"
+
+.PP
+Definition at line 2862 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_TEMP_VIEW   6   /* View Name       NULL            */"
+
+.PP
+Definition at line 2863 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_TRIGGER   7   /* Trigger Name    Table Name      */"
+
+.PP
+Definition at line 2864 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_VIEW   8   /* View Name       NULL            */"
+
+.PP
+Definition at line 2865 of file sqlite3\&.h\&.
+.SS "#define SQLITE_CREATE_VTABLE   29   /* Table Name      Module Name     */"
+
+.PP
+Definition at line 2886 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_ENABLE_FKEY   1002 /* int int* */"
+
+.PP
+Definition at line 2068 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_ENABLE_FTS3_TOKENIZER   1004 /* int int* */"
+
+.PP
+Definition at line 2070 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_ENABLE_LOAD_EXTENSION   1005 /* int int* */"
+
+.PP
+Definition at line 2071 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_ENABLE_QPSG   1007 /* int int* */"
+
+.PP
+Definition at line 2073 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_ENABLE_TRIGGER   1003 /* int int* */"
+
+.PP
+Definition at line 2069 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_LOOKASIDE   1001 /* void* int int */"
+
+.PP
+Definition at line 2067 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_MAINDBNAME   1000 /* const char* */"
+
+.PP
+Definition at line 2066 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBCONFIG_NO_CKPT_ON_CLOSE   1006 /* int int* */"
+
+.PP
+Definition at line 2072 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_CACHE_HIT   7"
+
+.PP
+Definition at line 7274 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_CACHE_MISS   8"
+
+.PP
+Definition at line 7275 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_CACHE_USED   1"
+
+.PP
+Definition at line 7268 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_CACHE_USED_SHARED   11"
+
+.PP
+Definition at line 7278 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_CACHE_WRITE   9"
+
+.PP
+Definition at line 7276 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_DEFERRED_FKS   10"
+
+.PP
+Definition at line 7277 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_LOOKASIDE_HIT   4"
+
+.PP
+Definition at line 7271 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_LOOKASIDE_MISS_FULL   6"
+
+.PP
+Definition at line 7273 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_LOOKASIDE_MISS_SIZE   5"
+
+.PP
+Definition at line 7272 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_LOOKASIDE_USED   0"
+
+.PP
+Definition at line 7267 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_MAX   11   /* Largest defined DBSTATUS */"
+
+.PP
+Definition at line 7279 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_SCHEMA_USED   2"
+
+.PP
+Definition at line 7269 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DBSTATUS_STMT_USED   3"
+
+.PP
+Definition at line 7270 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DELETE   9   /* Table Name      NULL            */"
+
+.PP
+Definition at line 2866 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DENY   1   /* Abort the SQL statement with an error */"
+
+.PP
+Definition at line 2835 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DEPRECATED"
+
+.PP
+Definition at line 83 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DETACH   25   /* Database Name   NULL            */"
+
+.PP
+Definition at line 2882 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DETERMINISTIC   0x800"
+
+.PP
+Definition at line 4734 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DONE   101  /* \fBsqlite3_step\fP() has finished executing */"
+
+.PP
+Definition at line 453 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_INDEX   10   /* Index Name      Table Name      */"
+
+.PP
+Definition at line 2867 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_TABLE   11   /* Table Name      NULL            */"
+
+.PP
+Definition at line 2868 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_TEMP_INDEX   12   /* Index Name      Table Name      */"
+
+.PP
+Definition at line 2869 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_TEMP_TABLE   13   /* Table Name      NULL            */"
+
+.PP
+Definition at line 2870 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_TEMP_TRIGGER   14   /* Trigger Name    Table Name      */"
+
+.PP
+Definition at line 2871 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_TEMP_VIEW   15   /* View Name       NULL            */"
+
+.PP
+Definition at line 2872 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_TRIGGER   16   /* Trigger Name    Table Name      */"
+
+.PP
+Definition at line 2873 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_VIEW   17   /* View Name       NULL            */"
+
+.PP
+Definition at line 2874 of file sqlite3\&.h\&.
+.SS "#define SQLITE_DROP_VTABLE   30   /* Table Name      Module Name     */"
+
+.PP
+Definition at line 2887 of file sqlite3\&.h\&.
+.SS "#define SQLITE_EMPTY   16   /* Internal use only */"
+
+.PP
+Definition at line 439 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ERROR   1   /* Generic error */"
+
+.PP
+Definition at line 424 of file sqlite3\&.h\&.
+.SS "#define SQLITE_EXPERIMENTAL"
+
+.PP
+Definition at line 84 of file sqlite3\&.h\&.
+.SS "#define SQLITE_EXTERN   extern"
+
+.PP
+Definition at line 49 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FAIL   3"
+
+.PP
+Definition at line 8293 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_BEGIN_ATOMIC_WRITE   31"
+
+.PP
+Definition at line 1094 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_BUSYHANDLER   15"
+
+.PP
+Definition at line 1079 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_CHUNK_SIZE   6"
+
+.PP
+Definition at line 1070 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_COMMIT_ATOMIC_WRITE   32"
+
+.PP
+Definition at line 1095 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_COMMIT_PHASETWO   22"
+
+.PP
+Definition at line 1085 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_FILE_POINTER   7"
+
+.PP
+Definition at line 1071 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_GET_LOCKPROXYFILE   2"
+
+.PP
+Definition at line 1066 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_HAS_MOVED   20"
+
+.PP
+Definition at line 1083 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_JOURNAL_POINTER   28"
+
+.PP
+Definition at line 1091 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_LAST_ERRNO   4"
+
+.PP
+Definition at line 1068 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_LOCKSTATE   1"
+
+.PP
+Definition at line 1065 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_MMAP_SIZE   18"
+
+.PP
+Definition at line 1081 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_OVERWRITE   11"
+
+.PP
+Definition at line 1075 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_PDB   30"
+
+.PP
+Definition at line 1093 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_PERSIST_WAL   10"
+
+.PP
+Definition at line 1074 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_POWERSAFE_OVERWRITE   13"
+
+.PP
+Definition at line 1077 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_PRAGMA   14"
+
+.PP
+Definition at line 1078 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_RBU   26"
+
+.PP
+Definition at line 1089 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_ROLLBACK_ATOMIC_WRITE   33"
+
+.PP
+Definition at line 1096 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_SET_LOCKPROXYFILE   3"
+
+.PP
+Definition at line 1067 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_SIZE_HINT   5"
+
+.PP
+Definition at line 1069 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_SYNC   21"
+
+.PP
+Definition at line 1084 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_SYNC_OMITTED   8"
+
+.PP
+Definition at line 1072 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_TEMPFILENAME   16"
+
+.PP
+Definition at line 1080 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_TRACE   19"
+
+.PP
+Definition at line 1082 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_VFS_POINTER   27"
+
+.PP
+Definition at line 1090 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_VFSNAME   12"
+
+.PP
+Definition at line 1076 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_WAL_BLOCK   24"
+
+.PP
+Definition at line 1087 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_WIN32_AV_RETRY   9"
+
+.PP
+Definition at line 1073 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_WIN32_GET_HANDLE   29"
+
+.PP
+Definition at line 1092 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_WIN32_SET_HANDLE   23"
+
+.PP
+Definition at line 1086 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FCNTL_ZIPVFS   25"
+
+.PP
+Definition at line 1088 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FLOAT   2"
+
+.PP
+Definition at line 4312 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FORMAT   24   /* Not used */"
+
+.PP
+Definition at line 447 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FULL   13   /* Insertion failed because database is full */"
+
+.PP
+Definition at line 436 of file sqlite3\&.h\&.
+.SS "#define SQLITE_FUNCTION   31   /* NULL            Function Name   */"
+
+.PP
+Definition at line 2888 of file sqlite3\&.h\&.
+.SS "#define SQLITE_GET_LOCKPROXYFILE   \fBSQLITE_FCNTL_GET_LOCKPROXYFILE\fP"
+
+.PP
+Definition at line 1099 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IGNORE   2   /* Don't allow access, but don't generate an error */"
+
+.PP
+Definition at line 2836 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_EQ   2"
+
+.PP
+Definition at line 6250 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_GE   32"
+
+.PP
+Definition at line 6254 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_GLOB   66"
+
+.PP
+Definition at line 6257 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_GT   4"
+
+.PP
+Definition at line 6251 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_IS   72"
+
+.PP
+Definition at line 6263 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_ISNOT   69"
+
+.PP
+Definition at line 6260 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_ISNOTNULL   70"
+
+.PP
+Definition at line 6261 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_ISNULL   71"
+
+.PP
+Definition at line 6262 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_LE   8"
+
+.PP
+Definition at line 6252 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_LIKE   65"
+
+.PP
+Definition at line 6256 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_LT   16"
+
+.PP
+Definition at line 6253 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_MATCH   64"
+
+.PP
+Definition at line 6255 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_NE   68"
+
+.PP
+Definition at line 6259 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_CONSTRAINT_REGEXP   67"
+
+.PP
+Definition at line 6258 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INDEX_SCAN_UNIQUE   1     /* Scan visits at most 1 row */"
+
+.PP
+Definition at line 6240 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INSERT   18   /* Table Name      NULL            */"
+
+.PP
+Definition at line 2875 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INTEGER   1"
+
+.PP
+Definition at line 4311 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INTERNAL   2   /* Internal logic error in SQLite */"
+
+.PP
+Definition at line 425 of file sqlite3\&.h\&.
+.SS "#define SQLITE_INTERRUPT   9   /* Operation terminated by \fBsqlite3_interrupt\fP()*/"
+
+.PP
+Definition at line 432 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC   0x00000001"
+
+.PP
+Definition at line 596 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC16K   0x00000040"
+
+.PP
+Definition at line 602 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC1K   0x00000004"
+
+.PP
+Definition at line 598 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC2K   0x00000008"
+
+.PP
+Definition at line 599 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC32K   0x00000080"
+
+.PP
+Definition at line 603 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC4K   0x00000010"
+
+.PP
+Definition at line 600 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC512   0x00000002"
+
+.PP
+Definition at line 597 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC64K   0x00000100"
+
+.PP
+Definition at line 604 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_ATOMIC8K   0x00000020"
+
+.PP
+Definition at line 601 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_BATCH_ATOMIC   0x00004000"
+
+.PP
+Definition at line 610 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_IMMUTABLE   0x00002000"
+
+.PP
+Definition at line 609 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_POWERSAFE_OVERWRITE   0x00001000"
+
+.PP
+Definition at line 608 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_SAFE_APPEND   0x00000200"
+
+.PP
+Definition at line 605 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_SEQUENTIAL   0x00000400"
+
+.PP
+Definition at line 606 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOCAP_UNDELETABLE_WHEN_OPEN   0x00000800"
+
+.PP
+Definition at line 607 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR   10   /* Some kind of disk I/O error occurred */"
+
+.PP
+Definition at line 433 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_ACCESS   (\fBSQLITE_IOERR\fP | (13<<8))"
+
+.PP
+Definition at line 485 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_AUTH   (\fBSQLITE_IOERR\fP | (28<<8))"
+
+.PP
+Definition at line 500 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_BEGIN_ATOMIC   (\fBSQLITE_IOERR\fP | (29<<8))"
+
+.PP
+Definition at line 501 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_BLOCKED   (\fBSQLITE_IOERR\fP | (11<<8))"
+
+.PP
+Definition at line 483 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_CHECKRESERVEDLOCK   (\fBSQLITE_IOERR\fP | (14<<8))"
+
+.PP
+Definition at line 486 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_CLOSE   (\fBSQLITE_IOERR\fP | (16<<8))"
+
+.PP
+Definition at line 488 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_COMMIT_ATOMIC   (\fBSQLITE_IOERR\fP | (30<<8))"
+
+.PP
+Definition at line 502 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_CONVPATH   (\fBSQLITE_IOERR\fP | (26<<8))"
+
+.PP
+Definition at line 498 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_DELETE   (\fBSQLITE_IOERR\fP | (10<<8))"
+
+.PP
+Definition at line 482 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_DELETE_NOENT   (\fBSQLITE_IOERR\fP | (23<<8))"
+
+.PP
+Definition at line 495 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_DIR_CLOSE   (\fBSQLITE_IOERR\fP | (17<<8))"
+
+.PP
+Definition at line 489 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_DIR_FSYNC   (\fBSQLITE_IOERR\fP | (5<<8))"
+
+.PP
+Definition at line 477 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_FSTAT   (\fBSQLITE_IOERR\fP | (7<<8))"
+
+.PP
+Definition at line 479 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_FSYNC   (\fBSQLITE_IOERR\fP | (4<<8))"
+
+.PP
+Definition at line 476 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_GETTEMPPATH   (\fBSQLITE_IOERR\fP | (25<<8))"
+
+.PP
+Definition at line 497 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_LOCK   (\fBSQLITE_IOERR\fP | (15<<8))"
+
+.PP
+Definition at line 487 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_MMAP   (\fBSQLITE_IOERR\fP | (24<<8))"
+
+.PP
+Definition at line 496 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_NOMEM   (\fBSQLITE_IOERR\fP | (12<<8))"
+
+.PP
+Definition at line 484 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_RDLOCK   (\fBSQLITE_IOERR\fP | (9<<8))"
+
+.PP
+Definition at line 481 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_READ   (\fBSQLITE_IOERR\fP | (1<<8))"
+
+.PP
+Definition at line 473 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_ROLLBACK_ATOMIC   (\fBSQLITE_IOERR\fP | (31<<8))"
+
+.PP
+Definition at line 503 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_SEEK   (\fBSQLITE_IOERR\fP | (22<<8))"
+
+.PP
+Definition at line 494 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_SHMLOCK   (\fBSQLITE_IOERR\fP | (20<<8))"
+
+.PP
+Definition at line 492 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_SHMMAP   (\fBSQLITE_IOERR\fP | (21<<8))"
+
+.PP
+Definition at line 493 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_SHMOPEN   (\fBSQLITE_IOERR\fP | (18<<8))"
+
+.PP
+Definition at line 490 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_SHMSIZE   (\fBSQLITE_IOERR\fP | (19<<8))"
+
+.PP
+Definition at line 491 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_SHORT_READ   (\fBSQLITE_IOERR\fP | (2<<8))"
+
+.PP
+Definition at line 474 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_TRUNCATE   (\fBSQLITE_IOERR\fP | (6<<8))"
+
+.PP
+Definition at line 478 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_UNLOCK   (\fBSQLITE_IOERR\fP | (8<<8))"
+
+.PP
+Definition at line 480 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_VNODE   (\fBSQLITE_IOERR\fP | (27<<8))"
+
+.PP
+Definition at line 499 of file sqlite3\&.h\&.
+.SS "#define SQLITE_IOERR_WRITE   (\fBSQLITE_IOERR\fP | (3<<8))"
+
+.PP
+Definition at line 475 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LAST_ERRNO   \fBSQLITE_FCNTL_LAST_ERRNO\fP"
+
+.PP
+Definition at line 1101 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_ATTACHED   7"
+
+.PP
+Definition at line 3521 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_COLUMN   2"
+
+.PP
+Definition at line 3516 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_COMPOUND_SELECT   4"
+
+.PP
+Definition at line 3518 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_EXPR_DEPTH   3"
+
+.PP
+Definition at line 3517 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_FUNCTION_ARG   6"
+
+.PP
+Definition at line 3520 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_LENGTH   0"
+
+.PP
+Definition at line 3514 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_LIKE_PATTERN_LENGTH   8"
+
+.PP
+Definition at line 3522 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_SQL_LENGTH   1"
+
+.PP
+Definition at line 3515 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_TRIGGER_DEPTH   10"
+
+.PP
+Definition at line 3524 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_VARIABLE_NUMBER   9"
+
+.PP
+Definition at line 3523 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_VDBE_OP   5"
+
+.PP
+Definition at line 3519 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LIMIT_WORKER_THREADS   11"
+
+.PP
+Definition at line 3525 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LOCK_EXCLUSIVE   4"
+
+.PP
+Definition at line 623 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LOCK_NONE   0"
+
+.PP
+Definition at line 619 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LOCK_PENDING   3"
+
+.PP
+Definition at line 622 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LOCK_RESERVED   2"
+
+.PP
+Definition at line 621 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LOCK_SHARED   1"
+
+.PP
+Definition at line 620 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LOCKED   6   /* A table in the database is locked */"
+
+.PP
+Definition at line 429 of file sqlite3\&.h\&.
+.SS "#define SQLITE_LOCKED_SHAREDCACHE   (\fBSQLITE_LOCKED\fP |  (1<<8))"
+
+.PP
+Definition at line 504 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MISMATCH   20   /* Data type mismatch */"
+
+.PP
+Definition at line 443 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MISUSE   21   /* Library used incorrectly */"
+
+.PP
+Definition at line 444 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_FAST   0"
+
+.PP
+Definition at line 6908 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_RECURSIVE   1"
+
+.PP
+Definition at line 6909 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_APP1   8  /* For use by application */"
+
+.PP
+Definition at line 6918 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_APP2   9  /* For use by application */"
+
+.PP
+Definition at line 6919 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_APP3   10  /* For use by application */"
+
+.PP
+Definition at line 6920 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_LRU   6  /* lru page list */"
+
+.PP
+Definition at line 6915 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_LRU2   7  /* NOT USED */"
+
+.PP
+Definition at line 6916 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_MASTER   2"
+
+.PP
+Definition at line 6910 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_MEM   3  /* \fBsqlite3_malloc\fP() */"
+
+.PP
+Definition at line 6911 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_MEM2   4  /* NOT USED */"
+
+.PP
+Definition at line 6912 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_OPEN   4  /* sqlite3BtreeOpen() */"
+
+.PP
+Definition at line 6913 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_PMEM   7  /* sqlite3PageMalloc() */"
+
+.PP
+Definition at line 6917 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_PRNG   5  /* \fBsqlite3_randomness\fP() */"
+
+.PP
+Definition at line 6914 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_VFS1   11  /* For use by built\-in VFS */"
+
+.PP
+Definition at line 6921 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_VFS2   12  /* For use by extension VFS */"
+
+.PP
+Definition at line 6922 of file sqlite3\&.h\&.
+.SS "#define SQLITE_MUTEX_STATIC_VFS3   13  /* For use by application VFS */"
+
+.PP
+Definition at line 6923 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NOLFS   22   /* Uses OS features not supported on host */"
+
+.PP
+Definition at line 445 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NOMEM   7   /* A malloc() failed */"
+
+.PP
+Definition at line 430 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NOTADB   26   /* File opened that is not a database file */"
+
+.PP
+Definition at line 449 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NOTFOUND   12   /* Unknown opcode in \fBsqlite3_file_control\fP() */"
+
+.PP
+Definition at line 435 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NOTICE   27   /* Notifications from \fBsqlite3_log\fP() */"
+
+.PP
+Definition at line 450 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NOTICE_RECOVER_ROLLBACK   (\fBSQLITE_NOTICE\fP | (2<<8))"
+
+.PP
+Definition at line 528 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NOTICE_RECOVER_WAL   (\fBSQLITE_NOTICE\fP | (1<<8))"
+
+.PP
+Definition at line 527 of file sqlite3\&.h\&.
+.SS "#define SQLITE_NULL   5"
+
+.PP
+Definition at line 4314 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OK   0   /* Successful result */"
+
+.PP
+Definition at line 422 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OK_LOAD_PERMANENTLY   (\fBSQLITE_OK\fP | (1<<8))"
+
+.PP
+Definition at line 531 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_AUTOPROXY   0x00000020  /* VFS only */"
+
+.PP
+Definition at line 545 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_CREATE   0x00000004  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 542 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_DELETEONCLOSE   0x00000008  /* VFS only */"
+
+.PP
+Definition at line 543 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_EXCLUSIVE   0x00000010  /* VFS only */"
+
+.PP
+Definition at line 544 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_FULLMUTEX   0x00010000  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 556 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_MAIN_DB   0x00000100  /* VFS only */"
+
+.PP
+Definition at line 548 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_MAIN_JOURNAL   0x00000800  /* VFS only */"
+
+.PP
+Definition at line 551 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_MASTER_JOURNAL   0x00004000  /* VFS only */"
+
+.PP
+Definition at line 554 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_MEMORY   0x00000080  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 547 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_NOMUTEX   0x00008000  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 555 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_PRIVATECACHE   0x00040000  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 558 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_READONLY   0x00000001  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 540 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_READWRITE   0x00000002  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 541 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_SHAREDCACHE   0x00020000  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 557 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_SUBJOURNAL   0x00002000  /* VFS only */"
+
+.PP
+Definition at line 553 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_TEMP_DB   0x00000200  /* VFS only */"
+
+.PP
+Definition at line 549 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_TEMP_JOURNAL   0x00001000  /* VFS only */"
+
+.PP
+Definition at line 552 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_TRANSIENT_DB   0x00000400  /* VFS only */"
+
+.PP
+Definition at line 550 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_URI   0x00000040  /* Ok for sqlite3_open_v2() */"
+
+.PP
+Definition at line 546 of file sqlite3\&.h\&.
+.SS "#define SQLITE_OPEN_WAL   0x00080000  /* VFS only */"
+
+.PP
+Definition at line 559 of file sqlite3\&.h\&.
+.SS "#define SQLITE_PERM   3   /* Access permission denied */"
+
+.PP
+Definition at line 426 of file sqlite3\&.h\&.
+.SS "#define SQLITE_PRAGMA   19   /* Pragma Name     1st arg or NULL */"
+
+.PP
+Definition at line 2876 of file sqlite3\&.h\&.
+.SS "#define SQLITE_PREPARE_PERSISTENT   0x01"
+
+.PP
+Definition at line 3549 of file sqlite3\&.h\&.
+.SS "#define SQLITE_PROTOCOL   15   /* Database lock protocol error */"
+
+.PP
+Definition at line 438 of file sqlite3\&.h\&.
+.SS "#define SQLITE_RANGE   25   /* 2nd parameter to sqlite3_bind out of range */"
+
+.PP
+Definition at line 448 of file sqlite3\&.h\&.
+.SS "#define SQLITE_READ   20   /* Table Name      Column Name     */"
+
+.PP
+Definition at line 2877 of file sqlite3\&.h\&.
+.SS "#define SQLITE_READONLY   8   /* Attempt to write a readonly database */"
+
+.PP
+Definition at line 431 of file sqlite3\&.h\&.
+.SS "#define SQLITE_READONLY_CANTLOCK   (\fBSQLITE_READONLY\fP | (2<<8))"
+
+.PP
+Definition at line 513 of file sqlite3\&.h\&.
+.SS "#define SQLITE_READONLY_DBMOVED   (\fBSQLITE_READONLY\fP | (4<<8))"
+
+.PP
+Definition at line 515 of file sqlite3\&.h\&.
+.SS "#define SQLITE_READONLY_RECOVERY   (\fBSQLITE_READONLY\fP | (1<<8))"
+
+.PP
+Definition at line 512 of file sqlite3\&.h\&.
+.SS "#define SQLITE_READONLY_ROLLBACK   (\fBSQLITE_READONLY\fP | (3<<8))"
+
+.PP
+Definition at line 514 of file sqlite3\&.h\&.
+.SS "#define SQLITE_RECURSIVE   33   /* NULL            NULL            */"
+
+.PP
+Definition at line 2891 of file sqlite3\&.h\&.
+.SS "#define SQLITE_REINDEX   27   /* Index Name      NULL            */"
+
+.PP
+Definition at line 2884 of file sqlite3\&.h\&.
+.SS "#define SQLITE_REPLACE   5"
+
+.PP
+Definition at line 8295 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ROLLBACK   1"
+
+.PP
+Definition at line 8291 of file sqlite3\&.h\&.
+.SS "#define SQLITE_ROW   100  /* \fBsqlite3_step\fP() has another row ready */"
+
+.PP
+Definition at line 452 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SAVEPOINT   32   /* Operation       Savepoint Name  */"
+
+.PP
+Definition at line 2889 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SCANSTAT_EST   2"
+
+.PP
+Definition at line 8346 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SCANSTAT_EXPLAIN   4"
+
+.PP
+Definition at line 8348 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SCANSTAT_NAME   3"
+
+.PP
+Definition at line 8347 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SCANSTAT_NLOOP   0"
+
+.PP
+Definition at line 8344 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SCANSTAT_NVISIT   1"
+
+.PP
+Definition at line 8345 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SCANSTAT_SELECTID   5"
+
+.PP
+Definition at line 8349 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SCHEMA   17   /* The database schema changed */"
+
+.PP
+Definition at line 440 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SELECT   21   /* NULL            NULL            */"
+
+.PP
+Definition at line 2878 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SET_LOCKPROXYFILE   \fBSQLITE_FCNTL_SET_LOCKPROXYFILE\fP"
+
+.PP
+Definition at line 1100 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SHM_EXCLUSIVE   8"
+
+.PP
+Definition at line 1373 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SHM_LOCK   2"
+
+.PP
+Definition at line 1371 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SHM_NLOCK   8"
+
+.PP
+Definition at line 1383 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SHM_SHARED   4"
+
+.PP
+Definition at line 1372 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SHM_UNLOCK   1"
+
+.PP
+Definition at line 1370 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SOURCE_ID   '2017\-10\-24 18:55:49 1a584e499906b5c87ec7d43d4abce641fdf017c42125b083109bc77c4de48827'"
+
+.PP
+Definition at line 128 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATIC   ((\fBsqlite3_destructor_type\fP)0)"
+
+.PP
+Definition at line 5030 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_MALLOC_COUNT   9"
+
+.PP
+Definition at line 7138 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_MALLOC_SIZE   5"
+
+.PP
+Definition at line 7134 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_MEMORY_USED   0"
+
+.PP
+Definition at line 7129 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_PAGECACHE_OVERFLOW   2"
+
+.PP
+Definition at line 7131 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_PAGECACHE_SIZE   7"
+
+.PP
+Definition at line 7136 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_PAGECACHE_USED   1"
+
+.PP
+Definition at line 7130 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_PARSER_STACK   6"
+
+.PP
+Definition at line 7135 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_SCRATCH_OVERFLOW   4  /* NOT USED */"
+
+.PP
+Definition at line 7133 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_SCRATCH_SIZE   8  /* NOT USED */"
+
+.PP
+Definition at line 7137 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STATUS_SCRATCH_USED   3  /* NOT USED */"
+
+.PP
+Definition at line 7132 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STDCALL   \fBSQLITE_APICALL\fP"
+
+.PP
+Definition at line 61 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STMTSTATUS_AUTOINDEX   3"
+
+.PP
+Definition at line 7365 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STMTSTATUS_FULLSCAN_STEP   1"
+
+.PP
+Definition at line 7363 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STMTSTATUS_MEMUSED   99"
+
+.PP
+Definition at line 7369 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STMTSTATUS_REPREPARE   5"
+
+.PP
+Definition at line 7367 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STMTSTATUS_RUN   6"
+
+.PP
+Definition at line 7368 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STMTSTATUS_SORT   2"
+
+.PP
+Definition at line 7364 of file sqlite3\&.h\&.
+.SS "#define SQLITE_STMTSTATUS_VM_STEP   4"
+
+.PP
+Definition at line 7366 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SYNC_DATAONLY   0x00010"
+
+.PP
+Definition at line 653 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SYNC_FULL   0x00003"
+
+.PP
+Definition at line 652 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SYNC_NORMAL   0x00002"
+
+.PP
+Definition at line 651 of file sqlite3\&.h\&.
+.SS "#define SQLITE_SYSAPI"
+
+.PP
+Definition at line 67 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_ALWAYS   13"
+
+.PP
+Definition at line 7011 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_ASSERT   12"
+
+.PP
+Definition at line 7010 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_BENIGN_MALLOC_HOOKS   10"
+
+.PP
+Definition at line 7008 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_BITVEC_TEST   8"
+
+.PP
+Definition at line 7006 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_BYTEORDER   22"
+
+.PP
+Definition at line 7021 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_EXPLAIN_STMT   19  /* NOT USED */"
+
+.PP
+Definition at line 7017 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_FAULT_INSTALL   9"
+
+.PP
+Definition at line 7007 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_FIRST   5"
+
+.PP
+Definition at line 7002 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_IMPOSTER   25"
+
+.PP
+Definition at line 7024 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_ISINIT   23"
+
+.PP
+Definition at line 7022 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_ISKEYWORD   16"
+
+.PP
+Definition at line 7014 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_LAST   25"
+
+.PP
+Definition at line 7025 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_LOCALTIME_FAULT   18"
+
+.PP
+Definition at line 7016 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_NEVER_CORRUPT   20"
+
+.PP
+Definition at line 7019 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_ONCE_RESET_THRESHOLD   19"
+
+.PP
+Definition at line 7018 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_OPTIMIZATIONS   15"
+
+.PP
+Definition at line 7013 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_PENDING_BYTE   11"
+
+.PP
+Definition at line 7009 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_PRNG_RESET   7"
+
+.PP
+Definition at line 7005 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_PRNG_RESTORE   6"
+
+.PP
+Definition at line 7004 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_PRNG_SAVE   5"
+
+.PP
+Definition at line 7003 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_RESERVE   14"
+
+.PP
+Definition at line 7012 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_SCRATCHMALLOC   17  /* NOT USED */"
+
+.PP
+Definition at line 7015 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_SORTER_MMAP   24"
+
+.PP
+Definition at line 7023 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TESTCTRL_VDBE_COVERAGE   21"
+
+.PP
+Definition at line 7020 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TEXT   3"
+
+.PP
+Definition at line 4318 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TOOBIG   18   /* String or BLOB exceeds size limit */"
+
+.PP
+Definition at line 441 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TRACE_CLOSE   0x08"
+
+.PP
+Definition at line 2985 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TRACE_PROFILE   0x02"
+
+.PP
+Definition at line 2983 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TRACE_ROW   0x04"
+
+.PP
+Definition at line 2984 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TRACE_STMT   0x01"
+
+.PP
+Definition at line 2982 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TRANSACTION   22   /* Operation       NULL            */"
+
+.PP
+Definition at line 2879 of file sqlite3\&.h\&.
+.SS "#define SQLITE_TRANSIENT   ((\fBsqlite3_destructor_type\fP)\-1)"
+
+.PP
+Definition at line 5031 of file sqlite3\&.h\&.
+.SS "#define SQLITE_UPDATE   23   /* Table Name      Column Name     */"
+
+.PP
+Definition at line 2880 of file sqlite3\&.h\&.
+.SS "#define SQLITE_UTF16   4    /* Use native byte order */"
+
+.PP
+Definition at line 4722 of file sqlite3\&.h\&.
+.SS "#define SQLITE_UTF16_ALIGNED   8    /* \fBsqlite3_create_collation\fP only */"
+
+.PP
+Definition at line 4724 of file sqlite3\&.h\&.
+.SS "#define SQLITE_UTF16BE   3    /* IMP: R\-51971\-34154 */"
+
+.PP
+Definition at line 4721 of file sqlite3\&.h\&.
+.SS "#define SQLITE_UTF16LE   2    /* IMP: R\-03371\-37637 */"
+
+.PP
+Definition at line 4720 of file sqlite3\&.h\&.
+.SS "#define SQLITE_UTF8   1    /* IMP: R\-37514\-35566 */"
+
+.PP
+Definition at line 4719 of file sqlite3\&.h\&.
+.SS "#define SQLITE_VERSION   '3\&.21\&.0'"
+
+.PP
+Definition at line 126 of file sqlite3\&.h\&.
+.SS "#define SQLITE_VERSION_NUMBER   3021000"
+
+.PP
+Definition at line 127 of file sqlite3\&.h\&.
+.SS "#define SQLITE_VTAB_CONSTRAINT_SUPPORT   1"
+
+.PP
+Definition at line 8265 of file sqlite3\&.h\&.
+.SS "#define SQLITE_WARNING   28   /* Warnings from \fBsqlite3_log\fP() */"
+
+.PP
+Definition at line 451 of file sqlite3\&.h\&.
+.SS "#define SQLITE_WARNING_AUTOINDEX   (\fBSQLITE_WARNING\fP | (1<<8))"
+
+.PP
+Definition at line 529 of file sqlite3\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBfts5_api\fP \fBfts5_api\fP"
+
+.PP
+Definition at line 10686 of file sqlite3\&.h\&.
+.SS "typedef void(* fts5_extension_function) (const \fBFts5ExtensionApi\fP *pApi, \fBFts5Context\fP *pFts, \fBsqlite3_context\fP *pCtx, int nVal, \fBsqlite3_value\fP **apVal)"
+
+.PP
+Definition at line 10187 of file sqlite3\&.h\&.
+.SS "typedef struct \fBfts5_tokenizer\fP \fBfts5_tokenizer\fP"
+
+.PP
+Definition at line 10650 of file sqlite3\&.h\&.
+.SS "typedef struct \fBFts5Context\fP \fBFts5Context\fP"
+
+.PP
+Definition at line 10184 of file sqlite3\&.h\&.
+.SS "typedef struct \fBFts5ExtensionApi\fP \fBFts5ExtensionApi\fP"
+
+.PP
+Definition at line 10183 of file sqlite3\&.h\&.
+.SS "typedef struct \fBFts5PhraseIter\fP \fBFts5PhraseIter\fP"
+
+.PP
+Definition at line 10185 of file sqlite3\&.h\&.
+.SS "typedef struct \fBFts5Tokenizer\fP \fBFts5Tokenizer\fP"
+
+.PP
+Definition at line 10649 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3\fP \fBsqlite3\fP"
+
+.PP
+Definition at line 246 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_api_routines\fP \fBsqlite3_api_routines\fP"
+
+.PP
+Definition at line 1124 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_backup\fP \fBsqlite3_backup\fP"
+
+.PP
+Definition at line 7608 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_blob\fP \fBsqlite3_blob\fP"
+
+.PP
+Definition at line 6403 of file sqlite3\&.h\&.
+.SS "typedef int(* sqlite3_callback) (void *, int, char **, char **)"
+
+.PP
+Definition at line 339 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_context\fP \fBsqlite3_context\fP"
+
+.PP
+Definition at line 3842 of file sqlite3\&.h\&.
+.SS "typedef void(* sqlite3_destructor_type) (void *)"
+
+.PP
+Definition at line 5029 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_file\fP \fBsqlite3_file\fP"
+
+.PP
+Definition at line 666 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_index_info\fP \fBsqlite3_index_info\fP"
+
+.PP
+Definition at line 6054 of file sqlite3\&.h\&.
+.SS "typedef \fBsqlite_int64\fP \fBsqlite3_int64\fP"
+
+.PP
+Definition at line 278 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_io_methods\fP \fBsqlite3_io_methods\fP"
+
+.PP
+Definition at line 765 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_mem_methods\fP \fBsqlite3_mem_methods\fP"
+
+.PP
+Definition at line 1581 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_module\fP \fBsqlite3_module\fP"
+
+.PP
+Definition at line 6056 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_mutex\fP \fBsqlite3_mutex\fP"
+
+.PP
+Definition at line 1114 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_mutex_methods\fP \fBsqlite3_mutex_methods\fP"
+
+.PP
+Definition at line 6851 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_pcache\fP \fBsqlite3_pcache\fP"
+
+.PP
+Definition at line 7382 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_pcache_methods\fP \fBsqlite3_pcache_methods\fP"
+
+.PP
+Definition at line 7582 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_pcache_methods2\fP \fBsqlite3_pcache_methods2\fP"
+
+.PP
+Definition at line 7559 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_pcache_page\fP \fBsqlite3_pcache_page\fP"
+
+.PP
+Definition at line 7394 of file sqlite3\&.h\&.
+.SS "typedef double \fBsqlite3_rtree_dbl\fP"
+
+.PP
+Definition at line 8769 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_rtree_geometry\fP \fBsqlite3_rtree_geometry\fP"
+
+.PP
+Definition at line 8760 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_rtree_query_info\fP \fBsqlite3_rtree_query_info\fP"
+
+.PP
+Definition at line 8761 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_snapshot\fP  \fBsqlite3_snapshot\fP"
+
+.SS "typedef struct \fBsqlite3_stmt\fP \fBsqlite3_stmt\fP"
+
+.PP
+Definition at line 3414 of file sqlite3\&.h\&.
+.SS "typedef void(* sqlite3_syscall_ptr) (void)"
+
+.PP
+Definition at line 1284 of file sqlite3\&.h\&.
+.SS "typedef \fBsqlite_uint64\fP \fBsqlite3_uint64\fP"
+
+.PP
+Definition at line 279 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_value\fP \fBsqlite3_value\fP"
+
+.PP
+Definition at line 3828 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_vfs\fP \fBsqlite3_vfs\fP"
+
+.PP
+Definition at line 1283 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_vtab\fP \fBsqlite3_vtab\fP"
+
+.PP
+Definition at line 6053 of file sqlite3\&.h\&.
+.SS "typedef struct \fBsqlite3_vtab_cursor\fP \fBsqlite3_vtab_cursor\fP"
+
+.PP
+Definition at line 6055 of file sqlite3\&.h\&.
+.SS "typedef long long int \fBsqlite_int64\fP"
+
+.PP
+Definition at line 275 of file sqlite3\&.h\&.
+.SS "typedef unsigned long long int \fBsqlite_uint64\fP"
+
+.PP
+Definition at line 276 of file sqlite3\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBSQLITE_API\fP void* sqlite3_aggregate_context (\fBsqlite3_context\fP *, int nBytes)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int sqlite3_aggregate_count (\fBsqlite3_context\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_auto_extension (void(*)(void) xEntryPoint)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_backup_finish (\fBsqlite3_backup\fP * p)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_backup\fP* sqlite3_backup_init (\fBsqlite3\fP * pDest, const char * zDestName, \fBsqlite3\fP * pSource, const char * zSourceName)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_backup_pagecount (\fBsqlite3_backup\fP * p)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_backup_remaining (\fBsqlite3_backup\fP * p)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_backup_step (\fBsqlite3_backup\fP * p, int nPage)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_blob (\fBsqlite3_stmt\fP *, int, const void *, int n, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_blob64 (\fBsqlite3_stmt\fP *, int, const void *, \fBsqlite3_uint64\fP, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_double (\fBsqlite3_stmt\fP *, int, double)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_int (\fBsqlite3_stmt\fP *, int, int)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_int64 (\fBsqlite3_stmt\fP *, int, \fBsqlite3_int64\fP)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_null (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_parameter_count (\fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_parameter_index (\fBsqlite3_stmt\fP *, const char * zName)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_bind_parameter_name (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_pointer (\fBsqlite3_stmt\fP *, int, void *, const char *, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_text (\fBsqlite3_stmt\fP *, int, const char *, int, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_text16 (\fBsqlite3_stmt\fP *, int, const void *, int, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_text64 (\fBsqlite3_stmt\fP *, int, const char *, \fBsqlite3_uint64\fP, void(*)(void *), unsigned char encoding)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_value (\fBsqlite3_stmt\fP *, int, const \fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_zeroblob (\fBsqlite3_stmt\fP *, int, int n)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_bind_zeroblob64 (\fBsqlite3_stmt\fP *, int, \fBsqlite3_uint64\fP)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_blob_bytes (\fBsqlite3_blob\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_blob_close (\fBsqlite3_blob\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_blob_open (\fBsqlite3\fP *, const char * zDb, const char * zTable, const char * zColumn, \fBsqlite3_int64\fP iRow, int flags, \fBsqlite3_blob\fP ** ppBlob)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_blob_read (\fBsqlite3_blob\fP *, void * Z, int N, int iOffset)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_blob_reopen (\fBsqlite3_blob\fP *, \fBsqlite3_int64\fP)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_blob_write (\fBsqlite3_blob\fP *, const void * z, int n, int iOffset)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_busy_handler (\fBsqlite3\fP *, int(*)(void *, int), void *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_busy_timeout (\fBsqlite3\fP *, int ms)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_cancel_auto_extension (void(*)(void) xEntryPoint)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_changes (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_clear_bindings (\fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_close (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_close_v2 (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_collation_needed (\fBsqlite3\fP *, void *, void(*)(void *, \fBsqlite3\fP *, int eTextRep, const char *))"
+
+.SS "\fBSQLITE_API\fP int sqlite3_collation_needed16 (\fBsqlite3\fP *, void *, void(*)(void *, \fBsqlite3\fP *, int eTextRep, const void *))"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_column_blob (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_column_bytes (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_column_bytes16 (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_column_count (\fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_column_database_name (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_column_database_name16 (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_column_decltype (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_column_decltype16 (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP double sqlite3_column_double (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_column_int (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_int64\fP sqlite3_column_int64 (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_column_name (\fBsqlite3_stmt\fP *, int N)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_column_name16 (\fBsqlite3_stmt\fP *, int N)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_column_origin_name (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_column_origin_name16 (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_column_table_name (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_column_table_name16 (\fBsqlite3_stmt\fP *, int)"
+
+.SS "\fBSQLITE_API\fP const unsigned char* sqlite3_column_text (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_column_text16 (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_column_type (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_value\fP* sqlite3_column_value (\fBsqlite3_stmt\fP *, int iCol)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_commit_hook (\fBsqlite3\fP *, int(*)(void *), void *)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_compileoption_get (int N)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_compileoption_used (const char * zOptName)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_complete (const char * sql)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_complete16 (const void * sql)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_config (int,  \&.\&.\&.)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3\fP* sqlite3_context_db_handle (\fBsqlite3_context\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_collation (\fBsqlite3\fP *, const char * zName, int eTextRep, void * pArg, int(*)(void *, int, const void *, int, const void *) xCompare)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_collation16 (\fBsqlite3\fP *, const void * zName, int eTextRep, void * pArg, int(*)(void *, int, const void *, int, const void *) xCompare)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_collation_v2 (\fBsqlite3\fP *, const char * zName, int eTextRep, void * pArg, int(*)(void *, int, const void *, int, const void *) xCompare, void(*)(void *) xDestroy)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_function (\fBsqlite3\fP * db, const char * zFunctionName, int nArg, int eTextRep, void * pApp, void(*)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **) xFunc, void(*)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **) xStep, void(*)(\fBsqlite3_context\fP *) xFinal)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_function16 (\fBsqlite3\fP * db, const void * zFunctionName, int nArg, int eTextRep, void * pApp, void(*)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **) xFunc, void(*)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **) xStep, void(*)(\fBsqlite3_context\fP *) xFinal)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_function_v2 (\fBsqlite3\fP * db, const char * zFunctionName, int nArg, int eTextRep, void * pApp, void(*)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **) xFunc, void(*)(\fBsqlite3_context\fP *, int, \fBsqlite3_value\fP **) xStep, void(*)(\fBsqlite3_context\fP *) xFinal, void(*)(void *) xDestroy)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_module (\fBsqlite3\fP * db, const char * zName, const \fBsqlite3_module\fP * p, void * pClientData)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_create_module_v2 (\fBsqlite3\fP * db, const char * zName, const \fBsqlite3_module\fP * p, void * pClientData, void(*)(void *) xDestroy)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_data_count (\fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_db_cacheflush (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_db_config (\fBsqlite3\fP *, int op,  \&.\&.\&.)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_db_filename (\fBsqlite3\fP * db, const char * zDbName)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3\fP* sqlite3_db_handle (\fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_mutex\fP* sqlite3_db_mutex (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_db_readonly (\fBsqlite3\fP * db, const char * zDbName)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_db_release_memory (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_db_status (\fBsqlite3\fP *, int op, int * pCur, int * pHiwtr, int resetFlg)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_declare_vtab (\fBsqlite3\fP *, const char * zSQL)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_enable_load_extension (\fBsqlite3\fP * db, int onoff)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_enable_shared_cache (int)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_errcode (\fBsqlite3\fP * db)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_errmsg (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_errmsg16 (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_errstr (int)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_exec (\fBsqlite3\fP *, const char * sql, int(*)(void *, int, char **, char **) callback, void *, char ** errmsg)"
+
+.SS "\fBSQLITE_API\fP char* sqlite3_expanded_sql (\fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int sqlite3_expired (\fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_extended_errcode (\fBsqlite3\fP * db)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_extended_result_codes (\fBsqlite3\fP *, int onoff)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_file_control (\fBsqlite3\fP *, const char * zDbName, int op, void *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_finalize (\fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_free (void *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_free_table (char ** result)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_get_autocommit (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_get_auxdata (\fBsqlite3_context\fP *, int N)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_get_table (\fBsqlite3\fP * db, const char * zSql, char *** pazResult, int * pnRow, int * pnColumn, char ** pzErrmsg)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int sqlite3_global_recover (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_initialize (void)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_interrupt (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_int64\fP sqlite3_last_insert_rowid (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_libversion (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_libversion_number (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_limit (\fBsqlite3\fP *, int id, int newVal)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_load_extension (\fBsqlite3\fP * db, const char * zFile, const char * zProc, char ** pzErrMsg)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_log (int iErrCode, const char * zFormat,  \&.\&.\&.)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_malloc (int)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_malloc64 (\fBsqlite3_uint64\fP)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int sqlite3_memory_alarm (void(*)(void *, \fBsqlite3_int64\fP, int), void *, \fBsqlite3_int64\fP)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_int64\fP sqlite3_memory_highwater (int resetFlag)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_int64\fP sqlite3_memory_used (void)"
+
+.SS "\fBSQLITE_API\fP char* sqlite3_mprintf (const char *,  \&.\&.\&.)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_uint64\fP sqlite3_msize (void *)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_mutex\fP* sqlite3_mutex_alloc (int)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_mutex_enter (\fBsqlite3_mutex\fP *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_mutex_free (\fBsqlite3_mutex\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_mutex_held (\fBsqlite3_mutex\fP *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_mutex_leave (\fBsqlite3_mutex\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_mutex_notheld (\fBsqlite3_mutex\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_mutex_try (\fBsqlite3_mutex\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_stmt\fP* sqlite3_next_stmt (\fBsqlite3\fP * pDb, \fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_open (const char * filename, \fBsqlite3\fP ** ppDb)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_open16 (const void * filename, \fBsqlite3\fP ** ppDb)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_open_v2 (const char * filename, \fBsqlite3\fP ** ppDb, int flags, const char * zVfs)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_os_end (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_os_init (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_overload_function (\fBsqlite3\fP *, const char * zFuncName, int nArg)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_prepare (\fBsqlite3\fP * db, const char * zSql, int nByte, \fBsqlite3_stmt\fP ** ppStmt, const char ** pzTail)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_prepare16 (\fBsqlite3\fP * db, const void * zSql, int nByte, \fBsqlite3_stmt\fP ** ppStmt, const void ** pzTail)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_prepare16_v2 (\fBsqlite3\fP * db, const void * zSql, int nByte, \fBsqlite3_stmt\fP ** ppStmt, const void ** pzTail)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_prepare16_v3 (\fBsqlite3\fP * db, const void * zSql, int nByte, unsigned int prepFlags, \fBsqlite3_stmt\fP ** ppStmt, const void ** pzTail)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_prepare_v2 (\fBsqlite3\fP * db, const char * zSql, int nByte, \fBsqlite3_stmt\fP ** ppStmt, const char ** pzTail)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_prepare_v3 (\fBsqlite3\fP * db, const char * zSql, int nByte, unsigned int prepFlags, \fBsqlite3_stmt\fP ** ppStmt, const char ** pzTail)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void* sqlite3_profile (\fBsqlite3\fP *, void(*)(void *, const char *, \fBsqlite3_uint64\fP) xProfile, void *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_progress_handler (\fBsqlite3\fP *, int, int(*)(void *), void *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_randomness (int N, void * P)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_realloc (void *, int)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_realloc64 (void *, \fBsqlite3_uint64\fP)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_release_memory (int)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_reset (\fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_reset_auto_extension (void)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_blob (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_blob64 (\fBsqlite3_context\fP *, const void *, \fBsqlite3_uint64\fP, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_double (\fBsqlite3_context\fP *, double)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_error (\fBsqlite3_context\fP *, const char *, int)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_error16 (\fBsqlite3_context\fP *, const void *, int)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_error_code (\fBsqlite3_context\fP *, int)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_error_nomem (\fBsqlite3_context\fP *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_error_toobig (\fBsqlite3_context\fP *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_int (\fBsqlite3_context\fP *, int)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_int64 (\fBsqlite3_context\fP *, \fBsqlite3_int64\fP)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_null (\fBsqlite3_context\fP *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_pointer (\fBsqlite3_context\fP *, void *, const char *, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_subtype (\fBsqlite3_context\fP *, unsigned int)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_text (\fBsqlite3_context\fP *, const char *, int, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_text16 (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_text16be (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_text16le (\fBsqlite3_context\fP *, const void *, int, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_text64 (\fBsqlite3_context\fP *, const char *, \fBsqlite3_uint64\fP, void(*)(void *), unsigned char encoding)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_value (\fBsqlite3_context\fP *, \fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_result_zeroblob (\fBsqlite3_context\fP *, int n)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_result_zeroblob64 (\fBsqlite3_context\fP *, \fBsqlite3_uint64\fP n)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_rollback_hook (\fBsqlite3\fP *, void(*)(void *), void *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_rtree_geometry_callback (\fBsqlite3\fP * db, const char * zGeom, int(*)(\fBsqlite3_rtree_geometry\fP *, int, \fBsqlite3_rtree_dbl\fP *, int *) xGeom, void * pContext)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_rtree_query_callback (\fBsqlite3\fP * db, const char * zQueryFunc, int(*)(\fBsqlite3_rtree_query_info\fP *) xQueryFunc, void * pContext, void(*)(void *) xDestructor)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_set_authorizer (\fBsqlite3\fP *, int(*)(void *, int, const char *, const char *, const char *, const char *) xAuth, void * pUserData)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_set_auxdata (\fBsqlite3_context\fP *, int N, void *, void(*)(void *))"
+
+.SS "\fBSQLITE_API\fP void sqlite3_set_last_insert_rowid (\fBsqlite3\fP *, \fBsqlite3_int64\fP)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_shutdown (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_sleep (int)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int sqlite3_snapshot_cmp (\fBsqlite3_snapshot\fP * p1, \fBsqlite3_snapshot\fP * p2)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP void sqlite3_snapshot_free (\fBsqlite3_snapshot\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int sqlite3_snapshot_get (\fBsqlite3\fP * db, const char * zSchema, \fBsqlite3_snapshot\fP ** ppSnapshot)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int sqlite3_snapshot_open (\fBsqlite3\fP * db, const char * zSchema, \fBsqlite3_snapshot\fP * pSnapshot)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXPERIMENTAL\fP int sqlite3_snapshot_recover (\fBsqlite3\fP * db, const char * zDb)"
+
+.SS "\fBSQLITE_API\fP char* sqlite3_snprintf (int, char *, const char *,  \&.\&.\&.)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void sqlite3_soft_heap_limit (int N)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_int64\fP sqlite3_soft_heap_limit64 (\fBsqlite3_int64\fP N)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_sourceid (void)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_sql (\fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_status (int op, int * pCurrent, int * pHighwater, int resetFlag)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_status64 (int op, \fBsqlite3_int64\fP * pCurrent, \fBsqlite3_int64\fP * pHighwater, int resetFlag)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_step (\fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_stmt_busy (\fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_stmt_readonly (\fBsqlite3_stmt\fP * pStmt)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_stmt_scanstatus (\fBsqlite3_stmt\fP * pStmt, int idx, int iScanStatusOp, void * pOut)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_stmt_scanstatus_reset (\fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_stmt_status (\fBsqlite3_stmt\fP *, int op, int resetFlg)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_strglob (const char * zGlob, const char * zStr)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_stricmp (const char *, const char *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_strlike (const char * zGlob, const char * zStr, unsigned int cEsc)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_strnicmp (const char *, const char *, int)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_system_errno (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_table_column_metadata (\fBsqlite3\fP * db, const char * zDbName, const char * zTableName, const char * zColumnName, char const ** pzDataType, char const ** pzCollSeq, int * pNotNull, int * pPrimaryKey, int * pAutoinc)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_test_control (int op,  \&.\&.\&.)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void sqlite3_thread_cleanup (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_threadsafe (void)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_total_changes (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP void* sqlite3_trace (\fBsqlite3\fP *, void(*)(void *, const char *) xTrace, void *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_trace_v2 (\fBsqlite3\fP *, unsigned uMask, int(*)(unsigned, void *, void *, void *) xCallback, void * pCtx)"
+
+.SS "\fBSQLITE_API\fP \fBSQLITE_DEPRECATED\fP int sqlite3_transfer_bindings (\fBsqlite3_stmt\fP *, \fBsqlite3_stmt\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_unlock_notify (\fBsqlite3\fP * pBlocked, void(*)(void **apArg, int nArg) xNotify, void * pNotifyArg)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_update_hook (\fBsqlite3\fP *, void(*)(void *, int, char const *, char const *, \fBsqlite3_int64\fP), void *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_uri_boolean (const char * zFile, const char * zParam, int bDefault)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_int64\fP sqlite3_uri_int64 (const char *, const char *, \fBsqlite3_int64\fP)"
+
+.SS "\fBSQLITE_API\fP const char* sqlite3_uri_parameter (const char * zFilename, const char * zParam)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_user_data (\fBsqlite3_context\fP *)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_value_blob (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_value_bytes (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_value_bytes16 (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP double sqlite3_value_double (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_value\fP* sqlite3_value_dup (const \fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP void sqlite3_value_free (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_value_int (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_int64\fP sqlite3_value_int64 (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_value_numeric_type (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_value_pointer (\fBsqlite3_value\fP *, const char *)"
+
+.SS "\fBSQLITE_API\fP unsigned int sqlite3_value_subtype (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP const unsigned char* sqlite3_value_text (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_value_text16 (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_value_text16be (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP const void* sqlite3_value_text16le (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_value_type (\fBsqlite3_value\fP *)"
+
+.SS "\fBSQLITE_API\fP \fBsqlite3_vfs\fP* sqlite3_vfs_find (const char * zVfsName)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_vfs_register (\fBsqlite3_vfs\fP *, int makeDflt)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_vfs_unregister (\fBsqlite3_vfs\fP *)"
+
+.SS "\fBSQLITE_API\fP char* sqlite3_vmprintf (const char *, va_list)"
+
+.SS "\fBSQLITE_API\fP char* sqlite3_vsnprintf (int, char *, const char *, va_list)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_vtab_config (\fBsqlite3\fP *, int op,  \&.\&.\&.)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_vtab_on_conflict (\fBsqlite3\fP *)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_wal_autocheckpoint (\fBsqlite3\fP * db, int N)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_wal_checkpoint (\fBsqlite3\fP * db, const char * zDb)"
+
+.SS "\fBSQLITE_API\fP int sqlite3_wal_checkpoint_v2 (\fBsqlite3\fP * db, const char * zDb, int eMode, int * pnLog, int * pnCkpt)"
+
+.SS "\fBSQLITE_API\fP void* sqlite3_wal_hook (\fBsqlite3\fP *, int(*)(void *, \fBsqlite3\fP *, const char *, int), void *)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXTERN\fP char* sqlite3_data_directory"
+
+.PP
+Definition at line 5505 of file sqlite3\&.h\&.
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXTERN\fP char* sqlite3_temp_directory"
+
+.PP
+Definition at line 5468 of file sqlite3\&.h\&.
+.SS "\fBSQLITE_API\fP \fBSQLITE_EXTERN\fP const char sqlite3_version[]"
+
+.PP
+Definition at line 162 of file sqlite3\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

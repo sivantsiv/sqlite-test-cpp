@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_record_processor" kind="class" language="C++" prot="public">
+    <compoundname>RecordProcessor</compoundname>
+    <includes refid="_record_processor_8h" local="no">RecordProcessor.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_record_processor_1a86b37405597409fec1e19afd86e75adf" prot="private" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a0ef6f2646262c8a9b24368d8ac140f69" kindref="member">sqlite3</ref> *</type>
+        <definition>sqlite3* RecordProcessor::p_db</definition>
+        <argsstring></argsstring>
+        <name>p_db</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="20" column="1" bodyfile="RecordProcessor.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_record_processor_1a92e41434a78150df0551d1f595042f31" prot="private" static="no" mutable="no">
+        <type><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref></type>
+        <definition>Records RecordProcessor::records</definition>
+        <argsstring></argsstring>
+        <name>records</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="21" column="1" bodyfile="RecordProcessor.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_record_processor_1a3961a0d77a0d83e58a68736311b88a0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RecordProcessor::RecordProcessor</definition>
+        <argsstring>()</argsstring>
+        <name>RecordProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="24" column="1" bodyfile="RecordProcessor.cpp" bodystart="67" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_record_processor_1aa64ac5cbddceb678e8cb27e9fc58576c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RecordProcessor::RecordProcessor</definition>
+        <argsstring>(const char *filename)</argsstring>
+        <name>RecordProcessor</name>
+        <param>
+          <type>const char *</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="25" column="1" bodyfile="RecordProcessor.cpp" bodystart="84" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="class_record_processor_1a2c919a73f9cd411c141635f35dd047be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RecordProcessor::createTable</definition>
+        <argsstring>()</argsstring>
+        <name>createTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="27" column="1" bodyfile="RecordProcessor.cpp" bodystart="100" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_record_processor_1a6739098423e2d913004459282217db2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RecordProcessor::deleteTable</definition>
+        <argsstring>()</argsstring>
+        <name>deleteTable</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="28" column="1" bodyfile="RecordProcessor.cpp" bodystart="123" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_record_processor_1a6101b13cf5883e1fefe3013947ca9b68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RecordProcessor::insertRecord</definition>
+        <argsstring>(const char *sql)</argsstring>
+        <name>insertRecord</name>
+        <param>
+          <type>const char *</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="29" column="1" bodyfile="RecordProcessor.cpp" bodystart="143" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_record_processor_1aa246f2377aaba5ade7524813f07eaec0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref> &amp;</type>
+        <definition>Records &amp; RecordProcessor::selectRecord</definition>
+        <argsstring>(const char *sql)</argsstring>
+        <name>selectRecord</name>
+        <param>
+          <type>const char *</type>
+          <declname>sql</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="30" column="1" bodyfile="RecordProcessor.cpp" bodystart="159" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="class_record_processor_1a63fbf98c72bafa6c2e24a3962bdae70c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RecordProcessor::~RecordProcessor</definition>
+        <argsstring>()</argsstring>
+        <name>~RecordProcessor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="32" column="1" bodyfile="RecordProcessor.cpp" bodystart="180" bodyend="189"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="RecordProcessor.h" line="18" column="1" bodyfile="RecordProcessor.h" bodystart="17" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_record_processor_1a2c919a73f9cd411c141635f35dd047be" prot="public" virt="non-virtual"><scope>RecordProcessor</scope><name>createTable</name></member>
+      <member refid="class_record_processor_1a6739098423e2d913004459282217db2e" prot="public" virt="non-virtual"><scope>RecordProcessor</scope><name>deleteTable</name></member>
+      <member refid="class_record_processor_1a6101b13cf5883e1fefe3013947ca9b68" prot="public" virt="non-virtual"><scope>RecordProcessor</scope><name>insertRecord</name></member>
+      <member refid="class_record_processor_1a86b37405597409fec1e19afd86e75adf" prot="private" virt="non-virtual"><scope>RecordProcessor</scope><name>p_db</name></member>
+      <member refid="class_record_processor_1a3961a0d77a0d83e58a68736311b88a0a" prot="public" virt="non-virtual"><scope>RecordProcessor</scope><name>RecordProcessor</name></member>
+      <member refid="class_record_processor_1aa64ac5cbddceb678e8cb27e9fc58576c" prot="public" virt="non-virtual"><scope>RecordProcessor</scope><name>RecordProcessor</name></member>
+      <member refid="class_record_processor_1a92e41434a78150df0551d1f595042f31" prot="private" virt="non-virtual"><scope>RecordProcessor</scope><name>records</name></member>
+      <member refid="class_record_processor_1aa246f2377aaba5ade7524813f07eaec0" prot="public" virt="non-virtual"><scope>RecordProcessor</scope><name>selectRecord</name></member>
+      <member refid="class_record_processor_1a63fbf98c72bafa6c2e24a3962bdae70c" prot="public" virt="non-virtual"><scope>RecordProcessor</scope><name>~RecordProcessor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__index__info" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_index_info</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+    <innerclass refid="structsqlite3__index__info_1_1sqlite3__index__constraint" prot="public">sqlite3_index_info::sqlite3_index_constraint</innerclass>
+    <innerclass refid="structsqlite3__index__info_1_1sqlite3__index__constraint__usage" prot="public">sqlite3_index_info::sqlite3_index_constraint_usage</innerclass>
+    <innerclass refid="structsqlite3__index__info_1_1sqlite3__index__orderby" prot="public">sqlite3_index_info::sqlite3_index_orderby</innerclass>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__index__info_1ae861993a30ce914a5214eab2579d935a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::nConstraint</definition>
+        <argsstring></argsstring>
+        <name>nConstraint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6207" column="1" bodyfile="sqlite3.h" bodystart="6207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a634aa93834e2b47acf34454746c0f248" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsqlite3__index__info_1_1sqlite3__index__constraint" kindref="compound">sqlite3_index_info::sqlite3_index_constraint</ref> *</type>
+        <definition>struct sqlite3_index_info::sqlite3_index_constraint * sqlite3_index_info::aConstraint</definition>
+        <argsstring></argsstring>
+        <name>aConstraint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6213" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a3ef850fdc57eddbc8189fe84d0a9044e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::nOrderBy</definition>
+        <argsstring></argsstring>
+        <name>nOrderBy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6214" column="1" bodyfile="sqlite3.h" bodystart="6214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a6823a68979e19d8e332389361e920ef9" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsqlite3__index__info_1_1sqlite3__index__orderby" kindref="compound">sqlite3_index_info::sqlite3_index_orderby</ref> *</type>
+        <definition>struct sqlite3_index_info::sqlite3_index_orderby * sqlite3_index_info::aOrderBy</definition>
+        <argsstring></argsstring>
+        <name>aOrderBy</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6218" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a79b8a969dd7d582fc2ea3c0fbc5adb56" prot="public" static="no" mutable="no">
+        <type>struct <ref refid="structsqlite3__index__info_1_1sqlite3__index__constraint__usage" kindref="compound">sqlite3_index_info::sqlite3_index_constraint_usage</ref> *</type>
+        <definition>struct sqlite3_index_info::sqlite3_index_constraint_usage * sqlite3_index_info::aConstraintUsage</definition>
+        <argsstring></argsstring>
+        <name>aConstraintUsage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6223" column="1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1afcee17707a1c147fbd55c23c807fdae3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::idxNum</definition>
+        <argsstring></argsstring>
+        <name>idxNum</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6224" column="1" bodyfile="sqlite3.h" bodystart="6224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a1a9935e997bd6e3cce048534da7506a7" prot="public" static="no" mutable="no">
+        <type>char *</type>
+        <definition>char* sqlite3_index_info::idxStr</definition>
+        <argsstring></argsstring>
+        <name>idxStr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6225" column="1" bodyfile="sqlite3.h" bodystart="6225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a5410066c067c3891cdf165c70cc4d6b1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::needToFreeIdxStr</definition>
+        <argsstring></argsstring>
+        <name>needToFreeIdxStr</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6226" column="1" bodyfile="sqlite3.h" bodystart="6226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a5515d9de0f37f68d7e0930c20a668b29" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::orderByConsumed</definition>
+        <argsstring></argsstring>
+        <name>orderByConsumed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6227" column="1" bodyfile="sqlite3.h" bodystart="6227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1aa8b4fe1d2ee38aab57ba5e1da00d7830" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double sqlite3_index_info::estimatedCost</definition>
+        <argsstring></argsstring>
+        <name>estimatedCost</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6228" column="1" bodyfile="sqlite3.h" bodystart="6228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1adcdf25dcf9848a6fedf539bb9c921b7f" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a0a4d3e6c1ad46f90e746b920ab6ca0d2" kindref="member">sqlite3_int64</ref></type>
+        <definition>sqlite3_int64 sqlite3_index_info::estimatedRows</definition>
+        <argsstring></argsstring>
+        <name>estimatedRows</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6230" column="1" bodyfile="sqlite3.h" bodystart="6230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a8acf2a7efbc3e193cf01d2afbd44fdbb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sqlite3_index_info::idxFlags</definition>
+        <argsstring></argsstring>
+        <name>idxFlags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6232" column="1" bodyfile="sqlite3.h" bodystart="6232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__index__info_1a99787169e2f78c0728bdb339c4107a2e" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a181c20ecfd72bc6627635746d382c610" kindref="member">sqlite3_uint64</ref></type>
+        <definition>sqlite3_uint64 sqlite3_index_info::colUsed</definition>
+        <argsstring></argsstring>
+        <name>colUsed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6234" column="1" bodyfile="sqlite3.h" bodystart="6234" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="56">
+        <label>sqlite3_index_info::sqlite3_index_orderby</label>
+        <link refid="structsqlite3__index__info_1_1sqlite3__index__orderby"/>
+      </node>
+      <node id="55">
+        <label>sqlite3_index_info</label>
+        <link refid="structsqlite3__index__info"/>
+        <childnode refid="56" relation="usage">
+          <edgelabel>aOrderBy</edgelabel>
+        </childnode>
+        <childnode refid="57" relation="usage">
+          <edgelabel>aConstraintUsage</edgelabel>
+        </childnode>
+        <childnode refid="58" relation="usage">
+          <edgelabel>aConstraint</edgelabel>
+        </childnode>
+      </node>
+      <node id="58">
+        <label>sqlite3_index_info::sqlite3_index_constraint</label>
+        <link refid="structsqlite3__index__info_1_1sqlite3__index__constraint"/>
+      </node>
+      <node id="57">
+        <label>sqlite3_index_info::sqlite3_index_constraint_usage</label>
+        <link refid="structsqlite3__index__info_1_1sqlite3__index__constraint__usage"/>
+      </node>
+    </collaborationgraph>
+    <location file="sqlite3.h" line="6205" column="1" bodyfile="sqlite3.h" bodystart="6205" bodyend="6235"/>
+    <listofallmembers>
+      <member refid="structsqlite3__index__info_1a634aa93834e2b47acf34454746c0f248" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>aConstraint</name></member>
+      <member refid="structsqlite3__index__info_1a79b8a969dd7d582fc2ea3c0fbc5adb56" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>aConstraintUsage</name></member>
+      <member refid="structsqlite3__index__info_1a6823a68979e19d8e332389361e920ef9" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>aOrderBy</name></member>
+      <member refid="structsqlite3__index__info_1a99787169e2f78c0728bdb339c4107a2e" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>colUsed</name></member>
+      <member refid="structsqlite3__index__info_1aa8b4fe1d2ee38aab57ba5e1da00d7830" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>estimatedCost</name></member>
+      <member refid="structsqlite3__index__info_1adcdf25dcf9848a6fedf539bb9c921b7f" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>estimatedRows</name></member>
+      <member refid="structsqlite3__index__info_1a8acf2a7efbc3e193cf01d2afbd44fdbb" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>idxFlags</name></member>
+      <member refid="structsqlite3__index__info_1afcee17707a1c147fbd55c23c807fdae3" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>idxNum</name></member>
+      <member refid="structsqlite3__index__info_1a1a9935e997bd6e3cce048534da7506a7" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>idxStr</name></member>
+      <member refid="structsqlite3__index__info_1ae861993a30ce914a5214eab2579d935a" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>nConstraint</name></member>
+      <member refid="structsqlite3__index__info_1a5410066c067c3891cdf165c70cc4d6b1" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>needToFreeIdxStr</name></member>
+      <member refid="structsqlite3__index__info_1a3ef850fdc57eddbc8189fe84d0a9044e" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>nOrderBy</name></member>
+      <member refid="structsqlite3__index__info_1a5515d9de0f37f68d7e0930c20a668b29" prot="public" virt="non-virtual"><scope>sqlite3_index_info</scope><name>orderByConsumed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

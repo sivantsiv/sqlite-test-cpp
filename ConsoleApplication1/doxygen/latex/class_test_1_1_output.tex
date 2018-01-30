@@ -1,0 +1,238 @@
+\hypertarget{class_test_1_1_output}{}\section{Test\+:\+:Output Class Reference}
+\label{class_test_1_1_output}\index{Test\+::\+Output@{Test\+::\+Output}}
+
+
+Test suite output handler.  
+
+
+
+
+{\ttfamily \#include $<$cpptest-\/output.\+h$>$}
+
+Inheritance diagram for Test\+:\+:Output\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_test_1_1_output}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{class_test_1_1_output_a838de994609ac3d13b7d7cd389f56090}{$\sim$\+Output}} ()
+\item 
+virtual void \mbox{\hyperlink{class_test_1_1_output_aa66480875d088befc6c23ecfd1107cc1}{initialize}} (int tests)
+\item 
+virtual void \mbox{\hyperlink{class_test_1_1_output_aeff8af8326a8c54a38199f76837f860a}{finished}} (int tests, const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&time)
+\item 
+virtual void \mbox{\hyperlink{class_test_1_1_output_a7022c32c5a1577b10b93d3942746f17d}{suite\+\_\+start}} (int tests, const std\+::string \&name)
+\item 
+virtual void \mbox{\hyperlink{class_test_1_1_output_a6dbf4c0adb2bd4a7364c629179f788a6}{suite\+\_\+end}} (int tests, const std\+::string \&name, const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&time)
+\item 
+virtual void \mbox{\hyperlink{class_test_1_1_output_a52d43b97609febc5abbc6da9aa0abac2}{test\+\_\+start}} (const std\+::string \&name)
+\item 
+virtual void \mbox{\hyperlink{class_test_1_1_output_a3796943e3b56373492c957212a21454e}{test\+\_\+end}} (const std\+::string \&name, bool ok, const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&time)
+\item 
+virtual void \mbox{\hyperlink{class_test_1_1_output_a48c31f0baa7627d81939be840c9a7f65}{assertment}} (const \mbox{\hyperlink{class_test_1_1_source}{Source}} \&s)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_test_1_1_output_acbffb6b160039caafd3e9ac11cace65c}{Output}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Test suite output handler. 
+
+Abstract base class for all suite output handlers. Derive from this class to create real output handlers that creates arbitrary complex output handlers.
+
+All parts of testing is reported (test start/stop, suite start/stop, individual test start/stop, and assertments), thus giving maximum flexibility for derived classes. 
+
+Definition at line 55 of file cpptest-\/output.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_test_1_1_output_a838de994609ac3d13b7d7cd389f56090}\label{class_test_1_1_output_a838de994609ac3d13b7d7cd389f56090}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!````~Output@{$\sim$\+Output}}
+\index{````~Output@{$\sim$\+Output}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{$\sim$\+Output()}{~Output()}}
+{\footnotesize\ttfamily virtual Test\+::\+Output\+::$\sim$\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Empty destructor. 
+
+Definition at line 60 of file cpptest-\/output.\+h.
+
+\mbox{\Hypertarget{class_test_1_1_output_acbffb6b160039caafd3e9ac11cace65c}\label{class_test_1_1_output_acbffb6b160039caafd3e9ac11cace65c}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!Output@{Output}}
+\index{Output@{Output}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{Output()}{Output()}}
+{\footnotesize\ttfamily Test\+::\+Output\+::\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Empty constructor. 
+
+Definition at line 143 of file cpptest-\/output.\+h.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_test_1_1_output_a48c31f0baa7627d81939be840c9a7f65}\label{class_test_1_1_output_a48c31f0baa7627d81939be840c9a7f65}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!assertment@{assertment}}
+\index{assertment@{assertment}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{assertment()}{assertment()}}
+{\footnotesize\ttfamily virtual void Test\+::\+Output\+::assertment (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_test_1_1_source}{Source}} \&}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when an assertment is issued.
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Assert point information. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_test_1_1_compiler_output_a1c36e3fd12afe3556e887349b0b86b50}{Test\+::\+Compiler\+Output}}, \mbox{\hyperlink{class_test_1_1_text_output_a8110f86aa00f783fc5a91ec2f59a7998}{Test\+::\+Text\+Output}}, and \mbox{\hyperlink{class_test_1_1_collector_output_a96b61d5e53c3dfa1b98747bb582aa4f3}{Test\+::\+Collector\+Output}}.
+
+
+
+Definition at line 135 of file cpptest-\/output.\+h.
+
+\mbox{\Hypertarget{class_test_1_1_output_aeff8af8326a8c54a38199f76837f860a}\label{class_test_1_1_output_aeff8af8326a8c54a38199f76837f860a}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!finished@{finished}}
+\index{finished@{finished}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{finished()}{finished()}}
+{\footnotesize\ttfamily virtual void Test\+::\+Output\+::finished (\begin{DoxyParamCaption}\item[{int}]{tests,  }\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when testing is finished.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tests} & Total number of tests in all suites. \\
+\hline
+{\em time} & Total elapsed time for all tests. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_test_1_1_text_output_a9dcf13d9714a2774230386ef3215b701}{Test\+::\+Text\+Output}}, and \mbox{\hyperlink{class_test_1_1_collector_output_ad1a7502a31c58d93f0d88d7a679ab24d}{Test\+::\+Collector\+Output}}.
+
+
+
+Definition at line 76 of file cpptest-\/output.\+h.
+
+\mbox{\Hypertarget{class_test_1_1_output_aa66480875d088befc6c23ecfd1107cc1}\label{class_test_1_1_output_aa66480875d088befc6c23ecfd1107cc1}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!initialize@{initialize}}
+\index{initialize@{initialize}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily virtual void Test\+::\+Output\+::initialize (\begin{DoxyParamCaption}\item[{int}]{tests }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when testing is started.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tests} & Total number of tests in all suites. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file cpptest-\/output.\+h.
+
+\mbox{\Hypertarget{class_test_1_1_output_a6dbf4c0adb2bd4a7364c629179f788a6}\label{class_test_1_1_output_a6dbf4c0adb2bd4a7364c629179f788a6}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!suite\+\_\+end@{suite\+\_\+end}}
+\index{suite\+\_\+end@{suite\+\_\+end}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{suite\+\_\+end()}{suite\_end()}}
+{\footnotesize\ttfamily virtual void Test\+::\+Output\+::suite\+\_\+end (\begin{DoxyParamCaption}\item[{int}]{tests,  }\item[{const std\+::string \&}]{name,  }\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when a suite is finished.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tests} & Number of tests in this suite. \\
+\hline
+{\em name} & Name of the suite. \\
+\hline
+{\em time} & Total elapsed time for all tests in this suite. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_test_1_1_text_output_a84efd3536702a815325590cc8837dbb2}{Test\+::\+Text\+Output}}, and \mbox{\hyperlink{class_test_1_1_collector_output_a50c041adf1de3e296b50b1611e55a407}{Test\+::\+Collector\+Output}}.
+
+
+
+Definition at line 99 of file cpptest-\/output.\+h.
+
+\mbox{\Hypertarget{class_test_1_1_output_a7022c32c5a1577b10b93d3942746f17d}\label{class_test_1_1_output_a7022c32c5a1577b10b93d3942746f17d}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!suite\+\_\+start@{suite\+\_\+start}}
+\index{suite\+\_\+start@{suite\+\_\+start}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{suite\+\_\+start()}{suite\_start()}}
+{\footnotesize\ttfamily virtual void Test\+::\+Output\+::suite\+\_\+start (\begin{DoxyParamCaption}\item[{int}]{tests,  }\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when a suite is entered.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tests} & Number of tests in this suite. \\
+\hline
+{\em name} & Name of the suite. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_test_1_1_text_output_a0b6479918ee7f0501dfcdfcbc7c9d190}{Test\+::\+Text\+Output}}, and \mbox{\hyperlink{class_test_1_1_collector_output_a1d4c1eb5920fa96fb8dc8fe2eb0c336e}{Test\+::\+Collector\+Output}}.
+
+
+
+Definition at line 87 of file cpptest-\/output.\+h.
+
+\mbox{\Hypertarget{class_test_1_1_output_a3796943e3b56373492c957212a21454e}\label{class_test_1_1_output_a3796943e3b56373492c957212a21454e}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!test\+\_\+end@{test\+\_\+end}}
+\index{test\+\_\+end@{test\+\_\+end}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{test\+\_\+end()}{test\_end()}}
+{\footnotesize\ttfamily virtual void Test\+::\+Output\+::test\+\_\+end (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{bool}]{ok,  }\item[{const \mbox{\hyperlink{class_test_1_1_time}{Time}} \&}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when a test if finished, regardless if an assertment was issued.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the test function. \\
+\hline
+{\em ok} & True if the test was successful; false otherwise. \\
+\hline
+{\em time} & Execution time. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_test_1_1_text_output_a0ff333537e85d680740c72dd46cd2e7e}{Test\+::\+Text\+Output}}, and \mbox{\hyperlink{class_test_1_1_collector_output_a08aa350c9a0ce221d03f6841a0b5d633}{Test\+::\+Collector\+Output}}.
+
+
+
+Definition at line 123 of file cpptest-\/output.\+h.
+
+\mbox{\Hypertarget{class_test_1_1_output_a52d43b97609febc5abbc6da9aa0abac2}\label{class_test_1_1_output_a52d43b97609febc5abbc6da9aa0abac2}} 
+\index{Test\+::\+Output@{Test\+::\+Output}!test\+\_\+start@{test\+\_\+start}}
+\index{test\+\_\+start@{test\+\_\+start}!Test\+::\+Output@{Test\+::\+Output}}
+\subsubsection{\texorpdfstring{test\+\_\+start()}{test\_start()}}
+{\footnotesize\ttfamily virtual void Test\+::\+Output\+::test\+\_\+start (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Called when a tests is executed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Name of the test function. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_test_1_1_collector_output_a0ac72b71fac68305ceabb1c516760eb0}{Test\+::\+Collector\+Output}}.
+
+
+
+Definition at line 111 of file cpptest-\/output.\+h.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{cpptest-output_8h}{cpptest-\/output.\+h}}\end{DoxyCompactItemize}

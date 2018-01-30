@@ -1,0 +1,252 @@
+\hypertarget{structsqlite3__io__methods}{}\section{sqlite3\+\_\+io\+\_\+methods Struct Reference}
+\label{structsqlite3__io__methods}\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+
+
+{\ttfamily \#include $<$sqlite3.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structsqlite3__io__methods_ad1c72bdfde750a09a797f314a096a965}{i\+Version}}
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_ae0673b03bfa033d59188bfdab418cd26}{x\+Close}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_ac1433ffc0da0414a2a67a46d338d83eb}{x\+Read}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, void $\ast$, int i\+Amt, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a659f6a40777b685c6a6b80e5f07a3328}{x\+Write}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, const void $\ast$, int i\+Amt, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_abe797948913bfe94d4fab7246773af50}{x\+Truncate}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} size)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_ad4b78f6b0b475e621fe29fb1cc886437}{x\+Sync}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int flags)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_ae875f158de72435f40ca0bd5207d9862}{x\+File\+Size}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} $\ast$p\+Size)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_ac88793475b0c4188fb02c229f1a11e8b}{x\+Lock}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a5ce75a5ca2df9c1edcaef74d4c0d7e38}{x\+Unlock}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a484752731e4a054c97497ad8d48a344b}{x\+Check\+Reserved\+Lock}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int $\ast$p\+Res\+Out)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a913b12deb1dcae2c61b90776bcd9d19c}{x\+File\+Control}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int op, void $\ast$p\+Arg)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a7a1c0cf3c4de6402a69f50e625be5ca2}{x\+Sector\+Size}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_abbf1b4769c310bfee517af815eed93e9}{x\+Device\+Characteristics}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a2222efe012f210417f9881103014cdc5}{x\+Shm\+Map}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int i\+Pg, int pgsz, int, void volatile $\ast$$\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a2dbd4777e8ebce36b91dd5d64aef9bbf}{x\+Shm\+Lock}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int offset, int n, int flags)
+\item 
+void($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_aa4e436fef318c4702940da870f8e2710}{x\+Shm\+Barrier}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a494ae8bbfe91c38598c73aaa18f1848f}{x\+Shm\+Unmap}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int delete\+Flag)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_a71e611fc755d95ffbd3e7ecb8cb5fae6}{x\+Fetch}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst, int i\+Amt, void $\ast$$\ast$pp)
+\item 
+int($\ast$ \mbox{\hyperlink{structsqlite3__io__methods_abebf1bbaa50bea56f0e37d0f66193bda}{x\+Unfetch}} )(\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst, void $\ast$p)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 766 of file sqlite3.\+h.
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structsqlite3__io__methods_ad1c72bdfde750a09a797f314a096a965}\label{structsqlite3__io__methods_ad1c72bdfde750a09a797f314a096a965}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!i\+Version@{i\+Version}}
+\index{i\+Version@{i\+Version}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{i\+Version}{iVersion}}
+{\footnotesize\ttfamily int sqlite3\+\_\+io\+\_\+methods\+::i\+Version}
+
+
+
+Definition at line 767 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a484752731e4a054c97497ad8d48a344b}\label{structsqlite3__io__methods_a484752731e4a054c97497ad8d48a344b}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Check\+Reserved\+Lock@{x\+Check\+Reserved\+Lock}}
+\index{x\+Check\+Reserved\+Lock@{x\+Check\+Reserved\+Lock}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Check\+Reserved\+Lock}{xCheckReservedLock}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Check\+Reserved\+Lock) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int $\ast$p\+Res\+Out)}
+
+
+
+Definition at line 776 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_ae0673b03bfa033d59188bfdab418cd26}\label{structsqlite3__io__methods_ae0673b03bfa033d59188bfdab418cd26}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Close@{x\+Close}}
+\index{x\+Close@{x\+Close}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Close}{xClose}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Close) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)}
+
+
+
+Definition at line 768 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_abbf1b4769c310bfee517af815eed93e9}\label{structsqlite3__io__methods_abbf1b4769c310bfee517af815eed93e9}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Device\+Characteristics@{x\+Device\+Characteristics}}
+\index{x\+Device\+Characteristics@{x\+Device\+Characteristics}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Device\+Characteristics}{xDeviceCharacteristics}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Device\+Characteristics) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)}
+
+
+
+Definition at line 779 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a71e611fc755d95ffbd3e7ecb8cb5fae6}\label{structsqlite3__io__methods_a71e611fc755d95ffbd3e7ecb8cb5fae6}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Fetch@{x\+Fetch}}
+\index{x\+Fetch@{x\+Fetch}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Fetch}{xFetch}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Fetch) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst, int i\+Amt, void $\ast$$\ast$pp)}
+
+
+
+Definition at line 786 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a913b12deb1dcae2c61b90776bcd9d19c}\label{structsqlite3__io__methods_a913b12deb1dcae2c61b90776bcd9d19c}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+File\+Control@{x\+File\+Control}}
+\index{x\+File\+Control@{x\+File\+Control}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+File\+Control}{xFileControl}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+File\+Control) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int op, void $\ast$p\+Arg)}
+
+
+
+Definition at line 777 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_ae875f158de72435f40ca0bd5207d9862}\label{structsqlite3__io__methods_ae875f158de72435f40ca0bd5207d9862}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+File\+Size@{x\+File\+Size}}
+\index{x\+File\+Size@{x\+File\+Size}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+File\+Size}{xFileSize}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+File\+Size) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} $\ast$p\+Size)}
+
+
+
+Definition at line 773 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_ac88793475b0c4188fb02c229f1a11e8b}\label{structsqlite3__io__methods_ac88793475b0c4188fb02c229f1a11e8b}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Lock@{x\+Lock}}
+\index{x\+Lock@{x\+Lock}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Lock}{xLock}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Lock) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int)}
+
+
+
+Definition at line 774 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_ac1433ffc0da0414a2a67a46d338d83eb}\label{structsqlite3__io__methods_ac1433ffc0da0414a2a67a46d338d83eb}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Read@{x\+Read}}
+\index{x\+Read@{x\+Read}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Read}{xRead}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Read) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, void $\ast$, int i\+Amt, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst)}
+
+
+
+Definition at line 769 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a7a1c0cf3c4de6402a69f50e625be5ca2}\label{structsqlite3__io__methods_a7a1c0cf3c4de6402a69f50e625be5ca2}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Sector\+Size@{x\+Sector\+Size}}
+\index{x\+Sector\+Size@{x\+Sector\+Size}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Sector\+Size}{xSectorSize}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Sector\+Size) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)}
+
+
+
+Definition at line 778 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_aa4e436fef318c4702940da870f8e2710}\label{structsqlite3__io__methods_aa4e436fef318c4702940da870f8e2710}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Shm\+Barrier@{x\+Shm\+Barrier}}
+\index{x\+Shm\+Barrier@{x\+Shm\+Barrier}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Shm\+Barrier}{xShmBarrier}}
+{\footnotesize\ttfamily void($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Shm\+Barrier) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$)}
+
+
+
+Definition at line 783 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a2dbd4777e8ebce36b91dd5d64aef9bbf}\label{structsqlite3__io__methods_a2dbd4777e8ebce36b91dd5d64aef9bbf}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Shm\+Lock@{x\+Shm\+Lock}}
+\index{x\+Shm\+Lock@{x\+Shm\+Lock}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Shm\+Lock}{xShmLock}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Shm\+Lock) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int offset, int n, int flags)}
+
+
+
+Definition at line 782 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a2222efe012f210417f9881103014cdc5}\label{structsqlite3__io__methods_a2222efe012f210417f9881103014cdc5}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Shm\+Map@{x\+Shm\+Map}}
+\index{x\+Shm\+Map@{x\+Shm\+Map}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Shm\+Map}{xShmMap}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Shm\+Map) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int i\+Pg, int pgsz, int, void volatile $\ast$$\ast$)}
+
+
+
+Definition at line 781 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a494ae8bbfe91c38598c73aaa18f1848f}\label{structsqlite3__io__methods_a494ae8bbfe91c38598c73aaa18f1848f}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Shm\+Unmap@{x\+Shm\+Unmap}}
+\index{x\+Shm\+Unmap@{x\+Shm\+Unmap}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Shm\+Unmap}{xShmUnmap}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Shm\+Unmap) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int delete\+Flag)}
+
+
+
+Definition at line 784 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_ad4b78f6b0b475e621fe29fb1cc886437}\label{structsqlite3__io__methods_ad4b78f6b0b475e621fe29fb1cc886437}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Sync@{x\+Sync}}
+\index{x\+Sync@{x\+Sync}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Sync}{xSync}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Sync) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int flags)}
+
+
+
+Definition at line 772 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_abe797948913bfe94d4fab7246773af50}\label{structsqlite3__io__methods_abe797948913bfe94d4fab7246773af50}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Truncate@{x\+Truncate}}
+\index{x\+Truncate@{x\+Truncate}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Truncate}{xTruncate}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Truncate) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} size)}
+
+
+
+Definition at line 771 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_abebf1bbaa50bea56f0e37d0f66193bda}\label{structsqlite3__io__methods_abebf1bbaa50bea56f0e37d0f66193bda}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Unfetch@{x\+Unfetch}}
+\index{x\+Unfetch@{x\+Unfetch}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Unfetch}{xUnfetch}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Unfetch) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst, void $\ast$p)}
+
+
+
+Definition at line 787 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a5ce75a5ca2df9c1edcaef74d4c0d7e38}\label{structsqlite3__io__methods_a5ce75a5ca2df9c1edcaef74d4c0d7e38}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Unlock@{x\+Unlock}}
+\index{x\+Unlock@{x\+Unlock}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Unlock}{xUnlock}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Unlock) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, int)}
+
+
+
+Definition at line 775 of file sqlite3.\+h.
+
+\mbox{\Hypertarget{structsqlite3__io__methods_a659f6a40777b685c6a6b80e5f07a3328}\label{structsqlite3__io__methods_a659f6a40777b685c6a6b80e5f07a3328}} 
+\index{sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}!x\+Write@{x\+Write}}
+\index{x\+Write@{x\+Write}!sqlite3\+\_\+io\+\_\+methods@{sqlite3\+\_\+io\+\_\+methods}}
+\subsubsection{\texorpdfstring{x\+Write}{xWrite}}
+{\footnotesize\ttfamily int($\ast$ sqlite3\+\_\+io\+\_\+methods\+::x\+Write) (\mbox{\hyperlink{structsqlite3__file}{sqlite3\+\_\+file}} $\ast$, const void $\ast$, int i\+Amt, \mbox{\hyperlink{sqlite3_8h_a0a4d3e6c1ad46f90e746b920ab6ca0d2}{sqlite3\+\_\+int64}} i\+Ofst)}
+
+
+
+Definition at line 770 of file sqlite3.\+h.
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{sqlite3_8h}{sqlite3.\+h}}\end{DoxyCompactItemize}

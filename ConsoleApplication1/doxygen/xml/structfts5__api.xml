@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structfts5__api" kind="struct" language="C++" prot="public">
+    <compoundname>fts5_api</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structfts5__api_1a3c338289abb33e1805da870172956a7c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int fts5_api::iVersion</definition>
+        <argsstring></argsstring>
+        <name>iVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10688" column="1" bodyfile="sqlite3.h" bodystart="10688" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfts5__api_1a7fe3663f85eab512d5c461e1674da129" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* fts5_api::xCreateTokenizer) (fts5_api *pApi, const char *zName, void *pContext, fts5_tokenizer *pTokenizer, void(*xDestroy)(void *))</definition>
+        <argsstring>)(fts5_api *pApi, const char *zName, void *pContext, fts5_tokenizer *pTokenizer, void(*xDestroy)(void *))</argsstring>
+        <name>xCreateTokenizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10691" column="1" bodyfile="sqlite3.h" bodystart="10691" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfts5__api_1a20a23794695fa61e2892ad1243b16b67" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* fts5_api::xFindTokenizer) (fts5_api *pApi, const char *zName, void **ppContext, fts5_tokenizer *pTokenizer)</definition>
+        <argsstring>)(fts5_api *pApi, const char *zName, void **ppContext, fts5_tokenizer *pTokenizer)</argsstring>
+        <name>xFindTokenizer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10700" column="1" bodyfile="sqlite3.h" bodystart="10700" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structfts5__api_1acf1a0612be3b91b908f38ecbc6735d17" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* fts5_api::xCreateFunction) (fts5_api *pApi, const char *zName, void *pContext, fts5_extension_function xFunction, void(*xDestroy)(void *))</definition>
+        <argsstring>)(fts5_api *pApi, const char *zName, void *pContext, fts5_extension_function xFunction, void(*xDestroy)(void *))</argsstring>
+        <name>xCreateFunction</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10708" column="1" bodyfile="sqlite3.h" bodystart="10708" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="10687" column="1" bodyfile="sqlite3.h" bodystart="10687" bodyend="10715"/>
+    <listofallmembers>
+      <member refid="structfts5__api_1a3c338289abb33e1805da870172956a7c" prot="public" virt="non-virtual"><scope>fts5_api</scope><name>iVersion</name></member>
+      <member refid="structfts5__api_1acf1a0612be3b91b908f38ecbc6735d17" prot="public" virt="non-virtual"><scope>fts5_api</scope><name>xCreateFunction</name></member>
+      <member refid="structfts5__api_1a7fe3663f85eab512d5c461e1674da129" prot="public" virt="non-virtual"><scope>fts5_api</scope><name>xCreateTokenizer</name></member>
+      <member refid="structfts5__api_1a20a23794695fa61e2892ad1243b16b67" prot="public" virt="non-virtual"><scope>fts5_api</scope><name>xFindTokenizer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

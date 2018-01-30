@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__mutex__methods" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_mutex_methods</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1a1a163f0e0eaed85223b1537434df635a" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mutex_methods::xMutexInit) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>xMutexInit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6853" column="1" bodyfile="sqlite3.h" bodystart="6853" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1ab3bc5e370edbeb1db4199d5f609fb09f" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mutex_methods::xMutexEnd) (void)</definition>
+        <argsstring>)(void)</argsstring>
+        <name>xMutexEnd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6854" column="1" bodyfile="sqlite3.h" bodystart="6854" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1a1c6c36e7f710a5bb8564946595cba324" prot="public" static="no" mutable="no">
+        <type><ref refid="sqlite3_8h_1a0f546860bde03fddb33a9fed920da05c" kindref="member">sqlite3_mutex</ref> *(*</type>
+        <definition>sqlite3_mutex*(* sqlite3_mutex_methods::xMutexAlloc) (int)</definition>
+        <argsstring>)(int)</argsstring>
+        <name>xMutexAlloc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6855" column="1" bodyfile="sqlite3.h" bodystart="6855" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1a632046a2d4a6372a567a5ac5e8175b30" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_mutex_methods::xMutexFree) (sqlite3_mutex *)</definition>
+        <argsstring>)(sqlite3_mutex *)</argsstring>
+        <name>xMutexFree</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6856" column="1" bodyfile="sqlite3.h" bodystart="6856" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1a0237ae1928c2edab7be16e9e007f6a02" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_mutex_methods::xMutexEnter) (sqlite3_mutex *)</definition>
+        <argsstring>)(sqlite3_mutex *)</argsstring>
+        <name>xMutexEnter</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6857" column="1" bodyfile="sqlite3.h" bodystart="6857" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1aa65a38cee32246dc3257a80ce47be5fe" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mutex_methods::xMutexTry) (sqlite3_mutex *)</definition>
+        <argsstring>)(sqlite3_mutex *)</argsstring>
+        <name>xMutexTry</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6858" column="1" bodyfile="sqlite3.h" bodystart="6858" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1a0d4ef78481d18de5f9346f80321a17b1" prot="public" static="no" mutable="no">
+        <type>void(*</type>
+        <definition>void(* sqlite3_mutex_methods::xMutexLeave) (sqlite3_mutex *)</definition>
+        <argsstring>)(sqlite3_mutex *)</argsstring>
+        <name>xMutexLeave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6859" column="1" bodyfile="sqlite3.h" bodystart="6859" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1a71a26118133388426ddf18ab59ce87f5" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mutex_methods::xMutexHeld) (sqlite3_mutex *)</definition>
+        <argsstring>)(sqlite3_mutex *)</argsstring>
+        <name>xMutexHeld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6860" column="1" bodyfile="sqlite3.h" bodystart="6860" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__mutex__methods_1a5b7c9daa7aea5f01ef9fa58f6d1c5cb1" prot="public" static="no" mutable="no">
+        <type>int(*</type>
+        <definition>int(* sqlite3_mutex_methods::xMutexNotheld) (sqlite3_mutex *)</definition>
+        <argsstring>)(sqlite3_mutex *)</argsstring>
+        <name>xMutexNotheld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="6861" column="1" bodyfile="sqlite3.h" bodystart="6861" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="6852" column="1" bodyfile="sqlite3.h" bodystart="6852" bodyend="6862"/>
+    <listofallmembers>
+      <member refid="structsqlite3__mutex__methods_1a1c6c36e7f710a5bb8564946595cba324" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexAlloc</name></member>
+      <member refid="structsqlite3__mutex__methods_1ab3bc5e370edbeb1db4199d5f609fb09f" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexEnd</name></member>
+      <member refid="structsqlite3__mutex__methods_1a0237ae1928c2edab7be16e9e007f6a02" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexEnter</name></member>
+      <member refid="structsqlite3__mutex__methods_1a632046a2d4a6372a567a5ac5e8175b30" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexFree</name></member>
+      <member refid="structsqlite3__mutex__methods_1a71a26118133388426ddf18ab59ce87f5" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexHeld</name></member>
+      <member refid="structsqlite3__mutex__methods_1a1a163f0e0eaed85223b1537434df635a" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexInit</name></member>
+      <member refid="structsqlite3__mutex__methods_1a0d4ef78481d18de5f9346f80321a17b1" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexLeave</name></member>
+      <member refid="structsqlite3__mutex__methods_1a5b7c9daa7aea5f01ef9fa58f6d1c5cb1" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexNotheld</name></member>
+      <member refid="structsqlite3__mutex__methods_1aa65a38cee32246dc3257a80ce47be5fe" prot="public" virt="non-virtual"><scope>sqlite3_mutex_methods</scope><name>xMutexTry</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

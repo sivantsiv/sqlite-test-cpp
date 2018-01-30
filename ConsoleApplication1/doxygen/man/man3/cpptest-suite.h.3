@@ -1,0 +1,74 @@
+.TH "cpptest-suite.h" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cpptest-suite.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <list>\fP
+.br
+\fC#include <memory>\fP
+.br
+\fC#include <string>\fP
+.br
+\fC#include 'cpptest\-time\&.h'\fP
+.br
+\fC#include 'cpptest\-source\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBTest::Suite\fP"
+.br
+.RI "Unit testing suite\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI " \fBTest\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTEST_ADD\fP(func)   register_test(static_cast<Func>(&func), #func);"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TEST_ADD(func)   register_test(static_cast<Func>(&func), #func);"
+Adds a test function to the enclosing suite\&. Note that test functions should be added in the suites constructor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIfunc\fP Function to add, must be of type Suite::Func\&.
+.RE
+.PP
+\fBExample:\fP
+.RS 4
+
+.PP
+.nf
+MySuite::MySuite()
+{
+    TEST_ADD(&MySuite::test_1)
+    TEST_ADD(&MySuite::test_2)
+    \&.\&.\&.
+}
+
+.fi
+.PP
+ 
+.RE
+.PP
+
+.PP
+Definition at line 134 of file cpptest\-suite\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

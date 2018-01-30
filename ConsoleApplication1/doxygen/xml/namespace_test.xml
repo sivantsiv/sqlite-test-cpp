@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_test" kind="namespace" language="C++">
+    <compoundname>Test</compoundname>
+    <innerclass refid="class_test_1_1_collector_output" prot="public">Test::CollectorOutput</innerclass>
+    <innerclass refid="class_test_1_1_compiler_output" prot="public">Test::CompilerOutput</innerclass>
+    <innerclass refid="class_test_1_1_html_output" prot="public">Test::HtmlOutput</innerclass>
+    <innerclass refid="class_test_1_1_output" prot="public">Test::Output</innerclass>
+    <innerclass refid="class_test_1_1_source" prot="public">Test::Source</innerclass>
+    <innerclass refid="class_test_1_1_suite" prot="public">Test::Suite</innerclass>
+    <innerclass refid="class_test_1_1_text_output" prot="public">Test::TextOutput</innerclass>
+    <innerclass refid="class_test_1_1_time" prot="public">Test::Time</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="cpptest-collectoroutput.h" line="41" column="1"/>
+  </compounddef>
+</doxygen>

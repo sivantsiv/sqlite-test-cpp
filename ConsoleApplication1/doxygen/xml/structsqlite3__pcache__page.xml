@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="structsqlite3__pcache__page" kind="struct" language="C++" prot="public">
+    <compoundname>sqlite3_pcache_page</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsqlite3__pcache__page_1a19aa6f5638fe2d4eee32aed37a119288" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_pcache_page::pBuf</definition>
+        <argsstring></argsstring>
+        <name>pBuf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7396" column="1" bodyfile="sqlite3.h" bodystart="7396" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsqlite3__pcache__page_1a6356a15fc426a7558ddf34038f70a65f" prot="public" static="no" mutable="no">
+        <type>void *</type>
+        <definition>void* sqlite3_pcache_page::pExtra</definition>
+        <argsstring></argsstring>
+        <name>pExtra</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="7397" column="1" bodyfile="sqlite3.h" bodystart="7397" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="7395" column="1" bodyfile="sqlite3.h" bodystart="7395" bodyend="7398"/>
+    <listofallmembers>
+      <member refid="structsqlite3__pcache__page_1a19aa6f5638fe2d4eee32aed37a119288" prot="public" virt="non-virtual"><scope>sqlite3_pcache_page</scope><name>pBuf</name></member>
+      <member refid="structsqlite3__pcache__page_1a6356a15fc426a7558ddf34038f70a65f" prot="public" virt="non-virtual"><scope>sqlite3_pcache_page</scope><name>pExtra</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

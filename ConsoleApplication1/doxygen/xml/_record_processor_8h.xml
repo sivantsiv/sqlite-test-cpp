@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="_record_processor_8h" kind="file" language="C++">
+    <compoundname>RecordProcessor.h</compoundname>
+    <includes local="no">windows.h</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">ctime</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes refid="sqlite3_8h" local="yes">sqlite3.h</includes>
+    <includedby refid="_console_application1_8cpp" local="yes">ConsoleApplication1.cpp</includedby>
+    <includedby refid="_record_processor_8cpp" local="yes">RecordProcessor.cpp</includedby>
+    <incdepgraph>
+      <node id="156">
+        <label>stdarg.h</label>
+      </node>
+      <node id="149">
+        <label>windows.h</label>
+      </node>
+      <node id="153">
+        <label>string</label>
+      </node>
+      <node id="150">
+        <label>fstream</label>
+      </node>
+      <node id="155">
+        <label>sqlite3.h</label>
+        <link refid="sqlite3_8h"/>
+        <childnode refid="156" relation="include">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>ctime</label>
+      </node>
+      <node id="154">
+        <label>vector</label>
+      </node>
+      <node id="148">
+        <label>RecordProcessor.h</label>
+        <link refid="_record_processor_8h"/>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+        <childnode refid="151" relation="include">
+        </childnode>
+        <childnode refid="152" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+      </node>
+      <node id="151">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="158">
+        <label>ConsoleApplication1.cpp</label>
+        <link refid="_console_application1_8cpp"/>
+      </node>
+      <node id="157">
+        <label>RecordProcessor.h</label>
+        <link refid="_record_processor_8h"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>RecordProcessor.cpp</label>
+        <link refid="_record_processor_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_record_processor" prot="public">RecordProcessor</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="_record_processor_8h_1aca15616b57f3b98717c9a4ecee119fc2" prot="public" static="no">
+        <type>vector&lt; string &gt;</type>
+        <definition>using Record =  vector&lt;string&gt;</definition>
+        <argsstring></argsstring>
+        <name>Record</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="14" column="1" bodyfile="RecordProcessor.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" prot="public" static="no">
+        <type>vector&lt; <ref refid="_record_processor_8h_1aca15616b57f3b98717c9a4ecee119fc2" kindref="member">Record</ref> &gt;</type>
+        <definition>using Records =  vector&lt;Record&gt;</definition>
+        <argsstring></argsstring>
+        <name>Records</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="RecordProcessor.h" line="15" column="1" bodyfile="RecordProcessor.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>RECORDPROCESSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RECORDPROCESSOR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;windows.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="sqlite3_8h" kindref="compound">sqlite3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_record_processor_8h_1aca15616b57f3b98717c9a4ecee119fc2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="_record_processor_8h_1aca15616b57f3b98717c9a4ecee119fc2" kindref="member">Record</ref><sp/>=<sp/>vector&lt;string&gt;;</highlight></codeline>
+<codeline lineno="15" refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref><sp/>=<sp/>vector&lt;Record&gt;;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_record_processor" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_record_processor" kindref="compound">RecordProcessor</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="sqlite3_8h_1a0ef6f2646262c8a9b24368d8ac140f69" kindref="member">sqlite3</ref><sp/>*<sp/>p_db;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref><sp/><sp/><sp/>records;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_record_processor" kindref="compound">RecordProcessor</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_record_processor" kindref="compound">RecordProcessor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filename);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>createTable();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>deleteTable();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>insertRecord(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>sql);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="_record_processor_8h_1a38f4f71143d55126a9f66fd1f9824999" kindref="member">Records</ref>&amp;<sp/>selectRecord(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>sql);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="class_record_processor" kindref="compound">RecordProcessor</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="RecordProcessor.h"/>
+  </compounddef>
+</doxygen>

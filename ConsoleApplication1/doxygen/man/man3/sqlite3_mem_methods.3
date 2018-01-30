@@ -1,0 +1,79 @@
+.TH "sqlite3_mem_methods" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+sqlite3_mem_methods
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sqlite3\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "void *(* \fBxMalloc\fP )(int)"
+.br
+.ti -1c
+.RI "void(* \fBxFree\fP )(void *)"
+.br
+.ti -1c
+.RI "void *(* \fBxRealloc\fP )(void *, int)"
+.br
+.ti -1c
+.RI "int(* \fBxSize\fP )(void *)"
+.br
+.ti -1c
+.RI "int(* \fBxRoundup\fP )(int)"
+.br
+.ti -1c
+.RI "int(* \fBxInit\fP )(void *)"
+.br
+.ti -1c
+.RI "void(* \fBxShutdown\fP )(void *)"
+.br
+.ti -1c
+.RI "void * \fBpAppData\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 1582 of file sqlite3\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "void* sqlite3_mem_methods::pAppData"
+
+.PP
+Definition at line 1590 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_mem_methods::xFree) (void *)"
+
+.PP
+Definition at line 1584 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mem_methods::xInit) (void *)"
+
+.PP
+Definition at line 1588 of file sqlite3\&.h\&.
+.SS "void*(* sqlite3_mem_methods::xMalloc) (int)"
+
+.PP
+Definition at line 1583 of file sqlite3\&.h\&.
+.SS "void*(* sqlite3_mem_methods::xRealloc) (void *, int)"
+
+.PP
+Definition at line 1585 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mem_methods::xRoundup) (int)"
+
+.PP
+Definition at line 1587 of file sqlite3\&.h\&.
+.SS "void(* sqlite3_mem_methods::xShutdown) (void *)"
+
+.PP
+Definition at line 1589 of file sqlite3\&.h\&.
+.SS "int(* sqlite3_mem_methods::xSize) (void *)"
+
+.PP
+Definition at line 1586 of file sqlite3\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.

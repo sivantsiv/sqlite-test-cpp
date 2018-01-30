@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_test_1_1_html_output" kind="class" language="C++" prot="public">
+    <compoundname>Test::HtmlOutput</compoundname>
+    <basecompoundref refid="class_test_1_1_collector_output" prot="public" virt="non-virtual">Test::CollectorOutput</basecompoundref>
+    <includes refid="cpptest-htmloutput_8h" local="no">cpptest-htmloutput.h</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_test_1_1_html_output_1a1e37e043f56a53b521955598f3366682" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend struct</type>
+        <definition>friend struct TestSuiteRow</definition>
+        <argsstring></argsstring>
+        <name>TestSuiteRow</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-htmloutput.h" line="58" column="1" bodyfile="cpptest-htmloutput.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_test_1_1_html_output_1a589e4e59aee4da0f70f3f6568daaf0f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Test::HtmlOutput::generate</definition>
+        <argsstring>(std::ostream &amp;os, bool incl_ok_tests=true, const std::string &amp;name=&quot;&quot;)</argsstring>
+        <name>generate</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>incl_ok_tests</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="cpptest-htmloutput.h" line="47" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>HTML output. </para>    </briefdescription>
+    <detaileddescription>
+<para>Output handler that creates a HTML table with detailed information about all tests. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="28">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="26">
+        <label>Test::HtmlOutput</label>
+        <link refid="class_test_1_1_html_output"/>
+        <childnode refid="27" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>Test::CollectorOutput</label>
+        <link refid="class_test_1_1_collector_output"/>
+        <childnode refid="28" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="32">
+        <label>Test::Time</label>
+        <link refid="class_test_1_1_time"/>
+      </node>
+      <node id="31">
+        <label>Test::Output</label>
+        <link refid="class_test_1_1_output"/>
+      </node>
+      <node id="29">
+        <label>Test::HtmlOutput</label>
+        <link refid="class_test_1_1_html_output"/>
+        <childnode refid="30" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>Test::CollectorOutput</label>
+        <link refid="class_test_1_1_collector_output"/>
+        <childnode refid="31" relation="public-inheritance">
+        </childnode>
+        <childnode refid="32" relation="usage">
+          <edgelabel>_total_time</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="cpptest-htmloutput.h" line="45" column="1" bodyfile="cpptest-htmloutput.h" bodystart="44" bodyend="59"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_collector_output_1a9f79c0fa5abf1d6248a85e7ae4701c5f" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>_suites</name></member>
+      <member refid="class_test_1_1_collector_output_1a7d8ec4ad0316b57aa96ae50a548c94d2" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>_total_errors</name></member>
+      <member refid="class_test_1_1_collector_output_1ace6c1fc02a6ac7a6c15b982b96f5f68f" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>_total_tests</name></member>
+      <member refid="class_test_1_1_collector_output_1af1e014fde4bf5b4e6c89de748630aa79" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>_total_time</name></member>
+      <member refid="class_test_1_1_collector_output_1a96b61d5e53c3dfa1b98747bb582aa4f3" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>assertment</name></member>
+      <member refid="class_test_1_1_collector_output_1a852bde8f194b4f81ca36f222257adc53" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>CollectorOutput</name></member>
+      <member refid="class_test_1_1_collector_output_1ad1a7502a31c58d93f0d88d7a679ab24d" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>finished</name></member>
+      <member refid="class_test_1_1_html_output_1a589e4e59aee4da0f70f3f6568daaf0f0" prot="public" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>generate</name></member>
+      <member refid="class_test_1_1_output_1aa66480875d088befc6c23ecfd1107cc1" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>initialize</name></member>
+      <member refid="class_test_1_1_output_1acbffb6b160039caafd3e9ac11cace65c" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>Output</name></member>
+      <member refid="class_test_1_1_collector_output_1a1921f35e0da596bd75da5824afe872c9" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>Sources</name></member>
+      <member refid="class_test_1_1_collector_output_1a50c041adf1de3e296b50b1611e55a407" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>suite_end</name></member>
+      <member refid="class_test_1_1_collector_output_1a1d4c1eb5920fa96fb8dc8fe2eb0c336e" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>suite_start</name></member>
+      <member refid="class_test_1_1_collector_output_1a0879ce3b51f1e3b3fe14aa5665dccd30" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>Suites</name></member>
+      <member refid="class_test_1_1_collector_output_1a08aa350c9a0ce221d03f6841a0b5d633" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>test_end</name></member>
+      <member refid="class_test_1_1_collector_output_1a0ac72b71fac68305ceabb1c516760eb0" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>test_start</name></member>
+      <member refid="class_test_1_1_collector_output_1a54a7b7c9b6d181102bc8934190b06e86" prot="protected" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>Tests</name></member>
+      <member refid="class_test_1_1_html_output_1a1e37e043f56a53b521955598f3366682" prot="private" virt="non-virtual"><scope>Test::HtmlOutput</scope><name>TestSuiteRow</name></member>
+      <member refid="class_test_1_1_output_1a838de994609ac3d13b7d7cd389f56090" prot="public" virt="virtual"><scope>Test::HtmlOutput</scope><name>~Output</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

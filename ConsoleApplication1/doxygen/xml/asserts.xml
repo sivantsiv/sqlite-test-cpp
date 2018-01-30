@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="asserts" kind="page">
+    <compoundname>asserts</compoundname>
+    <title>Available asserts</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Normally, assert macros issues an assert if the given expression, if any, fails (as defined by the macro). Assertments include information about the current test suite, test function, source file, source file line, and a message. The message is normally the offending expression, however, for macros ending in _MSG it is possibly to supply a user defined message.</para><para><bold>General asserts</bold><itemizedlist>
+<listitem><para><ref refid="cpptest-assert_8h_1a947ab44cc42369eb7cfe33f8a1e38e4b" kindref="member">TEST_FAIL(msg)</ref></para></listitem></itemizedlist>
+</para><para><bold>Comparision asserts</bold><itemizedlist>
+<listitem><para><ref refid="cpptest-assert_8h_1a29a763f14098f5574ae5c68291dc6ddd" kindref="member">TEST_ASSERT(expr)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1ac612ede938734f9c8d898e05818882fb" kindref="member">TEST_ASSERT_MSG(expr, msg)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1ae281f4d973e657b11691a97551f17dd1" kindref="member">TEST_ASSERT_EQUALS(expected, got)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1ab8e9ce729f96abe74b76d98f9568a59c" kindref="member">TEST_ASSERT_EQUALS_MSG(expected, got, msg)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1aa506d98e8a5fc575df0361906f7deef8" kindref="member">TEST_ASSERT_EQUALS_OBJ(expected, got)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1a9583b1709f4b9dfb3ff2849bfec5c885" kindref="member">TEST_ASSERT_DELTA(a, b, delta)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1afcd749452840bfde9be575ef22fcede0" kindref="member">TEST_ASSERT_DELTA_MSG(a, b, delta, msg)</ref></para></listitem></itemizedlist>
+</para><para><bold>Exception asserts</bold><itemizedlist>
+<listitem><para><ref refid="cpptest-assert_8h_1a5174c5f93519d5726c8993b2f36d6ceb" kindref="member">TEST_THROWS(expr, x)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1a1ce6abe9e9134ce993840a648673e0f2" kindref="member">TEST_THROWS_MSG(expr, x, msg)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1a895af88056cd626a010136ac07b81d37" kindref="member">TEST_THROWS_ANYTHING(expr)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1a052597a8fd7dbc40ba350c735c4517c5" kindref="member">TEST_THROWS_ANYTHING_MSG(expr, msg)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1a885a5f6b6decac47414b4cc1a0a66425" kindref="member">TEST_THROWS_NOTHING(expr)</ref></para></listitem><listitem><para><ref refid="cpptest-assert_8h_1a758a47b613522a3d597c513786191ff9" kindref="member">TEST_THROWS_NOTHING_MSG(expr, msg)</ref> </para></listitem></itemizedlist>
+</para>    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="struct_fts5_phrase_iter" kind="struct" language="C++" prot="public">
+    <compoundname>Fts5PhraseIter</compoundname>
+    <includes refid="sqlite3_8h" local="no">sqlite3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_fts5_phrase_iter_1a335969d1ac0fcbb94173c472a3f179ae" prot="public" static="no" mutable="no">
+        <type>const unsigned char *</type>
+        <definition>const unsigned char* Fts5PhraseIter::a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10196" column="1" bodyfile="sqlite3.h" bodystart="10196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_fts5_phrase_iter_1a459180b0d670604aa38b3ac94be6adda" prot="public" static="no" mutable="no">
+        <type>const unsigned char *</type>
+        <definition>const unsigned char* Fts5PhraseIter::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="sqlite3.h" line="10197" column="1" bodyfile="sqlite3.h" bodystart="10197" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="sqlite3.h" line="10195" column="1" bodyfile="sqlite3.h" bodystart="10195" bodyend="10198"/>
+    <listofallmembers>
+      <member refid="struct_fts5_phrase_iter_1a335969d1ac0fcbb94173c472a3f179ae" prot="public" virt="non-virtual"><scope>Fts5PhraseIter</scope><name>a</name></member>
+      <member refid="struct_fts5_phrase_iter_1a459180b0d670604aa38b3ac94be6adda" prot="public" virt="non-virtual"><scope>Fts5PhraseIter</scope><name>b</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

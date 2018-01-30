@@ -1,0 +1,4 @@
+﻿  stdafx.cpp
+  ConsoleApplication1.cpp
+ConsoleApplication1.cpp(11): error C2143: syntax error: missing ',' before 'constant'
+  RecordProcessor.cpp

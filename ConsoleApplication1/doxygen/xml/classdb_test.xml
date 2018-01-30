@@ -1,0 +1,189 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="classdb_test" kind="class" language="C++" prot="public">
+    <compoundname>dbTest</compoundname>
+    <basecompoundref refid="class_test_1_1_suite" prot="public" virt="non-virtual">Test::Suite</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classdb_test_1a9edd9165f54a1ad52545ebff71686735" prot="protected" static="no" mutable="no">
+        <type><ref refid="class_record_processor" kindref="compound">RecordProcessor</ref></type>
+        <definition>RecordProcessor dbTest::processor</definition>
+        <argsstring></argsstring>
+        <name>processor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="122" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classdb_test_1a6455e9c7378fcac47a6e45ad1b1f6408" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dbTest::test_select_by_id</definition>
+        <argsstring>()</argsstring>
+        <name>test_select_by_id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="14" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="14" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classdb_test_1a1f5b47bc24dd90c35f37882921dd757e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dbTest::test_select_by_name</definition>
+        <argsstring>()</argsstring>
+        <name>test_select_by_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="32" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="32" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classdb_test_1a99490693e888f1a7c522abe72e0f1b83" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dbTest::test_select_by_file</definition>
+        <argsstring>()</argsstring>
+        <name>test_select_by_file</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="50" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="50" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classdb_test_1a77e9db4499201c2e0f4c563da0317f93" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dbTest::test_select_called</definition>
+        <argsstring>()</argsstring>
+        <name>test_select_called</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="68" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="68" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="classdb_test_1a201f80fc124ae31aad9f734356af75c8" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void dbTest::test_select_not_called</definition>
+        <argsstring>()</argsstring>
+        <name>test_select_not_called</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="90" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="90" bodyend="109"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdb_test_1aef2697ca1fc1a9368f220d8b5e62402d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>dbTest::dbTest</definition>
+        <argsstring>()</argsstring>
+        <name>dbTest</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="112" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="112" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classdb_test_1aeefb6e8d64ee6e03da89cb5573d60b31" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void dbTest::setup</definition>
+        <argsstring>()</argsstring>
+        <name>setup</name>
+        <reimplements refid="class_test_1_1_suite_1aa022f93f2bc7c0ca4f8bf0bb94758226">setup</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="124" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="124" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classdb_test_1a1fa8de6f80f7578356b0f8feb8dcdd8f" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void dbTest::tear_down</definition>
+        <argsstring>()</argsstring>
+        <name>tear_down</name>
+        <reimplements refid="class_test_1_1_suite_1a2f2f180307180f8fdb0ca718a12047d0">tear_down</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="ConsoleApplication1.cpp" line="139" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="139" bodyend="142"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="13">
+        <label>dbTest</label>
+        <link refid="classdb_test"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Test::Suite</label>
+        <link refid="class_test_1_1_suite"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="15">
+        <label>dbTest</label>
+        <link refid="classdb_test"/>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+        <childnode refid="17" relation="usage">
+          <edgelabel>processor</edgelabel>
+        </childnode>
+      </node>
+      <node id="17">
+        <label>RecordProcessor</label>
+        <link refid="class_record_processor"/>
+      </node>
+      <node id="16">
+        <label>Test::Suite</label>
+        <link refid="class_test_1_1_suite"/>
+      </node>
+    </collaborationgraph>
+    <location file="ConsoleApplication1.cpp" line="12" column="1" bodyfile="ConsoleApplication1.cpp" bodystart="11" bodyend="143"/>
+    <listofallmembers>
+      <member refid="class_test_1_1_suite_1a0237b63fc694ecb133d023cf2d6ab271" prot="public" virt="non-virtual"><scope>dbTest</scope><name>add</name></member>
+      <member refid="class_test_1_1_suite_1a1851ad75aed6141a19a06eeeb0fe0d3c" prot="protected" virt="non-virtual"><scope>dbTest</scope><name>assertment</name></member>
+      <member refid="class_test_1_1_suite_1a3e2289069402291cdb100483a3247c16" prot="protected" virt="non-virtual"><scope>dbTest</scope><name>continue_after_failure</name></member>
+      <member refid="classdb_test_1aef2697ca1fc1a9368f220d8b5e62402d" prot="public" virt="non-virtual"><scope>dbTest</scope><name>dbTest</name></member>
+      <member refid="class_test_1_1_suite_1a87c40a9c763fc3221bee0e70c431038f" prot="protected" virt="non-virtual"><scope>dbTest</scope><name>Func</name></member>
+      <member refid="classdb_test_1a9edd9165f54a1ad52545ebff71686735" prot="protected" virt="non-virtual"><scope>dbTest</scope><name>processor</name></member>
+      <member refid="class_test_1_1_suite_1a11e542d1d45905b817b00c35660700b9" prot="protected" virt="non-virtual"><scope>dbTest</scope><name>register_test</name></member>
+      <member refid="class_test_1_1_suite_1ad17746e218da79c537bc9d21e389f570" prot="public" virt="non-virtual"><scope>dbTest</scope><name>run</name></member>
+      <member refid="classdb_test_1aeefb6e8d64ee6e03da89cb5573d60b31" prot="protected" virt="virtual"><scope>dbTest</scope><name>setup</name></member>
+      <member refid="class_test_1_1_suite_1a8cb51a002cf4e675820f91fe03ec9117" prot="public" virt="non-virtual"><scope>dbTest</scope><name>Suite</name></member>
+      <member refid="classdb_test_1a1fa8de6f80f7578356b0f8feb8dcdd8f" prot="protected" virt="virtual"><scope>dbTest</scope><name>tear_down</name></member>
+      <member refid="classdb_test_1a99490693e888f1a7c522abe72e0f1b83" prot="private" virt="non-virtual"><scope>dbTest</scope><name>test_select_by_file</name></member>
+      <member refid="classdb_test_1a6455e9c7378fcac47a6e45ad1b1f6408" prot="private" virt="non-virtual"><scope>dbTest</scope><name>test_select_by_id</name></member>
+      <member refid="classdb_test_1a1f5b47bc24dd90c35f37882921dd757e" prot="private" virt="non-virtual"><scope>dbTest</scope><name>test_select_by_name</name></member>
+      <member refid="classdb_test_1a77e9db4499201c2e0f4c563da0317f93" prot="private" virt="non-virtual"><scope>dbTest</scope><name>test_select_called</name></member>
+      <member refid="classdb_test_1a201f80fc124ae31aad9f734356af75c8" prot="private" virt="non-virtual"><scope>dbTest</scope><name>test_select_not_called</name></member>
+      <member refid="class_test_1_1_suite_1a2396d55bb8f9277e19dfdd4fd35421ec" prot="public" virt="virtual"><scope>dbTest</scope><name>~Suite</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

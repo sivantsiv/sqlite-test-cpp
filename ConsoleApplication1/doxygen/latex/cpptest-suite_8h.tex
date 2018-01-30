@@ -1,0 +1,54 @@
+\hypertarget{cpptest-suite_8h}{}\section{cpptest-\/suite.h File Reference}
+\label{cpptest-suite_8h}\index{cpptest-\/suite.\+h@{cpptest-\/suite.\+h}}
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}cpptest-\/time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpptest-\/source.\+h\char`\"{}}\newline
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_test_1_1_suite}{Test\+::\+Suite}}
+\begin{DoxyCompactList}\small\item\em Unit testing suite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_test}{Test}}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{cpptest-suite_8h_abe8c3e0a2cf3893ebc1c265264ed9cb8}{T\+E\+S\+T\+\_\+\+A\+DD}}(func)~register\+\_\+test(static\+\_\+cast$<$Func$>$(\&func), \#func);
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{cpptest-suite_8h_abe8c3e0a2cf3893ebc1c265264ed9cb8}\label{cpptest-suite_8h_abe8c3e0a2cf3893ebc1c265264ed9cb8}} 
+\index{cpptest-\/suite.\+h@{cpptest-\/suite.\+h}!T\+E\+S\+T\+\_\+\+A\+DD@{T\+E\+S\+T\+\_\+\+A\+DD}}
+\index{T\+E\+S\+T\+\_\+\+A\+DD@{T\+E\+S\+T\+\_\+\+A\+DD}!cpptest-\/suite.\+h@{cpptest-\/suite.\+h}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T\+\_\+\+A\+DD}{TEST\_ADD}}
+{\footnotesize\ttfamily \#define T\+E\+S\+T\+\_\+\+A\+DD(\begin{DoxyParamCaption}\item[{}]{func }\end{DoxyParamCaption})~register\+\_\+test(static\+\_\+cast$<$Func$>$(\&func), \#func);}
+
+Adds a test function to the enclosing suite. Note that test functions should be added in the suites constructor.
+
+
+\begin{DoxyParams}{Parameters}
+{\em func} & Function to add, must be of type Suite\+::\+Func.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyParagraph}{Example\+:}
+
+\begin{DoxyCode}
+MySuite::MySuite()
+\{
+    \mbox{\hyperlink{cpptest-suite_8h_abe8c3e0a2cf3893ebc1c265264ed9cb8}{TEST\_ADD}}(&MySuite::test\_1)
+    \mbox{\hyperlink{cpptest-suite_8h_abe8c3e0a2cf3893ebc1c265264ed9cb8}{TEST\_ADD}}(&MySuite::test\_2)
+    ...
+\}
+\end{DoxyCode}
+ 
+\end{DoxyParagraph}
+
+
+Definition at line 134 of file cpptest-\/suite.\+h.
+

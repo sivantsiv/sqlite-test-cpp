@@ -1,0 +1,574 @@
+.TH "cpptest-assert.h" 3 "Mon Jan 22 2018" "Version 1.0" "NTS Homework" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+cpptest-assert.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <sstream>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBTEST_FAIL\fP(msg)"
+.br
+.ti -1c
+.RI "#define \fBTEST_ASSERT\fP(expr)"
+.br
+.ti -1c
+.RI "#define \fBTEST_ASSERT_MSG\fP(expr,  msg)"
+.br
+.ti -1c
+.RI "#define \fBTEST_ASSERT_EQUALS\fP(expected,  got)"
+.br
+.ti -1c
+.RI "#define \fBTEST_ASSERT_EQUALS_OBJ\fP(expected,  got)"
+.br
+.ti -1c
+.RI "#define \fBTEST_ASSERT_EQUALS_MSG\fP(expected,  got,  msg)"
+.br
+.ti -1c
+.RI "#define \fBTEST_ASSERT_DELTA\fP(a,  b,  delta)"
+.br
+.ti -1c
+.RI "#define \fBTEST_ASSERT_DELTA_MSG\fP(a,  b,  delta,  msg)"
+.br
+.ti -1c
+.RI "#define \fBTEST_THROWS\fP(expr,  x)"
+.br
+.ti -1c
+.RI "#define \fBTEST_THROWS_MSG\fP(expr,  x,  msg)"
+.br
+.ti -1c
+.RI "#define \fBTEST_THROWS_ANYTHING\fP(expr)"
+.br
+.ti -1c
+.RI "#define \fBTEST_THROWS_ANYTHING_MSG\fP(expr,  msg)"
+.br
+.ti -1c
+.RI "#define \fBTEST_THROWS_NOTHING\fP(expr)"
+.br
+.ti -1c
+.RI "#define \fBTEST_THROWS_NOTHING_MSG\fP(expr,  msg)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define TEST_ASSERT(expr)"
+\fBValue:\fP
+.PP
+.nf
+{                                                                 \
+        if (!(expr))                                                \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, #expr));  \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and issues an assertment if it fails\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_ASSERT_MSG(expr, msg)\fP
+.RE
+.PP
+\fBExample:\fP
+.RS 4
+
+.PP
+.nf
+void MySuite::test()
+{
+    int i;
+
+    // \&.\&.\&.
+
+    TEST_ASSERT(i == 13)
+}
+
+.fi
+.PP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 87 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_ASSERT_DELTA(a, b, delta)"
+\fBValue:\fP
+.PP
+.nf
+{                                                             \
+        if (((b) < (a) - (delta)) || ((b) > (a) + (delta)))         \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__,           \
+                       "delta(" #a ", " #b ", " #delta ")" ));      \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify that two expressions are equal up to a constant, issues an assertment if it fails\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP First expression to test\&. 
+.br
+\fIb\fP Second expression to test\&. 
+.br
+\fIdelta\fP Constant\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_ASSERT_DELTA_MSG(a, b, delta, msg)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 216 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_ASSERT_DELTA_MSG(a, b, delta, msg)"
+\fBValue:\fP
+.PP
+.nf
+{                                                               \
+        if (((b) < (a) - (delta)) || ((b) > (a) + (delta)))         \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, msg));    \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify that two expressions are equal up to a constant, issues an assertment if it fails\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIa\fP First expression to test\&. 
+.br
+\fIb\fP Second expression to test\&. 
+.br
+\fIdelta\fP Constant\&. 
+.br
+\fImsg\fP User message\&. 
+.br
+ 
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_ASSERT_DELTA(a, b, delta)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 240 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_ASSERT_EQUALS(expected, got)"
+\fBValue:\fP
+.PP
+.nf
+{                                                                 \
+        if (!((got) == (expected)))                                     \
+        {                                                               \
+            std::stringstream tmpstream;                                \
+            tmpstream << "Got " << (got) << ", expected " << (expected);\
+            assertment(::Test::Source(__FILE__, __LINE__,               \
+                        tmpstream\&.str()\&.c_str()));                        \
+            if (!continue_after_failure()) return;                      \
+        }                                                               \
+    }
+.fi
+Verify that two expressions are equal, issues an assertment if it fails\&. Requires the output operator (<<) to be defined for both expected and got\&.
+.PP
+If the output operator is not available, you should use \fBTEST_ASSERT_EQUALS_OBJ(expected, got)\fP\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpected\fP Expected value\&. 
+.br
+\fIgot\fP Value to test against expected value\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_ASSERT_EQUALS_MSG(expected, got, msg)\fP 
+.PP
+\fBTEST_ASSERT_EQUALS_OBJ(expected, got)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 133 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_ASSERT_EQUALS_MSG(expected, got, msg)"
+\fBValue:\fP
+.PP
+.nf
+{                                                                    \
+        if (!((got) == (expected)))                                     \
+        {                                                               \
+            std::stringstream tmpstream;                                \
+            tmpstream << (msg) << ": ";                                 \
+            tmpstream << "Got " << (got) << ", expected " << (expected);\
+            assertment(::Test::Source(__FILE__, __LINE__,               \
+                        tmpstream\&.str()\&.c_str()));                        \
+            if (!continue_after_failure()) return;                      \
+        }                                                               \
+    }
+.fi
+Verify that two expressions are equal, issues an assertment if it fails\&. The output operator (<<) must be defined for the object under test\&. If the output operator is not available, you should use \fBTEST_ASSERT_EQUALS_OBJ(expected, got)\fP instead\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpected\fP Expected value\&. 
+.br
+\fIgot\fP Value to test against expected value\&. 
+.br
+\fImsg\fP User message to print out on failure\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_ASSERT_EQUALS(expected, got)\fP 
+.PP
+\fBTEST_ASSERT_EQUALS_OBJ(expected, got)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 190 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_ASSERT_EQUALS_OBJ(expected, got)"
+\fBValue:\fP
+.PP
+.nf
+{                                                             \
+        if (!((got) == (expected)))                                 \
+        {                                                           \
+            std::stringstream tmpstream;                            \
+            tmpstream << #expected << " object not equal to ";      \
+            tmpstream << #got << " object\&.";                     \
+            assertment(::Test::Source(__FILE__, __LINE__,           \
+                        tmpstream\&.str()\&.c_str()));                    \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify that two expressions are equal, issues an assertment if it fails\&.
+.PP
+If the output operator is defined for the objects being compared you should use \fBTEST_ASSERT_EQUALS(expected, got)\fP instead for more useful failure messages\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpected\fP Expected value\&. 
+.br
+\fIgot\fP Value to test against expected value\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_ASSERT_EQUALS(expected, got)\fP 
+.PP
+\fBTEST_ASSERT_EQUALS_MSG(expected, got, msg)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 162 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_ASSERT_MSG(expr, msg)"
+\fBValue:\fP
+.PP
+.nf
+{                                                                \
+        if (!(expr))                                                \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, msg));    \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and issues an assertment if it fails\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&. 
+.br
+\fImsg\fP User message\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_ASSERT(expr)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 107 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_FAIL(msg)"
+\fBValue:\fP
+.PP
+.nf
+{                                                                \
+        assertment(::Test::Source(__FILE__, __LINE__, (msg) != 0 ? #msg : "")); \
+        if (!continue_after_failure()) return;                      \
+    }
+.fi
+Unconditional failure\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImsg\fP Provided message\&.
+.RE
+.PP
+\fBExample:\fP
+.RS 4
+
+.PP
+.nf
+void MySuite::test()
+{
+    // \&.\&.\&.
+
+    switch (flag)
+    {
+        // handling valid cases \&.\&.\&.
+
+        default:
+            TEST_FAIL("This should not happen")
+    }
+}
+
+.fi
+.PP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 59 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_THROWS(expr, x)"
+\fBValue:\fP
+.PP
+.nf
+{                                                               \
+        bool __expected = false;                                    \
+        try { expr; }                                               \
+        catch (x)           { __expected = true; }                  \
+        catch (\&.\&.\&.)            {}                                      \
+        if (!__expected)                                            \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, #expr));  \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and expects an exception in return\&. An assertment is issued if the exception is not thrown\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&. 
+.br
+\fIx\fP Expected exception\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_THROWS_MSG(expr, x, msg)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 261 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_THROWS_ANYTHING(expr)"
+\fBValue:\fP
+.PP
+.nf
+{                                                                \
+        bool __expected = false;                                    \
+        try { expr; }                                               \
+        catch (\&.\&.\&.) { __expected = true; }                         \
+        if (!__expected)                                            \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, #expr));  \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and expects any exception in return\&. An assertment is issued if no exception is thrown\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_THROWS_ANYTHING_MSG(expr, msg)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 311 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_THROWS_ANYTHING_MSG(expr, msg)"
+\fBValue:\fP
+.PP
+.nf
+{                                                               \
+        bool __expected = false;                                    \
+        try { expr; }                                               \
+        catch (\&.\&.\&.) { __expected = true; }                         \
+        if (!__expected)                                            \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, msg));    \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and expects any exception in return\&. An assertment is issued if no exception is thrown\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&. 
+.br
+\fImsg\fP User message\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_THROWS_ANYTHING(expr)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 335 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_THROWS_MSG(expr, x, msg)"
+\fBValue:\fP
+.PP
+.nf
+{                                                             \
+        bool __expected = false;                                    \
+        try { expr; }                                               \
+        catch (x)           { __expected = true; }                  \
+        catch (\&.\&.\&.)            {}                                      \
+        if (!__expected)                                            \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, msg));    \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and expects an exception in return\&. An assertment is issued if the exception is not thrown\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&. 
+.br
+\fIx\fP Expected exception\&. 
+.br
+\fImsg\fP User message\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_THROWS(expr, x)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 287 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_THROWS_NOTHING(expr)"
+\fBValue:\fP
+.PP
+.nf
+{                                                             \
+        bool __expected = true;                                     \
+        try { expr; }                                               \
+        catch (\&.\&.\&.) { __expected = false; }                            \
+        if (!__expected)                                            \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, #expr));  \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and expects no exception in return\&. An assertment is issued if any exception is thrown\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_THROWS_NOTHING_MSG(expr, msg)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 358 of file cpptest\-assert\&.h\&.
+.SS "#define TEST_THROWS_NOTHING_MSG(expr, msg)"
+\fBValue:\fP
+.PP
+.nf
+{                                                                \
+        bool __expected = true;                                     \
+        try { expr; }                                               \
+        catch (\&.\&.\&.) { __expected = false; }                            \
+        if (!__expected)                                            \
+        {                                                           \
+            assertment(::Test::Source(__FILE__, __LINE__, msg));    \
+            if (!continue_after_failure()) return;                  \
+        }                                                           \
+    }
+.fi
+Verify an expression and expects no exception in return\&. An assertment is issued if any exception is thrown\&.
+.PP
+Used in conjunction with \fBTest::Suite\fP\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIexpr\fP Expression to test\&. 
+.br
+\fImsg\fP User message\&.
+.RE
+.PP
+\fBSee also:\fP
+.RS 4
+\fBTEST_THROWS_NOTHING(expr)\fP
+.RE
+.PP
+For a description of all asserts, see \fBAvailable asserts\fP\&. 
+.PP
+Definition at line 382 of file cpptest\-assert\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for NTS Homework from the source code\&.
