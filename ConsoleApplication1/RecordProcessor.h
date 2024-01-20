@@ -9,10 +9,8 @@
 #include <vector>
 #include "sqlite3\sqlite3.h"
 
-using namespace std;
-
-using Record = vector<string>;
-using Records = vector<Record>;
+using Record = std::vector<std::string>;
+using Records = std::vector<Record>;
 
 class RecordProcessor
 {

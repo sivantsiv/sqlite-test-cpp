@@ -1,7 +1,9 @@
 #include "stdafx.h"
+#include <chrono>
+#include <thread>
 #include "RecordProcessor.h"
 
-using namespace std;
+const int dbDelay = 1;
 
 // SQL Engine callback
 static int callback(void *pData, int argc, char **argv, char **azColName)
@@ -16,9 +18,9 @@ static int callback(void *pData, int argc, char **argv, char **azColName)
 	}
 
 	char sdate[9];
-	ofstream log;
+	std::ofstream log;
 	_strdate_s(sdate);
-	string filename = "Log_";
+	std::string filename = "Log_";
 	filename.append(sdate);
 	filename.append(".txt");
 	for (unsigned int i = 0; i < filename.length(); ++i)
@@ -40,13 +42,13 @@ static int callback(void *pData, int argc, char **argv, char **azColName)
 	bool static first_run = true;
 	if (first_run == true)
 	{
-		log << (string)timestamp << endl;
+		log << (std::string)timestamp << std::endl;
 		first_run = false;
 	}
 
 	for (int i = 0; i < argc; i++)
 	{
-		log << (string)azColName[i] << " = ";
+		log << (std::string)azColName[i] << " = ";
 		if (argv[i])
 		{
 			log << argv[i];
@@ -55,9 +57,9 @@ static int callback(void *pData, int argc, char **argv, char **azColName)
 		{
 			log << "NULL";
 		}
-		log << endl;
+		log << std::endl;
 	}
-	log << endl;
+	log << std::endl;
 	log.close();
 
 	return 0;
@@ -67,16 +69,16 @@ static int callback(void *pData, int argc, char **argv, char **azColName)
 RecordProcessor::RecordProcessor()
 {
 	// Open database
-	cout << "Opening MyDb.db ..." << endl;
+	std::cout << "Opening MyDb.db ..." << std::endl;
 	if (sqlite3_open("MyDb.db", &p_db))
 	{
 		// Failed to open database
-		cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(p_db) << endl << endl;
+		std::cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(p_db) << std::endl << std::endl;
 		sqlite3_close(p_db);
 	}
 	else
 	{
-		cout << "Opened MyDb.db" << endl << endl;
+		std::cout << "Opened MyDb.db" << std::endl << std::endl;
 	}
 }
 
@@ -84,16 +86,16 @@ RecordProcessor::RecordProcessor()
 RecordProcessor::RecordProcessor(const char* filename)
 {
 	// Open database
-	cout << "Opening MyDb.db ..." << endl;
+	std::cout << "Opening MyDb.db ..." << std::endl;
 	if (sqlite3_open(filename, &p_db))
 	{
 		// Failed to open database
-		cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(p_db) << endl << endl;
+		std::cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(p_db) << std::endl << std::endl;
 		sqlite3_close(p_db);
 	}
 	else
 	{
-		cout << "Opened SQLite database" << endl << endl;
+		std::cout << "Opened SQLite database" << std::endl << std::endl;
 	}
 }
 
@@ -112,7 +114,7 @@ bool RecordProcessor::createTable()
 	int rc = sqlite3_exec(p_db, sql, NULL, 0, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		cout << "SQL error: " << (string)zErrMsg << endl;
+		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
 		sqlite3_free(zErrMsg);
 		return false;
 	}
@@ -131,7 +133,7 @@ bool RecordProcessor::deleteTable()
 	int rc = sqlite3_exec(p_db, sql, NULL, 0, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		cout << "SQL error: " << (string)zErrMsg << endl;
+		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
 		sqlite3_free(zErrMsg);
 		return false;
 	}
@@ -147,7 +149,7 @@ bool RecordProcessor::insertRecord(const char* sql)
 	int rc = sqlite3_exec(p_db, sql, NULL, 0, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		cout << "SQL error: " << (string)zErrMsg << endl;
+		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
 		sqlite3_free(zErrMsg);
 		return false;
 	}
@@ -165,12 +167,12 @@ Records& RecordProcessor::selectRecord(const char* sql)
 	int rc = sqlite3_exec(p_db, sql, callback, &records, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		cout << "SQL error: " << (string)zErrMsg << endl;
+		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
 		sqlite3_free(zErrMsg);
 	}
 	else 
 	{
-		cout << records.size() << " record(s) returned" << endl;
+		std::cout << records.size() << " record(s) returned" << std::endl;
 	}
 
 	return ref;
@@ -180,10 +182,10 @@ Records& RecordProcessor::selectRecord(const char* sql)
 RecordProcessor::~RecordProcessor()
 {
 	// Close Database
-	cout << "Closing MyDb.db ..." << endl;
+	std::cout << "Closing MyDb.db ..." << std::endl;
 	sqlite3_close(p_db);
-	cout << "Closed MyDb.db" << endl << endl;
+	std::cout << "Closed MyDb.db" << std::endl << std::endl;
 
 	// Wait until database is closed
-	Sleep(1000);
+	std::this_thread::sleep_for(std::chrono::seconds(dbDelay));
 }
