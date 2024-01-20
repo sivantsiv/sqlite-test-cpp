@@ -1,5 +1,4 @@
-#ifndef RECORDPROCESSOR_H
-#define RECORDPROCESSOR_H
+#pragma once
 
 #include <windows.h>
 #include <fstream>
@@ -15,19 +14,17 @@ using Records = std::vector<Record>;
 class RecordProcessor
 {
 private:
-	sqlite3 * p_db;
-	Records   records;
+	sqlite3 * m_Db;
+	Records   m_Records;
 
 public:
 	RecordProcessor();
-	RecordProcessor(const char* filename);
+	RecordProcessor(const std::string& filename);
 
 	bool createTable();
+	bool insertRecord(const std::string& sql);
+	Records& selectRecord(const std::string& sql);
 	bool deleteTable();
-	bool insertRecord(const char* sql);
-	Records& selectRecord(const char* sql);
 
 	~RecordProcessor();
 };
-
-#endif

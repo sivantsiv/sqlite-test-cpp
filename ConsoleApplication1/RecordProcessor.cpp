@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include <chrono>
+#include <ctime>
 #include <thread>
 #include "RecordProcessor.h"
 
@@ -13,14 +14,14 @@ static int callback(void *pData, int argc, char **argv, char **azColName)
 		records->emplace_back(argv, argv + argc);
 	}
 	catch (...) {
-		// Abort select on failure, don't let exception propogate thru sqlite3 call-stack
+		// Abort select on failure, don't let exception propogate thru SQLite3 call-stack
 		return 1;
 	}
-
+	
 	char sdate[9];
 	std::ofstream log;
 	_strdate_s(sdate);
-	std::string filename = "Log_";
+	std::string filename = "log_";
 	filename.append(sdate);
 	filename.append(".txt");
 	for (unsigned int i = 0; i < filename.length(); ++i)
@@ -36,13 +37,11 @@ static int callback(void *pData, int argc, char **argv, char **azColName)
 	}
 
 	// Generate timestamp for file logging
-	time_t now = time(nullptr);
-	char timestamp[26];
-	ctime_s(timestamp, sizeof(timestamp), &now);
+	auto timenow = std::chrono::system_clock::to_time_t(std::chrono::system_clock::now());
 	bool static first_run = true;
 	if (first_run == true)
 	{
-		log << (std::string)timestamp << std::endl;
+		log << ctime(&timenow) << std::endl;
 		first_run = false;
 	}
 
@@ -70,11 +69,11 @@ RecordProcessor::RecordProcessor()
 {
 	// Open database
 	std::cout << "Opening MyDb.db ..." << std::endl;
-	if (sqlite3_open("MyDb.db", &p_db))
+	if (sqlite3_open("MyDb.db", &m_Db))
 	{
 		// Failed to open database
-		std::cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(p_db) << std::endl << std::endl;
-		sqlite3_close(p_db);
+		std::cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(m_Db) << std::endl << std::endl;
+		sqlite3_close(m_Db);
 	}
 	else
 	{
@@ -82,16 +81,16 @@ RecordProcessor::RecordProcessor()
 	}
 }
 
-// Constructor
-RecordProcessor::RecordProcessor(const char* filename)
+// Class Constructor
+RecordProcessor::RecordProcessor(const std::string& filename)
 {
 	// Open database
-	std::cout << "Opening MyDb.db ..." << std::endl;
-	if (sqlite3_open(filename, &p_db))
+	std::cout << "Opening " << filename << "..." << std::endl;
+	if (sqlite3_open(filename.c_str(), &m_Db))
 	{
 		// Failed to open database
-		std::cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(p_db) << std::endl << std::endl;
-		sqlite3_close(p_db);
+		std::cerr << "Error opening SQLite3 database: " << sqlite3_errmsg(m_Db) << std::endl << std::endl;
+		sqlite3_close(m_Db);
 	}
 	else
 	{
@@ -102,19 +101,18 @@ RecordProcessor::RecordProcessor(const char* filename)
 bool RecordProcessor::createTable()
 {
 	// Create SQL statement 
-	char* sql;
-	sql = (char *)"CREATE TABLE IF NOT EXISTS RECORDS("  \
-			      "ID INT PRIMARY KEY     NOT NULL," \
-			      "NAME           TEXT    NOT NULL," \
-			      "FILE           TEXT    NOT NULL," \
-			      "CALLED         INT );";
+	std::string sql =	"CREATE TABLE IF NOT EXISTS RECORDS("  \
+						"ID INT PRIMARY KEY     NOT NULL," \
+						"NAME           TEXT    NOT NULL," \
+						"FILE           TEXT    NOT NULL," \
+						"CALLED         INT );";
 
 	// Execute SQL statement 
 	char *zErrMsg = 0;
-	int rc = sqlite3_exec(p_db, sql, NULL, 0, &zErrMsg);
+	int rc = sqlite3_exec(m_Db, sql.c_str(), nullptr, 0, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
+		std::cout << "SQL error: " << static_cast<std::string>(zErrMsg) << std::endl;
 		sqlite3_free(zErrMsg);
 		return false;
 	}
@@ -125,15 +123,14 @@ bool RecordProcessor::createTable()
 bool RecordProcessor::deleteTable()
 {
 	// Create SQL statement 
-	char* sql;
-	sql = (char *)"DROP TABLE IF EXISTS RECORDS";
+	std::string sql = "DROP TABLE IF EXISTS RECORDS";
 
 	// Execute SQL statement 
 	char *zErrMsg = 0;
-	int rc = sqlite3_exec(p_db, sql, NULL, 0, &zErrMsg);
+	int rc = sqlite3_exec(m_Db, sql.c_str(), nullptr, 0, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
+		std::cout << "SQL error: " << static_cast<std::string>(zErrMsg) << std::endl;
 		sqlite3_free(zErrMsg);
 		return false;
 	}
@@ -142,14 +139,14 @@ bool RecordProcessor::deleteTable()
 }
 
 // Insert new database record/records
-bool RecordProcessor::insertRecord(const char* sql)
+bool RecordProcessor::insertRecord(const std::string& sql)
 {
 	// Execute SQL statement 
 	char *zErrMsg = 0;
-	int rc = sqlite3_exec(p_db, sql, NULL, 0, &zErrMsg);
+	int rc = sqlite3_exec(m_Db, sql.c_str(), nullptr, 0, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
+		std::cout << "SQL error: " << static_cast<std::string>(zErrMsg) << std::endl;
 		sqlite3_free(zErrMsg);
 		return false;
 	}
@@ -158,21 +155,21 @@ bool RecordProcessor::insertRecord(const char* sql)
 }
 
 // Select existing database record/records
-Records& RecordProcessor::selectRecord(const char* sql)
+Records& RecordProcessor::selectRecord(const std::string& sql)
 {
 	// Execute SQL statement 
 	char *zErrMsg = 0;
-	Records& ref = records;
-	records.resize(0);
-	int rc = sqlite3_exec(p_db, sql, callback, &records, &zErrMsg);
+	Records& ref = m_Records;
+	m_Records.resize(0);
+	int rc = sqlite3_exec(m_Db, sql.c_str(), callback, &m_Records, &zErrMsg);
 	if (rc != SQLITE_OK)
 	{
-		std::cout << "SQL error: " << (std::string)zErrMsg << std::endl;
+		std::cout << "SQL error: " << static_cast<std::string>(zErrMsg) << std::endl;
 		sqlite3_free(zErrMsg);
 	}
 	else 
 	{
-		std::cout << records.size() << " record(s) returned" << std::endl;
+		std::cout << m_Records.size() << " record(s) returned" << std::endl;
 	}
 
 	return ref;
@@ -182,9 +179,9 @@ Records& RecordProcessor::selectRecord(const char* sql)
 RecordProcessor::~RecordProcessor()
 {
 	// Close Database
-	std::cout << "Closing MyDb.db ..." << std::endl;
-	sqlite3_close(p_db);
-	std::cout << "Closed MyDb.db" << std::endl << std::endl;
+	std::cout << "Closing SQLite database ..." << std::endl;
+	sqlite3_close(m_Db);
+	std::cout << "Closed SQLite database" << std::endl << std::endl;
 
 	// Wait until database is closed
 	std::this_thread::sleep_for(std::chrono::seconds(dbDelay));
