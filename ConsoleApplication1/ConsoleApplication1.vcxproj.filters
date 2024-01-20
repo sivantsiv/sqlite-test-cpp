@@ -21,13 +21,7 @@
     <ClInclude Include="targetver.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="sqlite3.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RecordProcessor.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cpptest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
